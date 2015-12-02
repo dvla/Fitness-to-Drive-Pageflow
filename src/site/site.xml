@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd"
+         name="F2D Pageflow processor">
+
+    <body>
+
+        <menu name="F2D Pageflow Processor" inherit="top">
+            <item name="Introduction" href="index.html"/>
+        </menu>
+
+	<menu ref="reports" inherit="top" />
+    </body>
+    <custom>
+        <reflowSkin>
+            <localResources>true</localResources>
+            <theme>site</theme>
+        </reflowSkin>
+    </custom>
+</project>
