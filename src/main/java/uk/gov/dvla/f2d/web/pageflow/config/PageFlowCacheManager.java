@@ -9,12 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public final class PageFlowCacheManager
+public class PageFlowCacheManager
 {
-    private PageFlowCacheManager() {
-        // Nothing to do here.
-    }
-
     /**
      * Retrieve all of the available medical conditions configured against the data cache.
      * @return Map<String, MedicalCondition> all supported medical conditions.
