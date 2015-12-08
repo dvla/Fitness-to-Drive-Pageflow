@@ -3,6 +3,7 @@ package uk.gov.dvla.f2d.web.pageflow.config;
 import uk.gov.dvla.f2d.web.pageflow.enums.Question;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
+import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestionnaire;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,14 @@ import java.util.stream.Collectors;
 
 public class PageFlowCacheManager
 {
+    /**
+     * Retrieve the entire medical questionnaire and all it's conditions.
+     * @return MedicalQuestionnaire pre-populated with all it's details.
+     */
+    public static MedicalQuestionnaire getQuestionnaire() {
+        return PageFlowDataCache.getInstance().getMedicalQuestionnaire();
+    }
+
     /**
      * Retrieve all of the available medical conditions configured against the data cache.
      * @return Map<String, MedicalCondition> all supported medical conditions.

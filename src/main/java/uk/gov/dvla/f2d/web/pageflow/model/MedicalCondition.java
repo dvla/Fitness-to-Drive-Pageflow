@@ -1,8 +1,9 @@
 package uk.gov.dvla.f2d.web.pageflow.model;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class MedicalCondition
+public class MedicalCondition implements Serializable
 {
     private Long ID;
     private String displayText;

@@ -32,14 +32,4 @@ public class PageFlowDataCacheTest extends TestCase
 
         assertNotNull(medical);
     }
-
-    /**
-     * Test to see if a medical questionnaire has been loaded from file system
-     */
-    public void _testMedicalQuestionnaireLoadedFromFileSystem() {
-        PageFlowDataCache manager = PageFlowDataCache.getInstance();
-        MedicalQuestionnaire medical = manager.getMedicalQuestionnaire();
-
-        assertNotNull(medical);
-    }
 }

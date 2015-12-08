@@ -6,7 +6,6 @@ import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.web.pageflow.enums.Question;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestionnaire;
 
 import java.util.*;
 
@@ -167,7 +166,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("Radio", question.getFormat());
         assertEquals("Yes", question.getValidate());
         assertEquals("No", question.getLogout());
-        assertEquals("Yes=9, No=8", question.getDecision());
+        assertEquals("Y=9, N=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
         assertEquals(question.getAnswers().size(), 0);
@@ -195,10 +194,10 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("Checkbox", question.getFormat());
         assertEquals("Yes", question.getValidate());
         assertEquals("No", question.getLogout());
-        assertEquals("None", question.getDecision());
+        assertEquals("1=2, 2=3, 4=4, 8=5, 16=6, 21=7, 32=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
-        assertEquals(question.getAnswers().size(), 1);
+        assertEquals(question.getAnswers().size(), 0);
 
         assertNotNull(question.toString());
     }

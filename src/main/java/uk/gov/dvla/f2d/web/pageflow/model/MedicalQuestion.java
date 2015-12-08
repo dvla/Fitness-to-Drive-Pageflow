@@ -1,8 +1,9 @@
 package uk.gov.dvla.f2d.web.pageflow.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MedicalQuestion
+public class MedicalQuestion implements Serializable
 {
     private Long ID;
     private String page;
@@ -11,9 +12,10 @@ public class MedicalQuestion
     private String format;
     private String validate;
     private String logout;
-    private String decision;
-
+    private String options;
     private List<String> answers;
+
+    private String decision;
 
     public MedicalQuestion() {
         super();
@@ -75,12 +77,12 @@ public class MedicalQuestion
         this.logout = logout;
     }
 
-    public String getDecision() {
-        return decision;
+    public String getOptions() {
+        return options;
     }
 
-    public void setDecision(String decision) {
-        this.decision = decision;
+    public void setOptions(String options) {
+        this.options = options;
     }
 
     public List<String> getAnswers() {
@@ -91,8 +93,15 @@ public class MedicalQuestion
         this.answers = answers;
     }
 
+    public String getDecision() {
+        return decision;
+    }
+
+    public void setDecision(String decision) {
+        this.decision = decision;
+    }
 
     public String toString() {
-        return "["+ID+"; "+page+"; "+type+"; "+index+"; "+format+"; "+validate+"; "+logout+"; "+decision+"; "+answers+"]";
+        return "["+ID+"; "+page+"; "+type+"; "+index+"; "+format+"; "+validate+"; "+logout+"; "+ options +"; "+answers+"; "+decision+"]";
     }
 }
