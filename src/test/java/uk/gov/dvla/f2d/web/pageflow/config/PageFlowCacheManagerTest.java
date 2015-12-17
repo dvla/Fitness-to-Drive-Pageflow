@@ -166,10 +166,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("Y=9, N=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
-
-        System.out.println("ANSWERS: ["+question+")]");
-
-        assertEquals(question.getAnswers().size(), 1);
+        assertEquals(question.getAnswers().size(), 0);
 
         assertNotNull(question.toString());
     }
@@ -196,7 +193,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("1=2, 2=3, 4=4, 8=5, 16=6, 21=7, 32=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
-        assertEquals(question.getAnswers().size(), 3);
+        assertEquals(question.getAnswers().size(), 0);
 
         assertNotNull(question.toString());
     }

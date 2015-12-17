@@ -17,7 +17,7 @@ public class PageFlowCacheManager
      * @return MedicalQuestionnaire pre-populated with all it's details.
      */
     public static MedicalQuestionnaire getQuestionnaire() {
-        return PageFlowDataCache.getInstance().getMedicalQuestionnaire();
+        return PageFlowDataCache.getMedicalQuestionnaire();
     }
 
     /**
@@ -25,7 +25,7 @@ public class PageFlowCacheManager
      * @return Map<String, MedicalCondition> all supported medical conditions.
      */
     public static List<MedicalCondition> getConditions() {
-        return PageFlowDataCache.getInstance().getMedicalQuestionnaire().getConditions();
+        return PageFlowDataCache.getMedicalQuestionnaire().getConditions();
     }
 
     /**

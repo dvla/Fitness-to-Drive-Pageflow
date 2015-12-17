@@ -12,39 +12,14 @@ final class PageFlowDataCache
 
     private static PageFlowDataCache instance;
 
-    private MedicalQuestionnaire medical;
-
-    private PageFlowDataCache() {
-        initialise();
-    }
-
-    static synchronized PageFlowDataCache getInstance() {
-        if(instance == null) {
-            instance = new PageFlowDataCache();
-        }
-        return instance;
-    }
-
-    private void initialise() {
+    static MedicalQuestionnaire getMedicalQuestionnaire() {
         try {
-            // We need to import all the supported medical conditions.
-            medical = loadDataIntoInternalCache();
+            ClassLoader classLoader = PageFlowDataCache.class.getClassLoader();
+            InputStream resourceStream = classLoader.getResource(PAGEFLOW_MODEL_FILE).openStream();
+            return new ObjectMapper().readValue(resourceStream, MedicalQuestionnaire.class);
 
         } catch(IOException ex) {
             throw new RuntimeException(ex);
         }
-    }
-
-    private MedicalQuestionnaire loadDataIntoInternalCache() throws IOException {
-        return loadMedicalQuestionnaireFromLocalJsonResource();
-    }
-
-    private MedicalQuestionnaire loadMedicalQuestionnaireFromLocalJsonResource() throws IOException {
-        InputStream resourceStream = getClass().getClassLoader().getResource(PAGEFLOW_MODEL_FILE).openStream();
-        return new ObjectMapper().readValue(resourceStream, MedicalQuestionnaire.class);
-    }
-
-    MedicalQuestionnaire getMedicalQuestionnaire() {
-        return medical;
     }
 }

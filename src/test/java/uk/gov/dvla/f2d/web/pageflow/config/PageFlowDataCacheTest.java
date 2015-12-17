@@ -27,9 +27,7 @@ public class PageFlowDataCacheTest extends TestCase
      * Test to see if a medical questionnaire has been loaded from resources
      */
     public void testMedicalQuestionnaireLoadedFromLocalResource() {
-        PageFlowDataCache manager = PageFlowDataCache.getInstance();
-        MedicalQuestionnaire medical = manager.getMedicalQuestionnaire();
-
+        MedicalQuestionnaire medical = PageFlowDataCache.getMedicalQuestionnaire();
         assertNotNull(medical);
     }
 }
