@@ -166,6 +166,9 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("Y=9, N=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
+
+        System.out.println("ANSWERS: ["+question+")]");
+
         assertEquals(question.getAnswers().size(), 1);
 
         assertNotNull(question.toString());
