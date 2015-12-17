@@ -17,7 +17,7 @@ public final class PageFlowUI
      * Get an iterative, displayable list of all the currently supported medical conditions.
      */
     public static String getSupportedConditions() throws JsonProcessingException {
-        return new ObjectMapper().writeValueAsString(PageFlowCacheManager.getConditions().values());
+        return new ObjectMapper().writeValueAsString(PageFlowCacheManager.getConditions());
     }
 
     /**

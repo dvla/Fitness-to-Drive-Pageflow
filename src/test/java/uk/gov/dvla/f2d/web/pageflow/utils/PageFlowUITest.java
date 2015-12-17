@@ -9,6 +9,7 @@ import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestionnaire;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
 
@@ -58,7 +59,7 @@ public class PageFlowUITest extends TestCase
 
             assertTrue("Data structure was an unexpected type", (result instanceof MedicalQuestionnaire));
 
-            Map<String, MedicalCondition> conditions = ((MedicalQuestionnaire)result).getConditions();
+            List<MedicalCondition> conditions = ((MedicalQuestionnaire)result).getConditions();
 
             assertTrue("No conditions were found in data structure", conditions.size() > 0);
             assertTrue("No questions were found in data structure", conditions.size() > 0);

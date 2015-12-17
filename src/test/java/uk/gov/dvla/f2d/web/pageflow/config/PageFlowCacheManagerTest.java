@@ -14,6 +14,8 @@ import java.util.*;
  */
 public class PageFlowCacheManagerTest extends TestCase
 {
+    private static final String DIABETES_CONDITION_ID   = "1";
+
     /**
      * Create the test case
      *
@@ -45,13 +47,11 @@ public class PageFlowCacheManagerTest extends TestCase
                 "Diabetes","Glaucoma", "Epilepsy"
         };
 
-        Map<String, MedicalCondition> supported = PageFlowCacheManager.getConditions();
+        List<MedicalCondition> supported = PageFlowCacheManager.getConditions();
 
         assertEquals(supported.size(), supportedConditions.length);
 
-        for(String key : supported.keySet()) {
-            MedicalCondition condition = supported.get(key);
-
+        for(MedicalCondition condition : supported) {
             String message = condition.getDisplayText()+" does not exist in the pageflow";
             assertTrue(message,  Arrays.asList(supportedConditions).contains(condition.getDisplayText()));
         }
@@ -61,10 +61,12 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if only eligibility questions are returned for a condition
      */
     public void testEligibilityQuestionsOnly() {
-        final String DIABETES_ID = "1";
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        assertNotNull(condition);
 
-        MedicalCondition diabetes = PageFlowCacheManager.getConditions().get(DIABETES_ID);
-        List<MedicalQuestion> questions = PageFlowCacheManager.getEligibilityQuestions(diabetes);
+        List<MedicalQuestion> questions = PageFlowCacheManager.getEligibilityQuestions(condition);
+        assertNotNull(questions);
+        assertTrue("No eligibility questions were found for condition", questions.size() > 0);
 
         boolean eligibilityQuestionsOnlyFound = true;
 
@@ -82,10 +84,12 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if only eligibility questions are returned for a condition
      */
     public void testStandardQuestionsOnly() {
-        final String DIABETES_ID = "1";
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        assertNotNull(condition);
 
-        MedicalCondition diabetes = PageFlowCacheManager.getConditions().get(DIABETES_ID);
-        List<MedicalQuestion> questions = PageFlowCacheManager.getStandardQuestions(diabetes);
+        List<MedicalQuestion> questions = PageFlowCacheManager.getStandardQuestions(condition);
+        assertNotNull(questions);
+        assertTrue("No standard questions were found for condition", questions.size() > 0);
 
         boolean standardQuestionsOnlyFound = true;
 
@@ -102,10 +106,7 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to ascertain if we can find a medical condition by it's identifier.
      */
     public void testFindConditionByIdentifier() {
-        final String DIABETES_ID = "1";
-
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_ID);
-
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
         assertNotNull(condition);
 
         assertEquals("Diabetes", condition.getDisplayText());
@@ -115,13 +116,13 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to ascertain if we can find a particular question for a condition.
      */
     public void testFindConditionAndQuestionByIdentifiers() {
-        final String DIABETES_ID = "1";
         final String QUESTION_ID = "7";
 
-        Map<String, MedicalCondition> supported = PageFlowCacheManager.getConditions();
-        MedicalCondition condition = supported.get(DIABETES_ID);
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        assertNotNull(condition);
 
         MedicalQuestion question = PageFlowCacheManager.getQuestionByConditionAndID(condition, QUESTION_ID);
+        assertNotNull(question);
 
         assertEquals("hypoglycaemia-episode", question.getPage());
     }
@@ -130,13 +131,10 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to determine that all parameters are properly populated.
      */
     public void testAllMedicalConditionParametersPopulated() {
-        final String DIABETES_ID = "1";
-
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_ID);
-
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
         assertNotNull(condition);
 
-        assertEquals(new Long(DIABETES_ID), condition.getID());
+        assertEquals(new Long(DIABETES_CONDITION_ID), condition.getID());
         assertEquals("Diabetes", condition.getDisplayText());
         assertEquals("diabetes", condition.getValue());
         assertEquals("diab1 diabetes daibetes dibetes dyabetes diabbetes", condition.getSpellings());
@@ -150,13 +148,12 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to determine that all parameters are properly populated.
      */
     public void testAllMedicalQuestionParametersPopulated() {
-        final String DIABETES_ID = "1";
         final String QUESTION_ID = "7";
 
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_ID);
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        assertNotNull(condition);
 
         MedicalQuestion question = condition.getQuestions().get(QUESTION_ID);
-
         assertNotNull(question);
 
         assertEquals(new Long(QUESTION_ID), question.getID());
@@ -169,7 +166,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("Y=9, N=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
-        assertEquals(question.getAnswers().size(), 0);
+        assertEquals(question.getAnswers().size(), 1);
 
         assertNotNull(question.toString());
     }
@@ -178,13 +175,12 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to determine that all parameters are properly populated.
      */
     public void testMedicalQuestionDefaultAnswersSupplied() {
-        final String DIABETES_ID = "1";
         final String QUESTION_ID = "9";
 
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_ID);
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        assertNotNull(condition);
 
         MedicalQuestion question = condition.getQuestions().get(QUESTION_ID);
-
         assertNotNull(question);
 
         assertEquals(new Long(QUESTION_ID), question.getID());
@@ -197,7 +193,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("1=2, 2=3, 4=4, 8=5, 16=6, 21=7, 32=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
-        assertEquals(question.getAnswers().size(), 0);
+        assertEquals(question.getAnswers().size(), 3);
 
         assertNotNull(question.toString());
     }

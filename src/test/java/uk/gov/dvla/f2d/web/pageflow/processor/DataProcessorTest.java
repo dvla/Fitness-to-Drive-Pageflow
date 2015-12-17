@@ -42,8 +42,7 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "1";
         final String TARGET_QUESTION        = "7";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getConditions();
-        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
         return question;
@@ -57,8 +56,7 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "1";
         final String TARGET_QUESTION        = "9";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getConditions();
-        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
         return question;

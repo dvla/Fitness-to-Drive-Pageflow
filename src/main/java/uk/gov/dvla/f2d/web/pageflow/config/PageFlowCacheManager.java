@@ -24,7 +24,7 @@ public class PageFlowCacheManager
      * Retrieve all of the available medical conditions configured against the data cache.
      * @return Map<String, MedicalCondition> all supported medical conditions.
      */
-    public static Map<String, MedicalCondition> getConditions() {
+    public static List<MedicalCondition> getConditions() {
         return PageFlowDataCache.getInstance().getMedicalQuestionnaire().getConditions();
     }
 
@@ -34,7 +34,13 @@ public class PageFlowCacheManager
      * @return MedicalCondition - the condition based on this key.
      */
     public static MedicalCondition getConditionByID(final String ID) {
-        return getConditions().get(ID);
+        List<MedicalCondition> allConditions = getConditions();
+        for(MedicalCondition condition : allConditions) {
+            if(condition.getID().toString().equals(ID)) {
+                return condition;
+            }
+        }
+        return null;
     }
 
     /**
