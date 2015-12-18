@@ -6,12 +6,10 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestionnaire;
+import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
-import java.util.SortedMap;
 
 public class PageFlowUITest extends TestCase
 {
@@ -55,11 +53,11 @@ public class PageFlowUITest extends TestCase
             assertNotNull(fullData);
             assertTrue("Questionnaire was not pre-populated", fullData.length() > 0);
 
-            Object result = hydrateObjectUsingMapper(fullData, MedicalQuestionnaire.class);
+            Object result = hydrateObjectUsingMapper(fullData, MedicalForm.class);
 
-            assertTrue("Data structure was an unexpected type", (result instanceof MedicalQuestionnaire));
+            assertTrue("Data structure was an unexpected type", (result instanceof MedicalForm));
 
-            List<MedicalCondition> conditions = ((MedicalQuestionnaire)result).getConditions();
+            List<MedicalCondition> conditions = ((MedicalForm)result).getSupportedConditions();
 
             assertTrue("No conditions were found in data structure", conditions.size() > 0);
             assertTrue("No questions were found in data structure", conditions.size() > 0);

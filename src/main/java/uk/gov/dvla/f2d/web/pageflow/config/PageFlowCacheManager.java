@@ -2,12 +2,11 @@ package uk.gov.dvla.f2d.web.pageflow.config;
 
 import uk.gov.dvla.f2d.web.pageflow.enums.Question;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
+import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestionnaire;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class PageFlowCacheManager
@@ -16,8 +15,8 @@ public class PageFlowCacheManager
      * Retrieve the entire medical questionnaire and all it's conditions.
      * @return MedicalQuestionnaire pre-populated with all it's details.
      */
-    public static MedicalQuestionnaire getQuestionnaire() {
-        return PageFlowDataCache.getMedicalQuestionnaire();
+    public static MedicalForm getQuestionnaire() {
+        return PageFlowDataCache.getMedicalForm();
     }
 
     /**
@@ -25,7 +24,7 @@ public class PageFlowCacheManager
      * @return Map<String, MedicalCondition> all supported medical conditions.
      */
     public static List<MedicalCondition> getConditions() {
-        return PageFlowDataCache.getMedicalQuestionnaire().getConditions();
+        return PageFlowDataCache.getMedicalForm().getSupportedConditions();
     }
 
     /**
@@ -37,6 +36,21 @@ public class PageFlowCacheManager
         List<MedicalCondition> allConditions = getConditions();
         for(MedicalCondition condition : allConditions) {
             if(condition.getID().toString().equals(ID)) {
+                return condition;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Retrieve a particular medical condition using a specific condition ID key.
+     * @param Value - The key of the medical condition to retrieve.
+     * @return MedicalCondition - the condition based on this key.
+     */
+    public static MedicalCondition getConditionByValue(final String value) {
+        List<MedicalCondition> allConditions = getConditions();
+        for(MedicalCondition condition : allConditions) {
+            if(condition.getValue().toString().equals(value)) {
                 return condition;
             }
         }

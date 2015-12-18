@@ -3,7 +3,7 @@ package uk.gov.dvla.f2d.web.pageflow.config;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestionnaire;
+import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
 
 public class PageFlowDataCacheTest extends TestCase
 {
@@ -26,8 +26,8 @@ public class PageFlowDataCacheTest extends TestCase
     /**
      * Test to see if a medical questionnaire has been loaded from resources
      */
-    public void testMedicalQuestionnaireLoadedFromLocalResource() {
-        MedicalQuestionnaire medical = PageFlowDataCache.getMedicalQuestionnaire();
+    public void testMedicalFormLoadedFromLocalResource() {
+        MedicalForm medical = PageFlowDataCache.getMedicalForm();
         assertNotNull(medical);
     }
 }
