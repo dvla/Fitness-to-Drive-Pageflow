@@ -90,9 +90,35 @@ public class DataProcessorTest extends TestCase
         assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckboxGroupImpl));
     }
 
-    public void testRadioGroupDataProcessorDecision() {
+    public void testRadioGroupDataProcessorDecisionSuccess() {
         final String ANSWER_FOR_QUESTION    = "Y";
         final String DECISION_FOR_QUESTION  = "9";
+
+        MedicalQuestion question = getRadioGroupQuestion();
+        assertNotNull(question);
+
+        DataProcessorFactory factory = new DataProcessorFactory();
+        IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
+
+        // Check we have no decision for now.
+        assertEquals(question.getDecision(), "");
+
+        List<String> answers = new ArrayList<>();
+        answers.add(ANSWER_FOR_QUESTION);
+
+        question.setAnswers(answers);
+
+        // Apply our data processor for this answer
+        processor.apply();
+
+        // Check a decision has now been made.
+        Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);
+        assertTrue("Correct decision has not been made.", expectedDecision);
+    }
+
+    public void testRadioGroupDataProcessorDecisionFailure() {
+        final String ANSWER_FOR_QUESTION    = "N";
+        final String DECISION_FOR_QUESTION  = "8";
 
         MedicalQuestion question = getRadioGroupQuestion();
         assertNotNull(question);

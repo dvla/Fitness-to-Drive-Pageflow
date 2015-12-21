@@ -12,12 +12,12 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 
     @Override
     public void apply() {
-        final String[] options = question.getOptions().split(",");
-        final String answer = question.getAnswers().get(0);
+        final String[] options = question.getOptions().trim().split(",");
+        final String answer = question.getAnswers().get(0).trim();
 
         for(String option : options) {
-            String key = option.split("=")[0];
-            String value = option.split("=")[1];
+            String key = option.split("=")[0].trim();
+            String value = option.split("=")[1].trim();
 
             if(key.equalsIgnoreCase(answer)) {
                 question.setDecision(value);
