@@ -9,22 +9,7 @@ public final class PageFlowUI
     /**
      * Get the full structure of the pre-populated list of conditions and questions.
      */
-    public static String getFullQuestionnaire() throws JsonProcessingException {
-        return new ObjectMapper().writeValueAsString(PageFlowCacheManager.getQuestionnaire());
-    }
-
-    /**
-     * Get an iterative, displayable list of all the currently supported medical conditions.
-     */
-    public static String getSupportedConditions() throws JsonProcessingException {
-        return new ObjectMapper().writeValueAsString(PageFlowCacheManager.getConditions());
-    }
-
-    /**
-     * Once a user has selected their medical condition, we must retrieve the configuration
-     * from the cache and then we can start to build a pathway through the application.
-     */
-    public static String getConditionByID(final String ID) throws JsonProcessingException {
-        return new ObjectMapper().writeValueAsString(PageFlowCacheManager.getConditionByID(ID));
+    public static String getMedicalForm() throws JsonProcessingException {
+        return new ObjectMapper().writeValueAsString(PageFlowCacheManager.getMedicalForm());
     }
 }

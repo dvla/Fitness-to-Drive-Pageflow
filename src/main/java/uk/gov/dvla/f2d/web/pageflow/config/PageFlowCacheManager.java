@@ -7,6 +7,7 @@ import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class PageFlowCacheManager
@@ -15,7 +16,7 @@ public class PageFlowCacheManager
      * Retrieve the entire medical questionnaire and all it's conditions.
      * @return MedicalQuestionnaire pre-populated with all it's details.
      */
-    public static MedicalForm getQuestionnaire() {
+    public static MedicalForm getMedicalForm() {
         return PageFlowDataCache.getMedicalForm();
     }
 
@@ -23,7 +24,7 @@ public class PageFlowCacheManager
      * Retrieve all of the available medical conditions configured against the data cache.
      * @return Map<String, MedicalCondition> all supported medical conditions.
      */
-    public static List<MedicalCondition> getConditions() {
+    public static Map<String, MedicalCondition> getSupportedConditions() {
         return PageFlowDataCache.getMedicalForm().getSupportedConditions();
     }
 
@@ -33,28 +34,7 @@ public class PageFlowCacheManager
      * @return MedicalCondition - the condition based on this key.
      */
     public static MedicalCondition getConditionByID(final String ID) {
-        List<MedicalCondition> allConditions = getConditions();
-        for(MedicalCondition condition : allConditions) {
-            if(condition.getID().toString().equals(ID)) {
-                return condition;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * Retrieve a particular medical condition using a specific condition ID key.
-     * @param Value - The key of the medical condition to retrieve.
-     * @return MedicalCondition - the condition based on this key.
-     */
-    public static MedicalCondition getConditionByValue(final String value) {
-        List<MedicalCondition> allConditions = getConditions();
-        for(MedicalCondition condition : allConditions) {
-            if(condition.getValue().toString().equals(value)) {
-                return condition;
-            }
-        }
-        return null;
+        return getSupportedConditions().get(ID);
     }
 
     /**

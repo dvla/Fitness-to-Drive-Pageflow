@@ -39,8 +39,8 @@ public class DataProcessorTest extends TestCase
      * @return Radio group question
      */
     private MedicalQuestion getRadioGroupQuestion() {
-        final String DIABETES_CONDITION     = "1";
-        final String TARGET_QUESTION        = "7";
+        final String DIABETES_CONDITION     = "diabetes";
+        final String TARGET_QUESTION        = "hypoglycaemia-episode";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
@@ -53,8 +53,8 @@ public class DataProcessorTest extends TestCase
      * @return Checkbox group question
      */
     private MedicalQuestion getCheckboxGroupQuestion() {
-        final String DIABETES_CONDITION     = "1";
-        final String TARGET_QUESTION        = "9";
+        final String DIABETES_CONDITION     = "diabetes";
+        final String TARGET_QUESTION        = "insulin-declaration";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
