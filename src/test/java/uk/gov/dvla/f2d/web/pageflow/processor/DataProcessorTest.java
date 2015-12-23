@@ -40,7 +40,7 @@ public class DataProcessorTest extends TestCase
      */
     private MedicalQuestion getRadioGroupQuestion() {
         final String DIABETES_CONDITION     = "diabetes";
-        final String TARGET_QUESTION        = "hypoglycaemia-episode";
+        final String TARGET_QUESTION        = "hypoglycaemia-blood-sugar";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
@@ -92,7 +92,7 @@ public class DataProcessorTest extends TestCase
 
     public void testRadioGroupDataProcessorDecisionSuccess() {
         final String ANSWER_FOR_QUESTION    = "Y";
-        final String DECISION_FOR_QUESTION  = "9";
+        final String DECISION_FOR_QUESTION  = "7";
 
         MedicalQuestion question = getRadioGroupQuestion();
         assertNotNull(question);
@@ -118,7 +118,7 @@ public class DataProcessorTest extends TestCase
 
     public void testRadioGroupDataProcessorDecisionFailure() {
         final String ANSWER_FOR_QUESTION    = "N";
-        final String DECISION_FOR_QUESTION  = "8";
+        final String DECISION_FOR_QUESTION  = "9";
 
         MedicalQuestion question = getRadioGroupQuestion();
         assertNotNull(question);

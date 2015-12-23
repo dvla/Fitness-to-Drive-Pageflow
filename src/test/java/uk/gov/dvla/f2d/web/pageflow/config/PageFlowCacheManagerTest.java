@@ -115,7 +115,7 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to ascertain if we can find a particular question for a condition.
      */
     public void testFindConditionAndQuestionByIdentifiers() {
-        final String QUESTION_ID = "hypoglycaemia-episode";
+        final String QUESTION_ID = "hypoglycaemia-blood-sugar";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
         assertNotNull(condition);
@@ -137,7 +137,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("Diabetes", condition.getDisplayText());
         assertEquals("diab1 diabetes daibetes dibetes dyabetes diabbetes", condition.getSpellings());
         assertEquals("diabetes-help-page", condition.getInformationLink());
-        assertEquals("Diabetes", condition.getConfiguration());
+        assertEquals("DIABETES_NOTIFY", condition.getConfiguration());
 
         assertNotNull(condition.toString());
     }
@@ -146,7 +146,7 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to determine that all parameters are properly populated.
      */
     public void testAllMedicalQuestionParametersPopulated() {
-        final String QUESTION_ID = "hypoglycaemia-episode";
+        final String QUESTION_ID = "hypoglycaemia-blood-sugar";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
         assertNotNull(condition);
@@ -156,11 +156,11 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertEquals(QUESTION_ID, question.getID());
         assertEquals("Standard", question.getType());
-        assertEquals(new Double(7), question.getIndex());
+        assertEquals(8.0, question.getIndex());
         assertEquals("Radio", question.getFormat());
         assertEquals("Yes", question.getValidate());
         assertEquals("No", question.getLogout());
-        assertEquals("Y=9, N=8", question.getOptions());
+        assertEquals("Y=7, N=9", question.getOptions());
 
         assertNotNull(question.getAnswers());
         assertEquals(question.getAnswers().size(), 0);
@@ -182,7 +182,7 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertEquals(QUESTION_ID, question.getID());
         assertEquals("Standard", question.getType());
-        assertEquals(new Double(9), question.getIndex());
+        assertEquals(new Double(11), question.getIndex());
         assertEquals("Checkbox", question.getFormat());
         assertEquals("Yes", question.getValidate());
         assertEquals("No", question.getLogout());
