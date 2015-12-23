@@ -156,10 +156,10 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertEquals(QUESTION_ID, question.getID());
         assertEquals("Standard", question.getType());
-        assertEquals(8.0, question.getIndex());
+        assertEquals(8, question.getIndex().intValue());
         assertEquals("Radio", question.getFormat());
-        assertEquals("Yes", question.getValidate());
-        assertEquals("No", question.getLogout());
+        assertEquals(Boolean.TRUE, question.getValidate());
+        assertEquals(Boolean.FALSE, question.getLogout());
         assertEquals("Y=7, N=9", question.getOptions());
 
         assertNotNull(question.getAnswers());
@@ -182,10 +182,10 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertEquals(QUESTION_ID, question.getID());
         assertEquals("Standard", question.getType());
-        assertEquals(new Double(11), question.getIndex());
+        assertEquals(11, question.getIndex().intValue());
         assertEquals("Checkbox", question.getFormat());
-        assertEquals("Yes", question.getValidate());
-        assertEquals("No", question.getLogout());
+        assertEquals(Boolean.TRUE, question.getValidate());
+        assertEquals(Boolean.FALSE, question.getLogout());
         assertEquals("1=2, 2=3, 4=4, 8=5, 16=6, 21=7, 32=8", question.getOptions());
 
         assertNotNull(question.getAnswers());
