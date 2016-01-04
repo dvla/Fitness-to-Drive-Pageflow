@@ -16,6 +16,8 @@ public final class DataProcessorFactory
             processor = new DataProcessorRadioGroupImpl(question);
         } else if(Format.CHECKBOX.equals(question.getFormat())) {
             processor = new DataProcessorCheckboxGroupImpl(question);
+        } else if(Format.CONFIRM.equals(question.getFormat())) {
+            processor = new DataProcessorConfirmPageImpl(question);
         } else {
             throw new RuntimeException("Data processor is not supported!");
         }

@@ -54,7 +54,7 @@
           "format": "Radio",
           "validate": true,
           "logout": false,
-          "options": "Y=5, N=A4.1",
+          "options": "Y=4, N=A4.1",
           "answers": [],
           "decision": "",
           "id": "diabetes-with-insulin"
@@ -142,6 +142,18 @@
           "answers": [],
           "decision": "",
           "id": "non-notifiable-condition"
+        },
+        "verify-holding-page": {
+          "page": "4",
+          "type": "Information",
+          "index": 3,
+          "format": "Confirm",
+          "validate": false,
+          "logout": false,
+          "options": "Y=5",
+          "answers": [],
+          "decision": "",
+          "id": "verify-holding-page"
         }
       },
       "id": "diabetes"

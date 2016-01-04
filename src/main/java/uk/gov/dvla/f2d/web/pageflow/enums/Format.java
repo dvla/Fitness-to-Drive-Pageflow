@@ -3,7 +3,8 @@ package uk.gov.dvla.f2d.web.pageflow.enums;
 public enum Format
 {
     RADIO("Radio"),
-    CHECKBOX("Checkbox");
+    CHECKBOX("Checkbox"),
+    CONFIRM("Confirm");
 
     private String format;
 

@@ -62,6 +62,16 @@ public class DataProcessorTest extends TestCase
         return question;
     }
 
+    private MedicalQuestion getConfirmPageQuestion() {
+        final String DIABETES_CONDITION     = "diabetes";
+        final String TARGET_QUESTION        = "verify-holding-page";
+
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
+        MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
+
+        return question;
+    }
+
     /**
      * Test to determine if our factory retrieves the radio group processor for a question.
      */
@@ -147,6 +157,30 @@ public class DataProcessorTest extends TestCase
         final String DECISION_FOR_QUESTION  = "7";
 
         MedicalQuestion question = getCheckboxGroupQuestion();
+        assertNotNull(question);
+
+        DataProcessorFactory factory = new DataProcessorFactory();
+        IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
+
+        // Check we have no decision for now.
+        assertEquals(question.getDecision(), "");
+
+        List<String> answers = Arrays.asList(ANSWERS_FOR_QUESTIONS);
+        question.setAnswers(answers);
+
+        // Apply our data processor for this answer
+        processor.apply();
+
+        // Check a decision has now been made.
+        Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);
+        assertTrue("Correct decision has not been made.", expectedDecision);
+    }
+
+    public void testConfirmPageDataProcessorDecision() {
+        final String[] ANSWERS_FOR_QUESTIONS = {"Y"};
+        final String DECISION_FOR_QUESTION  = "5";
+
+        MedicalQuestion question = getConfirmPageQuestion();
         assertNotNull(question);
 
         DataProcessorFactory factory = new DataProcessorFactory();
