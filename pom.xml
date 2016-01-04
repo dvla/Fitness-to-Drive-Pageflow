@@ -62,7 +62,7 @@
     <dependency>
       <groupId>uk.gov.dvla.f2d</groupId>
       <artifactId>f2d-pageflow-generation</artifactId>
-      <version>1.4</version>
+      <version>1.5-SNAPSHOT</version>
     </dependency>
 
     <dependency>
