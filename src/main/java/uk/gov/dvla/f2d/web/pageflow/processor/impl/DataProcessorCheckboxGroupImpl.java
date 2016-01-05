@@ -12,6 +12,12 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
 
     @Override
     public void apply() {
+        question.setDecision(question.getOptions().trim());
+    }
+
+    /*
+    @Override
+    public void apply() {
         final String[] options = question.getOptions().split(",");
         final Integer answer = findAnswer();
 
@@ -28,4 +34,5 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
     private Integer findAnswer() {
         return question.getAnswers().stream().mapToInt(s -> Integer.parseInt(s)).sum();
     }
+    */
 }

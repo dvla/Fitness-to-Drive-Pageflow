@@ -1,6 +1,6 @@
 package uk.gov.dvla.f2d.web.pageflow.config;
 
-import uk.gov.dvla.f2d.web.pageflow.enums.Question;
+import uk.gov.dvla.f2d.web.pageflow.enums.Page;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
@@ -43,7 +43,7 @@ public class PageFlowCacheManager
      * @param type - The type of questions we are interesting on retrieving.
      * @return List - questions found for this condition.
      */
-    private static List<MedicalQuestion> getQuestionsByType(MedicalCondition condition, Question type) {
+    private static List<MedicalQuestion> getQuestionsByType(MedicalCondition condition, Page type) {
         List<MedicalQuestion> questions = new ArrayList<>();
         questions.addAll(condition.getQuestions().values().stream().filter(
                 question -> question.getType().equalsIgnoreCase(type.toString())).collect(Collectors.toList())
@@ -51,12 +51,12 @@ public class PageFlowCacheManager
         return questions;
     }
 
-    public static List<MedicalQuestion> getEligibilityQuestions(MedicalCondition condition) {
-        return getQuestionsByType(condition, Question.ELIGIBILITY);
+    public static List<MedicalQuestion> getEligibilityPages(MedicalCondition condition) {
+        return getQuestionsByType(condition, Page.ELIGIBILITY);
     }
 
-    public static List<MedicalQuestion> getStandardQuestions(MedicalCondition condition) {
-        return getQuestionsByType(condition, Question.STANDARD);
+    public static List<MedicalQuestion> getQuestionPages(MedicalCondition condition) {
+        return getQuestionsByType(condition, Page.QUESTION);
     }
 
     public static MedicalQuestion getQuestionByConditionAndID(MedicalCondition condition, final String questionID) {

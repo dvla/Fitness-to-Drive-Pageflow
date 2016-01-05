@@ -6,15 +6,11 @@ import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorCheckboxGroupImpl;
-import uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory;
-import uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorRadioGroupImpl;
-import uk.gov.dvla.f2d.web.pageflow.processor.impl.IDataQuestionProcessor;
+import uk.gov.dvla.f2d.web.pageflow.processor.impl.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class DataProcessorTest extends TestCase
 {
@@ -54,7 +50,7 @@ public class DataProcessorTest extends TestCase
      */
     private MedicalQuestion getCheckboxGroupQuestion() {
         final String DIABETES_CONDITION     = "diabetes";
-        final String TARGET_QUESTION        = "insulin-declaration";
+        final String TARGET_QUESTION        = "medical-consent-part-1";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
@@ -62,9 +58,19 @@ public class DataProcessorTest extends TestCase
         return question;
     }
 
-    private MedicalQuestion getConfirmPageQuestion() {
+    private MedicalQuestion getContinuePageQuestion() {
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "verify-holding-page";
+
+        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
+        MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
+
+        return question;
+    }
+
+    private MedicalQuestion getFormPageQuestion() {
+        final String DIABETES_CONDITION     = "diabetes";
+        final String TARGET_QUESTION        = "change-address";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
@@ -98,6 +104,34 @@ public class DataProcessorTest extends TestCase
 
         assertNotNull(processor);
         assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckboxGroupImpl));
+    }
+
+    /**
+     * Test to determine if our factory retrieves the continue page processor for a question.
+     */
+    public void testRetrieveContinuePageDataProcessor() {
+        MedicalQuestion question = getContinuePageQuestion();
+        assertNotNull(question);
+
+        DataProcessorFactory factory = new DataProcessorFactory();
+        IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
+
+        assertNotNull(processor);
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorContinuePageImpl));
+    }
+
+    /**
+     * Test to determine if our factory retrieves the continue page processor for a question.
+     */
+    public void testRetrieveFormPageDataProcessor() {
+        MedicalQuestion question = getFormPageQuestion();
+        assertNotNull(question);
+
+        DataProcessorFactory factory = new DataProcessorFactory();
+        IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
+
+        assertNotNull(processor);
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorFormPageImpl));
     }
 
     public void testRadioGroupDataProcessorDecisionSuccess() {
@@ -154,7 +188,7 @@ public class DataProcessorTest extends TestCase
 
     public void testCheckboxGroupDataProcessorDecision() {
         final String[] ANSWERS_FOR_QUESTIONS  = {"1","4","16"};
-        final String DECISION_FOR_QUESTION  = "7";
+        final String DECISION_FOR_QUESTION  = "14";
 
         MedicalQuestion question = getCheckboxGroupQuestion();
         assertNotNull(question);
@@ -176,11 +210,35 @@ public class DataProcessorTest extends TestCase
         assertTrue("Correct decision has not been made.", expectedDecision);
     }
 
-    public void testConfirmPageDataProcessorDecision() {
-        final String[] ANSWERS_FOR_QUESTIONS = {"Y"};
+    public void testContinuePageDataProcessorDecision() {
+        final String[] ANSWERS_FOR_QUESTIONS = {"Y","N","MAYBE"};
         final String DECISION_FOR_QUESTION  = "5";
 
-        MedicalQuestion question = getConfirmPageQuestion();
+        MedicalQuestion question = getContinuePageQuestion();
+        assertNotNull(question);
+
+        DataProcessorFactory factory = new DataProcessorFactory();
+        IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
+
+        // Check we have no decision for now.
+        assertEquals(question.getDecision(), "");
+
+        List<String> answers = Arrays.asList(ANSWERS_FOR_QUESTIONS);
+        question.setAnswers(answers);
+
+        // Apply our data processor for this answer
+        processor.apply();
+
+        // Check a decision has now been made.
+        Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);
+        assertTrue("Correct decision has not been made.", expectedDecision);
+    }
+
+    public void testFormPageDataProcessorDecision() {
+        final String[] ANSWERS_FOR_QUESTIONS = {"Y","N","MAYBE"};
+        final String DECISION_FOR_QUESTION  = "6";
+
+        MedicalQuestion question = getFormPageQuestion();
         assertNotNull(question);
 
         DataProcessorFactory factory = new DataProcessorFactory();

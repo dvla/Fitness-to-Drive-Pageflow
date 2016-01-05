@@ -3,7 +3,7 @@ package uk.gov.dvla.f2d.web.pageflow.config;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.web.pageflow.enums.Question;
+import uk.gov.dvla.f2d.web.pageflow.enums.Page;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 
@@ -63,14 +63,14 @@ public class PageFlowCacheManagerTest extends TestCase
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
         assertNotNull(condition);
 
-        List<MedicalQuestion> questions = PageFlowCacheManager.getEligibilityQuestions(condition);
+        List<MedicalQuestion> questions = PageFlowCacheManager.getEligibilityPages(condition);
         assertNotNull(questions);
         assertTrue("No eligibility questions were found for condition", questions.size() > 0);
 
         boolean eligibilityQuestionsOnlyFound = true;
 
         for(MedicalQuestion question : questions) {
-            if(!(question.getType().equals(Question.ELIGIBILITY.toString()))) {
+            if(!(question.getType().equals(Page.ELIGIBILITY.toString()))) {
                 eligibilityQuestionsOnlyFound = false;
             }
         }
@@ -86,14 +86,14 @@ public class PageFlowCacheManagerTest extends TestCase
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
         assertNotNull(condition);
 
-        List<MedicalQuestion> questions = PageFlowCacheManager.getStandardQuestions(condition);
+        List<MedicalQuestion> questions = PageFlowCacheManager.getQuestionPages(condition);
         assertNotNull(questions);
         assertTrue("No standard questions were found for condition", questions.size() > 0);
 
         boolean standardQuestionsOnlyFound = true;
 
         for(MedicalQuestion question : questions) {
-            if(!(question.getType().equals(Question.STANDARD.toString()))) {
+            if(!(question.getType().equals(Page.QUESTION.toString()))) {
                 standardQuestionsOnlyFound = false;
             }
         }
@@ -155,8 +155,8 @@ public class PageFlowCacheManagerTest extends TestCase
         assertNotNull(question);
 
         assertEquals(QUESTION_ID, question.getID());
-        assertEquals("Standard", question.getType());
-        assertEquals(8, question.getIndex().intValue());
+        assertEquals("Question", question.getType());
+        assertEquals(9, question.getIndex().intValue());
         assertEquals("Radio", question.getFormat());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
@@ -181,12 +181,12 @@ public class PageFlowCacheManagerTest extends TestCase
         assertNotNull(question);
 
         assertEquals(QUESTION_ID, question.getID());
-        assertEquals("Standard", question.getType());
-        assertEquals(11, question.getIndex().intValue());
-        assertEquals("Checkbox", question.getFormat());
+        assertEquals("Question", question.getType());
+        assertEquals(12, question.getIndex().intValue());
+        assertEquals("Radio", question.getFormat());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
-        assertEquals("1=2, 2=3, 4=4, 8=5, 16=6, 21=7, 32=8", question.getOptions());
+        assertEquals("Y=10, N=10", question.getOptions());
 
         assertNotNull(question.getAnswers());
         assertEquals(question.getAnswers().size(), 0);
