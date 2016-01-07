@@ -195,10 +195,10 @@
           "page": "6a",
           "type": "Question",
           "index": 8,
-          "format": "Radio",
+          "format": "Continue",
           "validate": true,
           "logout": false,
-          "options": "Y=22, N=22",
+          "options": "22",
           "answers": [],
           "decision": "",
           "id": "hypoglycaemia-symptoms-info"

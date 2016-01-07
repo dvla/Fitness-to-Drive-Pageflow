@@ -30,20 +30,6 @@ public class PageFlowUITest extends TestCase
     }
 
     /**
-     * This method is used to transpose the response back into the data model.
-     * @param data - The JSON data which represents our client state
-     * @param target - The class we wish to convert the model back into.
-     * @return Object representing the data model from the response.
-     */
-    private Object hydrateObjectUsingMapper(final String data, Class target) {
-        try {
-            return new ObjectMapper().readValue(data, target);
-
-        } catch(IOException ex) {
-            throw new RuntimeException(ex);
-        }
-    }
-    /**
      * Test to see if a medical questionnaire has been loaded from resources
      */
     public void testRetrieveSupportedMedicalConditions() {
@@ -53,17 +39,20 @@ public class PageFlowUITest extends TestCase
             assertNotNull(fullData);
             assertTrue("Questionnaire was not pre-populated", fullData.length() > 0);
 
-            Object result = hydrateObjectUsingMapper(fullData, MedicalForm.class);
+            MedicalForm form = MapUtils.mapStringToModel(fullData);
 
-            assertTrue("Data structure was an unexpected type", (result instanceof MedicalForm));
+            assertNotNull(form);
 
-            Map<String, MedicalCondition> conditions = ((MedicalForm)result).getSupportedConditions();
+            Map<String, MedicalCondition> conditions = form.getSupportedConditions();
 
             assertTrue("No conditions were found in data structure", conditions.size() > 0);
             assertTrue("No questions were found in data structure", conditions.size() > 0);
 
         } catch(JsonProcessingException ex) {
             fail("A JsonProcessingException should not have been raised.");
+
+        } catch(IOException ex) {
+            fail("An IOException should not have been raised.");
         }
     }
 }
