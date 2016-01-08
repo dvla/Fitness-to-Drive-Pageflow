@@ -50,7 +50,7 @@ public class DataProcessorTest extends TestCase
      */
     private MedicalQuestion getCheckboxGroupQuestion() {
         final String DIABETES_CONDITION     = "diabetes";
-        final String TARGET_QUESTION        = "medical-consent-part-1";
+        final String TARGET_QUESTION        = "car-bike-moped";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
@@ -188,7 +188,7 @@ public class DataProcessorTest extends TestCase
 
     public void testCheckboxGroupDataProcessorDecision() {
         final String[] ANSWERS_FOR_QUESTIONS  = {"1","4","16"};
-        final String DECISION_FOR_QUESTION  = "14";
+        final String DECISION_FOR_QUESTION  = "20";
 
         MedicalQuestion question = getCheckboxGroupQuestion();
         assertNotNull(question);
