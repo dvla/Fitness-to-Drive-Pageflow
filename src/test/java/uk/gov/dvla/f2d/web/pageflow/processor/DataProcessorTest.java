@@ -60,7 +60,7 @@ public class DataProcessorTest extends TestCase
 
     private MedicalQuestion getContinuePageQuestion() {
         final String DIABETES_CONDITION     = "diabetes";
-        final String TARGET_QUESTION        = "verify-holding-page";
+        final String TARGET_QUESTION        = "hypoglycaemia-symptoms-info";
 
         MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
@@ -212,7 +212,7 @@ public class DataProcessorTest extends TestCase
 
     public void testContinuePageDataProcessorDecision() {
         final String[] ANSWERS_FOR_QUESTIONS = {"Y","N","MAYBE"};
-        final String DECISION_FOR_QUESTION  = "5";
+        final String DECISION_FOR_QUESTION  = "22";
 
         MedicalQuestion question = getContinuePageQuestion();
         assertNotNull(question);

@@ -88,7 +88,7 @@
           "type": "Radio",
           "validate": true,
           "logout": false,
-          "options": "Y=4, N=A4.1",
+          "options": "Y=5, N=A4.1",
           "answers": [],
           "decision": "",
           "id": "diabetes-with-insulin"
@@ -256,7 +256,7 @@
           "type": "Radio",
           "validate": true,
           "logout": false,
-          "options": "Y=15, N=20",
+          "options": "Y=15, N=*",
           "answers": [],
           "decision": "",
           "id": "medical-consent-part-2"
@@ -296,18 +296,6 @@
           "answers": [],
           "decision": "",
           "id": "special-controls"
-        },
-        "verify-holding-page": {
-          "step": "4",
-          "page": "Information",
-          "order": 3,
-          "type": "Continue",
-          "validate": false,
-          "logout": false,
-          "options": "5",
-          "answers": [],
-          "decision": "",
-          "id": "verify-holding-page"
         }
       },
       "id": "diabetes"
