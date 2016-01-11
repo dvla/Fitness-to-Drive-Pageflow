@@ -188,7 +188,7 @@ public class DataProcessorTest extends TestCase
 
     public void testCheckboxGroupDataProcessorDecision() {
         final String[] ANSWERS_FOR_QUESTIONS  = {"1","4","16"};
-        final String DECISION_FOR_QUESTION  = "20";
+        final String DECISION_FOR_QUESTION  = "*";
 
         MedicalQuestion question = getCheckboxGroupQuestion();
         assertNotNull(question);
@@ -196,7 +196,7 @@ public class DataProcessorTest extends TestCase
         DataProcessorFactory factory = new DataProcessorFactory();
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
-        // Check we have no decision for now.
+        // Check we have no decision for now.m
         assertEquals(question.getDecision(), "");
 
         List<String> answers = Arrays.asList(ANSWERS_FOR_QUESTIONS);

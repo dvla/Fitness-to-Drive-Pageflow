@@ -70,7 +70,7 @@ public class PageFlowCacheManagerTest extends TestCase
         boolean eligibilityQuestionsOnlyFound = true;
 
         for(MedicalQuestion question : questions) {
-            if(!(question.getType().equals(Page.ELIGIBILITY.toString()))) {
+            if(!(question.getPage().equals(Page.ELIGIBILITY.toString()))) {
                 eligibilityQuestionsOnlyFound = false;
             }
         }
@@ -93,7 +93,7 @@ public class PageFlowCacheManagerTest extends TestCase
         boolean standardQuestionsOnlyFound = true;
 
         for(MedicalQuestion question : questions) {
-            if(!(question.getType().equals(Page.QUESTION.toString()))) {
+            if(!(question.getPage().equals(Page.QUESTION.toString()))) {
                 standardQuestionsOnlyFound = false;
             }
         }
@@ -155,9 +155,10 @@ public class PageFlowCacheManagerTest extends TestCase
         assertNotNull(question);
 
         assertEquals(QUESTION_ID, question.getID());
-        assertEquals("Question", question.getType());
-        assertEquals(9, question.getIndex().intValue());
-        assertEquals("Radio", question.getFormat());
+        assertEquals("22", question.getStep());
+        assertEquals("Question", question.getPage());
+        assertEquals(8, question.getOrder().intValue());
+        assertEquals("Radio", question.getType());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
         assertEquals("Y=7, N=9", question.getOptions());
@@ -181,9 +182,10 @@ public class PageFlowCacheManagerTest extends TestCase
         assertNotNull(question);
 
         assertEquals(QUESTION_ID, question.getID());
-        assertEquals("Question", question.getType());
-        assertEquals(12, question.getIndex().intValue());
-        assertEquals("Radio", question.getFormat());
+        assertEquals("9", question.getStep());
+        assertEquals("Question", question.getPage());
+        assertEquals(11, question.getOrder().intValue());
+        assertEquals("Radio", question.getType());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
         assertEquals("Y=10, N=10", question.getOptions());

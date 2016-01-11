@@ -1,8 +1,18 @@
 {
   "messageHeader": {
-    "service": null
+    "service": null,
+    "path": null
   },
-  "personalDetails": null,
+  "personalDetails": {
+    "driverNumber": null,
+    "driverName": null,
+    "addressLine1": null,
+    "addressLine2": null,
+    "addressLine3": null,
+    "addressLine4": null,
+    "postCode": null,
+    "emailAddress": null
+  },
   "medicalCondition": null,
   "supportedConditions": {
     "diabetes": {
@@ -12,10 +22,10 @@
       "configuration": "DIABETES_NOTIFY",
       "questions": {
         "automatic-gears": {
-          "page": "17",
-          "type": "Question",
-          "index": 23,
-          "format": "Radio",
+          "step": "17",
+          "page": "Question",
+          "order": 22,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=18, N=18",
@@ -24,22 +34,22 @@
           "id": "automatic-gears"
         },
         "car-bike-moped": {
-          "page": "19",
-          "type": "Question",
-          "index": 25,
-          "format": "CheckBox",
+          "step": "19",
+          "page": "Question",
+          "order": 24,
+          "type": "CheckBox",
           "validate": true,
           "logout": false,
-          "options": "20",
+          "options": "*",
           "answers": [],
           "decision": "",
           "id": "car-bike-moped"
         },
         "change-address": {
-          "page": "A6.1",
-          "type": "Question",
-          "index": 5,
-          "format": "Form",
+          "step": "A6.1",
+          "page": "Question",
+          "order": 5,
+          "type": "Form",
           "validate": true,
           "logout": false,
           "options": "6",
@@ -48,10 +58,10 @@
           "id": "change-address"
         },
         "confirm-address": {
-          "page": "5",
-          "type": "Question",
-          "index": 4,
-          "format": "Radio",
+          "step": "5",
+          "page": "Question",
+          "order": 4,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=6, N=A6.1",
@@ -59,23 +69,11 @@
           "decision": "",
           "id": "confirm-address"
         },
-        "confirmation": {
-          "page": "21",
-          "type": "Information",
-          "index": 27,
-          "format": "Continue",
-          "validate": false,
-          "logout": true,
-          "options": "",
-          "answers": [],
-          "decision": "",
-          "id": "confirmation"
-        },
         "consultant-details": {
-          "page": "16",
-          "type": "Question",
-          "index": 22,
-          "format": "Form",
+          "step": "16",
+          "page": "Question",
+          "order": 21,
+          "type": "Form",
           "validate": true,
           "logout": false,
           "options": "17",
@@ -83,23 +81,11 @@
           "decision": "",
           "id": "consultant-details"
         },
-        "contact-details": {
-          "page": " ",
-          "type": "Question",
-          "index": 6,
-          "format": "Radio",
-          "validate": true,
-          "logout": false,
-          "options": " ",
-          "answers": [""],
-          "decision": "",
-          "id": "contact-details"
-        },
         "diabetes-with-insulin": {
-          "page": "3",
-          "type": "Eligibility",
-          "index": 1,
-          "format": "Radio",
+          "step": "3",
+          "page": "Eligibility",
+          "order": 1,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=4, N=A4.1",
@@ -108,10 +94,10 @@
           "id": "diabetes-with-insulin"
         },
         "functioning-eyes": {
-          "page": "11",
-          "type": "Question",
-          "index": 14,
-          "format": "Radio",
+          "step": "11",
+          "page": "Question",
+          "order": 13,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "1=11a, 2=11b",
@@ -120,10 +106,10 @@
           "id": "functioning-eyes"
         },
         "health-practitioner-one": {
-          "page": "12",
-          "type": "Question",
-          "index": 17,
-          "format": "Radio",
+          "step": "12",
+          "page": "Question",
+          "order": 16,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=13, N=13",
@@ -132,10 +118,10 @@
           "id": "health-practitioner-one"
         },
         "health-practitioner-two": {
-          "page": "A7.1",
-          "type": "Question",
-          "index": 18,
-          "format": "Radio",
+          "step": "A7.1",
+          "page": "Question",
+          "order": 17,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=17, N=13",
@@ -144,10 +130,10 @@
           "id": "health-practitioner-two"
         },
         "hypoglycaemia-blood-sugar": {
-          "page": "22",
-          "type": "Question",
-          "index": 9,
-          "format": "Radio",
+          "step": "22",
+          "page": "Question",
+          "order": 8,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=7, N=9",
@@ -156,10 +142,10 @@
           "id": "hypoglycaemia-blood-sugar"
         },
         "hypoglycaemia-get-symptoms": {
-          "page": "7",
-          "type": "Question",
-          "index": 10,
-          "format": "Radio",
+          "step": "7",
+          "page": "Question",
+          "order": 9,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=8, N=8",
@@ -168,10 +154,10 @@
           "id": "hypoglycaemia-get-symptoms"
         },
         "hypoglycaemia-know-symptoms": {
-          "page": "6",
-          "type": "Question",
-          "index": 7,
-          "format": "Radio",
+          "step": "6",
+          "page": "Question",
+          "order": 6,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=22, N=6a",
@@ -180,10 +166,10 @@
           "id": "hypoglycaemia-know-symptoms"
         },
         "hypoglycaemia-multiple-episodes": {
-          "page": "8",
-          "type": "Question",
-          "index": 11,
-          "format": "Radio",
+          "step": "8",
+          "page": "Question",
+          "order": 10,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=9, N=9",
@@ -192,10 +178,10 @@
           "id": "hypoglycaemia-multiple-episodes"
         },
         "hypoglycaemia-symptoms-info": {
-          "page": "6a",
-          "type": "Question",
-          "index": 8,
-          "format": "Continue",
+          "step": "6a",
+          "page": "Question",
+          "order": 7,
+          "type": "Continue",
           "validate": true,
           "logout": false,
           "options": "22",
@@ -204,10 +190,10 @@
           "id": "hypoglycaemia-symptoms-info"
         },
         "insulin-declaration": {
-          "page": "9",
-          "type": "Question",
-          "index": 12,
-          "format": "Radio",
+          "step": "9",
+          "page": "Question",
+          "order": 11,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=10, N=10",
@@ -216,10 +202,10 @@
           "id": "insulin-declaration"
         },
         "laser-treatment-one": {
-          "page": "11a",
-          "type": "Question",
-          "index": 15,
-          "format": "Radio",
+          "step": "11a",
+          "page": "Question",
+          "order": 14,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=12, N=A7.1",
@@ -228,10 +214,10 @@
           "id": "laser-treatment-one"
         },
         "laser-treatment-two": {
-          "page": "11b",
-          "type": "Question",
-          "index": 16,
-          "format": "Radio",
+          "step": "11b",
+          "page": "Question",
+          "order": 15,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=12, N=A7.1",
@@ -240,10 +226,10 @@
           "id": "laser-treatment-two"
         },
         "legal-eyesight-standard": {
-          "page": "10",
-          "type": "Question",
-          "index": 13,
-          "format": "Radio",
+          "step": "10",
+          "page": "Question",
+          "order": 12,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=11, YG=11, N=11",
@@ -252,10 +238,10 @@
           "id": "legal-eyesight-standard"
         },
         "medical-consent-part-1": {
-          "page": "13",
-          "type": "Question",
-          "index": 19,
-          "format": "Radio",
+          "step": "13",
+          "page": "Question",
+          "order": 18,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=15, N=14",
@@ -264,10 +250,10 @@
           "id": "medical-consent-part-1"
         },
         "medical-consent-part-2": {
-          "page": "14",
-          "type": "Question",
-          "index": 20,
-          "format": "Radio",
+          "step": "14",
+          "page": "Question",
+          "order": 19,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=15, N=20",
@@ -276,10 +262,10 @@
           "id": "medical-consent-part-2"
         },
         "medical-practitioner": {
-          "page": "15",
-          "type": "Question",
-          "index": 21,
-          "format": "Radio",
+          "step": "15",
+          "page": "Question",
+          "order": 20,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "G=16, GN=16, C=16, NS=16",
@@ -288,10 +274,10 @@
           "id": "medical-practitioner"
         },
         "non-notifiable-condition": {
-          "page": "A4.1",
-          "type": "Information",
-          "index": 2,
-          "format": "Continue",
+          "step": "A4.1",
+          "page": "Information",
+          "order": 2,
+          "type": "Continue",
           "validate": false,
           "logout": true,
           "options": "",
@@ -300,34 +286,22 @@
           "id": "non-notifiable-condition"
         },
         "special-controls": {
-          "page": "18",
-          "type": "Question",
-          "index": 24,
-          "format": "Radio",
+          "step": "18",
+          "page": "Question",
+          "order": 23,
+          "type": "Radio",
           "validate": true,
           "logout": false,
-          "options": "Y=19, N=20",
+          "options": "Y=19, N=*",
           "answers": [],
           "decision": "",
           "id": "special-controls"
         },
-        "summary": {
-          "page": "20",
-          "type": "Summary",
-          "index": 26,
-          "format": "Continue",
-          "validate": true,
-          "logout": false,
-          "options": "Y=21",
-          "answers": [],
-          "decision": "",
-          "id": "summary"
-        },
         "verify-holding-page": {
-          "page": "4",
-          "type": "Information",
-          "index": 3,
-          "format": "Continue",
+          "step": "4",
+          "page": "Information",
+          "order": 3,
+          "type": "Continue",
           "validate": false,
           "logout": false,
           "options": "5",
@@ -345,10 +319,10 @@
       "configuration": "GLAUCOMA_NOTIFY",
       "questions": {
         "diabetes-with-insulin": {
-          "page": "3",
-          "type": "Eligibility",
-          "index": 1,
-          "format": "Radio",
+          "step": "3",
+          "page": "Eligibility",
+          "order": 1,
+          "type": "Radio",
           "validate": true,
           "logout": false,
           "options": "Y=5, N=A4.1",

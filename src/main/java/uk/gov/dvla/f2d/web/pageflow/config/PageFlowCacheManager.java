@@ -43,10 +43,10 @@ public class PageFlowCacheManager
      * @param type - The type of questions we are interesting on retrieving.
      * @return List - questions found for this condition.
      */
-    private static List<MedicalQuestion> getQuestionsByType(MedicalCondition condition, Page type) {
+    private static List<MedicalQuestion> getQuestionsByType(MedicalCondition condition, Page page) {
         List<MedicalQuestion> questions = new ArrayList<>();
         questions.addAll(condition.getQuestions().values().stream().filter(
-                question -> question.getType().equalsIgnoreCase(type.toString())).collect(Collectors.toList())
+                question -> question.getPage().equalsIgnoreCase(page.toString())).collect(Collectors.toList())
         );
         return questions;
     }
