@@ -34,12 +34,12 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 
         // Check that an answer was supplied for this question.
         if(answer == null || answer.trim().length() == 0) {
-            throw new PageValidationException("No answer was supplied for this question.");
+            throw new PageValidationException("NoAnswerProvided", "No answer was supplied for this question.");
         }
 
         // Check that the answer supplied was a valid response.
         if(!keys.contains(answer)) {
-            throw new PageValidationException("The answer '"+answer+" was not a valid option.");
+            throw new PageValidationException("InvalidOption","The answer '"+answer+" was not a valid option.");
         }
     }
 }
