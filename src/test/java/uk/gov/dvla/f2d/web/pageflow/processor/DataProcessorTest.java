@@ -4,6 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.exceptions.PageValidationException;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.processor.impl.*;
@@ -153,7 +154,12 @@ public class DataProcessorTest extends TestCase
         question.setAnswers(answers);
 
         // Apply our data processor for this answer
-        processor.apply();
+        try {
+            processor.apply();
+
+        } catch(PageValidationException ex) {
+            fail("A PageValidationException should not have been raised!");
+        }
 
         // Check a decision has now been made.
         Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);
@@ -179,7 +185,12 @@ public class DataProcessorTest extends TestCase
         question.setAnswers(answers);
 
         // Apply our data processor for this answer
-        processor.apply();
+        try {
+            processor.apply();
+
+        } catch(PageValidationException ex) {
+            fail("A PageValidationException should not have been raised!");
+        }
 
         // Check a decision has now been made.
         Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);
@@ -203,7 +214,12 @@ public class DataProcessorTest extends TestCase
         question.setAnswers(answers);
 
         // Apply our data processor for this answer
-        processor.apply();
+        try {
+            processor.apply();
+
+        } catch(PageValidationException ex) {
+            fail("A PageValidationException should not have been raised!");
+        }
 
         // Check a decision has now been made.
         Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);
@@ -227,7 +243,12 @@ public class DataProcessorTest extends TestCase
         question.setAnswers(answers);
 
         // Apply our data processor for this answer
-        processor.apply();
+        try {
+            processor.apply();
+
+        } catch(PageValidationException ex) {
+            fail("A PageValidationException should not have been raised!");
+        }
 
         // Check a decision has now been made.
         Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);
@@ -251,7 +272,12 @@ public class DataProcessorTest extends TestCase
         question.setAnswers(answers);
 
         // Apply our data processor for this answer
-        processor.apply();
+        try {
+            processor.apply();
+
+        } catch(PageValidationException ex) {
+            fail("A PageValidationException should not have been raised!");
+        }
 
         // Check a decision has now been made.
         Boolean expectedDecision = question.getDecision().equals(DECISION_FOR_QUESTION);

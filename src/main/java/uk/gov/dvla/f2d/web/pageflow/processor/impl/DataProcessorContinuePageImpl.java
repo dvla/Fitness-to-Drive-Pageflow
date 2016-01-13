@@ -1,5 +1,6 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
+import uk.gov.dvla.f2d.web.pageflow.exceptions.PageValidationException;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 
 public class DataProcessorContinuePageImpl implements IDataQuestionProcessor
@@ -11,7 +12,7 @@ public class DataProcessorContinuePageImpl implements IDataQuestionProcessor
     }
 
     @Override
-    public void apply() {
+    public void apply() throws PageValidationException {
         question.setDecision(question.getOptions().trim());
     }
 }
