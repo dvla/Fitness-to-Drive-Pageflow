@@ -25,7 +25,7 @@
         "automatic-gears": {
           "step": "17",
           "page": "Question",
-          "order": 22,
+          "order": 23,
           "type": "Radio",
           "validate": true,
           "logout": false,
@@ -37,7 +37,7 @@
         "car-bike-moped": {
           "step": "19",
           "page": "Question",
-          "order": 24,
+          "order": 25,
           "type": "CheckBox",
           "validate": true,
           "logout": false,
@@ -71,9 +71,9 @@
           "id": "confirm-address"
         },
         "consultant-details": {
-          "step": "16",
+          "step": "16a",
           "page": "Question",
-          "order": 21,
+          "order": 22,
           "type": "Form",
           "validate": true,
           "logout": false,
@@ -106,7 +106,19 @@
           "decision": "",
           "id": "functioning-eyes"
         },
-        "health-practitioner-one": {
+        "gp-details": {
+          "step": "16",
+          "page": "Question",
+          "order": 21,
+          "type": "Form",
+          "validate": true,
+          "logout": false,
+          "options": "17",
+          "answers": [],
+          "decision": "",
+          "id": "gp-details"
+        },
+        "healthcare-practitioner-one": {
           "step": "12",
           "page": "Question",
           "order": 16,
@@ -116,9 +128,9 @@
           "options": "Y=13, N=13",
           "answers": [],
           "decision": "",
-          "id": "health-practitioner-one"
+          "id": "healthcare-practitioner-one"
         },
-        "health-practitioner-two": {
+        "healthcare-practitioner-two": {
           "step": "A7.1",
           "page": "Question",
           "order": 17,
@@ -128,7 +140,7 @@
           "options": "Y=17, N=13",
           "answers": [],
           "decision": "",
-          "id": "health-practitioner-two"
+          "id": "healthcare-practitioner-two"
         },
         "hypoglycaemia-blood-sugar": {
           "step": "22",
@@ -238,7 +250,7 @@
           "decision": "",
           "id": "legal-eyesight-standard"
         },
-        "medical-consent-part-1": {
+        "medical-consent-one": {
           "step": "13",
           "page": "Question",
           "order": 18,
@@ -248,9 +260,9 @@
           "options": "Y=15, N=14",
           "answers": [],
           "decision": "",
-          "id": "medical-consent-part-1"
+          "id": "medical-consent-one"
         },
-        "medical-consent-part-2": {
+        "medical-consent-two": {
           "step": "14",
           "page": "Question",
           "order": 19,
@@ -260,7 +272,7 @@
           "options": "Y=15, N=*",
           "answers": [],
           "decision": "",
-          "id": "medical-consent-part-2"
+          "id": "medical-consent-two"
         },
         "medical-practitioner": {
           "step": "15",
@@ -269,7 +281,7 @@
           "type": "Radio",
           "validate": true,
           "logout": false,
-          "options": "G=16, GN=16, C=16, NS=16",
+          "options": "G=16, GN=16, C=16a, NS=16a",
           "answers": [],
           "decision": "",
           "id": "medical-practitioner"
@@ -289,7 +301,7 @@
         "special-controls": {
           "step": "18",
           "page": "Question",
-          "order": 23,
+          "order": 24,
           "type": "Radio",
           "validate": true,
           "logout": false,
