@@ -1,8 +1,8 @@
 {
   "messageHeader": {
     "service": null,
-    "path": null,
-    "notification": null
+    "notification": null,
+    "path": []
   },
   "personalDetails": {
     "driverNumber": null,
@@ -20,7 +20,7 @@
       "displayText": "Diabetes",
       "spellings": "diab1 diabetes daibetes dibetes dyabetes diabbetes",
       "informationLink": "diabetes-help-page",
-      "configuration": "DIABETES_NOTIFY",
+      "configuration": "DIABETES",
       "questions": {
         "automatic-gears": {
           "step": "17",
@@ -32,6 +32,7 @@
           "options": "Y=18, N=18",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "automatic-gears"
         },
         "car-bike-moped": {
@@ -44,6 +45,7 @@
           "options": "*",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "car-bike-moped"
         },
         "change-address": {
@@ -56,6 +58,7 @@
           "options": "6",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "change-address"
         },
         "confirm-address": {
@@ -68,6 +71,7 @@
           "options": "Y=6, N=A6.1",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "confirm-address"
         },
         "consultant-details": {
@@ -80,6 +84,7 @@
           "options": "17",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "consultant-details"
         },
         "diabetes-with-insulin": {
@@ -92,6 +97,7 @@
           "options": "Y=5, N=A4.1",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "diabetes-with-insulin"
         },
         "functioning-eyes": {
@@ -104,6 +110,7 @@
           "options": "1=11a, 2=11b",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "functioning-eyes"
         },
         "gp-details": {
@@ -116,6 +123,7 @@
           "options": "17",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "gp-details"
         },
         "healthcare-practitioner-one": {
@@ -128,6 +136,7 @@
           "options": "Y=13, N=13",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "healthcare-practitioner-one"
         },
         "healthcare-practitioner-two": {
@@ -140,6 +149,7 @@
           "options": "Y=17, N=13",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "healthcare-practitioner-two"
         },
         "hypoglycaemia-blood-sugar": {
@@ -152,6 +162,7 @@
           "options": "Y=7, N=9",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "hypoglycaemia-blood-sugar"
         },
         "hypoglycaemia-get-symptoms": {
@@ -164,6 +175,7 @@
           "options": "Y=8, N=8",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "hypoglycaemia-get-symptoms"
         },
         "hypoglycaemia-know-symptoms": {
@@ -176,6 +188,7 @@
           "options": "Y=22, N=6a",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "hypoglycaemia-know-symptoms"
         },
         "hypoglycaemia-multiple-episodes": {
@@ -188,6 +201,7 @@
           "options": "Y=9, N=9",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "hypoglycaemia-multiple-episodes"
         },
         "hypoglycaemia-symptoms-info": {
@@ -200,6 +214,7 @@
           "options": "22",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "hypoglycaemia-symptoms-info"
         },
         "insulin-declaration": {
@@ -212,6 +227,7 @@
           "options": "Y=10, N=10",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "insulin-declaration"
         },
         "laser-treatment-one": {
@@ -224,6 +240,7 @@
           "options": "Y=12, N=A7.1",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "laser-treatment-one"
         },
         "laser-treatment-two": {
@@ -236,6 +253,7 @@
           "options": "Y=12, N=A7.1",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "laser-treatment-two"
         },
         "legal-eyesight-standard": {
@@ -248,6 +266,7 @@
           "options": "Y=11, YG=11, N=11",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "legal-eyesight-standard"
         },
         "medical-consent-one": {
@@ -260,6 +279,7 @@
           "options": "Y=15, N=14",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "medical-consent-one"
         },
         "medical-consent-two": {
@@ -272,6 +292,7 @@
           "options": "Y=15, N=*",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "medical-consent-two"
         },
         "medical-practitioner": {
@@ -284,6 +305,7 @@
           "options": "G=16, GN=16, C=16a, NS=16a",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "medical-practitioner"
         },
         "non-notifiable-condition": {
@@ -296,6 +318,7 @@
           "options": "",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "non-notifiable-condition"
         },
         "special-controls": {
@@ -308,6 +331,7 @@
           "options": "Y=19, N=*",
           "answers": [],
           "decision": "",
+          "text": "",
           "id": "special-controls"
         }
       },
@@ -317,9 +341,9 @@
       "displayText": "Glaucoma",
       "spellings": "glaucoma gluacoma glycoma glucoma gluecoma",
       "informationLink": "glaucoma-help-page",
-      "configuration": "GLAUCOMA_NOTIFY",
+      "configuration": "GLAUCOMA",
       "questions": {
-        "diabetes-with-insulin": {
+        "glaucoma-start": {
           "step": "3",
           "page": "Eligibility",
           "order": 1,
@@ -329,7 +353,8 @@
           "options": "Y=5, N=A4.1",
           "answers": [],
           "decision": "",
-          "id": "diabetes-with-insulin"
+          "text": "",
+          "id": "glaucoma-start"
         }
       },
       "id": "glaucoma"

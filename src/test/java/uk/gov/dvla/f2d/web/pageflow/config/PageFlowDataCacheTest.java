@@ -4,6 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class PageFlowDataCacheTest extends TestCase
 {
@@ -27,7 +28,7 @@ public class PageFlowDataCacheTest extends TestCase
      * Test to see if a medical questionnaire has been loaded from resources
      */
     public void testMedicalFormLoadedFromLocalResource() {
-        MedicalForm medical = PageFlowDataCache.getMedicalForm();
+        MedicalForm medical = PageFlowDataCache.getMedicalForm(NOTIFY_SERVICE);
         assertNotNull(medical);
     }
 }

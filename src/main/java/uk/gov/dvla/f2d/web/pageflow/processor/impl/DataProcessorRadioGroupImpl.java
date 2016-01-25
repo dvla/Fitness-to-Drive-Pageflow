@@ -8,6 +8,9 @@ import java.util.List;
 
 public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 {
+    private static final String COMMA_SYMBOL        = ",";
+    private static final String EQUALS_SYMBOL       = "=";
+
     private MedicalQuestion question;
 
     DataProcessorRadioGroupImpl(MedicalQuestion newQuestion) {
@@ -16,14 +19,18 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 
     @Override
     public void apply() throws PageValidationException {
-        final String[] options = question.getOptions().trim().split(",");
-        final String answer = question.getAnswers().get(0).trim();
+        final String[] options = question.getOptions().trim().split(COMMA_SYMBOL);
+
+        String answer = "";
+        if(!(question.getAnswers().isEmpty())) {
+            answer = question.getAnswers().get(0).trim();
+        }
 
         List<String> keys = new ArrayList<>();
 
         for(String option : options) {
-            String key = option.split("=")[0].trim();
-            String value = option.split("=")[1].trim();
+            String key = option.split(EQUALS_SYMBOL)[0].trim();
+            String value = option.split(EQUALS_SYMBOL)[1].trim();
 
             if(key.equalsIgnoreCase(answer)) {
                 question.setDecision(value);

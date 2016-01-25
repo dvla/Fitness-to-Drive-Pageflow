@@ -26,7 +26,7 @@ public final class DataProcessorFactory
             processor = new DataProcessorContinuePageImpl(question);
 
         } else {
-            throw new RuntimeException("Data processor is not supported!");
+            throw new IllegalArgumentException("Data processor is not supported!");
         }
 
         return processor;

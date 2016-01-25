@@ -5,9 +5,11 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.web.pageflow.enums.Page;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
+import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 
 import java.util.*;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 /**
  * Unit test for simple App.
@@ -36,7 +38,8 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if all medical conditions have been loaded
      */
     public void testAllMedicalConditionsLoaded() {
-        assertEquals(PageFlowCacheManager.getSupportedConditions().size(), 2);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        assertEquals(form.getSupportedConditions().size(), 2);
     }
 
     /**
@@ -47,7 +50,9 @@ public class PageFlowCacheManagerTest extends TestCase
                 "Diabetes","Glaucoma"
         };
 
-        Map<String, MedicalCondition> supported = PageFlowCacheManager.getSupportedConditions();
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        Map<String, MedicalCondition> supported = form.getSupportedConditions();
+
         assertEquals(supported.size(), supportedConditions.length);
 
         for(MedicalCondition condition : supported.values()) {
@@ -60,10 +65,13 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if only eligibility questions are returned for a condition
      */
     public void testEligibilityQuestionsOnly() {
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION_ID);
+
         assertNotNull(condition);
 
         List<MedicalQuestion> questions = PageFlowCacheManager.getEligibilityPages(condition);
+
         assertNotNull(questions);
         assertTrue("No eligibility questions were found for condition", questions.size() > 0);
 
@@ -83,10 +91,13 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if only eligibility questions are returned for a condition
      */
     public void testStandardQuestionsOnly() {
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION_ID);
+
         assertNotNull(condition);
 
         List<MedicalQuestion> questions = PageFlowCacheManager.getQuestionPages(condition);
+
         assertNotNull(questions);
         assertTrue("No standard questions were found for condition", questions.size() > 0);
 
@@ -105,7 +116,9 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to ascertain if we can find a medical condition by it's identifier.
      */
     public void testFindConditionByIdentifier() {
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION_ID);
+
         assertNotNull(condition);
 
         assertEquals("Diabetes", condition.getDisplayText());
@@ -117,7 +130,9 @@ public class PageFlowCacheManagerTest extends TestCase
     public void testFindConditionAndQuestionByIdentifiers() {
         final String QUESTION_ID = "hypoglycaemia-blood-sugar";
 
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION_ID);
+
         assertNotNull(condition);
 
         MedicalQuestion question = PageFlowCacheManager.getQuestionByConditionAndID(condition, QUESTION_ID);
@@ -130,14 +145,16 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to determine that all parameters are properly populated.
      */
     public void testAllMedicalConditionParametersPopulated() {
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION_ID);
+
         assertNotNull(condition);
 
         assertEquals(DIABETES_CONDITION_ID, condition.getID());
         assertEquals("Diabetes", condition.getDisplayText());
         assertEquals("diab1 diabetes daibetes dibetes dyabetes diabbetes", condition.getSpellings());
         assertEquals("diabetes-help-page", condition.getInformationLink());
-        assertEquals("DIABETES_NOTIFY", condition.getConfiguration());
+        assertEquals("DIABETES", condition.getConfiguration());
 
         assertNotNull(condition.toString());
     }
@@ -148,7 +165,8 @@ public class PageFlowCacheManagerTest extends TestCase
     public void testAllMedicalQuestionParametersPopulated() {
         final String QUESTION_ID = "hypoglycaemia-blood-sugar";
 
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION_ID);
         assertNotNull(condition);
 
         MedicalQuestion question = condition.getQuestions().get(QUESTION_ID);
@@ -175,7 +193,8 @@ public class PageFlowCacheManagerTest extends TestCase
     public void testMedicalQuestionDefaultAnswersSupplied() {
         final String QUESTION_ID = "insulin-declaration";
 
-        MedicalCondition condition = PageFlowCacheManager.getConditionByID(DIABETES_CONDITION_ID);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION_ID);
         assertNotNull(condition);
 
         MedicalQuestion question = condition.getQuestions().get(QUESTION_ID);

@@ -1,49 +1,52 @@
 package uk.gov.dvla.f2d.web.pageflow.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
 
 import java.io.IOException;
 import java.util.Map;
 
-public class PageFlowUITest extends TestCase
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
+
+public class MapUtilsTest extends TestCase
 {
     /**
      * Create the test case
-     *
      * @param testName name of the test case
      */
-    public PageFlowUITest(String testName ) {
-        super( testName );
+    public MapUtilsTest(String testName ) {
+        super(testName);
     }
 
     /**
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite( PageFlowUITest.class );
+        return new TestSuite(MapUtilsTest.class);
     }
 
     /**
      * Test to see if a medical questionnaire has been loaded from resources
      */
-    public void testRetrieveSupportedMedicalConditions() {
+    public void testRetrieveSupportedMedicalConditionsForNotifyService() {
         try {
-            final String fullData = PageFlowUI.getMedicalForm();
+            MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+
+            final String fullData = MapUtils.mapModelToString(form);
 
             assertNotNull(fullData);
             assertTrue("Questionnaire was not pre-populated", fullData.length() > 0);
 
-            MedicalForm form = MapUtils.mapStringToModel(fullData);
+            MedicalForm newForm = MapUtils.mapStringToModel(fullData);
 
-            assertNotNull(form);
+            assertNotNull(newForm);
 
-            Map<String, MedicalCondition> conditions = form.getSupportedConditions();
+            Map<String, MedicalCondition> conditions = newForm.getSupportedConditions();
 
             assertTrue("No conditions were found in data structure", conditions.size() > 0);
             assertTrue("No questions were found in data structure", conditions.size() > 0);
