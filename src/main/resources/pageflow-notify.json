@@ -1,8 +1,9 @@
 {
   "messageHeader": {
     "service": null,
-    "notification": null,
-    "path": []
+    "language": null,
+    "notifications": [],
+    "breadcrumb": []
   },
   "personalDetails": {
     "driverNumber": null,
