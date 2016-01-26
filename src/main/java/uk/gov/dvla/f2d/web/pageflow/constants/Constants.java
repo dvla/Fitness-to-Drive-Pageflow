@@ -7,4 +7,8 @@ public class Constants
     };
 
     public static final String NOTIFY_SERVICE = SUPPORTED_SERVICES[0];
+
+    /**
+     * These are error/notification level constants used for validation.
+     */
 }
