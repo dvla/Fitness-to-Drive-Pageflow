@@ -1,33 +1,385 @@
 {
   "questions": {
-    "diabetes-with-insulin": {
+    "automatic-gears": {
       "options": {
-        "Y": {
-          "answers": {
-            "en": "YES, this is the ENGLISH answer to your diabetes with insulin",
-            "cy": "YES, this is the WELSH answer to your diabetes with insulin"
-          }
-        },
         "N": {
           "answers": {
-            "en": "NO, this is the ENGLISH answer to your diabetes with insulin",
-            "cy": "NO, this is the WELSH answer to your diabetes with insulin"
+            "cy": "NO, your WELSH answer to [automatic-gears]",
+            "en": "NO, your ENGLISH answer to [automatic-gears]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [automatic-gears]",
+            "en": "YES, your ENGLISH answer to [automatic-gears]"
+          }
+        }
+      }
+    },
+    "car-bike-moped": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [car-bike-moped]",
+            "en": "NO, your ENGLISH answer to [car-bike-moped]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [car-bike-moped]",
+            "en": "YES, your ENGLISH answer to [car-bike-moped]"
+          }
+        }
+      }
+    },
+    "change-address": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [change-address]",
+            "en": "NO, your ENGLISH answer to [change-address]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [change-address]",
+            "en": "YES, your ENGLISH answer to [change-address]"
+          }
+        }
+      }
+    },
+    "confirm-address": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [confirm-address]",
+            "en": "NO, your ENGLISH answer to [confirm-address]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [confirm-address]",
+            "en": "YES, your ENGLISH answer to [confirm-address]"
+          }
+        }
+      }
+    },
+    "consultant-details": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [consultant-details]",
+            "en": "NO, your ENGLISH answer to [consultant-details]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [consultant-details]",
+            "en": "YES, your ENGLISH answer to [consultant-details]"
+          }
+        }
+      }
+    },
+    "diabetes-with-insulin": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "You do not treat your diabetes with insulin (Welsh)",
+            "en": "You do not treat your diabetes with insulin"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "You treat your diabetes with insulin (Welsh)",
+            "en": "You treat your diabetes with insulin"
+          }
+        }
+      }
+    },
+    "functioning-eyes": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [functioning-eyes]",
+            "en": "NO, your ENGLISH answer to [functioning-eyes]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [functioning-eyes]",
+            "en": "YES, your ENGLISH answer to [functioning-eyes]"
+          }
+        }
+      }
+    },
+    "gp-details": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [gp-details]",
+            "en": "NO, your ENGLISH answer to [gp-details]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [gp-details]",
+            "en": "YES, your ENGLISH answer to [gp-details]"
+          }
+        }
+      }
+    },
+    "healthcare-practitioner-one": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [healthcare-practitioner-one]",
+            "en": "NO, your ENGLISH answer to [healthcare-practitioner-one]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [healthcare-practitioner-one]",
+            "en": "YES, your ENGLISH answer to [healthcare-practitioner-one]"
+          }
+        }
+      }
+    },
+    "healthcare-practitioner-two": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [healthcare-practitioner-two]",
+            "en": "NO, your ENGLISH answer to [healthcare-practitioner-two]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [healthcare-practitioner-two]",
+            "en": "YES, your ENGLISH answer to [healthcare-practitioner-two]"
+          }
+        }
+      }
+    },
+    "hypoglycaemia-blood-sugar": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [hypoglycaemia-blood-sugar]",
+            "en": "NO, your ENGLISH answer to [hypoglycaemia-blood-sugar]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [hypoglycaemia-blood-sugar]",
+            "en": "YES, your ENGLISH answer to [hypoglycaemia-blood-sugar]"
+          }
+        }
+      }
+    },
+    "hypoglycaemia-get-symptoms": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [hypoglycaemia-get-symptoms]",
+            "en": "NO, your ENGLISH answer to [hypoglycaemia-get-symptoms]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [hypoglycaemia-get-symptoms]",
+            "en": "YES, your ENGLISH answer to [hypoglycaemia-get-symptoms]"
+          }
+        }
+      }
+    },
+    "hypoglycaemia-know-symptoms": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "You do not know what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
+            "en": "You do not know what the symptoms of low blood sugar (hypoglycaemia) are"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "You know what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
+            "en": "You know what the symptoms of low blood sugar (hypoglycaemia) are"
+          }
+        }
+      }
+    },
+    "hypoglycaemia-multiple-episodes": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [hypoglycaemia-multiple-episodes]",
+            "en": "NO, your ENGLISH answer to [hypoglycaemia-multiple-episodes]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [hypoglycaemia-multiple-episodes]",
+            "en": "YES, your ENGLISH answer to [hypoglycaemia-multiple-episodes]"
+          }
+        }
+      }
+    },
+    "hypoglycaemia-symptoms-info": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [hypoglycaemia-symptoms-info]",
+            "en": "NO, your ENGLISH answer to [hypoglycaemia-symptoms-info]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [hypoglycaemia-symptoms-info]",
+            "en": "YES, your ENGLISH answer to [hypoglycaemia-symptoms-info]"
+          }
+        }
+      }
+    },
+    "insulin-declaration": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [insulin-declaration]",
+            "en": "NO, your ENGLISH answer to [insulin-declaration]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [insulin-declaration]",
+            "en": "YES, your ENGLISH answer to [insulin-declaration]"
+          }
+        }
+      }
+    },
+    "laser-treatment-one": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [laser-treatment-one]",
+            "en": "NO, your ENGLISH answer to [laser-treatment-one]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [laser-treatment-one]",
+            "en": "YES, your ENGLISH answer to [laser-treatment-one]"
+          }
+        }
+      }
+    },
+    "laser-treatment-two": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [laser-treatment-two]",
+            "en": "NO, your ENGLISH answer to [laser-treatment-two]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [laser-treatment-two]",
+            "en": "YES, your ENGLISH answer to [laser-treatment-two]"
           }
         }
       }
     },
     "legal-eyesight-standard": {
       "options": {
-        "Y": {
-          "answers": {
-            "en": "YES, this is the ENGLISH answer to your diabetes with insulin",
-            "cy": "YES, this is the WELSH answer to your diabetes with insulin"
-          }
-        },
         "N": {
           "answers": {
-            "en": "NO, this is the ENGLISH answer to your diabetes with insulin",
-            "cy": "NO, this is the WELSH answer to your diabetes with insulin"
+            "cy": "NO, your WELSH answer to [legal-eyesight-standard]",
+            "en": "NO, your ENGLISH answer to [legal-eyesight-standard]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [legal-eyesight-standard]",
+            "en": "YES, your ENGLISH answer to [legal-eyesight-standard]"
+          }
+        }
+      }
+    },
+    "medical-consent-one": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [medical-consent-one]",
+            "en": "NO, your ENGLISH answer to [medical-consent-one]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [medical-consent-one]",
+            "en": "YES, your ENGLISH answer to [medical-consent-one]"
+          }
+        }
+      }
+    },
+    "medical-consent-two": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [medical-consent-two]",
+            "en": "NO, your ENGLISH answer to [medical-consent-two]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [medical-consent-two]",
+            "en": "YES, your ENGLISH answer to [medical-consent-two]"
+          }
+        }
+      }
+    },
+    "medical-practitioner": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [medical-practitioner]",
+            "en": "NO, your ENGLISH answer to [medical-practitioner]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [medical-practitioner]",
+            "en": "YES, your ENGLISH answer to [medical-practitioner]"
+          }
+        }
+      }
+    },
+    "non-notifiable-condition": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [non-notifiable-condition]",
+            "en": "NO, your ENGLISH answer to [non-notifiable-condition]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [non-notifiable-condition]",
+            "en": "YES, your ENGLISH answer to [non-notifiable-condition]"
+          }
+        }
+      }
+    },
+    "special-controls": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "NO, your WELSH answer to [special-controls]",
+            "en": "NO, your ENGLISH answer to [special-controls]"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "YES, your WELSH answer to [special-controls]",
+            "en": "YES, your ENGLISH answer to [special-controls]"
           }
         }
       }

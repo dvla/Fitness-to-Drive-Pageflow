@@ -1,14 +1,19 @@
 package uk.gov.dvla.f2d.web.pageflow.summary;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
+import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
+import uk.gov.dvla.f2d.web.pageflow.model.MessageHeader;
 import uk.gov.dvla.f2d.web.pageflow.utils.ServiceUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.HYPHEN_SYMBOL;
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.JSON_SUFFIX;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class SummaryAggregator
 {
@@ -25,7 +30,7 @@ public class SummaryAggregator
         return instance;
     }
 
-    public Summary aggregate(MedicalForm form) {
+    private Summary aggregate(MedicalForm form) {
         // Check to see if the quested service is supported?
         ServiceUtils.checkServiceSupported(form.getMessageHeader().getService());
 
@@ -44,5 +49,73 @@ public class SummaryAggregator
         } catch(IOException ex) {
             throw new IllegalArgumentException(ex);
         }
+    }
+
+    public List<String> process(MedicalForm form) {
+        List<String> response = new ArrayList<>();
+
+        Summary summary = aggregate(form);
+
+        MessageHeader header = form.getMessageHeader();
+        MedicalCondition condition = form.getMedicalCondition();
+
+        Map<String, MedicalQuestion> questions = condition.getQuestions();
+        for(String key : questions.keySet()) {
+            MedicalQuestion question = questions.get(key);
+
+            if(question.getType().equals(RADIO)) {
+                response.addAll(processRadio(summary, header, question));
+
+            } else if(question.getType().equals(CHECKBOX)) {
+                response.addAll(processCheckBox(summary, header, question));
+
+            } else if(question.getType().equals(FORM)) {
+                response.addAll(processForm(summary, header, question));
+
+            } else if(question.getType().equals(CONTINUE)) {
+                response.addAll(processContinue(summary, header, question));
+
+            } else {
+                throw new IllegalArgumentException("Question type is not supported: "+question.getType());
+            }
+        }
+
+        return response;
+    }
+
+    private List<String> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {
+        List<String> response = new ArrayList<>();
+        if(summary.getQuestions().containsKey(question.getID())) {
+            if(!(question.getAnswers().isEmpty())) {
+                Option option = summary.getQuestions().get(question.getID());
+                Answer answer = option.getOptions().get(question.getAnswers().get(0));
+                response.add(answer.getAnswers().get(header.getLanguage()));
+            }
+        }
+        return response;
+    }
+
+    private List<String> processCheckBox(Summary summary, MessageHeader header, MedicalQuestion question) {
+        List<String> response = new ArrayList<>();
+        if(summary.getQuestions().containsKey(question.getID())) {
+            if(!(question.getAnswers().isEmpty())) {
+                for(String value : question.getAnswers()) {
+                    Option option = summary.getQuestions().get(question.getID());
+                    Answer answer = option.getOptions().get(value);
+                    response.add(answer.getAnswers().get(header.getLanguage()));
+                }
+            }
+        }
+        return response;
+    }
+
+    private List<String> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
+        List<String> response = new ArrayList<>();
+        return response;
+    }
+
+    private List<String> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
+        List<String> response = new ArrayList<>();
+        return response;
     }
 }

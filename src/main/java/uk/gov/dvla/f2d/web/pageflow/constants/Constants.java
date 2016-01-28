@@ -18,6 +18,14 @@ public class Constants
     public static final String JSON_SUFFIX         = ".json";
 
     /**
+     * Process the data model types required for validation and aggregation.
+     */
+    public static final String RADIO               = "Radio";
+    public static final String CHECKBOX            = "CheckBox";
+    public static final String FORM                = "Form";
+    public static final String CONTINUE            = "Continue";
+
+    /**
      * These are error/notification level constants used for validation.
      */
     public static final String EMPTY_STRING        = "";
