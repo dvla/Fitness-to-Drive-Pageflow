@@ -68,8 +68,8 @@ public class SummaryAggregatorTest extends TestCase
         assertFalse(response.isEmpty());
         assertTrue(response.size() == 2);
 
-        assertEquals(response.get(0), "YES, this is the ENGLISH answer to your diabetes with insulin");
-        assertEquals(response.get(1), "NO, this is the ENGLISH answer to your legal eyesight standard");
+        assertEquals(response.get(0), "You treat your diabetes with insulin");
+        assertEquals(response.get(1), "NO, your ENGLISH answer to [legal-eyesight-standard]");
     }
 
     /**
@@ -102,8 +102,8 @@ public class SummaryAggregatorTest extends TestCase
         assertFalse(response.isEmpty());
         assertTrue(response.size() == 2);
 
-        assertEquals(response.get(0), "YES, this is the ENGLISH answer to your diabetes with insulin");
-        assertEquals(response.get(1), "NO, this is the ENGLISH answer to your legal eyesight standard");
+        assertEquals(response.get(0), "You treat your diabetes with insulin");
+        assertEquals(response.get(1), "NO, your ENGLISH answer to [legal-eyesight-standard]");
     }
 
     /**
@@ -136,39 +136,7 @@ public class SummaryAggregatorTest extends TestCase
         assertFalse(response.isEmpty());
         assertTrue(response.size() == 2);
 
-        assertEquals(response.get(0), "NO, this is the WELSH answer to your diabetes with insulin");
-        assertEquals(response.get(1), "YES, this is the WELSH answer to your legal eyesight standard");
-    }
-
-    /**
-     * Test the summary for (Notify -> Diabetes -> English).
-     */
-    public void testNotifyForDiabetesAllYesAnswersInEnglish() {
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
-        assertNotNull(form);
-
-        form.getMessageHeader().setLanguage(ENGLISH_LANGUAGE);
-
-        assertEquals(NOTIFY_SERVICE, form.getMessageHeader().getService());
-        assertEquals(ENGLISH_LANGUAGE, form.getMessageHeader().getLanguage());
-
-        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
-        assertNotNull(condition);
-
-        form.setMedicalCondition(condition);
-
-        SummaryAggregator aggregator = SummaryAggregator.getInstance();
-        assertNotNull(aggregator);
-
-        for(MedicalQuestion question : form.getMedicalCondition().getQuestions().values()) {
-            question.setAnswers(Arrays.asList(new String[]{YES_ANSWER}));
-        }
-
-        List<String> response = aggregator.process(form);
-        assertFalse(response.isEmpty());
-        assertTrue(response.size() == 2);
-
-        assertEquals(response.get(0), "NO, this is the WELSH answer to your diabetes with insulin");
-        assertEquals(response.get(1), "YES, this is the WELSH answer to your legal eyesight standard");
+        assertEquals(response.get(0), "You do not treat your diabetes with insulin (Welsh)");
+        assertEquals(response.get(1), "YES, your WELSH answer to [legal-eyesight-standard]");
     }
 }
