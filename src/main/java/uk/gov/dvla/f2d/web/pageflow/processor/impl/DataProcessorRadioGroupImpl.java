@@ -1,16 +1,17 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
-import uk.gov.dvla.f2d.web.pageflow.exceptions.PageValidationException;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
+import uk.gov.dvla.f2d.web.pageflow.model.Notification;
+import uk.gov.dvla.f2d.web.pageflow.utils.PageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.COMMA_SYMBOL;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.EQUALS_SYMBOL;
+
 public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 {
-    private static final String COMMA_SYMBOL        = ",";
-    private static final String EQUALS_SYMBOL       = "=";
-
     private MedicalQuestion question;
 
     DataProcessorRadioGroupImpl(MedicalQuestion newQuestion) {
@@ -18,7 +19,7 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
     }
 
     @Override
-    public void apply() throws PageValidationException {
+    public List<Notification> validate() {
         final String[] options = question.getOptions().trim().split(COMMA_SYMBOL);
 
         String answer = "";
@@ -39,14 +40,28 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
             keys.add(key);
         }
 
+        List<Notification> notifications = new ArrayList<>();
+
         // Check that an answer was supplied for this question.
-        if(answer == null || answer.trim().length() == 0) {
-            throw new PageValidationException("NoAnswerProvided", "No answer was supplied for this question.");
+        if((answer == null) || (answer.trim().length() == 0)) {
+            Notification notification = new Notification();
+            notification.setPage(PageUtils.capitalise(question));
+            notification.setField("answer");
+            notification.setCode("NullOrEmpty");
+            notification.setDescription("Field supplied was empty.");
+            notifications.add(notification);
         }
 
         // Check that the answer supplied was a valid response.
         if(!keys.contains(answer)) {
-            throw new PageValidationException("InvalidOption","The answer '"+answer+" was not a valid option.");
+            Notification notification = new Notification();
+            notification.setPage(PageUtils.capitalise(question));
+            notification.setField("answer");
+            notification.setCode("InvalidOption");
+            notification.setDescription("Field supplied was empty.");
+            notifications.add(notification);
         }
+
+        return notifications;
     }
 }

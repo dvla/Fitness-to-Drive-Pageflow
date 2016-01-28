@@ -1,0 +1,36 @@
+{
+  "questions": {
+    "diabetes-with-insulin": {
+      "options": {
+        "Y": {
+          "answers": {
+            "en": "YES, this is the ENGLISH answer to your diabetes with insulin",
+            "cy": "YES, this is the WELSH answer to your diabetes with insulin"
+          }
+        },
+        "N": {
+          "answers": {
+            "en": "NO, this is the ENGLISH answer to your diabetes with insulin",
+            "cy": "NO, this is the WELSH answer to your diabetes with insulin"
+          }
+        }
+      }
+    },
+    "legal-eyesight-standard": {
+      "options": {
+        "Y": {
+          "answers": {
+            "en": "YES, this is the ENGLISH answer to your diabetes with insulin",
+            "cy": "YES, this is the WELSH answer to your diabetes with insulin"
+          }
+        },
+        "N": {
+          "answers": {
+            "en": "NO, this is the ENGLISH answer to your diabetes with insulin",
+            "cy": "NO, this is the WELSH answer to your diabetes with insulin"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "messageHeader": {
-    "service": null,
-    "language": null,
+    "service": "notify",
+    "language": "en",
     "notifications": [],
     "breadcrumb": []
   },
