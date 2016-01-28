@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
@@ -110,12 +111,16 @@ public class SummaryAggregator
     }
 
     private List<String> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
-        List<String> response = new ArrayList<>();
-        return response;
+        return question.getAnswers().stream().collect(Collectors.toList());
     }
 
     private List<String> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
         List<String> response = new ArrayList<>();
+        if(summary.getQuestions().containsKey(question.getID())) {
+            Option option = summary.getQuestions().get(question.getID());
+            Answer answer = option.getOptions().get(YES);
+            response.add(answer.getAnswers().get(header.getLanguage()));
+        }
         return response;
     }
 }

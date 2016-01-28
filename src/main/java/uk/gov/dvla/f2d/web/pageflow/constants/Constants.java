@@ -25,6 +25,9 @@ public class Constants
     public static final String FORM                = "Form";
     public static final String CONTINUE            = "Continue";
 
+    public static final String YES                 = "Y";
+    public static final String NO                  = "N";
+
     /**
      * These are error/notification level constants used for validation.
      */
