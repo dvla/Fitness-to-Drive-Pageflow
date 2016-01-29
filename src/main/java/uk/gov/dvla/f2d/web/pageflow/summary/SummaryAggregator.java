@@ -60,24 +60,21 @@ public class SummaryAggregator
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
 
-        Map<String, MedicalQuestion> questions = condition.getQuestions();
-        for(String key : questions.keySet()) {
-            MedicalQuestion question = questions.get(key);
-
-            if(question.getType().equals(RADIO)) {
-                response.addAll(processRadio(summary, header, question));
-
-            } else if(question.getType().equals(CHECKBOX)) {
-                response.addAll(processCheckBox(summary, header, question));
-
-            } else if(question.getType().equals(FORM)) {
-                response.addAll(processForm(summary, header, question));
-
-            } else if(question.getType().equals(CONTINUE)) {
-                response.addAll(processContinue(summary, header, question));
-
-            } else {
-                throw new IllegalArgumentException("Question type is not supported: "+question.getType());
+        for(String breadcrumb : form.getMessageHeader().getBreadcrumb()) {
+            for(MedicalQuestion question : condition.getQuestions().values()) {
+                if(question.getStep().equals(breadcrumb) && !question.getAnswers().isEmpty()) {
+                    if (question.getType().equals(RADIO)) {
+                        response.addAll(processRadio(summary, header, question));
+                    } else if (question.getType().equals(CHECKBOX)) {
+                        response.addAll(processCheckBox(summary, header, question));
+                    } else if (question.getType().equals(FORM)) {
+                        response.addAll(processForm(summary, header, question));
+                    } else if (question.getType().equals(CONTINUE)) {
+                        response.addAll(processContinue(summary, header, question));
+                    } else {
+                        throw new IllegalArgumentException("Question type is not supported: " + question.getType());
+                    }
+                }
             }
         }
 

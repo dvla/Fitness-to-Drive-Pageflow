@@ -22,8 +22,12 @@ public class SummaryAggregatorTest extends TestCase
     private static final String NO_ANSWER           = "N";
 
     private static final String DIABETES_CONDITION  = "diabetes";
+
     private static final String DIABETES_QUESTION   = "diabetes-with-insulin";
+    private static final String DIABETES_STEP       = "3";
+
     private static final String EYESIGHT_QUESTION   = "legal-eyesight-standard";
+    private static final String EYESIGHT_STEP       = "10";
 
     /**
      * Create the test case
@@ -50,6 +54,10 @@ public class SummaryAggregatorTest extends TestCase
         assertEquals(NOTIFY_SERVICE, form.getMessageHeader().getService());
         assertEquals(ENGLISH_LANGUAGE, form.getMessageHeader().getLanguage());
 
+        form.getMessageHeader().getBreadcrumb().add(DIABETES_STEP);
+        form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
+        assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
+
         MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
         assertNotNull(condition);
 
@@ -66,10 +74,10 @@ public class SummaryAggregatorTest extends TestCase
 
         List<String> response = aggregator.process(form);
         assertFalse(response.isEmpty());
-        assertTrue(response.size() == 2);
+        assertEquals(response.size(), 2);
 
         assertEquals(response.get(0), "You treat your diabetes with insulin");
-        assertEquals(response.get(1), "NO, your ENGLISH answer to [legal-eyesight-standard]");
+        assertEquals(response.get(1), "You do not meet the legal eyesight standard for driving");
     }
 
     /**
@@ -84,6 +92,10 @@ public class SummaryAggregatorTest extends TestCase
         assertEquals(NOTIFY_SERVICE, form.getMessageHeader().getService());
         assertEquals(ENGLISH_LANGUAGE, form.getMessageHeader().getLanguage());
 
+        form.getMessageHeader().getBreadcrumb().add(DIABETES_STEP);
+        form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
+        assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
+
         MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
         assertNotNull(condition);
 
@@ -100,10 +112,10 @@ public class SummaryAggregatorTest extends TestCase
 
         List<String> response = aggregator.process(form);
         assertFalse(response.isEmpty());
-        assertTrue(response.size() == 2);
+        assertEquals(response.size(), 2);
 
         assertEquals(response.get(0), "You treat your diabetes with insulin");
-        assertEquals(response.get(1), "NO, your ENGLISH answer to [legal-eyesight-standard]");
+        assertEquals(response.get(1), "You do not meet the legal eyesight standard for driving");
     }
 
     /**
@@ -117,6 +129,10 @@ public class SummaryAggregatorTest extends TestCase
 
         assertEquals(NOTIFY_SERVICE, form.getMessageHeader().getService());
         assertEquals(WELSH_LANGUAGE, form.getMessageHeader().getLanguage());
+
+        form.getMessageHeader().getBreadcrumb().add(DIABETES_STEP);
+        form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
+        assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
 
         MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
         assertNotNull(condition);
@@ -134,9 +150,9 @@ public class SummaryAggregatorTest extends TestCase
 
         List<String> response = aggregator.process(form);
         assertFalse(response.isEmpty());
-        assertTrue(response.size() == 2);
+        assertEquals(response.size(), 2);
 
         assertEquals(response.get(0), "You do not treat your diabetes with insulin (Welsh)");
-        assertEquals(response.get(1), "YES, your WELSH answer to [legal-eyesight-standard]");
+        assertEquals(response.get(1), "You meet the legal eyesight standard for driving (Welsh)");
     }
 }
