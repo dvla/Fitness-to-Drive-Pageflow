@@ -15,12 +15,6 @@ import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class SummaryAggregatorTest extends TestCase
 {
-    private static final String ENGLISH_LANGUAGE    = "en";
-    private static final String WELSH_LANGUAGE      = "cy";
-
-    private static final String YES_ANSWER          = "Y";
-    private static final String NO_ANSWER           = "N";
-
     private static final String DIABETES_CONDITION  = "diabetes";
 
     private static final String DIABETES_QUESTION   = "diabetes-with-insulin";
@@ -67,10 +61,10 @@ public class SummaryAggregatorTest extends TestCase
         assertNotNull(aggregator);
 
         MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get(DIABETES_QUESTION);
-        diabetes.setAnswers(Arrays.asList(new String[]{YES_ANSWER}));
+        diabetes.setAnswers(Arrays.asList(new String[]{YES}));
 
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
-        eyesight.setAnswers(Arrays.asList(new String[]{NO_ANSWER}));
+        eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
         List<String> response = aggregator.process(form);
         assertFalse(response.isEmpty());
@@ -105,10 +99,10 @@ public class SummaryAggregatorTest extends TestCase
         assertNotNull(aggregator);
 
         MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get(DIABETES_QUESTION);
-        diabetes.setAnswers(Arrays.asList(new String[]{YES_ANSWER}));
+        diabetes.setAnswers(Arrays.asList(new String[]{YES}));
 
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
-        eyesight.setAnswers(Arrays.asList(new String[]{NO_ANSWER}));
+        eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
         List<String> response = aggregator.process(form);
         assertFalse(response.isEmpty());
@@ -143,10 +137,10 @@ public class SummaryAggregatorTest extends TestCase
         assertNotNull(aggregator);
 
         MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get(DIABETES_QUESTION);
-        diabetes.setAnswers(Arrays.asList(new String[]{NO_ANSWER}));
+        diabetes.setAnswers(Arrays.asList(new String[]{NO}));
 
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
-        eyesight.setAnswers(Arrays.asList(new String[]{YES_ANSWER}));
+        eyesight.setAnswers(Arrays.asList(new String[]{YES}));
 
         List<String> response = aggregator.process(form);
         assertFalse(response.isEmpty());

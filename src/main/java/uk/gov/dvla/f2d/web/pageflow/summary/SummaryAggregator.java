@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
@@ -32,6 +31,7 @@ public class SummaryAggregator
     }
 
     private Summary aggregate(MedicalForm form) {
+
         // Check to see if the quested service is supported?
         ServiceUtils.checkServiceSupported(form.getMessageHeader().getService());
 
@@ -40,7 +40,7 @@ public class SummaryAggregator
             final String condition = form.getMedicalCondition().getID();
             final String service = form.getMessageHeader().getService();
 
-            String resourceToLoad = condition + HYPHEN_SYMBOL + service + JSON_SUFFIX;
+            String resourceToLoad = (condition + HYPHEN_SYMBOL + service + JSON_SUFFIX);
 
             ClassLoader classLoader = this.getClass().getClassLoader();
             InputStream resourceStream = classLoader.getResource(resourceToLoad).openStream();
