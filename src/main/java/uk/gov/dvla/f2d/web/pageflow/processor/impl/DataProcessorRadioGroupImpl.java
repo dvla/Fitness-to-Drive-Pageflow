@@ -2,7 +2,7 @@ package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.model.Notification;
-import uk.gov.dvla.f2d.web.pageflow.utils.PageUtils;
+import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +45,7 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
         // Check that an answer was supplied for this question.
         if((answer == null) || (answer.trim().length() == 0)) {
             Notification notification = new Notification();
-            notification.setPage(PageUtils.capitalise(question));
+            notification.setPage(FormHelper.capitalise(question));
             notification.setField("answer");
             notification.setCode("NullOrEmpty");
             notification.setDescription("Field supplied was empty.");
@@ -55,7 +55,7 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
         // Check that the answer supplied was a valid response.
         if(!keys.contains(answer)) {
             Notification notification = new Notification();
-            notification.setPage(PageUtils.capitalise(question));
+            notification.setPage(FormHelper.capitalise(question));
             notification.setField("answer");
             notification.setCode("InvalidOption");
             notification.setDescription("Field supplied was empty.");

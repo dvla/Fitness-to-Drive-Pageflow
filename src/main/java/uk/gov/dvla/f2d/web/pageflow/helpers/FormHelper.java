@@ -1,11 +1,11 @@
-package uk.gov.dvla.f2d.web.pageflow.utils;
+package uk.gov.dvla.f2d.web.pageflow.helpers;
 
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
-public class PageUtils
+public class FormHelper
 {
-    private PageUtils() {
+    private FormHelper() {
         super();
     }
 
