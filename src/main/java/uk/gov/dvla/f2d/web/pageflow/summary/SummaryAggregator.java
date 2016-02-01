@@ -5,6 +5,7 @@ import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.model.MessageHeader;
+import uk.gov.dvla.f2d.web.pageflow.utils.LogUtils;
 import uk.gov.dvla.f2d.web.pageflow.utils.ServiceUtils;
 
 import java.io.IOException;
@@ -20,7 +21,7 @@ public class SummaryAggregator
     private static SummaryAggregator instance;
 
     private SummaryAggregator() {
-        super();
+        LogUtils.debug("Constructor called.");
     }
 
     public static synchronized SummaryAggregator getInstance() {
@@ -33,6 +34,7 @@ public class SummaryAggregator
     private Summary aggregate(MedicalForm form) {
 
         // Check to see if the quested service is supported?
+        LogUtils.debug("Check service is supported?");
         ServiceUtils.checkServiceSupported(form.getMessageHeader().getService());
 
         // Service is supported, so proceed to load the configuration.
@@ -42,10 +44,16 @@ public class SummaryAggregator
 
             String resourceToLoad = (condition + HYPHEN_SYMBOL + service + JSON_SUFFIX);
 
+            LogUtils.debug("Load Resource ["+resourceToLoad+"]");
+
             ClassLoader classLoader = this.getClass().getClassLoader();
             InputStream resourceStream = classLoader.getResource(resourceToLoad).openStream();
 
-            return new ObjectMapper().readValue(resourceStream, Summary.class);
+            Summary summary = new ObjectMapper().readValue(resourceStream, Summary.class);
+
+            LogUtils.debug("Resource Loaded [Questions="+summary.getQuestions().size()+"]");
+
+            return summary;
 
         } catch(IOException ex) {
             throw new IllegalArgumentException(ex);
@@ -57,12 +65,20 @@ public class SummaryAggregator
 
         Summary summary = aggregate(form);
 
+        LogUtils.debug("Resource Loaded ["+summary.getQuestions().size()+"]");
+
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
 
+        LogUtils.debug("Breadcrumbs: "+header.getBreadcrumb());
+
         for(String breadcrumb : form.getMessageHeader().getBreadcrumb()) {
+            LogUtils.debug("- Breadcrumb: "+breadcrumb);
+
             for(MedicalQuestion question : condition.getQuestions().values()) {
                 if(question.getStep().equals(breadcrumb) && !question.getAnswers().isEmpty()) {
+                    LogUtils.debug("  - Step: "+question.getStep()+", Answers: "+question.getAnswers());
+
                     if (question.getType().equals(RADIO)) {
                         response.addAll(processRadio(summary, header, question));
                     } else if (question.getType().equals(CHECKBOX)) {
@@ -82,6 +98,7 @@ public class SummaryAggregator
     }
 
     private List<String> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {
+        LogUtils.debug("    - Radio: "+question.getID()+", Answers: "+question.getAnswers());
         List<String> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
@@ -94,6 +111,7 @@ public class SummaryAggregator
     }
 
     private List<String> processCheckBox(Summary summary, MessageHeader header, MedicalQuestion question) {
+        LogUtils.debug("    - Check: "+question.getID()+", Answers: "+question.getAnswers());
         List<String> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
@@ -108,10 +126,12 @@ public class SummaryAggregator
     }
 
     private List<String> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
+        LogUtils.debug("    - Form: "+question.getID()+", Answers: "+question.getAnswers());
         return question.getAnswers().stream().collect(Collectors.toList());
     }
 
     private List<String> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
+        LogUtils.debug("    - Continue: "+question.getID()+", Answers: "+question.getAnswers());
         List<String> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             Option option = summary.getQuestions().get(question.getID());
