@@ -198,14 +198,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not treat your diabetes with insulin (Welsh)",
-            "en": "You do not treat your diabetes with insulin"
+            "cy": "",
+            "en": ""
           }
         },
         "Y": {
           "answers": {
-            "cy": "You treat your diabetes with insulin (Welsh)",
-            "en": "You treat your diabetes with insulin"
+            "cy": "You treat your diabetes with <b>insulin</b> (Welsh)",
+            "en": "You treat your diabetes with <b>insulin</b>"
           }
         }
       }
