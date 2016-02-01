@@ -4,30 +4,144 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not need to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
-            "en": "You do not need to drive a vehicle with automatic gears as a result of your medical condition"
+            "cy": "You <b>do not need</b> to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
+            "en": "You <b>do not need</b> to drive a vehicle with automatic gears as a result of your medical condition"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You need to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
-            "en": "You need to drive a vehicle with automatic gears as a result of your medical condition"
+            "cy": "You <b>need</b> to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
+            "en": "You <b>need</b> to drive a vehicle with automatic gears as a result of your medical condition"
           }
         }
       }
     },
     "car-bike-moped": {
       "options": {
-        "N": {
+        "CAR-1": {
           "answers": {
-            "cy": "NO, your WELSH answer to [car-bike-moped]",
-            "en": "NO, your ENGLISH answer to [car-bike-moped]"
+            "cy": "Combined braking and accelerator system (Welsh)",
+            "en": "Combined braking and accelerator system"
           }
         },
-        "Y": {
+        "CAR-2": {
           "answers": {
-            "cy": "YES, your WELSH answer to [car-bike-moped]",
-            "en": "YES, your ENGLISH answer to [car-bike-moped]"
+            "cy": "Accelerator system",
+            "en": "Accelerator system"
+          }
+        },
+        "CAR-3": {
+          "answers": {
+            "cy": "Rear view mirror",
+            "en": "Rear view mirror"
+          }
+        },
+        "CAR-4": {
+          "answers": {
+            "cy": "Braking system",
+            "en": "Braking system"
+          }
+        },
+        "CAR-5": {
+          "answers": {
+            "cy": "Clutch",
+            "en": "Clutch"
+          }
+        },
+        "CAR-6": {
+          "answers": {
+            "cy": "Control layouts",
+            "en": "Control layouts"
+          }
+        },
+        "CAR-7": {
+          "answers": {
+            "cy": "Driver seat",
+            "en": "Driver seat"
+          }
+        },
+        "CAR-8": {
+          "answers": {
+            "cy": "Steering",
+            "en": "Steering"
+          }
+        },
+        "CAR-9": {
+          "answers": {
+            "cy": "Transmission",
+            "en": "Transmission"
+          }
+        },
+        "BIKE-1": {
+          "answers": {
+            "cy": "Adjusted commands",
+            "en": "Adjusted commands"
+          }
+        },
+        "BIKE-2": {
+          "answers": {
+            "cy": "Adjusted foot operated brake",
+            "en": "Adjusted foot operated brake"
+          }
+        },
+        "BIKE-3": {
+          "answers": {
+            "cy": "Adjusted hand operated brake",
+            "en": "Adjusted hand operated brake"
+          }
+        },
+        "BIKE-4": {
+          "answers": {
+            "cy": "Adjusted manual transmission and clutch",
+            "en": "Adjusted manual transmission and clutch"
+          }
+        },
+        "BIKE-5": {
+          "answers": {
+            "cy": "Only with sidecar",
+            "en": "Only with sidecar"
+          }
+        },
+        "BIKE-6": {
+          "answers": {
+            "cy": "Single operated brake",
+            "en": "Single operated brake"
+          }
+        },
+        "BIKE-7": {
+          "answers": {
+            "cy": "Seat height",
+            "en": "Seat height"
+          }
+        },
+        "MOPED-1": {
+          "answers": {
+            "cy": "Adjusted foot operated brake",
+            "en": "Adjusted foot operated brake"
+          }
+        },
+        "MOPED-2": {
+          "answers": {
+            "cy": "Adjusted hand operated brake",
+            "en": "Adjusted hand operated brake"
+          }
+        },
+        "MOPED-3": {
+          "answers": {
+            "cy": "Adjusted manual transmission and clutch",
+            "en": "Adjusted manual transmission and clutch"
+          }
+        },
+        "MOPED-4": {
+          "answers": {
+            "cy": "Only with sidecar",
+            "en": "Only with sidecar"
+          }
+        },
+        "MOPED-5": {
+          "answers": {
+            "cy": "Single operated brake",
+            "en": "Single operated brake"
           }
         }
       }
@@ -286,20 +400,20 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not meet the legal eyesight standard for driving (Welsh)",
-            "en": "You do not meet the legal eyesight standard for driving"
+            "cy": "You <b>do not meet</b> the legal eyesight standard for driving (Welsh)",
+            "en": "You <b>do not meet</b> the legal eyesight standard for driving"
           }
         },
         "YG": {
           "answers": {
-            "cy": "You meet the legal eyesight standard for driving with glasses or corrective lenses (Welsh)",
-            "en": "You meet the legal eyesight standard for driving with glasses or corrective lenses"
+            "cy": "You <b>meet</b> the legal eyesight standard for driving <b>with glasses or corrective lenses (Welsh)</b>",
+            "en": "You <b>meet</b> the legal eyesight standard for driving <b>with glasses or corrective lenses</b>"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You meet the legal eyesight standard for driving (Welsh)",
-            "en": "You meet the legal eyesight standard for driving"
+            "cy": "You <b>meet</b> the legal eyesight standard for driving (Welsh)",
+            "en": "You <b>meet</b> the legal eyesight standard for driving"
           }
         }
       }

@@ -43,4 +43,5 @@ public class Constants
     public static final String COMMA_SYMBOL        = ",";
     public static final String EQUALS_SYMBOL       = "=";
     public static final String HYPHEN_SYMBOL       = "-";
+    public static final String PERIOD_SYMBOL       = ".";
 }
