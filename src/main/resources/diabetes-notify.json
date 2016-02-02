@@ -4,14 +4,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You <b>do not need</b> to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
-            "en": "You <b>do not need</b> to drive a vehicle with automatic gears as a result of your medical condition"
+            "cy": "You {b}do not need{/b} to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
+            "en": "You {b}do not need{/b} to drive a vehicle with automatic gears as a result of your medical condition"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You <b>need</b> to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
-            "en": "You <b>need</b> to drive a vehicle with automatic gears as a result of your medical condition"
+            "cy": "You {b}need{/b} to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
+            "en": "You {b}need{/b} to drive a vehicle with automatic gears as a result of your medical condition"
           }
         }
       }
@@ -204,8 +204,8 @@
         },
         "Y": {
           "answers": {
-            "cy": "You treat your diabetes with <b>insulin</b> (Welsh)",
-            "en": "You treat your diabetes with <b>insulin</b>"
+            "cy": "You treat your diabetes with {b}insulin{/b} (Welsh)",
+            "en": "You treat your diabetes with {b}insulin{/b}"
           }
         }
       }
@@ -400,20 +400,20 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You <b>do not meet</b> the legal eyesight standard for driving (Welsh)",
-            "en": "You <b>do not meet</b> the legal eyesight standard for driving"
+            "cy": "You {b}do not meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "You {b}do not meet{/b} the legal eyesight standard for driving"
           }
         },
         "YG": {
           "answers": {
-            "cy": "You <b>meet</b> the legal eyesight standard for driving <b>with glasses or corrective lenses (Welsh)</b>",
-            "en": "You <b>meet</b> the legal eyesight standard for driving <b>with glasses or corrective lenses</b>"
+            "cy": "You {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses (Welsh){/b}",
+            "en": "You {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b}"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You <b>meet</b> the legal eyesight standard for driving (Welsh)",
-            "en": "You <b>meet</b> the legal eyesight standard for driving"
+            "cy": "You {b}meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "You {b}meet{/b} the legal eyesight standard for driving"
           }
         }
       }

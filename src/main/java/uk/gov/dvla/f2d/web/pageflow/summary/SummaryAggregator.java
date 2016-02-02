@@ -119,18 +119,24 @@ public class SummaryAggregator
         List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
+
+                Line line = new Line();
+                line.setType(question.getType());
+                line.setSubHeading(question.getText());
+
                 for(String value : question.getAnswers()) {
                     Option option = summary.getQuestions().get(question.getID());
                     Answer answer = option.getOptions().get(value);
 
-                    Line line = new Line();
-                    line.setType(question.getType());
-                    line.setSubHeading(question.getText());
-                    line.getLines().add(answer.getAnswers().get(header.getLanguage()));
-                    line.setLink(question.getID());
-
-                    response.add(line);
+                    String text = answer.getAnswers().get(header.getLanguage());
+                    if(text != null) {
+                        line.getLines().add(text);
+                    }
                 }
+
+                line.setLink(question.getID());
+
+                response.add(line);
             }
         }
         return response;

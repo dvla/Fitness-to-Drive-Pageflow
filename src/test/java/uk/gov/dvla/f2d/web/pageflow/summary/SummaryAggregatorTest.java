@@ -70,8 +70,8 @@ public class SummaryAggregatorTest extends TestCase
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 
-        assertEquals(response.get(0).getLines().get(0), "You treat your diabetes with <b>insulin</b>");
-        assertEquals(response.get(1).getLines().get(0), "You <b>do not meet</b> the legal eyesight standard for driving");
+        assertEquals(response.get(0).getLines().get(0), "You treat your diabetes with {b}insulin{/b}");
+        assertEquals(response.get(1).getLines().get(0), "You {b}do not meet{/b} the legal eyesight standard for driving");
     }
 
     /**
@@ -108,8 +108,8 @@ public class SummaryAggregatorTest extends TestCase
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 
-        assertEquals(response.get(0).getLines().get(0), "You treat your diabetes with <b>insulin</b>");
-        assertEquals(response.get(1).getLines().get(0), "You <b>do not meet</b> the legal eyesight standard for driving");
+        assertEquals(response.get(0).getLines().get(0), "You treat your diabetes with {b}insulin{/b}");
+        assertEquals(response.get(1).getLines().get(0), "You {b}do not meet{/b} the legal eyesight standard for driving");
     }
 
     /**
@@ -147,6 +147,6 @@ public class SummaryAggregatorTest extends TestCase
         assertEquals(response.size(), 2);
 
         assertEquals(response.get(0).getLines().get(0), "");
-        assertEquals(response.get(1).getLines().get(0), "You <b>meet</b> the legal eyesight standard for driving (Welsh)");
+        assertEquals(response.get(1).getLines().get(0), "You {b}meet{/b} the legal eyesight standard for driving (Welsh)");
     }
 }
