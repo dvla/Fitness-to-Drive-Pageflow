@@ -57,21 +57,21 @@ public class SummaryAggregatorTest extends TestCase
 
         form.setMedicalCondition(condition);
 
-        SummaryAggregator aggregator = SummaryAggregator.getInstance();
-        assertNotNull(aggregator);
-
         MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get(DIABETES_QUESTION);
         diabetes.setAnswers(Arrays.asList(new String[]{YES}));
 
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
         eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
-        List<String> response = aggregator.process(form);
+        SummaryAggregator aggregator = SummaryAggregator.getInstance();
+        assertNotNull(aggregator);
+
+        List<Line> response = aggregator.process(form);
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 
-        assertEquals(response.get(0), "You treat your diabetes with <b>insulin</b>");
-        assertEquals(response.get(1), "You <b>do not meet</b> the legal eyesight standard for driving");
+        assertEquals(response.get(0).getLines().get(0), "You treat your diabetes with <b>insulin</b>");
+        assertEquals(response.get(1).getLines().get(0), "You <b>do not meet</b> the legal eyesight standard for driving");
     }
 
     /**
@@ -95,21 +95,21 @@ public class SummaryAggregatorTest extends TestCase
 
         form.setMedicalCondition(condition);
 
-        SummaryAggregator aggregator = SummaryAggregator.getInstance();
-        assertNotNull(aggregator);
-
         MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get(DIABETES_QUESTION);
         diabetes.setAnswers(Arrays.asList(new String[]{YES}));
 
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
         eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
-        List<String> response = aggregator.process(form);
+        SummaryAggregator aggregator = SummaryAggregator.getInstance();
+        assertNotNull(aggregator);
+
+        List<Line> response = aggregator.process(form);
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 
-        assertEquals(response.get(0), "You treat your diabetes with <b>insulin</b>");
-        assertEquals(response.get(1), "You <b>do not meet</b> the legal eyesight standard for driving");
+        assertEquals(response.get(0).getLines().get(0), "You treat your diabetes with <b>insulin</b>");
+        assertEquals(response.get(1).getLines().get(0), "You <b>do not meet</b> the legal eyesight standard for driving");
     }
 
     /**
@@ -133,20 +133,20 @@ public class SummaryAggregatorTest extends TestCase
 
         form.setMedicalCondition(condition);
 
-        SummaryAggregator aggregator = SummaryAggregator.getInstance();
-        assertNotNull(aggregator);
-
         MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get(DIABETES_QUESTION);
         diabetes.setAnswers(Arrays.asList(new String[]{NO}));
 
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
         eyesight.setAnswers(Arrays.asList(new String[]{YES}));
 
-        List<String> response = aggregator.process(form);
+        SummaryAggregator aggregator = SummaryAggregator.getInstance();
+        assertNotNull(aggregator);
+
+        List<Line> response = aggregator.process(form);
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 
-        assertEquals(response.get(0), "");
-        assertEquals(response.get(1), "You <b>meet</b> the legal eyesight standard for driving (Welsh)");
+        assertEquals(response.get(0).getLines().get(0), "");
+        assertEquals(response.get(1).getLines().get(0), "You <b>meet</b> the legal eyesight standard for driving (Welsh)");
     }
 }

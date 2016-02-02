@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
@@ -20,8 +19,10 @@ public class SummaryAggregator
 {
     private static SummaryAggregator instance;
 
+    private Summary summary;
+
     private SummaryAggregator() {
-        LogUtils.debug("Constructor called.");
+        super();
     }
 
     public static synchronized SummaryAggregator getInstance() {
@@ -31,10 +32,8 @@ public class SummaryAggregator
         return instance;
     }
 
-    private Summary aggregate(MedicalForm form) {
-
+    private void initialise(MedicalForm form) {
         // Check to see if the quested service is supported?
-        LogUtils.debug("Check service is supported?");
         ServiceUtils.checkServiceSupported(form.getMessageHeader().getService());
 
         // Service is supported, so proceed to load the configuration.
@@ -49,23 +48,21 @@ public class SummaryAggregator
             ClassLoader classLoader = this.getClass().getClassLoader();
             InputStream resourceStream = classLoader.getResource(resourceToLoad).openStream();
 
-            Summary summary = new ObjectMapper().readValue(resourceStream, Summary.class);
+            summary = new ObjectMapper().readValue(resourceStream, Summary.class);
 
             LogUtils.debug("Resource Loaded [Questions="+summary.getQuestions().size()+"]");
-
-            return summary;
 
         } catch(IOException ex) {
             throw new IllegalArgumentException(ex);
         }
     }
 
-    public List<String> process(MedicalForm form) {
-        List<String> response = new ArrayList<>();
+    public List<Line> process(MedicalForm form) {
+        List<Line> response = new ArrayList<>();
 
-        Summary summary = aggregate(form);
-
-        LogUtils.debug("Resource Loaded ["+summary.getQuestions().size()+"]");
+        if(summary == null) {
+            initialise(form);
+        }
 
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
@@ -97,46 +94,77 @@ public class SummaryAggregator
         return response;
     }
 
-    private List<String> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {
+    private List<Line> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {
         LogUtils.debug("    - Radio: "+question.getID()+", Answers: "+question.getAnswers());
-        List<String> response = new ArrayList<>();
+        List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
                 Option option = summary.getQuestions().get(question.getID());
                 Answer answer = option.getOptions().get(question.getAnswers().get(0));
-                response.add(answer.getAnswers().get(header.getLanguage()));
+
+                Line line = new Line();
+                line.setType(question.getType());
+                line.setSubHeading(null);
+                line.getLines().add(answer.getAnswers().get(header.getLanguage()));
+                line.setLink(question.getID());
+
+                response.add(line);
             }
         }
         return response;
     }
 
-    private List<String> processCheckBox(Summary summary, MessageHeader header, MedicalQuestion question) {
+    private List<Line> processCheckBox(Summary summary, MessageHeader header, MedicalQuestion question) {
         LogUtils.debug("    - Check: "+question.getID()+", Answers: "+question.getAnswers());
-        List<String> response = new ArrayList<>();
+        List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
                 for(String value : question.getAnswers()) {
                     Option option = summary.getQuestions().get(question.getID());
                     Answer answer = option.getOptions().get(value);
-                    response.add(answer.getAnswers().get(header.getLanguage()));
+
+                    Line line = new Line();
+                    line.setType(question.getType());
+                    line.setSubHeading(question.getText());
+                    line.getLines().add(answer.getAnswers().get(header.getLanguage()));
+                    line.setLink(question.getID());
+
+                    response.add(line);
                 }
             }
         }
         return response;
     }
 
-    private List<String> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
+    private List<Line> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
         LogUtils.debug("    - Form: "+question.getID()+", Answers: "+question.getAnswers());
-        return question.getAnswers().stream().collect(Collectors.toList());
+
+        List<Line> response = new ArrayList<>();
+
+        Line line = new Line();
+        line.setType(question.getType());
+        line.setSubHeading(null);
+        line.setLines(question.getAnswers());
+        line.setLink(question.getID());
+        response.add(line);
+
+        return response;
     }
 
-    private List<String> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
+    private List<Line> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
         LogUtils.debug("    - Continue: "+question.getID()+", Answers: "+question.getAnswers());
-        List<String> response = new ArrayList<>();
+        List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             Option option = summary.getQuestions().get(question.getID());
             Answer answer = option.getOptions().get(YES);
-            response.add(answer.getAnswers().get(header.getLanguage()));
+
+            Line line = new Line();
+            line.setType(question.getType());
+            line.setSubHeading(null);
+            line.getLines().add(answer.getAnswers().get(header.getLanguage()));
+            line.setLink(question.getID());
+
+            response.add(line);
         }
         return response;
     }

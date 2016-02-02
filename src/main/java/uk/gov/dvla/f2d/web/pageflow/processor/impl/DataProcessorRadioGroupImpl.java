@@ -53,7 +53,7 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
         }
 
         // Check that the answer supplied was a valid response.
-        if(!keys.contains(answer)) {
+        if(!keys.contains(answer) && notifications.isEmpty()) {
             Notification notification = new Notification();
             notification.setPage(FormHelper.capitalise(question));
             notification.setField("answer");

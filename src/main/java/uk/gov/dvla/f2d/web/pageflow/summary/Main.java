@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 class Main
 {
@@ -42,9 +43,9 @@ class Main
             "car-bike-moped"
     };
 
-    private static final String[] OPTIONS = {"Y", "N"};
+    private static final String[] OPTIONS = {YES, NO};
 
-    private static final String[] ANSWERS = {"en", "cy"};
+    private static final String[] ANSWERS = {ENGLISH_LANGUAGE, WELSH_LANGUAGE};
 
     public void generate() {
         Map<String, Option> questions = new TreeMap<>();
@@ -89,16 +90,16 @@ class Main
         form.setMedicalCondition(condition);
 
         MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get("diabetes-with-insulin");
-        diabetes.setAnswers(Arrays.asList(new String[]{"Y"}));
+        diabetes.setAnswers(Arrays.asList(new String[]{YES}));
 
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get("legal-eyesight-standard");
-        eyesight.setAnswers(Arrays.asList(new String[]{"N"}));
+        eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
         SummaryAggregator aggregator = SummaryAggregator.getInstance();
-        List<String> responses = aggregator.process(form);
+        List<Line> responses = aggregator.process(form);
 
-        for(String response : responses) {
-            System.out.println("Text: "+response);
+        for(Line response : responses) {
+            System.out.println("Line: "+response);
         }
     }
 
