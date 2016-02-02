@@ -61,7 +61,7 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
             notification.setPage(FormHelper.capitalise(question));
             notification.setField(ANSWER_FIELD);
             notification.setCode("InvalidOption");
-            notification.setDescription("Field supplied was empty.");
+            notification.setDescription("Field supplied was invalid.");
             notifications.add(notification);
         }
 

@@ -120,11 +120,18 @@ public class SummaryAggregator
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
 
+                String heading = null;
+
                 Line line = new Line();
                 line.setType(question.getType());
                 line.setSubHeading(question.getText());
 
                 for(String value : question.getAnswers()) {
+                    String key = value.split(HYPHEN_SYMBOL)[0];
+                    if(!(key.equals(heading))) {
+                        line.getLines().add("{b}"+key+"{/b}");
+                        heading = key;
+                    }
                     Option option = summary.getQuestions().get(question.getID());
                     Answer answer = option.getOptions().get(value);
 

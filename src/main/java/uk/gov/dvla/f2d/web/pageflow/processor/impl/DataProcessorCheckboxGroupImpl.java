@@ -1,10 +1,13 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
+import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.model.Notification;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.ANSWER_FIELD;
 
 public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
 {
@@ -19,6 +22,16 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
         question.setDecision(question.getOptions().trim());
 
         List<Notification> notifications = new ArrayList<>();
+
+        if(question.getAnswers().isEmpty()) {
+            Notification notification = new Notification();
+            notification.setPage(FormHelper.capitalise(question));
+            notification.setField(ANSWER_FIELD);
+            notification.setCode("NullOrEmpty");
+            notification.setDescription("Field supplied was empty.");
+            notifications.add(notification);
+        }
+
         return notifications;
     }
 

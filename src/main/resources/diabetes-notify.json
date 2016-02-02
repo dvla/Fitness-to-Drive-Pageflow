@@ -18,127 +18,127 @@
     },
     "car-bike-moped": {
       "options": {
-        "CAR-1": {
+        "Car-1": {
           "answers": {
             "cy": "Combined braking and accelerator system (Welsh)",
             "en": "Combined braking and accelerator system"
           }
         },
-        "CAR-2": {
+        "Car-2": {
           "answers": {
             "cy": "Accelerator system",
             "en": "Accelerator system"
           }
         },
-        "CAR-3": {
+        "Car-3": {
           "answers": {
             "cy": "Rear view mirror",
             "en": "Rear view mirror"
           }
         },
-        "CAR-4": {
+        "Car-4": {
           "answers": {
             "cy": "Braking system",
             "en": "Braking system"
           }
         },
-        "CAR-5": {
+        "Car-5": {
           "answers": {
             "cy": "Clutch",
             "en": "Clutch"
           }
         },
-        "CAR-6": {
+        "Car-6": {
           "answers": {
             "cy": "Control layouts",
             "en": "Control layouts"
           }
         },
-        "CAR-7": {
+        "Car-7": {
           "answers": {
             "cy": "Driver seat",
             "en": "Driver seat"
           }
         },
-        "CAR-8": {
+        "Car-8": {
           "answers": {
             "cy": "Steering",
             "en": "Steering"
           }
         },
-        "CAR-9": {
+        "Car-9": {
           "answers": {
             "cy": "Transmission",
             "en": "Transmission"
           }
         },
-        "BIKE-1": {
+        "Motorcycle-1": {
           "answers": {
             "cy": "Adjusted commands",
             "en": "Adjusted commands"
           }
         },
-        "BIKE-2": {
+        "Motorcycle-2": {
           "answers": {
             "cy": "Adjusted foot operated brake",
             "en": "Adjusted foot operated brake"
           }
         },
-        "BIKE-3": {
+        "Motorcycle-3": {
           "answers": {
             "cy": "Adjusted hand operated brake",
             "en": "Adjusted hand operated brake"
           }
         },
-        "BIKE-4": {
+        "Motorcycle-4": {
           "answers": {
             "cy": "Adjusted manual transmission and clutch",
             "en": "Adjusted manual transmission and clutch"
           }
         },
-        "BIKE-5": {
+        "Motorcycle-5": {
           "answers": {
             "cy": "Only with sidecar",
             "en": "Only with sidecar"
           }
         },
-        "BIKE-6": {
+        "Motorcycle-6": {
           "answers": {
             "cy": "Single operated brake",
             "en": "Single operated brake"
           }
         },
-        "BIKE-7": {
+        "Motorcycle-7": {
           "answers": {
             "cy": "Seat height",
             "en": "Seat height"
           }
         },
-        "MOPED-1": {
+        "Moped-1": {
           "answers": {
             "cy": "Adjusted foot operated brake",
             "en": "Adjusted foot operated brake"
           }
         },
-        "MOPED-2": {
+        "Moped-2": {
           "answers": {
             "cy": "Adjusted hand operated brake",
             "en": "Adjusted hand operated brake"
           }
         },
-        "MOPED-3": {
+        "Moped-3": {
           "answers": {
             "cy": "Adjusted manual transmission and clutch",
             "en": "Adjusted manual transmission and clutch"
           }
         },
-        "MOPED-4": {
+        "Moped-4": {
           "answers": {
             "cy": "Only with sidecar",
             "en": "Only with sidecar"
           }
         },
-        "MOPED-5": {
+        "Moped-5": {
           "answers": {
             "cy": "Single operated brake",
             "en": "Single operated brake"
