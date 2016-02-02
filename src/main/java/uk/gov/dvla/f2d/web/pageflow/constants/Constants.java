@@ -44,4 +44,10 @@ public class Constants
     public static final String EQUALS_SYMBOL       = "=";
     public static final String HYPHEN_SYMBOL       = "-";
     public static final String PERIOD_SYMBOL       = ".";
+
+    /**
+     * Specified fields for use within validation framework.
+     */
+    public static final String ANSWER_FIELD        = "answer";
+
 }

@@ -7,8 +7,7 @@ import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.COMMA_SYMBOL;
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.EQUALS_SYMBOL;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 {
@@ -16,6 +15,10 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 
     DataProcessorRadioGroupImpl(MedicalQuestion newQuestion) {
         this.question = newQuestion;
+    }
+
+    private boolean isNullOrEmpty(final String field) {
+        return (field == null || field.trim().equals(EMPTY_STRING));
     }
 
     @Override
@@ -43,20 +46,20 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
         List<Notification> notifications = new ArrayList<>();
 
         // Check that an answer was supplied for this question.
-        if((answer == null) || (answer.trim().length() == 0)) {
+        if(isNullOrEmpty(answer)) {
             Notification notification = new Notification();
             notification.setPage(FormHelper.capitalise(question));
-            notification.setField("answer");
+            notification.setField(ANSWER_FIELD);
             notification.setCode("NullOrEmpty");
             notification.setDescription("Field supplied was empty.");
             notifications.add(notification);
         }
 
         // Check that the answer supplied was a valid response.
-        if(!keys.contains(answer) && notifications.isEmpty()) {
+        if(!isNullOrEmpty(answer) && !keys.contains(answer)) {
             Notification notification = new Notification();
             notification.setPage(FormHelper.capitalise(question));
-            notification.setField("answer");
+            notification.setField(ANSWER_FIELD);
             notification.setCode("InvalidOption");
             notification.setDescription("Field supplied was empty.");
             notifications.add(notification);
