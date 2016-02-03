@@ -146,38 +146,6 @@
         }
       }
     },
-    "change-address": {
-      "options": {
-        "N": {
-          "answers": {
-            "cy": "NO, your WELSH answer to [change-address]",
-            "en": "NO, your ENGLISH answer to [change-address]"
-          }
-        },
-        "Y": {
-          "answers": {
-            "cy": "YES, your WELSH answer to [change-address]",
-            "en": "YES, your ENGLISH answer to [change-address]"
-          }
-        }
-      }
-    },
-    "confirm-address": {
-      "options": {
-        "N": {
-          "answers": {
-            "cy": "NO, your WELSH answer to [confirm-address]",
-            "en": "NO, your ENGLISH answer to [confirm-address]"
-          }
-        },
-        "Y": {
-          "answers": {
-            "cy": "YES, your WELSH answer to [confirm-address]",
-            "en": "YES, your ENGLISH answer to [confirm-address]"
-          }
-        }
-      }
-    },
     "consultant-details": {
       "options": {
         "N": {
