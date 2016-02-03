@@ -3,6 +3,7 @@ package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
 import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.model.Notification;
+import uk.gov.dvla.f2d.web.pageflow.utils.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,11 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
 
     @Override
     public List<Notification> validate() {
+        LogUtils.debug(this.getClass(), "Answers: "+question.getAnswers());
+        LogUtils.debug(this.getClass(), "  - Size: "+question.getAnswers().size());
+        LogUtils.debug(this.getClass(), "  - Empty: "+question.getAnswers().isEmpty());
+        LogUtils.debug(this.getClass(), "Options: ["+question.getOptions()+"]");
+
         question.setDecision(question.getOptions().trim());
 
         List<Notification> notifications = new ArrayList<>();

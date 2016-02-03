@@ -43,14 +43,14 @@ public class SummaryAggregator
 
             String resourceToLoad = (condition + HYPHEN_SYMBOL + service + JSON_SUFFIX);
 
-            LogUtils.debug("Load Resource ["+resourceToLoad+"]");
+            LogUtils.debug(this.getClass(), "Load Resource ["+resourceToLoad+"]");
 
             ClassLoader classLoader = this.getClass().getClassLoader();
             InputStream resourceStream = classLoader.getResource(resourceToLoad).openStream();
 
             summary = new ObjectMapper().readValue(resourceStream, Summary.class);
 
-            LogUtils.debug("Resource Loaded [Questions="+summary.getQuestions().size()+"]");
+            LogUtils.debug(this.getClass(), "Resource Loaded [Questions="+summary.getQuestions().size()+"]");
 
         } catch(IOException ex) {
             throw new IllegalArgumentException(ex);
@@ -67,14 +67,14 @@ public class SummaryAggregator
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
 
-        LogUtils.debug("Breadcrumbs: "+header.getBreadcrumb());
+        LogUtils.debug(this.getClass(), "Breadcrumbs: "+header.getBreadcrumb());
 
         for(String breadcrumb : form.getMessageHeader().getBreadcrumb()) {
-            LogUtils.debug("- Breadcrumb: "+breadcrumb);
+            LogUtils.debug(this.getClass(), "- Breadcrumb: "+breadcrumb);
 
             for(MedicalQuestion question : condition.getQuestions().values()) {
                 if(question.getStep().equals(breadcrumb) && !question.getAnswers().isEmpty()) {
-                    LogUtils.debug("  - Step: "+question.getStep()+", Answers: "+question.getAnswers());
+                    LogUtils.debug(this.getClass(), "  - Step: "+question.getStep()+", Answers: "+question.getAnswers());
 
                     if (question.getType().equals(RADIO)) {
                         response.addAll(processRadio(summary, header, question));
@@ -95,7 +95,7 @@ public class SummaryAggregator
     }
 
     private List<Line> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug("    - Radio: "+question.getID()+", Answers: "+question.getAnswers());
+        LogUtils.debug(this.getClass(), "    - Radio: "+question.getID()+", Answers: "+question.getAnswers());
         List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
@@ -118,7 +118,7 @@ public class SummaryAggregator
     }
 
     private List<Line> processCheckBox(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug("    - Check: "+question.getID()+", Answers: "+question.getAnswers());
+        LogUtils.debug(this.getClass(), "    - Check: "+question.getID()+", Answers: "+question.getAnswers());
         List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
@@ -153,7 +153,7 @@ public class SummaryAggregator
     }
 
     private List<Line> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug("    - Form: "+question.getID()+", Answers: "+question.getAnswers());
+        LogUtils.debug(this.getClass(), "    - Form: "+question.getID()+", Answers: "+question.getAnswers());
 
         List<Line> response = new ArrayList<>();
 
@@ -168,7 +168,7 @@ public class SummaryAggregator
     }
 
     private List<Line> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug("    - Continue: "+question.getID()+", Answers: "+question.getAnswers());
+        LogUtils.debug(this.getClass(), "    - Continue: "+question.getID()+", Answers: "+question.getAnswers());
         List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             Option option = summary.getQuestions().get(question.getID());
