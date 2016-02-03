@@ -102,13 +102,16 @@ public class SummaryAggregator
                 Option option = summary.getQuestions().get(question.getID());
                 Answer answer = option.getOptions().get(question.getAnswers().get(0));
 
-                Line line = new Line();
-                line.setType(question.getType());
-                line.setSubHeading(null);
-                line.getLines().add(answer.getAnswers().get(header.getLanguage()));
-                line.setLink(question.getID());
+                String text = answer.getAnswers().get(header.getLanguage());
+                if(text != null) {
+                    Line line = new Line();
+                    line.setType(question.getType());
+                    line.setSubHeading(null);
+                    line.getLines().add(text);
+                    line.setLink(question.getID());
 
-                response.add(line);
+                    response.add(line);
+                }
             }
         }
         return response;
@@ -156,7 +159,7 @@ public class SummaryAggregator
 
         Line line = new Line();
         line.setType(question.getType());
-        line.setSubHeading(null);
+        line.setSubHeading(question.getText());
         line.setLines(question.getAnswers());
         line.setLink(question.getID());
         response.add(line);
@@ -173,7 +176,7 @@ public class SummaryAggregator
 
             Line line = new Line();
             line.setType(question.getType());
-            line.setSubHeading(null);
+            line.setSubHeading(question.getText());
             line.getLines().add(answer.getAnswers().get(header.getLanguage()));
             line.setLink(question.getID());
 
