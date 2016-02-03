@@ -4,14 +4,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You {b}do not need{/b} to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
-            "en": "You {b}do not need{/b} to drive a vehicle with automatic gears as a result of your medical condition"
+            "cy": "you {b}do not need{/b} to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
+            "en": "you {b}do not need{/b} to drive a vehicle with automatic gears as a result of your medical condition"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You {b}need{/b} to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
-            "en": "You {b}need{/b} to drive a vehicle with automatic gears as a result of your medical condition"
+            "cy": "you {b}need{/b} to drive a vehicle with automatic gears as a result of your medical condition (Welsh)",
+            "en": "you {b}need{/b} to drive a vehicle with automatic gears as a result of your medical condition"
           }
         }
       }
@@ -172,8 +172,8 @@
         },
         "Y": {
           "answers": {
-            "cy": "You treat your diabetes with {b}insulin{/b} (Welsh)",
-            "en": "You treat your diabetes with {b}insulin{/b}"
+            "cy": "you treat your diabetes with {b}insulin{/b} (Welsh)",
+            "en": "you treat your diabetes with {b}insulin{/b}"
           }
         }
       }
@@ -182,14 +182,14 @@
       "options": {
         "1": {
           "answers": {
-            "cy": "You have one functioning eye (Welsh)",
-            "en": "You have one functioning eye"
+            "cy": "you have {b}one{/b} functioning eye (Welsh)",
+            "en": "you have {b}one{/b} functioning eye"
           }
         },
         "2": {
           "answers": {
-            "cy": "You have two functioning eyes (Welsh)",
-            "en": "You have two functioning eyes"
+            "cy": "you have {b}two{/b} functioning eyes (Welsh)",
+            "en": "you have {b}two{/b} functioning eyes"
           }
         }
       }
@@ -214,14 +214,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You have not seen a healthcare professional about your diabetes in the last 12 months (Welsh)",
-            "en": "You have not seen a healthcare professional about your diabetes in the last 12 months"
+            "cy": "you {b}have not seen{/b} a healthcare professional about your diabetes in the last 12 months (Welsh)",
+            "en": "you {b}have not seen{/b} a healthcare professional about your diabetes in the last 12 months"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You have seen a healthcare professional about your diabetes in the last 12 months (Welsh)",
-            "en": "You have seen a healthcare professional about your diabetes in the last 12 months"
+            "cy": "you {b}have{/b} seen a healthcare professional about your diabetes in the last 12 months (Welsh)",
+            "en": "you {b}have{/b} seen a healthcare professional about your diabetes in the last 12 months"
           }
         }
       }
@@ -246,14 +246,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not understand the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
-            "en": "You do not understand the need to test your blood glucose/sugar at times relevant to driving"
+            "cy": "you {b}do not understand{/b} the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
+            "en": "you {b}do not understand{/b} the need to test your blood glucose/sugar at times relevant to driving"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You understand the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
-            "en": "You understand the need to test your blood glucose/sugar at times relevant to driving"
+            "cy": "you {b}understand{/b} the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
+            "en": "you {b}understand{/b} the need to test your blood glucose/sugar at times relevant to driving"
           }
         }
       }
@@ -262,14 +262,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not experience symptoms of low blood sugar (hypoglycaemia) (Welsh)",
-            "en": "You do not experience symptoms of low blood sugar (hypoglycaemia)"
+            "cy": "you {b}do not experience{/b} symptoms of low blood sugar (hypoglycaemia) (Welsh)",
+            "en": "you {b}do not experience{/b} symptoms of low blood sugar (hypoglycaemia)"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You experience symptoms of low blood sugar (hypoglycaemia) (Welsh)",
-            "en": "You experience symptoms of low blood sugar (hypoglycaemia)"
+            "cy": "you {b}experience{/b} symptoms of low blood sugar (hypoglycaemia) (Welsh)",
+            "en": "you {b}experience{/b} symptoms of low blood sugar (hypoglycaemia)"
           }
         }
       }
@@ -278,14 +278,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not know what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
-            "en": "You do not know what the symptoms of low blood sugar (hypoglycaemia) are"
+            "cy": "you {b}do not know{/b} what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
+            "en": "you {b}do not know{/b} what the symptoms of low blood sugar (hypoglycaemia) are"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You know what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
-            "en": "You know what the symptoms of low blood sugar (hypoglycaemia) are"
+            "cy": "you {b}know{/b} what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
+            "en": "you {b}know{/b} what the symptoms of low blood sugar (hypoglycaemia) are"
           }
         }
       }
@@ -294,14 +294,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You have had less than two episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months (Welsh)",
-            "en": "You have had less than two episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months"
+            "cy": "you have had {b}less than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months (Welsh)",
+            "en": "you have had {b}less than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You have had more than two episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months (Welsh)",
-            "en": "You have had more than two episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months"
+            "cy": "you have had {b}more than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months (Welsh)",
+            "en": "you have had {b}more than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months"
           }
         }
       }
@@ -310,8 +310,8 @@
       "options": {
         "Y": {
           "answers": {
-            "cy": "You have read and understood what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
-            "en": "You have read and understood what the symptoms of low blood sugar (hypoglycaemia) are"
+            "cy": "you {b}have read and understood{/b} what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
+            "en": "you {b}have read and understood{/b} what the symptoms of low blood sugar (hypoglycaemia) are"
           }
         }
       }
@@ -320,14 +320,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not understand the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
-            "en": "You do not understand the need to test your blood glucose/sugar at times relevant to driving"
+            "cy": "you {b}do not understand{/b} the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
+            "en": "you {b}do not understand{/b} the need to test your blood glucose/sugar at times relevant to driving"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You understand the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
-            "en": "You understand the need to test your blood glucose/sugar at times relevant to driving"
+            "cy": "you {b}understand{/b} the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
+            "en": "you {b}understand{/b} the need to test your blood glucose/sugar at times relevant to driving"
           }
         }
       }
@@ -336,14 +336,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You have not had laser treatment/injections for diabetic eye disease (Welsh)",
-            "en": "You have not had laser treatment/injections for diabetic eye disease"
+            "cy": "you {b}have not{/b} had laser treatment/injections for diabetic eye disease (Welsh)",
+            "en": "you {b}have not{/b} had laser treatment/injections for diabetic eye disease"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You have had laser treatment/injections for diabetic eye disease (Welsh)",
-            "en": "You have had laser treatment/injections for diabetic eye disease"
+            "cy": "you {b}have{/b} had laser treatment/injections for diabetic eye disease (Welsh)",
+            "en": "you {b}have{/b} had laser treatment/injections for diabetic eye disease"
           }
         }
       }
@@ -352,14 +352,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You have not had laser treatment/injections in both eyes for diabetic eye disease (Welsh)",
-            "en": "You have not had laser treatment/injections in both eyes for diabetic eye disease"
+            "cy": "you {b}have not{/b} had laser treatment/injections in {b}both eyes{/b} for diabetic eye disease (Welsh)",
+            "en": "you {b}have not{/b} had laser treatment/injections in {b}both eyes{/b} for diabetic eye disease"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You have had laser treatment/injections in both eyes for diabetic eye disease (Welsh)",
-            "en": "You have had laser treatment/injections in both eyes for diabetic eye disease"
+            "cy": "you {b}have{/b} had laser treatment/injections in {b}both eyes{/b} for diabetic eye disease (Welsh)",
+            "en": "you {b}have{/b} had laser treatment/injections in {b}both eyes{/b} for diabetic eye disease"
           }
         }
       }
@@ -368,20 +368,20 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You {b}do not meet{/b} the legal eyesight standard for driving (Welsh)",
-            "en": "You {b}do not meet{/b} the legal eyesight standard for driving"
+            "cy": "you {b}do not meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}do not meet{/b} the legal eyesight standard for driving"
           }
         },
         "YG": {
           "answers": {
-            "cy": "You {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses (Welsh){/b}",
-            "en": "You {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b}"
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b} (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b}"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You {b}meet{/b} the legal eyesight standard for driving (Welsh)",
-            "en": "You {b}meet{/b} the legal eyesight standard for driving"
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving"
           }
         }
       }
@@ -390,14 +390,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not provide consent for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s) (Welsh)",
-            "en": "You do not provide consent for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s)"
+            "cy": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s)"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You have agreed that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
-            "en": "You have agreed that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s)"
+            "cy": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s)"
           }
         }
       }
@@ -422,26 +422,26 @@
       "options": {
         "G": {
           "answers": {
-            "cy": "You see a GP for your diabetic care (Welsh)",
-            "en": "You see a GP for your diabetic care"
+            "cy": "you see a {b}GP{/b} for your diabetic care (Welsh)",
+            "en": "you see a {b}GP{/b} for your diabetic care"
           }
         },
         "GN": {
           "answers": {
-            "cy": "You see a GP Nurse for your diabetic care (Welsh)",
-            "en": "You see a GP Nurse for your diabetic care"
+            "cy": "you see a {b}GP Nurse{/b} for your diabetic care (Welsh)",
+            "en": "you see a {b}GP Nurse{/b} for your diabetic care"
           }
         },
         "C": {
           "answers": {
-            "cy": "You see a Consultant for your diabetic care (Welsh)",
-            "en": "You see a Consultant for your diabetic care"
+            "cy": "you see a {b}Consultant{/b} for your diabetic care (Welsh)",
+            "en": "you see a {b}Consultant{/b} for your diabetic care"
           }
         },
         "NS": {
           "answers": {
-            "cy": "You see a Nurse Specialist for your diabetic care (Welsh)",
-            "en": "You see a Nurse Specialist for your diabetic care"
+            "cy": "you see a {b}Nurse Specialist{/b} for your diabetic care (Welsh)",
+            "en": "you see a {b}Nurse Specialist{/b} for your diabetic care"
           }
         }
       }
@@ -450,14 +450,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "You do not need to drive a vehicle with special controls (Welsh)",
-            "en": "You do not need to drive a vehicle with special controls"
+            "cy": "you {b}do not need{/b} to drive a vehicle with special controls (Welsh)",
+            "en": "you {b}do not need{/b} to drive a vehicle with special controls"
           }
         },
         "Y": {
           "answers": {
-            "cy": "You need to drive a vehicle with special controls (Welsh)",
-            "en": "You need to drive a vehicle with special controls"
+            "cy": "you {b}need{/b} to drive a vehicle with special controls (Welsh)",
+            "en": "you {b}need{/b} to drive a vehicle with special controls"
           }
         }
       }

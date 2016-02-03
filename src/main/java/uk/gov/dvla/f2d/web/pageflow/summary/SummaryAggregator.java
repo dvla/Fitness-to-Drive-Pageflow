@@ -57,12 +57,22 @@ public class SummaryAggregator
         }
     }
 
-    public List<Line> process(MedicalForm form) {
-        List<Line> response = new ArrayList<>();
-
+    private void checkIntegrity(MedicalForm form) {
         if(summary == null) {
             initialise(form);
         }
+        /*
+        MessageHeader header = form.getMessageHeader();
+        MedicalCondition condition = form.getMedicalCondition();
+
+        LogUtils.debug(this.getClass(), "Breadcrumbs: "+header.getBreadcrumb());
+        */
+    }
+
+    public List<Line> process(MedicalForm form) {
+        List<Line> response = new ArrayList<>();
+
+        checkIntegrity(form);
 
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
@@ -73,19 +83,25 @@ public class SummaryAggregator
             LogUtils.debug(this.getClass(), "- Breadcrumb: "+breadcrumb);
 
             for(MedicalQuestion question : condition.getQuestions().values()) {
-                if(question.getStep().equals(breadcrumb) && !question.getAnswers().isEmpty()) {
-                    LogUtils.debug(this.getClass(), "  - Step: "+question.getStep()+", Answers: "+question.getAnswers());
+                if(question.getStep().equals(breadcrumb)) {
 
-                    if (question.getType().equals(RADIO)) {
-                        response.addAll(processRadio(summary, header, question));
-                    } else if (question.getType().equals(CHECKBOX)) {
-                        response.addAll(processCheckBox(summary, header, question));
-                    } else if (question.getType().equals(FORM)) {
-                        response.addAll(processForm(summary, header, question));
-                    } else if (question.getType().equals(CONTINUE)) {
-                        response.addAll(processContinue(summary, header, question));
-                    } else {
-                        throw new IllegalArgumentException("Question type is not supported: " + question.getType());
+                    LogUtils.debug(this.getClass(), "  - Step: " + question.getStep());
+                    LogUtils.debug(this.getClass(), "    + Answers: " + question.getAnswers());
+                    LogUtils.debug(this.getClass(), "    +    Size: " + question.getAnswers().size());
+                    LogUtils.debug(this.getClass(), "    +   Empty: " + question.getAnswers().isEmpty());
+
+                    if(!(question.getAnswers().isEmpty())) {
+                        if (question.getType().equals(RADIO)) {
+                            response.addAll(processRadio(summary, header, question));
+                        } else if (question.getType().equals(CHECKBOX)) {
+                            response.addAll(processCheckBox(summary, header, question));
+                        } else if (question.getType().equals(FORM)) {
+                            response.addAll(processForm(summary, header, question));
+                        } else if (question.getType().equals(CONTINUE)) {
+                            response.addAll(processContinue(summary, header, question));
+                        } else {
+                            throw new IllegalArgumentException("Type is not supported: " + question.getType());
+                        }
                     }
                 }
             }
