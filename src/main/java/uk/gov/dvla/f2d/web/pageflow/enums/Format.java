@@ -4,12 +4,12 @@ public enum Format
 {
     FORM("Form"),
     RADIO("Radio"),
-    CHECKBOX("Checkbox"),
+    CHECKBOX("CheckBox"),
     CONTINUE("Continue");
 
     private String format;
 
-    private Format(final String newFormat) {
+    Format(final String newFormat) {
         this.format = newFormat;
     }
 
