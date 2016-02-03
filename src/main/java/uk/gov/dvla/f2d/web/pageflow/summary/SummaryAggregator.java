@@ -106,7 +106,7 @@ public class SummaryAggregator
                 if(text != null) {
                     Line line = new Line();
                     line.setType(question.getType());
-                    line.setSubHeading(null);
+                    line.setSubHeading(question.getText());
                     line.getLines().add(text);
                     line.setLink(question.getID());
 
@@ -132,7 +132,7 @@ public class SummaryAggregator
                 for(String value : question.getAnswers()) {
                     String key = value.split(HYPHEN_SYMBOL)[0];
                     if(!(key.equals(heading))) {
-                        line.getLines().add("{b}"+key+"{/b}");
+                        line.getLines().add(BOLD_ON + key + BOLD_OFF);
                         heading = key;
                     }
                     Option option = summary.getQuestions().get(question.getID());

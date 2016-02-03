@@ -45,6 +45,9 @@ public class Constants
     public static final String HYPHEN_SYMBOL       = "-";
     public static final String PERIOD_SYMBOL       = ".";
 
+    public static final String BOLD_ON             = "{b}";
+    public static final String BOLD_OFF            = "{/b}";
+
     /**
      * Specified fields for use within validation framework.
      */
