@@ -435,13 +435,13 @@
           "text": "",
           "id": "medical-consent-two"
         },
-        "notify-condition": {
+        "notifiable-condition": {
           "step": "A1.3",
           "page": "Information",
           "order": 3,
           "type": "Continue",
           "validate": true,
-          "logout": false,
+          "logout": true,
           "options": "",
           "answers": [""],
           "decision": "",
