@@ -390,7 +390,7 @@
           "type": "Radio",
           "validate": true,
           "logout": false,
-          "options": "Y=5, N=A4.1",
+          "options": "Y=5, N=A1.3",
           "answers": [""],
           "decision": "",
           "text": "",
@@ -435,8 +435,8 @@
           "text": "",
           "id": "medical-consent-two"
         },
-        "non-notifiable-condition": {
-          "step": "A4.1",
+        "non-notifiable-change": {
+          "step": "A1.3",
           "page": "Information",
           "order": 3,
           "type": "Continue",
@@ -446,7 +446,7 @@
           "answers": [""],
           "decision": "",
           "text": "",
-          "id": "non-notifiable-condition"
+          "id": "non-notifiable-change"
         },
         "ophthalmologist-details": {
           "step": "A2.7",
