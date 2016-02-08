@@ -85,7 +85,7 @@ public class SummaryAggregator
             for(MedicalQuestion question : condition.getQuestions().values()) {
                 if(question.getStep().equals(breadcrumb)) {
 
-                    LogUtils.debug(this.getClass(), "  - Step: " + question.getStep());
+                    LogUtils.debug(this.getClass(), "  - Step: " + question.getStep() + "-> " + question.getID());
                     LogUtils.debug(this.getClass(), "    + Answers: " + question.getAnswers());
                     LogUtils.debug(this.getClass(), "    +    Size: " + question.getAnswers().size());
                     LogUtils.debug(this.getClass(), "    +   Empty: " + question.getAnswers().isEmpty());
@@ -118,15 +118,17 @@ public class SummaryAggregator
                 Option option = summary.getQuestions().get(question.getID());
                 Answer answer = option.getOptions().get(question.getAnswers().get(0));
 
-                String text = answer.getAnswers().get(header.getLanguage());
-                if(text != null) {
-                    Line line = new Line();
-                    line.setType(question.getType());
-                    line.setSubHeading(question.getText());
-                    line.getLines().add(text);
-                    line.setLink(question.getID());
+                if(answer != null) {
+                    String text = answer.getAnswers().get(header.getLanguage());
+                    if (text != null) {
+                        Line line = new Line();
+                        line.setType(question.getType());
+                        line.setSubHeading(question.getText());
+                        line.getLines().add(text);
+                        line.setLink(question.getID());
 
-                    response.add(line);
+                        response.add(line);
+                    }
                 }
             }
         }
@@ -153,7 +155,7 @@ public class SummaryAggregator
                     }
                     Option option = summary.getQuestions().get(question.getID());
                     Answer answer = option.getOptions().get(value);
-
+                    
                     String text = answer.getAnswers().get(header.getLanguage());
                     if(text != null) {
                         line.getLines().add(text);
