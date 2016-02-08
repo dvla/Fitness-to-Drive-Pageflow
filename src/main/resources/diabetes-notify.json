@@ -146,22 +146,6 @@
         }
       }
     },
-    "consultant-details": {
-      "options": {
-        "N": {
-          "answers": {
-            "cy": "NO, your WELSH answer to [consultant-details]",
-            "en": "NO, your ENGLISH answer to [consultant-details]"
-          }
-        },
-        "Y": {
-          "answers": {
-            "cy": "YES, your WELSH answer to [consultant-details]",
-            "en": "YES, your ENGLISH answer to [consultant-details]"
-          }
-        }
-      }
-    },
     "diabetes-with-insulin": {
       "options": {
         "N": {
@@ -194,22 +178,6 @@
         }
       }
     },
-    "gp-details": {
-      "options": {
-        "N": {
-          "answers": {
-            "cy": "NO, your WELSH answer to [gp-details]",
-            "en": "NO, your ENGLISH answer to [gp-details]"
-          }
-        },
-        "Y": {
-          "answers": {
-            "cy": "YES, your WELSH answer to [gp-details]",
-            "en": "YES, your ENGLISH answer to [gp-details]"
-          }
-        }
-      }
-    },
     "healthcare-practitioner-one": {
       "options": {
         "N": {
@@ -230,14 +198,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "NO, your WELSH answer to [healthcare-practitioner-two]",
-            "en": "NO, your ENGLISH answer to [healthcare-practitioner-two]"
+            "cy": "you {b}have not seen{/b} a healthcare professional about your diabetes in the last 12 months (Welsh)",
+            "en": "you {b}have not seen{/b} a healthcare professional about your diabetes in the last 12 months"
           }
         },
         "Y": {
           "answers": {
-            "cy": "YES, your WELSH answer to [healthcare-practitioner-two]",
-            "en": "YES, your ENGLISH answer to [healthcare-practitioner-two]"
+            "cy": "you {b}have{/b} seen a healthcare professional about your diabetes in the last 12 months (Welsh)",
+            "en": "you {b}have{/b} seen a healthcare professional about your diabetes in the last 12 months"
           }
         }
       }
@@ -388,12 +356,6 @@
     },
     "medical-consent-one": {
       "options": {
-        "N": {
-          "answers": {
-            "cy": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s) (Welsh)",
-            "en": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s)"
-          }
-        },
         "Y": {
           "answers": {
             "cy": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
@@ -406,14 +368,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "NO, your WELSH answer to [medical-consent-two]",
-            "en": "NO, your ENGLISH answer to [medical-consent-two]"
+            "cy": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s)"
           }
         },
         "Y": {
           "answers": {
-            "cy": "YES, your WELSH answer to [medical-consent-two]",
-            "en": "YES, your ENGLISH answer to [medical-consent-two]"
+            "cy": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s)"
           }
         }
       }
