@@ -61,12 +61,6 @@ public class SummaryAggregator
         if(summary == null) {
             initialise(form);
         }
-        /*
-        MessageHeader header = form.getMessageHeader();
-        MedicalCondition condition = form.getMedicalCondition();
-
-        LogUtils.debug(this.getClass(), "Breadcrumbs: "+header.getBreadcrumb());
-        */
     }
 
     public List<Line> process(MedicalForm form) {
@@ -83,7 +77,7 @@ public class SummaryAggregator
             LogUtils.debug(this.getClass(), "- Breadcrumb: "+breadcrumb);
 
             for(MedicalQuestion question : condition.getQuestions().values()) {
-                if(question.getStep().equals(breadcrumb)) {
+                if(question.getStep().equals(breadcrumb) && question.getSummary()) {
 
                     LogUtils.debug(this.getClass(), "  - Step: " + question.getStep() + "-> " + question.getID());
                     LogUtils.debug(this.getClass(), "    + Answers: " + question.getAnswers());
@@ -111,7 +105,6 @@ public class SummaryAggregator
     }
 
     private List<Line> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug(this.getClass(), "    - Radio: "+question.getID()+", Answers: "+question.getAnswers());
         List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
@@ -136,7 +129,6 @@ public class SummaryAggregator
     }
 
     private List<Line> processCheckBox(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug(this.getClass(), "    - Check: "+question.getID()+", Answers: "+question.getAnswers());
         List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
@@ -155,7 +147,7 @@ public class SummaryAggregator
                     }
                     Option option = summary.getQuestions().get(question.getID());
                     Answer answer = option.getOptions().get(value);
-                    
+
                     String text = answer.getAnswers().get(header.getLanguage());
                     if(text != null) {
                         line.getLines().add(text);
@@ -171,8 +163,6 @@ public class SummaryAggregator
     }
 
     private List<Line> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug(this.getClass(), "    - Form: "+question.getID()+", Answers: "+question.getAnswers());
-
         List<Line> response = new ArrayList<>();
 
         Line line = new Line();
@@ -186,7 +176,6 @@ public class SummaryAggregator
     }
 
     private List<Line> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
-        LogUtils.debug(this.getClass(), "    - Continue: "+question.getID()+", Answers: "+question.getAnswers());
         List<Line> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             Option option = summary.getQuestions().get(question.getID());
