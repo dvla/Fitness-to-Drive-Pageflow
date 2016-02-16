@@ -56,12 +56,6 @@
     },
     "medical-consent-one": {
       "options": {
-        "N": {
-          "answers": {
-            "cy": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s) (Welsh)",
-            "en": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s)"
-          }
-        },
         "Y": {
           "answers": {
             "cy": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
@@ -74,14 +68,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "NO, your WELSH answer to [medical-consent-two]",
-            "en": "NO, your ENGLISH answer to [medical-consent-two]"
+            "cy": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s)"
           }
         },
         "Y": {
           "answers": {
-            "cy": "YES, your WELSH answer to [medical-consent-two]",
-            "en": "YES, your ENGLISH answer to [medical-consent-two]"
+            "cy": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s)"
           }
         }
       }
