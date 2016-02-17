@@ -58,9 +58,7 @@ public class SummaryAggregator
     }
 
     private void checkIntegrity(MedicalForm form) {
-        if(summary == null) {
-            initialise(form);
-        }
+        initialise(form);
     }
 
     public List<Line> process(MedicalForm form) {
