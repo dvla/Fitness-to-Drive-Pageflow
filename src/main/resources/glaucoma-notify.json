@@ -18,16 +18,16 @@
     },
     "glaucoma-eyes": {
       "options": {
-        "1": {
-          "answers": {
-            "cy": "you have Glaucoma in {b}one{/b} eye (Welsh)",
-            "en": "you have Glaucoma in {b}one{/b} eye"
-          }
-        },
-        "2": {
+        "Y": {
           "answers": {
             "cy": "you have Glaucoma in {b}two{/b} eyes (Welsh)",
             "en": "you have Glaucoma in {b}two{/b} eyes"
+          }
+        },
+        "N": {
+          "answers": {
+            "cy": "you have Glaucoma in {b}one{/b} eye (Welsh)",
+            "en": "you have Glaucoma in {b}one{/b} eye"
           }
         }
       }
