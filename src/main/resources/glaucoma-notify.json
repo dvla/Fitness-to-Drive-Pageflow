@@ -20,14 +20,14 @@
       "options": {
         "Y": {
           "answers": {
-            "cy": "you have Glaucoma in {b}two{/b} eyes (Welsh)",
-            "en": "you have Glaucoma in {b}two{/b} eyes"
+            "cy": "you have glaucoma in {b}both{/b} eyes (Welsh)",
+            "en": "you have glaucoma in {b}both{/b} eyes"
           }
         },
         "N": {
           "answers": {
-            "cy": "you have Glaucoma in {b}one{/b} eye (Welsh)",
-            "en": "you have Glaucoma in {b}one{/b} eye"
+            "cy": "you have glaucoma in {b}one{/b} eye (Welsh)",
+            "en": "you have glaucoma in {b}one{/b} eye"
           }
         }
       }
