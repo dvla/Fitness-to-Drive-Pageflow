@@ -331,7 +331,7 @@
           "text": "",
           "id": "medical-practitioner"
         },
-        "non-notifiable-condition": {
+        "tablets-diet-both": {
           "step": "A4.1",
           "page": "Information",
           "order": 2,
@@ -343,7 +343,7 @@
           "answers": [],
           "decision": "",
           "text": "",
-          "id": "non-notifiable-condition"
+          "id": "tablets-diet-both"
         },
         "special-controls": {
           "step": "18",
