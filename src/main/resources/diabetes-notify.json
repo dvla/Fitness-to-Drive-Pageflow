@@ -20,128 +20,170 @@
       "options": {
         "Car-1": {
           "answers": {
-            "cy": "Combined braking and accelerator system (Welsh)",
-            "en": "Combined braking and accelerator system"
+            "cy": "Modifier accelerator system (Welsh)",
+            "en": "Modifier accelerator system"
           }
         },
         "Car-2": {
           "answers": {
-            "cy": "Accelerator system",
-            "en": "Accelerator system"
+            "cy": "Modified braking system (Welsh)",
+            "en": "Modified braking system"
           }
         },
         "Car-3": {
           "answers": {
-            "cy": "Rear view mirror",
-            "en": "Rear view mirror"
+            "cy": "Combined braking and accelerator system (Welsh)",
+            "en": "Combined braking and accelerator system"
           }
         },
         "Car-4": {
           "answers": {
-            "cy": "Braking system",
-            "en": "Braking system"
+            "cy": "Modified clutch (Welsh)",
+            "en": "Modified clutch"
           }
         },
         "Car-5": {
           "answers": {
-            "cy": "Clutch",
-            "en": "Clutch"
+            "cy": "Modified control layouts (Welsh)",
+            "en": "Modified control layouts"
           }
         },
         "Car-6": {
           "answers": {
-            "cy": "Control layouts",
-            "en": "Control layouts"
+            "cy": "Modified driver seat (Welsh)",
+            "en": "Modified driver seat"
           }
         },
         "Car-7": {
           "answers": {
-            "cy": "Driver seat",
-            "en": "Driver seat"
+            "cy": "Modified rear view mirror (Welsh)",
+            "en": "Modified rear view mirror"
           }
         },
         "Car-8": {
           "answers": {
-            "cy": "Steering",
-            "en": "Steering"
+            "cy": "Modified steering (Welsh)",
+            "en": "Modified steering"
           }
         },
         "Car-9": {
           "answers": {
-            "cy": "Transmission",
-            "en": "Transmission"
+            "cy": "Modified transmission (Welsh)",
+            "en": "Modified transmission"
           }
         },
         "Motorcycle-1": {
           "answers": {
-            "cy": "Adjusted commands",
-            "en": "Adjusted commands"
+            "cy": "Adjusted accelerator handle (Welsh)",
+            "en": "Adjusted accelerator handle"
           }
         },
         "Motorcycle-2": {
           "answers": {
-            "cy": "Adjusted foot operated brake",
-            "en": "Adjusted foot operated brake"
+            "cy": "Adjusted commands (lights, indicators etc) (Welsh)",
+            "en": "Adjusted commands (lights, indicators etc)"
           }
         },
         "Motorcycle-3": {
           "answers": {
-            "cy": "Adjusted hand operated brake",
-            "en": "Adjusted hand operated brake"
+            "cy": "Adjusted foot operated brake (Welsh)",
+            "en": "Adjusted foot operated brake"
           }
         },
         "Motorcycle-4": {
           "answers": {
-            "cy": "Adjusted manual transmission and clutch",
-            "en": "Adjusted manual transmission and clutch"
+            "cy": "Adjusted hand operated brake (Welsh)",
+            "en": "Adjusted hand operated brake"
           }
         },
         "Motorcycle-5": {
           "answers": {
-            "cy": "Only with sidecar",
-            "en": "Only with sidecar"
+            "cy": "Adjusted manual transmission and clutch (Welsh)",
+            "en": "Adjusted manual transmission and clutch"
           }
         },
         "Motorcycle-6": {
           "answers": {
-            "cy": "Single operated brake",
-            "en": "Single operated brake"
+            "cy": "Adjusted rear view mirror (Welsh)",
+            "en": "Adjusted rear view mirror"
           }
         },
         "Motorcycle-7": {
-          "answers": {
-            "cy": "Seat height",
-            "en": "Seat height"
-          }
-        },
-        "Moped-1": {
-          "answers": {
-            "cy": "Adjusted foot operated brake",
-            "en": "Adjusted foot operated brake"
-          }
-        },
-        "Moped-2": {
-          "answers": {
-            "cy": "Adjusted hand operated brake",
-            "en": "Adjusted hand operated brake"
-          }
-        },
-        "Moped-3": {
-          "answers": {
-            "cy": "Adjusted manual transmission and clutch",
-            "en": "Adjusted manual transmission and clutch"
-          }
-        },
-        "Moped-4": {
           "answers": {
             "cy": "Only with sidecar",
             "en": "Only with sidecar"
           }
         },
+        "Motorcycle-8": {
+          "answers": {
+            "cy": "Seat height (allows driver in a seated position to have contact with the ground) (Welsh)",
+            "en": "Seat height (allows driver in a seated position to have contact with the ground)"
+          }
+        },
+        "Motorcycle-9": {
+          "answers": {
+            "cy": "Single operated brake (Welsh)",
+            "en": "Single operated brake"
+          }
+        },
+        "Moped-1": {
+          "answers": {
+            "cy": "Adjusted accelerator handle (Welsh)",
+            "en": "Adjusted accelerator handle"
+          }
+        },
+        "Moped-2": {
+          "answers": {
+            "cy": "Adjusted commands (Welsh)",
+            "en": "Adjusted commands"
+          }
+        },
+        "Moped-3": {
+          "answers": {
+            "cy": "Adjusted foot operated brake (Welsh)",
+            "en": "Adjusted foot operated brake"
+          }
+        },
+        "Moped-4": {
+          "answers": {
+            "cy": "Adjusted hand operated brake (Welsh)",
+            "en": "Adjusted hand operated brake"
+          }
+        },
         "Moped-5": {
           "answers": {
-            "cy": "Single operated brake",
+            "cy": "Adjusted manual transmission and clutch (Welsh)",
+            "en": "Adjusted manual transmission and clutch"
+          }
+        },
+        "Moped-6": {
+          "answers": {
+            "cy": "Adjusted rear view mirror (Welsh)",
+            "en": "Adjusted rear view mirror"
+          }
+        },
+        "Moped-7": {
+          "answers": {
+            "cy": "Seat height (allows driver in a seated position to have contact with the ground) (Welsh)",
+            "en": "Seat height (allows driver in a seated position to have contact with the ground)"
+          }
+        },
+        "Moped-8": {
+          "answers": {
+            "cy": "Single operated brake (Welsh)",
             "en": "Single operated brake"
+          }
+        },
+        "Moped-9": {
+          "answers": {
+            "cy": "Moped (Welsh)",
+            "en": "Moped"
+          }
+        },
+        "Moped-10": {
+          "answers": {
+            "cy": "Tricycle (select this if you have 2 wheeled entitlement and only wish to drive tricycles) (Welsh)",
+            "en": "Tricycle (select this if you have 2 wheeled entitlement and only wish to drive tricycles)"
           }
         }
       }
