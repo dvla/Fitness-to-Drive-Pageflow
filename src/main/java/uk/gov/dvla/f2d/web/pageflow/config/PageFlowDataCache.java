@@ -1,6 +1,6 @@
 package uk.gov.dvla.f2d.web.pageflow.config;
 
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
+import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.web.pageflow.utils.MapUtils;
 import uk.gov.dvla.f2d.web.pageflow.utils.ServiceUtils;
 

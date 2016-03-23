@@ -1,6 +1,6 @@
 package uk.gov.dvla.f2d.web.pageflow.helpers;
 
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
+import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class FormHelper

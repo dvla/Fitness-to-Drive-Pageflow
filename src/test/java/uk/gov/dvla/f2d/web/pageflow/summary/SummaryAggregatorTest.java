@@ -3,10 +3,10 @@ package uk.gov.dvla.f2d.web.pageflow.summary;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
+import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
+import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalCondition;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
 
 import java.util.Arrays;
 import java.util.List;

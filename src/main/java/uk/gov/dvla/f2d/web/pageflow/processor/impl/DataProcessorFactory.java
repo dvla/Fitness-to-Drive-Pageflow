@@ -1,8 +1,7 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
+import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.model.MessageHeader;
 import uk.gov.dvla.f2d.web.pageflow.utils.LogUtils;
 
 public final class DataProcessorFactory

@@ -2,7 +2,7 @@ package uk.gov.dvla.f2d.web.pageflow.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
+import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 
 import java.io.IOException;
 import java.io.InputStream;

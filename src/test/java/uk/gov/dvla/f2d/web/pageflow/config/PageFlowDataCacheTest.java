@@ -3,7 +3,8 @@ package uk.gov.dvla.f2d.web.pageflow.config;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalForm;
+import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
+
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class PageFlowDataCacheTest extends TestCase

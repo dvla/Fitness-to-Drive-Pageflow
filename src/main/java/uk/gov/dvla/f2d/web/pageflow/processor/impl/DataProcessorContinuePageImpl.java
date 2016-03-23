@@ -1,7 +1,7 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
-import uk.gov.dvla.f2d.web.pageflow.model.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.model.Notification;
+import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
+import uk.gov.dvla.f2d.model.pageflow.Notification;
 
 import java.util.ArrayList;
 import java.util.List;
