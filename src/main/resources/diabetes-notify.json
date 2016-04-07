@@ -20,8 +20,8 @@
       "options": {
         "Car-1": {
           "answers": {
-            "cy": "Modifier accelerator system (Welsh)",
-            "en": "Modifier accelerator system"
+            "cy": "Modified accelerator system (Welsh)",
+            "en": "Modified accelerator system"
           }
         },
         "Car-2": {
@@ -256,14 +256,14 @@
       "options": {
         "N": {
           "answers": {
-            "cy": "you {b}do not understand{/b} the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
-            "en": "you {b}do not understand{/b} the need to test your blood glucose/sugar at times relevant to driving"
+            "cy": "you {b}have not{/b} had an episode of low blood sugar (hypoglycaemia) (Welsh)",
+            "en": "you {b}have not{/b} had an episode of low blood sugar (hypoglycaemia)"
           }
         },
         "Y": {
           "answers": {
-            "cy": "you {b}understand{/b} the need to test your blood glucose/sugar at times relevant to driving (Welsh)",
-            "en": "you {b}understand{/b} the need to test your blood glucose/sugar at times relevant to driving"
+            "cy": "you {b}have{/b} had an episode of low blood sugar (hypoglycaemia) (Welsh)",
+            "en": "you {b}have{/b} had an episode of low blood sugar (hypoglycaemia)"
           }
         }
       }
