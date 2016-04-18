@@ -18,7 +18,7 @@ import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class SummaryAggregator
 {
-    private Logger logger = LoggerFactory.getLogger(SummaryAggregator.class);
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private static SummaryAggregator instance;
 

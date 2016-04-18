@@ -15,7 +15,7 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
 {
     private MedicalQuestion question;
 
-    private Logger logger = LoggerFactory.getLogger(DataProcessorCheckboxGroupImpl.class);
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     DataProcessorCheckboxGroupImpl(MedicalQuestion newQuestion) {
         this.question = newQuestion;

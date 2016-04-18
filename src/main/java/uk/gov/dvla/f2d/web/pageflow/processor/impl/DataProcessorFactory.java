@@ -6,7 +6,7 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
 
 public final class DataProcessorFactory {
-    private Logger logger = LoggerFactory.getLogger(DataProcessorFactory.class);
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public DataProcessorFactory() {
         super();
