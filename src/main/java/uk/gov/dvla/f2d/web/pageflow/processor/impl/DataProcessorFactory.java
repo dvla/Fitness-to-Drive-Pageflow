@@ -1,11 +1,13 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
-import uk.gov.dvla.f2d.web.pageflow.utils.LogUtils;
 
-public final class DataProcessorFactory
-{
+public final class DataProcessorFactory {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     public DataProcessorFactory() {
         super();
     }
@@ -13,22 +15,22 @@ public final class DataProcessorFactory
     public IDataQuestionProcessor getQuestionProcessor(MedicalQuestion question) {
         IDataQuestionProcessor processor = null;
 
-        LogUtils.debug(this.getClass(), "Question Type: " + question.getType());
+        logger.debug("Question Type: " + question.getType());
 
         if(Format.FORM.equals(question.getType())) {
-            LogUtils.debug(this.getClass(), "  + Form Processor");
+            logger.debug("Form Processor");
             processor = new DataProcessorFormPageImpl(question);
 
         } else if(Format.RADIO.equals(question.getType())) {
-            LogUtils.debug(this.getClass(), "  + Radio Processor");
+            logger.debug("Radio Processor");
             processor = new DataProcessorRadioGroupImpl(question);
 
         } else if(Format.CHECKBOX.equals(question.getType())) {
-            LogUtils.debug(this.getClass(), "  + CheckBox Processor");
+            logger.debug("CheckBox Processor");
             processor = new DataProcessorCheckboxGroupImpl(question);
 
         } else if(Format.CONTINUE.equals(question.getType())) {
-            LogUtils.debug(this.getClass(), "  + Continue Processor");
+            logger.debug("Continue Processor");
             processor = new DataProcessorContinuePageImpl(question);
 
         } else {
