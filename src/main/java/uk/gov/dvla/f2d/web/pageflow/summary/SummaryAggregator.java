@@ -1,11 +1,12 @@
 package uk.gov.dvla.f2d.web.pageflow.summary;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.MessageHeader;
-import uk.gov.dvla.f2d.web.pageflow.utils.LogUtils;
 import uk.gov.dvla.f2d.web.pageflow.utils.ServiceUtils;
 
 import java.io.IOException;
@@ -17,6 +18,8 @@ import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class SummaryAggregator
 {
+    private Logger logger = LoggerFactory.getLogger(SummaryAggregator.class);
+
     private static SummaryAggregator instance;
 
     private Summary summary;
@@ -43,14 +46,14 @@ public class SummaryAggregator
 
             String resourceToLoad = (condition + HYPHEN_SYMBOL + service + JSON_SUFFIX);
 
-            LogUtils.debug(this.getClass(), "Load Resource ["+resourceToLoad+"]");
+            logger.debug("Load Resource ["+resourceToLoad+"]");
 
             ClassLoader classLoader = this.getClass().getClassLoader();
             InputStream resourceStream = classLoader.getResource(resourceToLoad).openStream();
 
             summary = new ObjectMapper().readValue(resourceStream, Summary.class);
 
-            LogUtils.debug(this.getClass(), "Resource Loaded [Questions="+summary.getQuestions().size()+"]");
+            logger.debug("Resource Loaded [Questions="+summary.getQuestions().size()+"]");
 
         } catch(IOException ex) {
             throw new IllegalArgumentException(ex);
@@ -69,18 +72,18 @@ public class SummaryAggregator
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
 
-        LogUtils.debug(this.getClass(), "Breadcrumbs: "+header.getBreadcrumb());
+        logger.debug("Breadcrumbs: "+header.getBreadcrumb());
 
         for(String breadcrumb : form.getMessageHeader().getBreadcrumb()) {
-            LogUtils.debug(this.getClass(), "- Breadcrumb: "+breadcrumb);
+            logger.debug("Breadcrumb: "+breadcrumb);
 
             for(MedicalQuestion question : condition.getQuestions().values()) {
                 if(question.getStep().equals(breadcrumb) && question.getSummary()) {
 
-                    LogUtils.debug(this.getClass(), "  - Step: " + question.getStep() + "-> " + question.getID());
-                    LogUtils.debug(this.getClass(), "    + Answers: " + question.getAnswers());
-                    LogUtils.debug(this.getClass(), "    +    Size: " + question.getAnswers().size());
-                    LogUtils.debug(this.getClass(), "    +   Empty: " + question.getAnswers().isEmpty());
+                    logger.debug("Step: " + question.getStep() + "-> " + question.getID());
+                    logger.debug("Answers: " + question.getAnswers());
+                    logger.debug("Size: " + question.getAnswers().size());
+                    logger.debug("Empty: " + question.getAnswers().isEmpty());
 
                     if(!(question.getAnswers().isEmpty())) {
                         if (question.getType().equals(RADIO)) {

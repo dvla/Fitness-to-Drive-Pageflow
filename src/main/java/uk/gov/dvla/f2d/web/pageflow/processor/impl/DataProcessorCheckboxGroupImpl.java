@@ -1,9 +1,10 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
-import uk.gov.dvla.f2d.web.pageflow.utils.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,16 +15,18 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
 {
     private MedicalQuestion question;
 
+    private Logger logger = LoggerFactory.getLogger(DataProcessorCheckboxGroupImpl.class);
+
     DataProcessorCheckboxGroupImpl(MedicalQuestion newQuestion) {
         this.question = newQuestion;
     }
 
     @Override
     public List<Notification> validate() {
-        LogUtils.debug(this.getClass(), "Answers: "+question.getAnswers());
-        LogUtils.debug(this.getClass(), "  - Size: "+question.getAnswers().size());
-        LogUtils.debug(this.getClass(), "  - Empty: "+question.getAnswers().isEmpty());
-        LogUtils.debug(this.getClass(), "Options: ["+question.getOptions()+"]");
+        logger.debug("Answers: "+question.getAnswers());
+        logger.debug("Size: "+question.getAnswers().size());
+        logger.debug("Empty?: "+question.getAnswers().isEmpty());
+        logger.debug("Options: ["+question.getOptions()+"]");
 
         question.setDecision(question.getOptions().trim());
 
