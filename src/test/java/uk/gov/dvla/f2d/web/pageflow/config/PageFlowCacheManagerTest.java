@@ -8,8 +8,11 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.enums.Page;
 
-import java.util.*;
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+import static uk.gov.dvla.f2d.model.constants.Constants.NOTIFY_SERVICE;
 
 /**
  * Unit test for simple App.

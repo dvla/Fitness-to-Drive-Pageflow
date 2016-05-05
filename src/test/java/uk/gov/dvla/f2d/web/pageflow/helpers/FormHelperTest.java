@@ -8,7 +8,7 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.NOTIFY_SERVICE;
+import static uk.gov.dvla.f2d.model.constants.Constants.NOTIFY_SERVICE;
 
 public class FormHelperTest extends TestCase
 {

@@ -3,22 +3,6 @@ package uk.gov.dvla.f2d.web.pageflow.constants;
 public class Constants
 {
     /**
-     * Define a list of all the supported services within this module.
-     */
-    public static final String[] SUPPORTED_SERVICES = {
-        "notify"
-    };
-
-    public static final String[] SUPPORTED_LANGUAGES = {
-        "en", "cy"
-    };
-
-    public static final String NOTIFY_SERVICE       = SUPPORTED_SERVICES[0];
-
-    public static final String ENGLISH_LANGUAGE     = SUPPORTED_LANGUAGES[0];
-    public static final String WELSH_LANGUAGE       = SUPPORTED_LANGUAGES[1];
-
-    /**
      * Constants relating to stream loading and file naming conventions.
      */
     public static final String PAGEFLOW_PREFIX     = "pageflow";

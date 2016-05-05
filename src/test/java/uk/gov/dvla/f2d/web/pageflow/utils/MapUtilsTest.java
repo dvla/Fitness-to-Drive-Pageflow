@@ -11,7 +11,7 @@ import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
 import java.io.IOException;
 import java.util.Map;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
+import static uk.gov.dvla.f2d.model.constants.Constants.NOTIFY_SERVICE;
 
 public class MapUtilsTest extends TestCase
 {

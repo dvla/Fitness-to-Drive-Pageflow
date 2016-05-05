@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
+import static uk.gov.dvla.f2d.model.constants.Constants.NOTIFY_SERVICE;
 
 public class PageFlowDataCacheTest extends TestCase
 {

@@ -4,7 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
+import static uk.gov.dvla.f2d.model.constants.Constants.*;
 
 public class ServiceUtilsTest extends TestCase
 {
@@ -56,8 +56,10 @@ public class ServiceUtilsTest extends TestCase
         try {
             ServiceUtils.checkLanguageSupported(WELSH_LANGUAGE);
 
+            fail("An IllegalArgumentException should have been raised.");
+
         } catch(IllegalArgumentException ex) {
-            fail("An IllegalArgumentException should not have been raised.");
+            // Success
         }
     }
 

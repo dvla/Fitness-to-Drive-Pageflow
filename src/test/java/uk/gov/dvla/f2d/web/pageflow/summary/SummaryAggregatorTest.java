@@ -11,6 +11,7 @@ import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
 import java.util.Arrays;
 import java.util.List;
 
+import static uk.gov.dvla.f2d.model.constants.Constants.*;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 public class SummaryAggregatorTest extends TestCase

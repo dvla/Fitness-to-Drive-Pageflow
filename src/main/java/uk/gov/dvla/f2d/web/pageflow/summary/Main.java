@@ -12,7 +12,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
+import static uk.gov.dvla.f2d.model.constants.Constants.*;
 
 class Main
 {
@@ -77,7 +79,7 @@ class Main
 
         try {
             // Sort the question in alphabetical order.
-            new ObjectMapper().writeValue(new File("/home/james/diabetes-notify.json"), summary);
+            new ObjectMapper().writeValue(new File("./diabetes-notify-GENERATED.json"), summary);
 
         } catch(IOException ex) {
             ex.printStackTrace();

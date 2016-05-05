@@ -1,9 +1,7 @@
 package uk.gov.dvla.f2d.web.pageflow.utils;
 
-import java.util.Arrays;
-
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.SUPPORTED_LANGUAGES;
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.SUPPORTED_SERVICES;
+import static uk.gov.dvla.f2d.model.constants.Constants.isLanguageSupported;
+import static uk.gov.dvla.f2d.model.constants.Constants.isServiceSupported;
 
 public class ServiceUtils
 {
@@ -12,13 +10,13 @@ public class ServiceUtils
     }
 
     public static void checkServiceSupported(final String service) {
-        if(!(Arrays.asList(SUPPORTED_SERVICES).contains(service))) {
+        if(!(isServiceSupported(service))) {
             throw new IllegalArgumentException("Service is not currently supported: " + service);
         }
     }
 
     public static void checkLanguageSupported(final String language) {
-        if(!(Arrays.asList(SUPPORTED_LANGUAGES).contains(language))) {
+        if(!(isLanguageSupported(language))) {
             throw new IllegalArgumentException("Language is not currently supported: " + language);
         }
     }
