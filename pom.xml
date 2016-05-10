@@ -12,7 +12,7 @@
   <parent>
     <groupId>uk.gov.dvla.dsp</groupId>
     <artifactId>dsp-parent</artifactId>
-    <version>4.0</version>
+    <version>4.3</version>
   </parent>
 
   <scm>
@@ -23,6 +23,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>1.6.4</slf4j.version>
+    <maven.javadoc.skip>true</maven.javadoc.skip>
   </properties>
 
   <build>
@@ -48,11 +49,11 @@
             <goals>
               <goal>jar</goal>
             </goals>
-            <configuration>
-              <additionalparam>-Xdoclint:none</additionalparam>
-            </configuration>
           </execution>
         </executions>
+        <configuration>
+          <additionalparam>-Xdoclint:none</additionalparam>
+        </configuration>
       </plugin>
 
     </plugins>
@@ -63,7 +64,7 @@
     <dependency>
       <groupId>uk.gov.dvla.f2d</groupId>
       <artifactId>f2d-business-model</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.1</version>
     </dependency>
 
     <dependency>
