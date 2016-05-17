@@ -7,7 +7,8 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.MessageHeader;
-import uk.gov.dvla.f2d.web.pageflow.utils.ServiceUtils;
+import uk.gov.dvla.f2d.web.pageflow.enums.Format;
+import uk.gov.dvla.f2d.web.pageflow.loaders.ResourceLoader;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 
 public class SummaryAggregator
 {
@@ -36,20 +38,16 @@ public class SummaryAggregator
     }
 
     private void initialise(MedicalForm form) {
-        // Check to see if the quested service is supported?
-        ServiceUtils.checkServiceSupported(form.getMessageHeader().getService());
-
         // Service is supported, so proceed to load the configuration.
         try {
             final String condition = form.getMedicalCondition().getID();
             final String service = form.getMessageHeader().getService();
 
-            String resourceToLoad = (condition + HYPHEN_SYMBOL + service + JSON_SUFFIX);
+            String resourceToLoad = (condition + HYPHEN + service + JSON_SUFFIX);
 
             logger.debug("Load Resource ["+resourceToLoad+"]");
 
-            ClassLoader classLoader = this.getClass().getClassLoader();
-            InputStream resourceStream = classLoader.getResource(resourceToLoad).openStream();
+            InputStream resourceStream = ResourceLoader.load(resourceToLoad);
 
             summary = new ObjectMapper().readValue(resourceStream, Summary.class);
 
@@ -86,13 +84,13 @@ public class SummaryAggregator
                     logger.debug("Empty: " + question.getAnswers().isEmpty());
 
                     if(!(question.getAnswers().isEmpty())) {
-                        if (question.getType().equals(RADIO)) {
+                        if (question.getType().equals(Format.RADIO.toString())) {
                             response.addAll(processRadio(summary, header, question));
-                        } else if (question.getType().equals(CHECKBOX)) {
+                        } else if (question.getType().equals(Format.CHECKBOX.toString())) {
                             response.addAll(processCheckBox(summary, header, question));
-                        } else if (question.getType().equals(FORM)) {
+                        } else if (question.getType().equals(Format.FORM.toString())) {
                             response.addAll(processForm(summary, header, question));
-                        } else if (question.getType().equals(CONTINUE)) {
+                        } else if (question.getType().equals(Format.CONTINUE.toString())) {
                             response.addAll(processContinue(summary, header, question));
                         } else {
                             throw new IllegalArgumentException("Type is not supported: " + question.getType());
@@ -141,7 +139,7 @@ public class SummaryAggregator
                 line.setSubHeading(question.getText());
 
                 for(String value : question.getAnswers()) {
-                    String key = value.split(HYPHEN_SYMBOL)[0];
+                    String key = value.split(HYPHEN)[0];
                     if(!(key.equals(heading))) {
                         line.getLines().add(BOLD_ON + key + BOLD_OFF);
                         heading = key;

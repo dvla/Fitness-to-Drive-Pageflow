@@ -2,18 +2,16 @@ package uk.gov.dvla.f2d.web.pageflow.enums;
 
 public enum Page
 {
-    ELIGIBILITY("Eligibility"),
-    INFORMATION("Information"),
-    QUESTION("Question"),
-    SUMMARY("Summary");
+    UNVERIFIED("Unverified"),
+    VERIFIED("Verified");
 
-    private String type;
+    private String page;
 
-    Page(final String type) {
-        this.type = type;
+    Page(final String page) {
+        this.page = page;
     }
 
     public String toString() {
-        return this.type;
+        return this.page;
     }
 }

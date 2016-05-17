@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 public final class MapUtils
 {
@@ -15,9 +14,5 @@ public final class MapUtils
 
     public static String mapModelToString(MedicalForm form) throws JsonProcessingException{
         return new ObjectMapper().writeValueAsString(form);
-    }
-
-    public static MedicalForm mapStreamToModel(InputStream stream) throws IOException {
-        return new ObjectMapper().readValue(stream, MedicalForm.class);
     }
 }

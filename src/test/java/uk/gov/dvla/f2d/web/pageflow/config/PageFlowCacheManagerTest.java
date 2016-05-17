@@ -73,7 +73,7 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertNotNull(condition);
 
-        List<MedicalQuestion> questions = PageFlowCacheManager.getEligibilityPages(condition);
+        List<MedicalQuestion> questions = PageFlowCacheManager.getUnverifiedPages(condition);
 
         assertNotNull(questions);
         assertTrue("No eligibility questions were found for condition", questions.size() > 0);
@@ -81,7 +81,7 @@ public class PageFlowCacheManagerTest extends TestCase
         boolean eligibilityQuestionsOnlyFound = true;
 
         for(MedicalQuestion question : questions) {
-            if(!(question.getPage().equals(Page.ELIGIBILITY.toString()))) {
+            if(!(question.getPage().equals(Page.UNVERIFIED.toString()))) {
                 eligibilityQuestionsOnlyFound = false;
             }
         }
@@ -99,7 +99,7 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertNotNull(condition);
 
-        List<MedicalQuestion> questions = PageFlowCacheManager.getQuestionPages(condition);
+        List<MedicalQuestion> questions = PageFlowCacheManager.getVerifiedPages(condition);
 
         assertNotNull(questions);
         assertTrue("No standard questions were found for condition", questions.size() > 0);
@@ -107,7 +107,7 @@ public class PageFlowCacheManagerTest extends TestCase
         boolean standardQuestionsOnlyFound = true;
 
         for(MedicalQuestion question : questions) {
-            if(!(question.getPage().equals(Page.QUESTION.toString()))) {
+            if(!(question.getPage().equals(Page.VERIFIED.toString()))) {
                 standardQuestionsOnlyFound = false;
             }
         }

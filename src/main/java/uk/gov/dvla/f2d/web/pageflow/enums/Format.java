@@ -2,9 +2,9 @@ package uk.gov.dvla.f2d.web.pageflow.enums;
 
 public enum Format
 {
-    FORM("Form"),
     RADIO("Radio"),
     CHECKBOX("CheckBox"),
+    FORM("Form"),
     CONTINUE("Continue");
 
     private String format;
@@ -14,7 +14,7 @@ public enum Format
     }
 
     public boolean equals(final String newFormat) {
-        return this.format.equalsIgnoreCase(newFormat);
+        return format.equals(newFormat);
     }
 
     public String toString() {
