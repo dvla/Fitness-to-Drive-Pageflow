@@ -3,9 +3,11 @@ package uk.gov.dvla.f2d.web.pageflow.config;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
+import uk.gov.dvla.f2d.model.enums.Service;
+import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 
-import static uk.gov.dvla.f2d.model.constants.Constants.NOTIFY_SERVICE;
+import java.io.IOException;
+import java.util.Map;
 
 public class PageFlowDataCacheTest extends TestCase
 {
@@ -28,8 +30,17 @@ public class PageFlowDataCacheTest extends TestCase
     /**
      * Test to see if a medical questionnaire has been loaded from resources
      */
-    public void testMedicalFormLoadedFromLocalResource() {
-        MedicalForm medical = PageFlowDataCache.getMedicalForm(NOTIFY_SERVICE);
-        assertNotNull(medical);
+    public void testSupportedConditionsLoaded() {
+        try {
+            PageFlowDataCache cache = new PageFlowDataCache();
+            Map<String, MedicalCondition> conditions =
+                    cache.getSupportedConditions(Service.NOTIFY.toString());
+
+            assertNotNull(conditions);
+            assertTrue(conditions.size() > 0);
+
+        } catch(IOException ex) {
+            fail("An IOException should not have been raised.");
+        }
     }
 }

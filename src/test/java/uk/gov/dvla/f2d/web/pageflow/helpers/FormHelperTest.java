@@ -3,12 +3,13 @@ package uk.gov.dvla.f2d.web.pageflow.helpers;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
 
-import static uk.gov.dvla.f2d.model.constants.Constants.NOTIFY_SERVICE;
+import java.util.Map;
 
 public class FormHelperTest extends TestCase
 {
@@ -34,10 +35,11 @@ public class FormHelperTest extends TestCase
      * This test check the "capitalise" method of the FormHelper class.
      */
     public void testCapitalise() {
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
+        MedicalForm form = PageFlowCacheManager.getMedicalForm(Service.NOTIFY);
         assertNotNull(form);
 
-        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);
 
         form.setMedicalCondition(condition);

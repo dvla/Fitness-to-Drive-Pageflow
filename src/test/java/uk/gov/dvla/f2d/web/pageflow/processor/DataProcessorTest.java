@@ -3,8 +3,8 @@ package uk.gov.dvla.f2d.web.pageflow.processor;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
-import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
@@ -13,8 +13,7 @@ import uk.gov.dvla.f2d.web.pageflow.processor.impl.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static uk.gov.dvla.f2d.model.constants.Constants.NOTIFY_SERVICE;
+import java.util.Map;
 
 public class DataProcessorTest extends TestCase
 {
@@ -42,8 +41,8 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "hypoglycaemia-blood-sugar";
 
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
-        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
         return question;
@@ -57,8 +56,8 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "car-bike-moped";
 
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
-        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
         return question;
@@ -68,8 +67,8 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "hypoglycaemia-symptoms-info";
 
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
-        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
         return question;
@@ -79,8 +78,8 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "change-address";
 
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(NOTIFY_SERVICE);
-        MedicalCondition condition = form.getSupportedConditions().get(DIABETES_CONDITION);
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
         return question;

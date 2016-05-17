@@ -22,7 +22,7 @@ public class PageFlowCacheManager
      * Retrieve the entire medical questionnaire and all it's conditions.
      * @return MedicalQuestionnaire pre-populated with all it's details.
      */
-    public static MedicalForm getMedicalForm(Service service, Language language) {
+    public static MedicalForm getMedicalForm(Service service) {
         MedicalForm form = new MedicalForm();
 
         Authentication authentication = new Authentication();
@@ -31,7 +31,7 @@ public class PageFlowCacheManager
         MessageHeader header = new MessageHeader();
         header.setAuthentication(authentication);
         header.setService(service.toString());
-        header.setLanguage(language.toString());
+        header.setLanguage(Language.ENGLISH.toString());
         header.setNotifications(new ArrayList<>());
         header.setBreadcrumb(new ArrayList<>());
 
