@@ -40,7 +40,7 @@ public class SummaryAggregator
     private void initialise(MedicalForm form) {
         // Service is supported, so proceed to load the configuration.
         try {
-            final String condition = form.getMedicalCondition().getID();
+            final String condition = form.getMedicalCondition().getSlug();
             final String service = form.getMessageHeader().getService();
 
             String resourceToLoad = (condition + HYPHEN + service + JSON_SUFFIX);

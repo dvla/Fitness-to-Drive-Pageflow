@@ -4,6 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import uk.gov.dvla.f2d.model.enums.Service;
+import uk.gov.dvla.f2d.model.enums.Severity;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
@@ -41,7 +42,7 @@ public class PageFlowCacheManagerTest extends TestCase
      */
     public void testAllMedicalConditionsLoaded() {
         Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
-        assertEquals(conditions.size(), 2);
+        assertEquals(conditions.size(), 5);
     }
 
     /**
@@ -49,15 +50,15 @@ public class PageFlowCacheManagerTest extends TestCase
      */
     public void testAllSupportedMedicalConditions() {
         String[] supportedConditions = {
-                "Diabetes","Glaucoma"
+                "Diabetes", "Glaucoma", "Epilepsy", "Alcohol problems", "Drug misuse"
         };
 
         Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
         assertEquals(conditions.size(), supportedConditions.length);
 
         for(MedicalCondition condition : conditions.values()) {
-            String message = condition.getDisplayText()+" does not exist in the page flow.";
-            assertTrue(message,  Arrays.asList(supportedConditions).contains(condition.getDisplayText()));
+            String message = condition.getTitle() + " does not exist in the page flow.";
+            assertTrue(message,  Arrays.asList(supportedConditions).contains(condition.getTitle()));
         }
     }
 
@@ -119,7 +120,7 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertNotNull(condition);
 
-        assertEquals("Diabetes", condition.getDisplayText());
+        assertEquals("Diabetes", condition.getTitle());
     }
 
     /**
@@ -148,11 +149,19 @@ public class PageFlowCacheManagerTest extends TestCase
 
         assertNotNull(condition);
 
-        assertEquals(DIABETES_CONDITION_ID, condition.getID());
-        assertEquals("Diabetes", condition.getDisplayText());
-        assertEquals("diab1 diabetes daibetes dibetes dyabetes diabbetes", condition.getSpellings());
-        assertEquals("diabetes-help-page", condition.getInformationLink());
-        assertEquals("DIABETES", condition.getConfiguration());
+        assertEquals("DIAB", condition.getID());
+        assertEquals("Diabetes", condition.getTitle());
+        assertEquals("diabetes", condition.getName());
+        assertEquals(" ", condition.getType());
+        assertEquals("DIAB1", condition.getForm());
+        assertEquals(DIABETES_CONDITION_ID, condition.getSlug());
+        assertEquals("diabetes-with-insulin", condition.getStart());
+        assertEquals("diabetes", condition.getSlug());
+        assertEquals("diabetes-and-driving", condition.getInformation());
+        // Add synonyms check here.
+        // Add casp check here.
+        assertEquals(Severity.NOTIFIABLE, condition.getSeverity());
+        assertEquals(Boolean.TRUE, condition.getDisplay());
 
         assertNotNull(condition.toString());
     }
