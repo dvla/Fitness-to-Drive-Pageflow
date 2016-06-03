@@ -168,7 +168,7 @@
 
         "logout": false,
 
-        "options": "Y=5, N=A4.1",
+        "options": "Y=4, N=A4.1",
 
         "summary": true,
 
