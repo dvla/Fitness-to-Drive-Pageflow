@@ -247,7 +247,7 @@ public class DataProcessorTest extends TestCase
 
     public void testFormPageDataProcessorDecision() {
         final String[] ANSWERS_FOR_QUESTIONS = {"Y","N","MAYBE"};
-        final String DECISION_FOR_QUESTION  = "6";
+        final String DECISION_FOR_QUESTION  = "A6.2";
 
         MedicalQuestion question = getFormPageQuestion();
         assertNotNull(question);
