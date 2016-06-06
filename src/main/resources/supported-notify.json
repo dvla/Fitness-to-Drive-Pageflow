@@ -20,7 +20,7 @@
 
         "page": "Verified",
 
-        "order": 23,
+        "order": 24,
 
         "type": "Radio",
 
@@ -48,7 +48,7 @@
 
         "page": "Verified",
 
-        "order": 25,
+        "order": 26,
 
         "type": "CheckBox",
 
@@ -84,7 +84,7 @@
 
         "logout": false,
 
-        "options": "6",
+        "options": "A6.2",
 
         "summary": false,
 
@@ -112,7 +112,7 @@
 
         "logout": false,
 
-        "options": "Y=6, N=A6.1",
+        "options": "Y=A6.2, N=A6.1",
 
         "summary": false,
 
@@ -132,7 +132,7 @@
 
         "page": "Verified",
 
-        "order": 22,
+        "order": 23,
 
         "type": "Form",
 
@@ -151,6 +151,34 @@
         "text": "",
 
         "id": "consultant-details"
+
+      },
+
+      "contact-details": {
+
+        "step": "A6.2",
+
+        "page": "Verified",
+
+        "order": 6,
+
+        "type": "Form",
+
+        "validate": true,
+
+        "logout": false,
+
+        "options": "6",
+
+        "summary": true,
+
+        "answers": [],
+
+        "decision": "",
+
+        "text": "",
+
+        "id": "contact-details"
 
       },
 
@@ -216,7 +244,7 @@
 
         "page": "Verified",
 
-        "order": 13,
+        "order": 14,
 
         "type": "Radio",
 
@@ -244,7 +272,7 @@
 
         "page": "Verified",
 
-        "order": 21,
+        "order": 22,
 
         "type": "Form",
 
@@ -272,7 +300,7 @@
 
         "page": "Verified",
 
-        "order": 16,
+        "order": 17,
 
         "type": "Radio",
 
@@ -300,7 +328,7 @@
 
         "page": "Verified",
 
-        "order": 17,
+        "order": 18,
 
         "type": "Radio",
 
@@ -328,7 +356,7 @@
 
         "page": "Verified",
 
-        "order": 8,
+        "order": 9,
 
         "type": "Radio",
 
@@ -356,7 +384,7 @@
 
         "page": "Verified",
 
-        "order": 9,
+        "order": 10,
 
         "type": "Radio",
 
@@ -384,7 +412,7 @@
 
         "page": "Verified",
 
-        "order": 6,
+        "order": 7,
 
         "type": "Radio",
 
@@ -412,7 +440,7 @@
 
         "page": "Verified",
 
-        "order": 10,
+        "order": 11,
 
         "type": "Radio",
 
@@ -440,7 +468,7 @@
 
         "page": "Verified",
 
-        "order": 7,
+        "order": 8,
 
         "type": "Continue",
 
@@ -468,7 +496,7 @@
 
         "page": "Verified",
 
-        "order": 11,
+        "order": 12,
 
         "type": "Radio",
 
@@ -496,7 +524,7 @@
 
         "page": "Verified",
 
-        "order": 14,
+        "order": 15,
 
         "type": "Radio",
 
@@ -524,7 +552,7 @@
 
         "page": "Verified",
 
-        "order": 15,
+        "order": 16,
 
         "type": "Radio",
 
@@ -552,7 +580,7 @@
 
         "page": "Verified",
 
-        "order": 12,
+        "order": 13,
 
         "type": "Radio",
 
@@ -580,7 +608,7 @@
 
         "page": "Verified",
 
-        "order": 18,
+        "order": 19,
 
         "type": "Radio",
 
@@ -608,7 +636,7 @@
 
         "page": "Verified",
 
-        "order": 19,
+        "order": 20,
 
         "type": "Radio",
 
@@ -636,7 +664,7 @@
 
         "page": "Verified",
 
-        "order": 20,
+        "order": 21,
 
         "type": "Radio",
 
@@ -664,7 +692,7 @@
 
         "page": "Verified",
 
-        "order": 24,
+        "order": 25,
 
         "type": "Radio",
 
@@ -746,7 +774,7 @@
 
         "logout": false,
 
-        "options": "10",
+        "options": "A6.2",
 
         "summary": false,
 
@@ -778,7 +806,7 @@
 
         "logout": false,
 
-        "options": "Y=10, N=A6.1",
+        "options": "Y=A6.2, N=A6.1",
 
         "summary": false,
 
@@ -793,6 +821,38 @@
         "text": "",
 
         "id": "confirm-address"
+
+      },
+
+      "contact-details": {
+
+        "step": "A6.2",
+
+        "page": "Verified",
+
+        "order": 7,
+
+        "type": "Form",
+
+        "validate": true,
+
+        "logout": false,
+
+        "options": "10",
+
+        "summary": true,
+
+        "answers": [
+
+          ""
+
+        ],
+
+        "decision": "",
+
+        "text": "",
+
+        "id": "contact-details"
 
       },
 
@@ -898,7 +958,7 @@
 
         "page": "Verified",
 
-        "order": 7,
+        "order": 8,
 
         "type": "Radio",
 
@@ -930,7 +990,7 @@
 
         "page": "Verified",
 
-        "order": 8,
+        "order": 9,
 
         "type": "Radio",
 
@@ -962,7 +1022,7 @@
 
         "page": "Verified",
 
-        "order": 9,
+        "order": 10,
 
         "type": "Radio",
 
@@ -1026,7 +1086,7 @@
 
         "page": "Verified",
 
-        "order": 10,
+        "order": 11,
 
         "type": "Form",
 
