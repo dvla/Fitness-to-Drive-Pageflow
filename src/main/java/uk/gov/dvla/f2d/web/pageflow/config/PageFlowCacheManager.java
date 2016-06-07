@@ -38,6 +38,7 @@ public class PageFlowCacheManager
         form.setMessageHeader(header);
         form.setPersonalDetails(null);
         form.setMedicalCondition(null);
+        form.setAdditionalConditions(new ArrayList<>());
 
         return form;
     }
