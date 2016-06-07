@@ -183,7 +183,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals(QUESTION_ID, question.getID());
         assertEquals("22", question.getStep());
         assertEquals(Page.VERIFIED.toString(), question.getPage());
-        assertEquals(8, question.getOrder().intValue());
+        assertEquals(9, question.getOrder().intValue());
         assertEquals(Format.RADIO.toString(), question.getType());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
@@ -212,7 +212,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals(QUESTION_ID, question.getID());
         assertEquals("9", question.getStep());
         assertEquals(Page.VERIFIED.toString(), question.getPage());
-        assertEquals(11, question.getOrder().intValue());
+        assertEquals(12, question.getOrder().intValue());
         assertEquals(Format.RADIO.toString(), question.getType());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
