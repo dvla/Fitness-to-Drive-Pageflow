@@ -10,6 +10,8 @@ public final class ResourceLoader
     }
 
     public static InputStream load(final String filename) throws IOException {
+        System.out.println("Loading Resource: ["+filename+"]");
+
         ClassLoader classLoader = ResourceLoader.class.getClassLoader();
         return classLoader.getResource(filename).openStream();
     }
