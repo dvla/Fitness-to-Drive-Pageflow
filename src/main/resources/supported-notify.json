@@ -30,7 +30,7 @@
       "automatic-gears": {
         "step": "17",
         "page": "Verified",
-        "order": 22,
+        "order": 23,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -44,7 +44,7 @@
       "car-bike-moped": {
         "step": "19",
         "page": "Verified",
-        "order": 24,
+        "order": 25,
         "type": "CheckBox",
         "validate": true,
         "logout": false,
@@ -86,7 +86,7 @@
       "consultant-details": {
         "step": "16a",
         "page": "Verified",
-        "order": 21,
+        "order": 22,
         "type": "Form",
         "validate": true,
         "logout": false,
@@ -128,7 +128,7 @@
       "functioning-eyes": {
         "step": "11",
         "page": "Verified",
-        "order": 12,
+        "order": 13,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -142,7 +142,7 @@
       "gp-details": {
         "step": "16",
         "page": "Verified",
-        "order": 20,
+        "order": 21,
         "type": "Form",
         "validate": true,
         "logout": false,
@@ -156,7 +156,7 @@
       "healthcare-practitioner-one": {
         "step": "12",
         "page": "Verified",
-        "order": 15,
+        "order": 16,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -170,7 +170,7 @@
       "healthcare-practitioner-two": {
         "step": "A7.1",
         "page": "Verified",
-        "order": 16,
+        "order": 17,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -184,7 +184,7 @@
       "hypoglycaemia-blood-sugar": {
         "step": "22",
         "page": "Verified",
-        "order": 7,
+        "order": 8,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -198,7 +198,7 @@
       "hypoglycaemia-get-symptoms": {
         "step": "7",
         "page": "Verified",
-        "order": 8,
+        "order": 9,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -212,7 +212,7 @@
       "hypoglycaemia-know-symptoms": {
         "step": "6",
         "page": "Verified",
-        "order": 5,
+        "order": 6,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -226,7 +226,7 @@
       "hypoglycaemia-multiple-episodes": {
         "step": "8",
         "page": "Verified",
-        "order": 9,
+        "order": 10,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -240,7 +240,7 @@
       "hypoglycaemia-symptoms-info": {
         "step": "6a",
         "page": "Verified",
-        "order": 6,
+        "order": 7,
         "type": "Continue",
         "validate": true,
         "logout": false,
@@ -254,7 +254,7 @@
       "insulin-declaration": {
         "step": "9",
         "page": "Verified",
-        "order": 10,
+        "order": 11,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -268,7 +268,7 @@
       "laser-treatment-one": {
         "step": "11a",
         "page": "Verified",
-        "order": 13,
+        "order": 14,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -282,7 +282,7 @@
       "laser-treatment-two": {
         "step": "11b",
         "page": "Verified",
-        "order": 14,
+        "order": 15,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -296,7 +296,7 @@
       "legal-eyesight-standard": {
         "step": "10",
         "page": "Verified",
-        "order": 11,
+        "order": 12,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -310,7 +310,7 @@
       "medical-consent-one": {
         "step": "13",
         "page": "Verified",
-        "order": 17,
+        "order": 18,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -324,7 +324,7 @@
       "medical-consent-two": {
         "step": "14",
         "page": "Verified",
-        "order": 18,
+        "order": 19,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -338,7 +338,7 @@
       "medical-practitioner": {
         "step": "15",
         "page": "Verified",
-        "order": 19,
+        "order": 20,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -352,7 +352,7 @@
       "special-controls": {
         "step": "18",
         "page": "Verified",
-        "order": 23,
+        "order": 24,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -496,7 +496,7 @@
       "legal-eyesight-standard": {
         "step": "10",
         "page": "Verified",
-        "order": 6,
+        "order": 7,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -510,7 +510,7 @@
       "medical-consent-one": {
         "step": "13",
         "page": "Verified",
-        "order": 7,
+        "order": 8,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -524,7 +524,7 @@
       "medical-consent-two": {
         "step": "14",
         "page": "Verified",
-        "order": 8,
+        "order": 9,
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -552,7 +552,7 @@
       "ophthalmologist-details": {
         "step": "A2.7",
         "page": "Verified",
-        "order": 9,
+        "order": 10,
         "type": "Form",
         "validate": true,
         "logout": false,
