@@ -638,44 +638,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=13, YG=13, N=*",
+        "options": "Y=*, YG=*, N=*",
         "summary": true,
         "answers": [""],
         "decision": "",
         "text": "",
         "id": "legal-eyesight-standard"
-      },
-      "medical-consent-one": {
-        "step": "13",
-        "page": "Verified",
-
-        "order": 9,
-
-        "type": "Radio",
-        "validate": true,
-        "logout": false,
-        "options": "Y=A2.7, N=14",
-        "summary": true,
-        "answers": [""],
-        "decision": "",
-        "text": "",
-        "id": "medical-consent-one"
-      },
-      "medical-consent-two": {
-        "step": "14",
-        "page": "Verified",
-
-        "order": 10,
-
-        "type": "Radio",
-        "validate": true,
-        "logout": false,
-        "options": "Y=A2.7, N=*",
-        "summary": true,
-        "answers": [""],
-        "decision": "",
-        "text": "",
-        "id": "medical-consent-two"
       },
       "non-notifiable-change": {
         "step": "A1.3",
@@ -690,22 +658,6 @@
         "decision": "",
         "text": "",
         "id": "non-notifiable-change"
-      },
-      "ophthalmologist-details": {
-        "step": "A2.7",
-        "page": "Verified",
-
-        "order": 11,
-
-        "type": "Form",
-        "validate": true,
-        "logout": false,
-        "options": "*",
-        "summary": true,
-        "answers": [""],
-        "decision": "",
-        "text": "",
-        "id": "ophthalmologist-details"
       }
     },
     "id": "V"
