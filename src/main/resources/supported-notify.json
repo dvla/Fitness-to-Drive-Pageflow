@@ -2,15 +2,77 @@
 
 {
 
+  "alcohol-problems": {
+
+    "title": "Alcohol problems",
+
+    "name": "alcohol problems",
+
+    "type": " ",
+
+    "form": "DR1",
+
+    "slug": "alcohol-problems",
+
+    "start": "",
+
+    "information": "alcohol-and-driving",
+
+    "synonyms": [
+
+      "alcohol misuse",
+
+      " alcohol problem"
+
+    ],
+
+    "casp": [
+
+      ""
+
+    ],
+
+    "severity": "NOTIFIABLE",
+
+    "display": false,
+
+    "questions": {},
+
+    "id": "A"
+
+  },
+
   "diabetes": {
 
-    "displayText": "Diabetes",
+    "title": "Diabetes",
 
-    "spellings": "diab1 diabetes daibetes dibetes dyabetes diabbetes",
+    "name": "diabetes",
 
-    "informationLink": "diabetes-help-page",
+    "type": " ",
 
-    "configuration": "DIABETES",
+    "form": "DIAB1",
+
+    "slug": "diabetes",
+
+    "start": "diabetes-with-insulin",
+
+    "information": "diabetes-and-driving",
+
+    "synonyms": [
+
+      ""
+
+    ],
+
+    "casp": [
+
+      ""
+
+    ],
+
+    "severity": "NOTIFIABLE",
+
+    "display": true,
 
     "questions": {
 
@@ -84,7 +146,7 @@
 
         "logout": false,
 
-        "options": "A6.2",
+        "options": "GEN1",
 
         "summary": false,
 
@@ -112,7 +174,7 @@
 
         "logout": false,
 
-        "options": "Y=A6.2, N=A6.1",
+        "options": "Y=GEN1, N=A6.1",
 
         "summary": false,
 
@@ -156,7 +218,7 @@
 
       "contact-details": {
 
-        "step": "A6.2",
+        "step": "GEN1",
 
         "page": "Verified",
 
@@ -196,7 +258,7 @@
 
         "logout": false,
 
-        "options": "Y=4, N=A4.1",
+        "options": "Y=EXP1, N=A4.1",
 
         "summary": true,
 
@@ -212,7 +274,7 @@
 
       "expectations": {
 
-        "step": "4",
+        "step": "EXP1",
 
         "page": "Unverified",
 
@@ -744,19 +806,117 @@
 
     },
 
-    "id": "diabetes"
+    "id": "DIAB"
+
+  },
+
+  "drug-misuse": {
+
+    "title": "Drug misuse",
+
+    "name": "drug misuse",
+
+    "type": " ",
+
+    "form": "DG1",
+
+    "slug": "drug-misuse",
+
+    "start": "",
+
+    "information": "drugs-and-driving",
+
+    "synonyms": [
+
+      "drug problem"
+
+    ],
+
+    "casp": [
+
+      ""
+
+    ],
+
+    "severity": "NOTIFIABLE",
+
+    "display": false,
+
+    "questions": {},
+
+    "id": "D"
+
+  },
+
+  "epilepsy": {
+
+    "title": "Epilepsy",
+
+    "name": "epilepsy",
+
+    "type": " ",
+
+    "form": "FEP1",
+
+    "slug": "epilepsy",
+
+    "start": "seizure-type",
+
+    "information": "epilepsy-and-driving",
+
+    "synonyms": [
+
+      ""
+
+    ],
+
+    "casp": [
+
+      ""
+
+    ],
+
+    "severity": "NOTIFIABLE",
+
+    "display": false,
+
+    "questions": {},
+
+    "id": "FEP"
 
   },
 
   "glaucoma": {
 
-    "displayText": "Glaucoma",
+    "title": "Glaucoma",
 
-    "spellings": "glaucoma gluacoma glycoma glucoma gluecoma",
+    "name": "glaucoma",
 
-    "informationLink": "glaucoma-help-page",
+    "type": " ",
 
-    "configuration": "GLAUCOMA",
+    "form": "V1",
+
+    "slug": "glaucoma",
+
+    "start": "functioning-eyes",
+
+    "information": "glaucoma-and-driving",
+
+    "synonyms": [
+
+      ""
+
+    ],
+
+    "casp": [
+
+      "V08"
+
+    ],
+
+    "severity": "NOTIFIABLE",
+
+    "display": true,
 
     "questions": {
 
@@ -774,7 +934,7 @@
 
         "logout": false,
 
-        "options": "A6.2",
+        "options": "GEN1",
 
         "summary": false,
 
@@ -806,7 +966,7 @@
 
         "logout": false,
 
-        "options": "Y=A6.2, N=A6.1",
+        "options": "Y=GEN1, N=A6.1",
 
         "summary": false,
 
@@ -826,7 +986,7 @@
 
       "contact-details": {
 
-        "step": "A6.2",
+        "step": "GEN1",
 
         "page": "Verified",
 
@@ -858,7 +1018,7 @@
 
       "expectations": {
 
-        "step": "4",
+        "step": "EXP1",
 
         "page": "Unverified",
 
@@ -902,7 +1062,7 @@
 
         "logout": false,
 
-        "options": "1=5, 2=A1.2",
+        "options": "1=EXP1, 2=A1.2",
 
         "summary": true,
 
@@ -934,7 +1094,7 @@
 
         "logout": false,
 
-        "options": "Y=5, N=A1.3",
+        "options": "Y=EXP1, N=A1.3",
 
         "summary": true,
 
@@ -1114,7 +1274,7 @@
 
     },
 
-    "id": "glaucoma"
+    "id": "V"
 
   }
 
