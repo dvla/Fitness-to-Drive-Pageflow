@@ -30,9 +30,7 @@
       "automatic-gears": {
         "step": "17",
         "page": "Verified",
-
         "order": 24,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -46,9 +44,7 @@
       "car-bike-moped": {
         "step": "19",
         "page": "Verified",
-
         "order": 26,
-
         "type": "CheckBox",
         "validate": true,
         "logout": false,
@@ -62,15 +58,11 @@
       "change-address": {
         "step": "A6.1",
         "page": "Verified",
-
         "order": 5,
-
         "type": "Form",
         "validate": true,
         "logout": false,
-
         "options": "GEN1",
-
         "summary": false,
         "answers": [],
         "decision": "",
@@ -80,15 +72,11 @@
       "confirm-address": {
         "step": "5",
         "page": "Verified",
-
         "order": 4,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
-
         "options": "Y=GEN1, N=A6.1",
-
         "summary": false,
         "answers": [],
         "decision": "",
@@ -98,9 +86,7 @@
       "consultant-details": {
         "step": "16a",
         "page": "Verified",
-
         "order": 23,
-
         "type": "Form",
         "validate": true,
         "logout": false,
@@ -112,17 +98,13 @@
         "id": "consultant-details"
       },
       "contact-details": {
-
         "step": "GEN1",
-
         "page": "Verified",
-
         "order": 6,
-
         "type": "Form",
         "validate": true,
         "logout": false,
-        "options": "6",
+        "options": "6a",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -136,50 +118,31 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-
         "options": "Y=EXP1, N=A4.1",
-
         "summary": true,
         "answers": [],
         "decision": "",
         "text": "",
         "id": "diabetes-with-insulin"
       },
-
       "expectations": {
-
         "step": "EXP1",
-
         "page": "Unverified",
-
         "order": 3,
-
         "type": "Continue",
-
         "validate": true,
-
         "logout": false,
-
         "options": "5",
-
         "summary": false,
-
         "answers": [],
-
         "decision": "",
-
         "text": "",
-
         "id": "expectations"
-
       },
-
       "functioning-eyes": {
         "step": "11",
         "page": "Verified",
-
         "order": 14,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -193,9 +156,7 @@
       "gp-details": {
         "step": "16",
         "page": "Verified",
-
         "order": 22,
-
         "type": "Form",
         "validate": true,
         "logout": false,
@@ -209,9 +170,7 @@
       "healthcare-practitioner-one": {
         "step": "12",
         "page": "Verified",
-
         "order": 17,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -225,9 +184,7 @@
       "healthcare-practitioner-two": {
         "step": "A7.1",
         "page": "Verified",
-
         "order": 18,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -241,9 +198,7 @@
       "hypoglycaemia-blood-sugar": {
         "step": "22",
         "page": "Verified",
-
         "order": 9,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -257,9 +212,7 @@
       "hypoglycaemia-get-symptoms": {
         "step": "7",
         "page": "Verified",
-
         "order": 10,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -270,28 +223,10 @@
         "text": "",
         "id": "hypoglycaemia-get-symptoms"
       },
-      "hypoglycaemia-know-symptoms": {
-        "step": "6",
-        "page": "Verified",
-
-        "order": 7,
-
-        "type": "Radio",
-        "validate": true,
-        "logout": false,
-        "options": "Y=22, N=6a",
-        "summary": true,
-        "answers": [],
-        "decision": "",
-        "text": "",
-        "id": "hypoglycaemia-know-symptoms"
-      },
       "hypoglycaemia-multiple-episodes": {
         "step": "8",
         "page": "Verified",
-
         "order": 11,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -305,9 +240,7 @@
       "hypoglycaemia-symptoms-info": {
         "step": "6a",
         "page": "Verified",
-
         "order": 8,
-
         "type": "Continue",
         "validate": true,
         "logout": false,
@@ -321,9 +254,7 @@
       "insulin-declaration": {
         "step": "9",
         "page": "Verified",
-
         "order": 12,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -337,9 +268,7 @@
       "laser-treatment-one": {
         "step": "11a",
         "page": "Verified",
-
         "order": 15,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -353,9 +282,7 @@
       "laser-treatment-two": {
         "step": "11b",
         "page": "Verified",
-
         "order": 16,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -369,9 +296,7 @@
       "legal-eyesight-standard": {
         "step": "10",
         "page": "Verified",
-
         "order": 13,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -385,9 +310,7 @@
       "medical-consent-one": {
         "step": "13",
         "page": "Verified",
-
         "order": 19,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -401,9 +324,7 @@
       "medical-consent-two": {
         "step": "14",
         "page": "Verified",
-
         "order": 20,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -417,9 +338,7 @@
       "medical-practitioner": {
         "step": "15",
         "page": "Verified",
-
         "order": 21,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -433,9 +352,7 @@
       "special-controls": {
         "step": "18",
         "page": "Verified",
-
         "order": 25,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
@@ -509,15 +426,11 @@
       "change-address": {
         "step": "A6.1",
         "page": "Verified",
-
         "order": 6,
-
         "type": "Form",
         "validate": true,
         "logout": false,
-
         "options": "GEN1",
-
         "summary": false,
         "answers": [""],
         "decision": "",
@@ -527,33 +440,21 @@
       "confirm-address": {
         "step": "5",
         "page": "Verified",
-
         "order": 5,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
-
         "options": "Y=GEN1, N=A6.1",
-
         "summary": false,
         "answers": [""],
         "decision": "",
-
         "text": "",
-
         "id": "confirm-address"
-
       },
-
       "contact-details": {
-
         "step": "GEN1",
-
         "page": "Verified",
-
         "order": 7,
-
         "type": "Form",
         "validate": true,
         "logout": false,
@@ -564,39 +465,20 @@
         "text": "",
         "id": "contact-details"
       },
-
       "expectations": {
-
         "step": "EXP1",
-
         "page": "Unverified",
-
         "order": 4,
-
         "type": "Continue",
-
         "validate": true,
-
         "logout": false,
-
         "options": "5",
-
         "summary": false,
-
-        "answers": [
-
-          ""
-
-        ],
-
+        "answers": [""],
         "decision": "",
-
         "text": "",
-
         "id": "expectations"
-
       },
-
       "functioning-eyes": {
         "step": "11",
         "page": "Unverified",
@@ -604,9 +486,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-
         "options": "1=EXP1, 2=A1.2",
-
         "summary": true,
         "answers": [""],
         "decision": "",
@@ -620,9 +500,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-
         "options": "Y=EXP1, N=A1.3",
-
         "summary": true,
         "answers": [""],
         "decision": "",
@@ -632,9 +510,7 @@
       "legal-eyesight-standard": {
         "step": "10",
         "page": "Verified",
-
         "order": 8,
-
         "type": "Radio",
         "validate": true,
         "logout": false,
