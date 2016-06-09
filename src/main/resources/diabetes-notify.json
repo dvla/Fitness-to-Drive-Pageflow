@@ -284,22 +284,6 @@
         }
       }
     },
-    "hypoglycaemia-know-symptoms": {
-      "options": {
-        "N": {
-          "answers": {
-            "cy": "you {b}do not know{/b} what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
-            "en": "you {b}do not know{/b} what the symptoms of low blood sugar (hypoglycaemia) are"
-          }
-        },
-        "Y": {
-          "answers": {
-            "cy": "you {b}know{/b} what the symptoms of low blood sugar (hypoglycaemia) are (Welsh)",
-            "en": "you {b}know{/b} what the symptoms of low blood sugar (hypoglycaemia) are"
-          }
-        }
-      }
-    },
     "hypoglycaemia-multiple-episodes": {
       "options": {
         "N": {
