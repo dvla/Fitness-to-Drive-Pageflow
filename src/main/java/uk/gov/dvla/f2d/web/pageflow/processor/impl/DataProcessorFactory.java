@@ -5,7 +5,8 @@ import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
 
-public final class DataProcessorFactory {
+public final class DataProcessorFactory
+{
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public DataProcessorFactory() {
@@ -13,28 +14,22 @@ public final class DataProcessorFactory {
     }
 
     public IDataQuestionProcessor getQuestionProcessor(MedicalQuestion question) {
-        IDataQuestionProcessor processor = null;
-
         logger.debug("Question Type: " + question.getType());
 
-        if(Format.FORM.equals(question.getType())) {
-            logger.debug("Form Processor");
-            processor = new DataProcessorFormPageImpl(question);
+        IDataQuestionProcessor processor = null;
 
-        } else if(Format.RADIO.equals(question.getType())) {
-            logger.debug("Radio Processor");
-            processor = new DataProcessorRadioGroupImpl(question);
+        switch(Format.lookup(question.getType())) {
+            case RADIO:
+                processor = new DataProcessorRadioGroupImpl(question); break;
 
-        } else if(Format.CHECKBOX.equals(question.getType())) {
-            logger.debug("CheckBox Processor");
-            processor = new DataProcessorCheckboxGroupImpl(question);
+            case CHECKBOX:
+                processor = new DataProcessorCheckBoxGroupImpl(question); break;
 
-        } else if(Format.CONTINUE.equals(question.getType())) {
-            logger.debug("Continue Processor");
-            processor = new DataProcessorContinuePageImpl(question);
+            case FORM:
+                processor = new DataProcessorFormPageImpl(question); break;
 
-        } else {
-            throw new IllegalArgumentException("Processor is not supported: "+question.getType());
+            case CONTINUE:
+                processor = new DataProcessorContinuePageImpl(question); break;
         }
 
         return processor;

@@ -13,16 +13,28 @@ import java.util.stream.Collectors;
 
 public class PageFlowCacheManager
 {
-    private static final PageFlowDataCache cache;
-    static {
-        cache = new PageFlowDataCache();
+    private static PageFlowCacheManager instance;
+
+    private PageFlowDataCache cache;
+
+    private PageFlowCacheManager() {
+        try {
+            cache = new PageFlowDataCache();
+            cache.initialise();
+
+        } catch(IOException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
-    /**
-     * Retrieve the entire medical questionnaire and all it's conditions.
-     * @return MedicalQuestionnaire pre-populated with all it's details.
-     */
-    public static MedicalForm getMedicalForm(Service service) {
+    public static synchronized PageFlowCacheManager getInstance() {
+        if(instance == null) {
+            instance = new PageFlowCacheManager();
+        }
+        return instance;
+    }
+
+    public MedicalForm createMedicalForm(Service service) {
         MedicalForm form = new MedicalForm();
 
         Authentication authentication = new Authentication();
@@ -43,17 +55,8 @@ public class PageFlowCacheManager
         return form;
     }
 
-    public static Map<String, MedicalCondition> getSupportedConditions(final String service) {
-        try {
-            if (!(Service.isSupported(service))) {
-                throw new IllegalArgumentException("Service ["+service.toString()+"] is not currently supported!");
-            }
-
-            return cache.getSupportedConditions(service);
-
-        } catch(IOException ex) {
-            throw new RuntimeException(ex);
-        }
+    public Map<String, MedicalCondition> getSupportedConditions(Service service) {
+        return cache.getSupportedConditions(service);
     }
 
     /**
@@ -65,7 +68,7 @@ public class PageFlowCacheManager
     private static List<MedicalQuestion> getQuestionsByType(MedicalCondition condition, Page page) {
         List<MedicalQuestion> questions = new ArrayList<>();
         questions.addAll(condition.getQuestions().values().stream().filter(
-                question -> question.getPage().equalsIgnoreCase(page.toString())).collect(Collectors.toList())
+                question -> question.getPage().equalsIgnoreCase(page.getName())).collect(Collectors.toList())
         );
         return questions;
     }

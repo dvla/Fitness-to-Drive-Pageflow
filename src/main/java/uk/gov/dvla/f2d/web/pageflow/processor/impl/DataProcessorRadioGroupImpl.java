@@ -9,6 +9,7 @@ import java.util.List;
 
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
+import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.*;
 
 public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
 {
@@ -51,8 +52,8 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
             Notification notification = new Notification();
             notification.setPage(FormHelper.capitalise(question));
             notification.setField(ANSWER_FIELD);
-            notification.setCode("NullOrEmpty");
-            notification.setDescription("Field supplied was empty.");
+            notification.setCode(NULL_OR_EMPTY_CODE);
+            notification.setDescription(NULL_OR_EMPTY_DESC);
             notifications.add(notification);
         }
 
@@ -61,8 +62,8 @@ public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
             Notification notification = new Notification();
             notification.setPage(FormHelper.capitalise(question));
             notification.setField(ANSWER_FIELD);
-            notification.setCode("InvalidOption");
-            notification.setDescription("Field supplied was invalid.");
+            notification.setCode(INVALID_OPTION_CODE);
+            notification.setDescription(INVALID_OPTION_DESC);
             notifications.add(notification);
         }
 

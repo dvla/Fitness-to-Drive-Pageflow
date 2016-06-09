@@ -10,14 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.ANSWER_FIELD;
+import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.*;
 
-public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
+public class DataProcessorCheckBoxGroupImpl implements IDataQuestionProcessor
 {
     private MedicalQuestion question;
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    DataProcessorCheckboxGroupImpl(MedicalQuestion newQuestion) {
+    DataProcessorCheckBoxGroupImpl(MedicalQuestion newQuestion) {
         this.question = newQuestion;
     }
 
@@ -36,8 +37,8 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
             Notification notification = new Notification();
             notification.setPage(FormHelper.capitalise(question));
             notification.setField(ANSWER_FIELD);
-            notification.setCode("NullOrEmpty");
-            notification.setDescription("Field supplied was empty.");
+            notification.setCode(NULL_OR_EMPTY_CODE);
+            notification.setDescription(NULL_OR_EMPTY_DESC);
             notifications.add(notification);
         }
 
@@ -54,7 +55,7 @@ public class DataProcessorCheckboxGroupImpl implements IDataQuestionProcessor
             String key = option.split("=")[0].trim();
             String value = option.split("=")[1].trim();
 
-            if (key.equalsIgnoreCase(answer.toString())) {
+            if (key.equalsIgnoreCase(answer.getName())) {
                 question.setDecision(value);
             }
         }

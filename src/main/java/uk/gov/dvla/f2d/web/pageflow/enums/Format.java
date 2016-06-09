@@ -7,17 +7,22 @@ public enum Format
     FORM("Form"),
     CONTINUE("Continue");
 
-    private String format;
+    private String name;
 
-    Format(final String newFormat) {
-        this.format = newFormat;
+    Format(final String name) {
+        this.name = name;
     }
 
-    public boolean equals(final String newFormat) {
-        return format.equals(newFormat);
+    public static Format lookup(final String name) {
+        for(Format format : Format.values()) {
+            if(format.getName().equals(name)) {
+                return format;
+            }
+        }
+        throw new IllegalArgumentException("Format [" + name + "] is not currently supported!");
     }
 
-    public String toString() {
-        return this.format;
+    public String getName() {
+        return this.name;
     }
 }

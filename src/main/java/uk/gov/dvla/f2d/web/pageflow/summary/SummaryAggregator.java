@@ -84,13 +84,13 @@ public class SummaryAggregator
                     logger.debug("Empty: " + question.getAnswers().isEmpty());
 
                     if(!(question.getAnswers().isEmpty())) {
-                        if (question.getType().equals(Format.RADIO.toString())) {
+                        if (question.getType().equals(Format.RADIO.getName())) {
                             response.addAll(processRadio(summary, header, question));
-                        } else if (question.getType().equals(Format.CHECKBOX.toString())) {
+                        } else if (question.getType().equals(Format.CHECKBOX.getName())) {
                             response.addAll(processCheckBox(summary, header, question));
-                        } else if (question.getType().equals(Format.FORM.toString())) {
+                        } else if (question.getType().equals(Format.FORM.getName())) {
                             response.addAll(processForm(summary, header, question));
-                        } else if (question.getType().equals(Format.CONTINUE.toString())) {
+                        } else if (question.getType().equals(Format.CONTINUE.getName())) {
                             response.addAll(processContinue(summary, header, question));
                         } else {
                             throw new IllegalArgumentException("Type is not supported: " + question.getType());

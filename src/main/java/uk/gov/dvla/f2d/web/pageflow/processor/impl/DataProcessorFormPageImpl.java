@@ -32,7 +32,7 @@ public class DataProcessorFormPageImpl implements IDataQuestionProcessor
             String key = option.split("=")[0].trim();
             String value = option.split("=")[1].trim();
 
-            if (key.equalsIgnoreCase(answer.toString())) {
+            if (key.equalsIgnoreCase(answer.getName())) {
                 question.setDecision(value);
             }
         }

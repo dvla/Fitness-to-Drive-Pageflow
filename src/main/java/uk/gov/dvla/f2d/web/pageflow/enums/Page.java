@@ -5,13 +5,22 @@ public enum Page
     UNVERIFIED("Unverified"),
     VERIFIED("Verified");
 
-    private String page;
+    private String name;
 
     Page(final String page) {
-        this.page = page;
+        this.name = page;
     }
 
-    public String toString() {
-        return this.page;
+    public static Page lookup(final String name) {
+        for(Page page : Page.values()) {
+            if(page.getName().equals(name)) {
+                return page;
+            }
+        }
+        throw new IllegalArgumentException("Page [" + name + "] is not currently supported!");
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

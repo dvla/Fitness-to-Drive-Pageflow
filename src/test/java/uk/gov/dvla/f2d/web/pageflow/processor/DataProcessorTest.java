@@ -3,6 +3,7 @@ package uk.gov.dvla.f2d.web.pageflow.processor;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
@@ -15,8 +16,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
+
 public class DataProcessorTest extends TestCase
 {
+    private static final String DIABETES_CONDITION      = Condition.DIABETES.getName();
     /**
      * Create the test case
      *
@@ -38,10 +42,14 @@ public class DataProcessorTest extends TestCase
      * @return Radio group question
      */
     private MedicalQuestion getRadioGroupQuestion() {
-        final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "hypoglycaemia-blood-sugar";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+
+        assertNotNull(conditions);
+        assertFalse(conditions.isEmpty());
+
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
@@ -53,10 +61,14 @@ public class DataProcessorTest extends TestCase
      * @return Checkbox group question
      */
     private MedicalQuestion getCheckboxGroupQuestion() {
-        final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "car-bike-moped";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+
+        assertNotNull(conditions);
+        assertFalse(conditions.isEmpty());
+
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
@@ -64,10 +76,14 @@ public class DataProcessorTest extends TestCase
     }
 
     private MedicalQuestion getContinuePageQuestion() {
-        final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "hypoglycaemia-symptoms-info";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+
+        assertNotNull(conditions);
+        assertFalse(conditions.isEmpty());
+
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
@@ -75,10 +91,14 @@ public class DataProcessorTest extends TestCase
     }
 
     private MedicalQuestion getFormPageQuestion() {
-        final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "change-address";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+
+        assertNotNull(conditions);
+        assertFalse(conditions.isEmpty());
+
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
@@ -110,7 +130,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckboxGroupImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckBoxGroupImpl));
     }
 
     /**
@@ -152,7 +172,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         // Check we have no decision for now.
-        assertEquals(question.getDecision(), "");
+        assertEquals(EMPTY, question.getDecision());
 
         List<String> answers = new ArrayList<>();
         answers.add(ANSWER_FOR_QUESTION);
@@ -179,7 +199,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         // Check we have no decision for now.
-        assertEquals(question.getDecision(), "");
+        assertEquals(EMPTY, question.getDecision());
 
         List<String> answers = new ArrayList<>();
         answers.add(ANSWER_FOR_QUESTION);
@@ -206,7 +226,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         // Check we have no decision for now.m
-        assertEquals(question.getDecision(), "");
+        assertEquals(EMPTY, question.getDecision());
 
         List<String> answers = Arrays.asList(ANSWERS_FOR_QUESTIONS);
         question.setAnswers(answers);
@@ -231,7 +251,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         // Check we have no decision for now.
-        assertEquals(question.getDecision(), "");
+        assertEquals(EMPTY, question.getDecision());
 
         List<String> answers = Arrays.asList(ANSWERS_FOR_QUESTIONS);
         question.setAnswers(answers);
@@ -256,7 +276,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         // Check we have no decision for now.
-        assertEquals(question.getDecision(), "");
+        assertEquals(EMPTY, question.getDecision());
 
         List<String> answers = Arrays.asList(ANSWERS_FOR_QUESTIONS);
         question.setAnswers(answers);

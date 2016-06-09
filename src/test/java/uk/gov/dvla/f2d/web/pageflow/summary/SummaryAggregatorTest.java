@@ -46,7 +46,9 @@ public class SummaryAggregatorTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> Default).
      */
     public void testNotifyForDiabetesInDefaultLanguage() {
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
+
         assertNotNull(form);
 
         assertEquals(Service.NOTIFY.getName(), form.getMessageHeader().getService());
@@ -56,7 +58,7 @@ public class SummaryAggregatorTest extends TestCase
         form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
         assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
+        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
 
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);
@@ -84,7 +86,9 @@ public class SummaryAggregatorTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> English).
      */
     public void testNotifyForDiabetesInEnglish() {
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
+
         assertNotNull(form);
 
         form.getMessageHeader().setLanguage(Language.ENGLISH.getName());
@@ -96,7 +100,7 @@ public class SummaryAggregatorTest extends TestCase
         form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
         assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
+        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
 
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);

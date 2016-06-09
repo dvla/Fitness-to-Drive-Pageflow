@@ -35,10 +35,11 @@ public class FormHelperTest extends TestCase
      * This test check the "capitalise" method of the FormHelper class.
      */
     public void testCapitalise() {
-        MedicalForm form = PageFlowCacheManager.getMedicalForm(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
         assertNotNull(form);
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
+        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);
 
