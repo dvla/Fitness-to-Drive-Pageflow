@@ -41,7 +41,7 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "hypoglycaemia-blood-sugar";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
@@ -56,7 +56,7 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "car-bike-moped";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
@@ -67,7 +67,7 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "hypoglycaemia-symptoms-info";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 
@@ -78,7 +78,7 @@ public class DataProcessorTest extends TestCase
         final String DIABETES_CONDITION     = "diabetes";
         final String TARGET_QUESTION        = "change-address";
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         MedicalQuestion question = condition.getQuestions().get(TARGET_QUESTION);
 

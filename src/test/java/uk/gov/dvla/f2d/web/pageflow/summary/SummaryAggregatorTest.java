@@ -49,14 +49,14 @@ public class SummaryAggregatorTest extends TestCase
         MedicalForm form = PageFlowCacheManager.getMedicalForm(Service.NOTIFY);
         assertNotNull(form);
 
-        assertEquals(Service.NOTIFY.toString(), form.getMessageHeader().getService());
-        assertEquals(Language.ENGLISH.toString(), form.getMessageHeader().getLanguage());
+        assertEquals(Service.NOTIFY.getName(), form.getMessageHeader().getService());
+        assertEquals(Language.ENGLISH.getName(), form.getMessageHeader().getLanguage());
 
         form.getMessageHeader().getBreadcrumb().add(DIABETES_STEP);
         form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
         assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
 
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);
@@ -87,16 +87,16 @@ public class SummaryAggregatorTest extends TestCase
         MedicalForm form = PageFlowCacheManager.getMedicalForm(Service.NOTIFY);
         assertNotNull(form);
 
-        form.getMessageHeader().setLanguage(Language.ENGLISH.toString());
+        form.getMessageHeader().setLanguage(Language.ENGLISH.getName());
 
-        assertEquals(Service.NOTIFY.toString(), form.getMessageHeader().getService());
-        assertEquals(Language.ENGLISH.toString(), form.getMessageHeader().getLanguage());
+        assertEquals(Service.NOTIFY.getName(), form.getMessageHeader().getService());
+        assertEquals(Language.ENGLISH.getName(), form.getMessageHeader().getLanguage());
 
         form.getMessageHeader().getBreadcrumb().add(DIABETES_STEP);
         form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
         assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
 
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);

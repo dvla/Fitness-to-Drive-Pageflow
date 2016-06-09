@@ -33,7 +33,7 @@ public class PageFlowDataCacheTest extends TestCase
     public void testSupportedConditionsLoaded() {
         try {
             PageFlowDataCache cache = new PageFlowDataCache();
-            Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY.toString());
+            Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY.getName());
 
             assertNotNull(conditions);
             assertTrue(conditions.size() > 0);

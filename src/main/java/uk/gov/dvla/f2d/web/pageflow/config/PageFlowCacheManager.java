@@ -30,8 +30,8 @@ public class PageFlowCacheManager
 
         MessageHeader header = new MessageHeader();
         header.setAuthentication(authentication);
-        header.setService(service.toString());
-        header.setLanguage(Language.ENGLISH.toString());
+        header.setService(service.getName());
+        header.setLanguage(Language.ENGLISH.getName());
         header.setNotifications(new ArrayList<>());
         header.setBreadcrumb(new ArrayList<>());
 

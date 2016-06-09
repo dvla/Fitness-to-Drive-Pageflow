@@ -34,7 +34,7 @@ public class MapUtilsTest extends TestCase
      * Test to see if a medical questionnaire has been loaded from resources
      */
     public void testRetrieveSupportedMedicalConditionsForNotifyService() {
-        String service = Service.NOTIFY.toString();
+        String service = Service.NOTIFY.getName();
         Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(service);
 
         assertTrue("No conditions were found in data structure", conditions.size() > 0);
@@ -68,8 +68,8 @@ public class MapUtilsTest extends TestCase
             MedicalForm form = MapUtils.mapStringToModel(data);
             assertNotNull(form);
 
-            assertEquals(form.getMessageHeader().getService(), Service.NOTIFY.toString());
-            assertEquals(form.getMessageHeader().getLanguage(), Language.ENGLISH.toString());
+            assertEquals(form.getMessageHeader().getService(), Service.NOTIFY.getName());
+            assertEquals(form.getMessageHeader().getLanguage(), Language.ENGLISH.getName());
             assertTrue(form.getMessageHeader().getBreadcrumb().isEmpty());
             assertTrue(form.getMessageHeader().getNotifications().isEmpty());
 

@@ -38,7 +38,7 @@ public class FormHelperTest extends TestCase
         MedicalForm form = PageFlowCacheManager.getMedicalForm(Service.NOTIFY);
         assertNotNull(form);
 
-        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.toString());
+        Map<String, MedicalCondition> conditions = PageFlowCacheManager.getSupportedConditions(Service.NOTIFY.getName());
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);
 
