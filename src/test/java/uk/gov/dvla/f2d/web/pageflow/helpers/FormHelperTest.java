@@ -7,7 +7,7 @@ import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
 
 import java.util.Map;
 
@@ -35,7 +35,7 @@ public class FormHelperTest extends TestCase
      * This test check the "capitalise" method of the FormHelper class.
      */
     public void testCapitalise() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
         assertNotNull(form);
 

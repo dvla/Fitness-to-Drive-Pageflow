@@ -8,7 +8,7 @@ import uk.gov.dvla.f2d.model.enums.Language;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
 
 import java.io.IOException;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class MapUtilsTest extends TestCase
      * Test to see if a medical questionnaire has been loaded from resources
      */
     public void testRetrieveSupportedMedicalConditionsForNotifyService() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
 
         assertTrue("No conditions were found in data structure", conditions.size() > 0);
@@ -46,7 +46,7 @@ public class MapUtilsTest extends TestCase
      */
     public void testMapMedicalFormToDataString() {
         try {
-            PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+            PageFlowManager cache = PageFlowManager.getInstance();
             MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
 
             String data = MapUtils.mapModelToString(form);

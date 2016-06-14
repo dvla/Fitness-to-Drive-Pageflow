@@ -8,7 +8,7 @@ import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
 
 import java.util.Arrays;
 import java.util.List;
@@ -46,7 +46,7 @@ public class SummaryAggregatorTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> Default).
      */
     public void testNotifyForDiabetesInDefaultLanguage() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
 
         assertNotNull(form);
@@ -86,7 +86,7 @@ public class SummaryAggregatorTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> English).
      */
     public void testNotifyForDiabetesInEnglish() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
 
         assertNotNull(form);

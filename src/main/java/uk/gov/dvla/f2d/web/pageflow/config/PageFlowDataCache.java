@@ -78,7 +78,9 @@ final class PageFlowDataCache
         TypeReference<Map<String, MedicalCondition>> reference =
                 new TypeReference<Map<String, MedicalCondition>>() {};
 
-        return mapper.readValue(loadConditionsIntoStream(service), reference);
+        InputStream stream = loadConditionsIntoStream(service);
+
+        return mapper.readValue(stream, reference);
     }
 
     Map<String, MedicalCondition> getSupportedConditions(Service service) {

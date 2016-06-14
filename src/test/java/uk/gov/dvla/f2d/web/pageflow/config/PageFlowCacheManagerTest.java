@@ -44,7 +44,7 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if all medical conditions have been loaded
      */
     public void testAllMedicalConditionsLoaded() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         assertEquals(conditions.size(), 5);
     }
@@ -57,7 +57,7 @@ public class PageFlowCacheManagerTest extends TestCase
                 "Diabetes", "Glaucoma", "Epilepsy", "Alcohol problems", "Drug misuse"
         };
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         assertEquals(conditions.size(), supportedConditions.length);
 
@@ -71,13 +71,13 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if only eligibility questions are returned for a condition
      */
     public void testUnverifiedQuestionsOnly() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
         assertNotNull(condition);
 
-        List<MedicalQuestion> questions = PageFlowCacheManager.getUnverifiedPages(condition);
+        List<MedicalQuestion> questions = PageFlowManager.getUnverifiedPages(condition);
 
         assertNotNull(questions);
         assertTrue("No UNVERIFIED questions were found for condition", questions.size() > 0);
@@ -97,13 +97,13 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to see if only eligibility questions are returned for a condition
      */
     public void testVerifiedQuestionsOnly() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
         assertNotNull(condition);
 
-        List<MedicalQuestion> questions = PageFlowCacheManager.getVerifiedPages(condition);
+        List<MedicalQuestion> questions = PageFlowManager.getVerifiedPages(condition);
 
         assertNotNull(questions);
         assertTrue("No VERIFIED questions were found for condition", questions.size() > 0);
@@ -122,7 +122,7 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to ascertain if we can find a medical condition by it's identifier.
      */
     public void testFindConditionByIdentifier() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
@@ -137,13 +137,13 @@ public class PageFlowCacheManagerTest extends TestCase
     public void testFindConditionAndQuestionByIdentifiers() {
         final String QUESTION_ID = "hypoglycaemia-blood-sugar";
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
         assertNotNull(condition);
 
-        MedicalQuestion question = PageFlowCacheManager.getQuestionByConditionAndID(condition, QUESTION_ID);
+        MedicalQuestion question = PageFlowManager.getQuestionByConditionAndID(condition, QUESTION_ID);
         assertNotNull(question);
 
         assertEquals(QUESTION_ID, question.getID());
@@ -153,7 +153,7 @@ public class PageFlowCacheManagerTest extends TestCase
      * Test to determine that all parameters are properly populated.
      */
     public void testAllMedicalConditionParametersPopulated() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
@@ -183,7 +183,7 @@ public class PageFlowCacheManagerTest extends TestCase
     public void testAllMedicalQuestionParametersPopulated() {
         final String QUESTION_ID = "hypoglycaemia-blood-sugar";
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
@@ -213,7 +213,7 @@ public class PageFlowCacheManagerTest extends TestCase
     public void testMedicalQuestionDefaultAnswersSupplied() {
         final String QUESTION_ID = "insulin-declaration";
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
