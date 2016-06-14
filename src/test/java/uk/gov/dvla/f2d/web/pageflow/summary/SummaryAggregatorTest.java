@@ -3,23 +3,23 @@ package uk.gov.dvla.f2d.web.pageflow.summary;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Language;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.NO;
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.YES;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 
 public class SummaryAggregatorTest extends TestCase
 {
-    private static final String DIABETES_CONDITION  = "diabetes";
+    private static final String DIABETES_CONDITION  = Condition.DIABETES.getName();
 
     private static final String DIABETES_QUESTION   = "diabetes-with-insulin";
     private static final String DIABETES_STEP       = "3";
@@ -46,7 +46,7 @@ public class SummaryAggregatorTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> Default).
      */
     public void testNotifyForDiabetesInDefaultLanguage() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
 
         assertNotNull(form);
@@ -86,7 +86,7 @@ public class SummaryAggregatorTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> English).
      */
     public void testNotifyForDiabetesInEnglish() {
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
 
         assertNotNull(form);

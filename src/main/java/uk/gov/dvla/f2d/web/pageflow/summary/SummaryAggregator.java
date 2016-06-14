@@ -15,8 +15,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import static uk.gov.dvla.f2d.model.constants.StringConstants.HYPHEN;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.YES;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
-import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 
 public class SummaryAggregator
 {
@@ -89,7 +90,7 @@ public class SummaryAggregator
                         } else if (question.getType().equals(Format.CHECKBOX.getName())) {
                             response.addAll(processCheckBox(summary, header, question));
                         } else if (question.getType().equals(Format.FORM.getName())) {
-                            response.addAll(processForm(summary, header, question));
+                            response.addAll(processQuestion(question));
                         } else if (question.getType().equals(Format.CONTINUE.getName())) {
                             response.addAll(processContinue(summary, header, question));
                         } else {
@@ -161,7 +162,7 @@ public class SummaryAggregator
         return response;
     }
 
-    private List<Line> processForm(Summary summary, MessageHeader header, MedicalQuestion question) {
+    private List<Line> processQuestion(MedicalQuestion question) {
         List<Line> response = new ArrayList<>();
 
         Line line = new Line();

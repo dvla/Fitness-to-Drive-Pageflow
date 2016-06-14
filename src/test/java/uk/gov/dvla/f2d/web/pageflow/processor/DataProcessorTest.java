@@ -8,7 +8,7 @@ import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
 import uk.gov.dvla.f2d.web.pageflow.processor.impl.*;
 
 import java.util.ArrayList;
@@ -44,7 +44,7 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getRadioGroupQuestion() {
         final String TARGET_QUESTION        = "hypoglycaemia-blood-sugar";
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
@@ -63,7 +63,7 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getCheckboxGroupQuestion() {
         final String TARGET_QUESTION        = "car-bike-moped";
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
@@ -78,7 +78,7 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getContinuePageQuestion() {
         final String TARGET_QUESTION        = "hypoglycaemia-symptoms-info";
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
@@ -93,7 +93,7 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getFormPageQuestion() {
         final String TARGET_QUESTION        = "change-address";
 
-        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        PageFlowManager cache = PageFlowManager.getInstance();
         Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
