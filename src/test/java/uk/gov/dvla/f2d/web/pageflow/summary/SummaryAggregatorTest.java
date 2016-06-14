@@ -3,6 +3,7 @@ package uk.gov.dvla.f2d.web.pageflow.summary;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Language;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
@@ -14,12 +15,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.NO;
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.YES;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 
 public class SummaryAggregatorTest extends TestCase
 {
-    private static final String DIABETES_CONDITION  = "diabetes";
+    private static final String DIABETES_CONDITION  = Condition.DIABETES.getName();
 
     private static final String DIABETES_QUESTION   = "diabetes-with-insulin";
     private static final String DIABETES_STEP       = "3";

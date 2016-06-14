@@ -8,12 +8,6 @@ public class Constants
     public static final String JSON_SUFFIX         = ".json";
 
     /**
-     * Process the data model types required for validation and aggregation.
-     */
-    public static final String YES                 = "Y";
-    public static final String NO                  = "N";
-
-    /**
      * These are error/notification level constants used for validation.
      */
     public static final String BOLD_ON             = "{b}";
@@ -23,5 +17,4 @@ public class Constants
      * Specified fields for use within validation framework.
      */
     public static final String ANSWER_FIELD        = "answer";
-
 }
