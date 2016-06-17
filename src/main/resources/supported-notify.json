@@ -41,6 +41,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "automatic-gears"
       },
       "car-bike-moped": {
@@ -55,6 +56,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "car-bike-moped"
       },
       "change-address": {
@@ -64,11 +66,12 @@
         "type": "Form",
         "validate": true,
         "logout": false,
-        "options": "6a",
+        "options": "GEN1",
         "summary": false,
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "change-address"
       },
       "confirm-address": {
@@ -78,11 +81,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=6a, N=A6.1",
+        "options": "Y=GEN1, N=A6.1",
         "summary": false,
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "confirm-address"
       },
       "consultant-details": {
@@ -97,6 +101,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "consultant-details"
       },
       "contact-details": {
@@ -111,6 +116,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "contact-details"
       },
       "diabetes-with-insulin": {
@@ -125,6 +131,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "diabetes-with-insulin"
       },
       "expectations": {
@@ -139,6 +146,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "expectations"
       },
       "functioning-eyes": {
@@ -153,6 +161,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "functioning-eyes"
       },
       "gp-details": {
@@ -167,6 +176,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "gp-details"
       },
       "healthcare-practitioner-one": {
@@ -181,6 +191,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "healthcare-practitioner-one"
       },
       "healthcare-practitioner-two": {
@@ -195,6 +206,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "healthcare-practitioner-two"
       },
       "hypoglycaemia-blood-sugar": {
@@ -209,6 +221,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "hypoglycaemia-blood-sugar"
       },
       "hypoglycaemia-get-symptoms": {
@@ -223,6 +236,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "hypoglycaemia-get-symptoms"
       },
       "hypoglycaemia-multiple-episodes": {
@@ -237,6 +251,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "hypoglycaemia-multiple-episodes"
       },
       "hypoglycaemia-symptoms-info": {
@@ -251,6 +266,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "hypoglycaemia-symptoms-info"
       },
       "insulin-declaration": {
@@ -265,6 +281,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "insulin-declaration"
       },
       "laser-treatment-one": {
@@ -279,6 +296,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "laser-treatment-one"
       },
       "laser-treatment-two": {
@@ -293,6 +311,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "laser-treatment-two"
       },
       "legal-eyesight-standard": {
@@ -307,6 +326,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "legal-eyesight-standard"
       },
       "medical-consent-one": {
@@ -321,6 +341,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "medical-consent-one"
       },
       "medical-consent-two": {
@@ -335,6 +356,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "medical-consent-two"
       },
       "medical-practitioner": {
@@ -349,6 +371,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "medical-practitioner"
       },
       "special-controls": {
@@ -363,6 +386,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "special-controls"
       },
       "tablets-diet-both": {
@@ -377,6 +401,7 @@
         "answers": [],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "tablets-diet-both"
       }
     },
@@ -435,11 +460,12 @@
         "type": "Form",
         "validate": true,
         "logout": false,
-        "options": "10",
+        "options": "GEN1",
         "summary": false,
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "change-address"
       },
       "confirm-address": {
@@ -449,11 +475,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=10, N=A6.1",
+        "options": "Y=GEN1, N=A6.1",
         "summary": false,
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "confirm-address"
       },
       "contact-details": {
@@ -468,6 +495,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "contact-details"
       },
       "expectations": {
@@ -482,6 +510,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "expectations"
       },
       "functioning-eyes": {
@@ -496,6 +525,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "functioning-eyes"
       },
       "glaucoma-eyes": {
@@ -510,6 +540,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "glaucoma-eyes"
       },
       "legal-eyesight-standard": {
@@ -524,6 +555,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "legal-eyesight-standard"
       },
       "non-notifiable-change": {
@@ -538,6 +570,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
+        "configuration": "",
         "id": "non-notifiable-change"
       }
     },
