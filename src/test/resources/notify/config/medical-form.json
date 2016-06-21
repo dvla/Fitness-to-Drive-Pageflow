@@ -1,0 +1,14 @@
+{
+  "messageHeader": {
+    "service": "notify",
+    "language": "en",
+    "notifications": [],
+    "breadcrumb": [],
+    "authentication": {
+      "verified": false
+    }
+  },
+  "personalDetails": null,
+  "medicalCondition": null,
+  "additionalConditions": []
+}

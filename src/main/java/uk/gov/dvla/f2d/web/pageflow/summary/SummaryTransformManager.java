@@ -15,75 +15,32 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import static uk.gov.dvla.f2d.model.constants.StringConstants.FORWARD_SLASH;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.HYPHEN;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.YES;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
-public class SummaryAggregator
+public final class SummaryTransformManager
 {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private static final Logger logger = LoggerFactory.getLogger(SummaryTransformManager.class);
 
-    private static SummaryAggregator instance;
-
-    private Summary summary;
-
-    private SummaryAggregator() {
+    public SummaryTransformManager() {
         super();
     }
 
-    public static synchronized SummaryAggregator getInstance() {
-        if(instance == null) {
-            instance = new SummaryAggregator();
-        }
-        return instance;
-    }
+    public List<Line> transform(MedicalForm form) {
+        logger.info("Starting to transform summary information...");
 
-    private void initialise(MedicalForm form) {
-        // Service is supported, so proceed to load the configuration.
-        try {
-            final String condition = form.getMedicalCondition().getSlug();
-            final String service = form.getMessageHeader().getService();
-
-            String resourceToLoad = (condition + HYPHEN + service + JSON_SUFFIX);
-
-            logger.debug("Load Resource ["+resourceToLoad+"]");
-
-            InputStream resourceStream = ResourceLoader.load(resourceToLoad);
-
-            summary = new ObjectMapper().readValue(resourceStream, Summary.class);
-
-            logger.debug("Resource Loaded [Questions="+summary.getQuestions().size()+"]");
-
-        } catch(IOException ex) {
-            throw new IllegalArgumentException(ex);
-        }
-    }
-
-    private void checkIntegrity(MedicalForm form) {
-        initialise(form);
-    }
-
-    public List<Line> process(MedicalForm form) {
         List<Line> response = new ArrayList<>();
 
-        checkIntegrity(form);
+        Summary summary = loadSummaryIntoInternalCache(form);
 
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
 
-        logger.debug("Breadcrumbs: "+header.getBreadcrumb());
-
         for(String breadcrumb : form.getMessageHeader().getBreadcrumb()) {
-            logger.debug("Breadcrumb: "+breadcrumb);
-
             for(MedicalQuestion question : condition.getQuestions().values()) {
                 if(question.getStep().equals(breadcrumb) && question.getSummary()) {
-
-                    logger.debug("Step: " + question.getStep() + "-> " + question.getID());
-                    logger.debug("Answers: " + question.getAnswers());
-                    logger.debug("Size: " + question.getAnswers().size());
-                    logger.debug("Empty: " + question.getAnswers().isEmpty());
-
                     if(!(question.getAnswers().isEmpty())) {
                         if (question.getType().equals(Format.RADIO.getName())) {
                             response.addAll(processRadio(summary, header, question));
@@ -101,7 +58,33 @@ public class SummaryAggregator
             }
         }
 
+        logger.info("Finishing processing summary information...");
+
         return response;
+    }
+
+    private Summary loadSummaryIntoInternalCache(MedicalForm form) {
+        logger.info("Loading summary data into internal cache...");
+        try {
+            final String service = form.getMessageHeader().getService();
+            final String condition = form.getMedicalCondition().getSlug();
+
+            final String resourceToLoad = (
+                    service + FORWARD_SLASH + condition + FORWARD_SLASH + SUMMARY_TRANSFORM + JSON_SUFFIX
+            );
+
+            logger.debug("Preparing to load: ["+resourceToLoad+"]");
+
+            InputStream resourceStream = ResourceLoader.load(resourceToLoad);
+            Summary summary = new ObjectMapper().readValue(resourceStream, Summary.class);
+
+            logger.info("Summary data was loaded successfully...");
+
+            return summary;
+
+        } catch(IOException ex) {
+            throw new IllegalArgumentException(ex);
+        }
     }
 
     private List<Line> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {

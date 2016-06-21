@@ -99,7 +99,7 @@ public class PageFlowManagerTest extends TestCase
         assertEquals(DIABETES_CONDITION, condition.getSlug());
         assertEquals("diabetes-with-insulin", condition.getStart());
         assertEquals("diabetes", condition.getSlug());
-        assertEquals("diabetes-and-driving", condition.getInformation());
+        assertEquals("diabetes-driving", condition.getInformation());
         assertTrue(condition.getSynonyms().isEmpty());
         assertEquals(1, condition.getCasp().size());
         assertTrue(condition.getCasp().contains("D01"));

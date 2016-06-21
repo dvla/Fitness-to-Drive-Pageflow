@@ -17,7 +17,7 @@ import java.util.Map;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 
-public class SummaryAggregatorTest extends TestCase
+public class SummaryTransformManagerTest extends TestCase
 {
     private static final String DIABETES_CONDITION  = Condition.DIABETES.getName();
 
@@ -31,7 +31,7 @@ public class SummaryAggregatorTest extends TestCase
      * Create the test case
      * @param testName name of the test case
      */
-    public SummaryAggregatorTest(String testName ) {
+    public SummaryTransformManagerTest(String testName ) {
         super(testName);
     }
 
@@ -39,7 +39,7 @@ public class SummaryAggregatorTest extends TestCase
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite(SummaryAggregatorTest.class);
+        return new TestSuite(SummaryTransformManagerTest.class);
     }
 
     /**
@@ -71,10 +71,10 @@ public class SummaryAggregatorTest extends TestCase
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
         eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
-        SummaryAggregator aggregator = SummaryAggregator.getInstance();
+        SummaryTransformManager aggregator = new SummaryTransformManager();
         assertNotNull(aggregator);
 
-        List<Line> response = aggregator.process(form);
+        List<Line> response = aggregator.transform(form);
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 
@@ -113,10 +113,10 @@ public class SummaryAggregatorTest extends TestCase
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
         eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
-        SummaryAggregator aggregator = SummaryAggregator.getInstance();
-        assertNotNull(aggregator);
+        SummaryTransformManager transform = new SummaryTransformManager();
+        assertNotNull(transform);
 
-        List<Line> response = aggregator.process(form);
+        List<Line> response = transform.transform(form);
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 

@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.TreeMap;
 
+import static uk.gov.dvla.f2d.model.constants.StringConstants.FORWARD_SLASH;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.HYPHEN;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.JSON_SUFFIX;
 
@@ -27,7 +28,6 @@ final class PageFlowDataCache
 
     void initialise() throws IOException {
         services = new TreeMap<>();
-
         for(Service service : Service.values()) {
             Map<String, MedicalCondition> conditions = loadMedicalConditions(service);
             services.put(service, new ObjectMapper().writeValueAsString(conditions));
@@ -35,7 +35,8 @@ final class PageFlowDataCache
     }
 
     private Map<String, MedicalCondition> loadMedicalConditions(Service service) throws IOException {
-        InputStream stream = ResourceLoader.load(SUPPORTED_PREFIX + HYPHEN + service.getName() + JSON_SUFFIX);
+        String resourceToLoad = (service.getName() + FORWARD_SLASH + SUPPORTED_PREFIX + JSON_SUFFIX);
+        InputStream stream = ResourceLoader.load(resourceToLoad);
 
         ObjectMapper mapper = new ObjectMapper(new JsonFactory());
         TypeReference<Map<String, MedicalCondition>> reference =
