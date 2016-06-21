@@ -41,7 +41,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"18\",\"N\": \"18\"}}",
         "id": "automatic-gears"
       },
       "car-bike-moped": {
@@ -86,7 +86,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
         "id": "confirm-address"
       },
       "consultant-details": {
@@ -131,7 +131,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"EXP1\",\"N\": \"A4.1\"}}",
         "id": "diabetes-with-insulin"
       },
       "expectations": {
@@ -161,7 +161,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"1\": \"11a\",\"2\": \"11b\"}}",
         "id": "functioning-eyes"
       },
       "gp-details": {
@@ -191,7 +191,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"13\",\"N\": \"13\"}}",
         "id": "healthcare-practitioner-one"
       },
       "healthcare-practitioner-two": {
@@ -206,7 +206,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"17\",\"N\": \"13\"}}",
         "id": "healthcare-practitioner-two"
       },
       "hypoglycaemia-blood-sugar": {
@@ -221,7 +221,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"7\",\"N\": \"9\"}}",
         "id": "hypoglycaemia-blood-sugar"
       },
       "hypoglycaemia-get-symptoms": {
@@ -236,7 +236,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"8\",\"N\": \"8\"}}",
         "id": "hypoglycaemia-get-symptoms"
       },
       "hypoglycaemia-multiple-episodes": {
@@ -251,7 +251,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"9\",\"N\": \"9\"}}",
         "id": "hypoglycaemia-multiple-episodes"
       },
       "hypoglycaemia-symptoms-info": {
@@ -281,7 +281,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"10\",\"N\": \"10\"}}",
         "id": "insulin-declaration"
       },
       "laser-treatment-one": {
@@ -296,7 +296,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"12\",\"N\": \"A7.1\"}}",
         "id": "laser-treatment-one"
       },
       "laser-treatment-two": {
@@ -311,7 +311,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"12\",\"N\": \"A7.1\"}}",
         "id": "laser-treatment-two"
       },
       "legal-eyesight-standard": {
@@ -326,7 +326,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"11\",\"YG\": \"11\",\"N\": \"11\"}}",
         "id": "legal-eyesight-standard"
       },
       "medical-consent-one": {
@@ -341,7 +341,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"15\",\"N\": \"14\"}}",
         "id": "medical-consent-one"
       },
       "medical-consent-two": {
@@ -356,7 +356,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"15\",\"N\": \"15\"}}",
         "id": "medical-consent-two"
       },
       "medical-practitioner": {
@@ -371,7 +371,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"G\": \"16\",\"GN\": \"16\",\"C\": \"16a\",\"NS\": \"16a\"}}",
         "id": "medical-practitioner"
       },
       "special-controls": {
@@ -386,7 +386,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"19\",\"N\": \"*\"}}",
         "id": "special-controls"
       },
       "tablets-diet-both": {
@@ -480,7 +480,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
         "id": "confirm-address"
       },
       "contact-details": {
@@ -525,7 +525,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"1\": \"EXP1\",\"2\": \"A1.2\"}}",
         "id": "functioning-eyes"
       },
       "glaucoma-eyes": {
@@ -540,7 +540,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"EXP1\",\"N\": \"A1.3\"}}",
         "id": "glaucoma-eyes"
       },
       "legal-eyesight-standard": {
@@ -555,7 +555,7 @@
         "answers": [""],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"YG\": \"*\",\"N\": \"*\"}}",
         "id": "legal-eyesight-standard"
       },
       "non-notifiable-change": {

@@ -1,17 +1,21 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataProcessorFormPageImpl implements IDataQuestionProcessor
+public class DataProcessorFormImpl implements IDataQuestionProcessor
 {
+    //private static final Logger logger = LoggerFactory.getLogger(DataProcessorFormImpl.class);
+
     private MedicalQuestion question;
 
-    DataProcessorFormPageImpl(MedicalQuestion newQuestion) {
-        this.question = newQuestion;
+    public DataProcessorFormImpl(MedicalQuestion question) {
+        this.question = question;
     }
 
     @Override

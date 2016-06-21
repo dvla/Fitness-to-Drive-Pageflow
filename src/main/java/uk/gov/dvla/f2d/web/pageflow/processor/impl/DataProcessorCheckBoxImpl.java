@@ -12,14 +12,14 @@ import java.util.List;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.ANSWER_FIELD;
 import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.*;
 
-public class DataProcessorCheckBoxGroupImpl implements IDataQuestionProcessor
+public class DataProcessorCheckBoxImpl implements IDataQuestionProcessor
 {
+    private static final Logger logger = LoggerFactory.getLogger(DataProcessorCheckBoxImpl.class);
+
     private MedicalQuestion question;
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    DataProcessorCheckBoxGroupImpl(MedicalQuestion newQuestion) {
-        this.question = newQuestion;
+    public DataProcessorCheckBoxImpl(MedicalQuestion question) {
+        this.question = question;
     }
 
     @Override

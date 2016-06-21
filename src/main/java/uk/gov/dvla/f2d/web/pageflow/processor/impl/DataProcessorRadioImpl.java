@@ -11,16 +11,16 @@ import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.*;
 
-public class DataProcessorRadioGroupImpl implements IDataQuestionProcessor
+import static uk.gov.dvla.f2d.web.pageflow.utils.ValidationUtils.*;
+
+public class DataProcessorRadioImpl implements IDataQuestionProcessor
 {
+    //private static final Logger logger = LoggerFactory.getLogger(DataProcessorRadioImpl.class);
+
     private MedicalQuestion question;
 
-    DataProcessorRadioGroupImpl(MedicalQuestion newQuestion) {
-        this.question = newQuestion;
-    }
-
-    private boolean isNullOrEmpty(final String field) {
-        return (field == null || field.trim().equals(EMPTY));
+    public DataProcessorRadioImpl(MedicalQuestion question) {
+        this.question = question;
     }
 
     @Override

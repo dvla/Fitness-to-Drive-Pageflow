@@ -116,7 +116,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorRadioGroupImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorRadioImpl));
     }
 
     /**
@@ -130,7 +130,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckBoxGroupImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckBoxImpl));
     }
 
     /**
@@ -144,7 +144,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorContinuePageImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorContinueImpl));
     }
 
     /**
@@ -158,7 +158,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorFormPageImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorFormImpl));
     }
 
     public void testRadioGroupDataProcessorDecisionSuccess() {

@@ -137,6 +137,9 @@ public class PageFlowManagerTest extends TestCase
         assertNotNull(question.getAnswers());
         assertEquals(question.getAnswers().size(), 0);
 
+        assertNotNull(question.getConfiguration());
+        assertTrue(question.getConfiguration().trim().length() > 0);
+
         assertNotNull(question.toString());
     }
 
