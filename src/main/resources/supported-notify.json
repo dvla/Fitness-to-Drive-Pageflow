@@ -22,7 +22,7 @@
     "form": "DIAB1",
     "slug": "diabetes",
     "start": "diabetes-with-insulin",
-    "information": "diabetes-and-driving",
+    "information": "diabetes-driving",
     "synonyms": [],
     "casp": ["D01"],
     "ceg": "101",
