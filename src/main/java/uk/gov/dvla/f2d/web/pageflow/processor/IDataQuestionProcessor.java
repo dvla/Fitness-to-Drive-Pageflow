@@ -1,4 +1,4 @@
-package uk.gov.dvla.f2d.web.pageflow.processor.impl;
+package uk.gov.dvla.f2d.web.pageflow.processor;
 
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 

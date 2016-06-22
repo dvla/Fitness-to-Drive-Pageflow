@@ -6,6 +6,8 @@ public final class Constants
      * Provide a list of module-wide constants here for quick reference.
      */
     public static final String SUMMARY_TRANSFORM        = "summary-transform";
+    public static final String SUPPORTED_PREFIX         = "supported";
+
     public static final String JSON_SUFFIX              = ".json";
 
     /**

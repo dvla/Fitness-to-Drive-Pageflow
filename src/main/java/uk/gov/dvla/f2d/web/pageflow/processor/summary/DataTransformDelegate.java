@@ -1,4 +1,4 @@
-package uk.gov.dvla.f2d.web.pageflow.summary;
+package uk.gov.dvla.f2d.web.pageflow.processor.summary;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -15,29 +15,30 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static uk.gov.dvla.f2d.model.constants.StringConstants.FORWARD_SLASH;
-import static uk.gov.dvla.f2d.model.constants.StringConstants.HYPHEN;
-import static uk.gov.dvla.f2d.model.constants.StringConstants.YES;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
-public final class SummaryTransformManager
+public class DataTransformDelegate
 {
-    private static final Logger logger = LoggerFactory.getLogger(SummaryTransformManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(DataTransformPipeline.class);
 
-    public SummaryTransformManager() {
-        super();
+    private MedicalForm form;
+
+    DataTransformDelegate(MedicalForm form) {
+        this.form = form;
     }
 
-    public List<Line> transform(MedicalForm form) {
+    List<SummaryLine> process() {
         logger.info("Starting to transform summary information...");
 
-        List<Line> response = new ArrayList<>();
+        List<SummaryLine> response = new ArrayList<>();
 
-        Summary summary = loadSummaryIntoInternalCache(form);
+        SummaryAggregate summary = loadSummaryIntoInternalCache();
 
         MessageHeader header = form.getMessageHeader();
         MedicalCondition condition = form.getMedicalCondition();
 
+        // FIXME: Consider rewriting this, not very efficient code.
         for(String breadcrumb : form.getMessageHeader().getBreadcrumb()) {
             for(MedicalQuestion question : condition.getQuestions().values()) {
                 if(question.getStep().equals(breadcrumb) && question.getSummary()) {
@@ -63,7 +64,7 @@ public final class SummaryTransformManager
         return response;
     }
 
-    private Summary loadSummaryIntoInternalCache(MedicalForm form) {
+    private SummaryAggregate loadSummaryIntoInternalCache() {
         logger.info("Loading summary data into internal cache...");
         try {
             final String service = form.getMessageHeader().getService();
@@ -76,9 +77,9 @@ public final class SummaryTransformManager
             logger.debug("Preparing to load: ["+resourceToLoad+"]");
 
             InputStream resourceStream = ResourceLoader.load(resourceToLoad);
-            Summary summary = new ObjectMapper().readValue(resourceStream, Summary.class);
+            SummaryAggregate summary = new ObjectMapper().readValue(resourceStream, SummaryAggregate.class);
 
-            logger.info("Summary data was loaded successfully...");
+            logger.info("SummaryAggregate data was loaded successfully...");
 
             return summary;
 
@@ -87,17 +88,18 @@ public final class SummaryTransformManager
         }
     }
 
-    private List<Line> processRadio(Summary summary, MessageHeader header, MedicalQuestion question) {
-        List<Line> response = new ArrayList<>();
+
+    List<SummaryLine> processRadio(SummaryAggregate summary, MessageHeader header, MedicalQuestion question) {
+        List<SummaryLine> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
-                Option option = summary.getQuestions().get(question.getID());
-                Answer answer = option.getOptions().get(question.getAnswers().get(0));
+                SummaryOption option = summary.getQuestions().get(question.getID());
+                SummaryAnswer answer = option.getOptions().get(question.getAnswers().get(0));
 
                 if(answer != null) {
                     String text = answer.getAnswers().get(header.getLanguage());
                     if (text != null) {
-                        Line line = new Line();
+                        SummaryLine line = new SummaryLine();
                         line.setType(question.getType());
                         line.setSubHeading(question.getText());
                         line.getLines().add(text);
@@ -111,14 +113,14 @@ public final class SummaryTransformManager
         return response;
     }
 
-    private List<Line> processCheckBox(Summary summary, MessageHeader header, MedicalQuestion question) {
-        List<Line> response = new ArrayList<>();
+    List<SummaryLine> processCheckBox(SummaryAggregate summary, MessageHeader header, MedicalQuestion question) {
+        List<SummaryLine> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
             if(!(question.getAnswers().isEmpty())) {
 
                 String heading = null;
 
-                Line line = new Line();
+                SummaryLine line = new SummaryLine();
                 line.setType(question.getType());
                 line.setSubHeading(question.getText());
 
@@ -128,8 +130,8 @@ public final class SummaryTransformManager
                         line.getLines().add(BOLD_ON + key + BOLD_OFF);
                         heading = key;
                     }
-                    Option option = summary.getQuestions().get(question.getID());
-                    Answer answer = option.getOptions().get(value);
+                    SummaryOption option = summary.getQuestions().get(question.getID());
+                    SummaryAnswer answer = option.getOptions().get(value);
 
                     String text = answer.getAnswers().get(header.getLanguage());
                     if(text != null) {
@@ -145,10 +147,10 @@ public final class SummaryTransformManager
         return response;
     }
 
-    private List<Line> processQuestion(MedicalQuestion question) {
-        List<Line> response = new ArrayList<>();
+    List<SummaryLine> processQuestion(MedicalQuestion question) {
+        List<SummaryLine> response = new ArrayList<>();
 
-        Line line = new Line();
+        SummaryLine line = new SummaryLine();
         line.setType(question.getType());
         line.setSubHeading(question.getText());
         line.setLines(question.getAnswers());
@@ -158,13 +160,13 @@ public final class SummaryTransformManager
         return response;
     }
 
-    private List<Line> processContinue(Summary summary, MessageHeader header, MedicalQuestion question) {
-        List<Line> response = new ArrayList<>();
+    List<SummaryLine> processContinue(SummaryAggregate summary, MessageHeader header, MedicalQuestion question) {
+        List<SummaryLine> response = new ArrayList<>();
         if(summary.getQuestions().containsKey(question.getID())) {
-            Option option = summary.getQuestions().get(question.getID());
-            Answer answer = option.getOptions().get(YES);
+            SummaryOption option = summary.getQuestions().get(question.getID());
+            SummaryAnswer answer = option.getOptions().get(YES);
 
-            Line line = new Line();
+            SummaryLine line = new SummaryLine();
             line.setType(question.getType());
             line.setSubHeading(question.getText());
             line.getLines().add(answer.getAnswers().get(header.getLanguage()));

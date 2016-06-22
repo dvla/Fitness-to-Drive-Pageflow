@@ -1,12 +1,12 @@
-package uk.gov.dvla.f2d.web.pageflow.summary;
+package uk.gov.dvla.f2d.web.pageflow.processor.summary;
 
 import java.util.Map;
 
-public class Answer
+public class SummaryAnswer
 {
     private Map<String, String> answers;
 
-    Answer() {
+    SummaryAnswer() {
         super();
     }
 

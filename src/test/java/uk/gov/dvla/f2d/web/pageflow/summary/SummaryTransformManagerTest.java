@@ -9,7 +9,10 @@ import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
+import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.domain.PageFlowManager;
+import uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline;
+import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,38 +30,34 @@ public class SummaryTransformManagerTest extends TestCase
     private static final String EYESIGHT_QUESTION   = "legal-eyesight-standard";
     private static final String EYESIGHT_STEP       = "10";
 
-    /**
-     * Create the test case
-     * @param testName name of the test case
-     */
     public SummaryTransformManagerTest(String testName ) {
         super(testName);
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
     public static Test suite() {
         return new TestSuite(SummaryTransformManagerTest.class);
     }
 
-    /**
-     * Test the summary for (Notify -> Diabetes -> Default).
-     */
-    public void testNotifyForDiabetesInDefaultLanguage() {
-        PageFlowManager cache = PageFlowManager.getInstance();
-        MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
+    public void setUp() throws Exception {
+
+    }
+
+    public void tearDown() throws Exception {
+
+    }
+
+    private MedicalForm createForm(Service service, Language language) {
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        MedicalForm form = cache.createMedicalForm(service);
+        form.getMessageHeader().setLanguage(language.getName());
 
         assertNotNull(form);
-
-        assertEquals(Service.NOTIFY.getName(), form.getMessageHeader().getService());
-        assertEquals(Language.ENGLISH.getName(), form.getMessageHeader().getLanguage());
 
         form.getMessageHeader().getBreadcrumb().add(DIABETES_STEP);
         form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
         assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
 
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);
@@ -71,10 +70,19 @@ public class SummaryTransformManagerTest extends TestCase
         MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
         eyesight.setAnswers(Arrays.asList(new String[]{NO}));
 
-        SummaryTransformManager aggregator = new SummaryTransformManager();
-        assertNotNull(aggregator);
+        return form;
+    }
 
-        List<Line> response = aggregator.transform(form);
+    /**
+     * Test the summary for (Notify -> Diabetes -> Default).
+     */
+    public void testNotifyForDiabetesInDefaultLanguage() {
+        MedicalForm form = createForm(Service.NOTIFY, Language.ENGLISH);
+
+        DataTransformPipeline pipeline = DataTransformPipeline.create();
+        assertNotNull(pipeline);
+
+        List<SummaryLine> response = pipeline.transform(form);
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 
@@ -86,37 +94,12 @@ public class SummaryTransformManagerTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> English).
      */
     public void testNotifyForDiabetesInEnglish() {
-        PageFlowManager cache = PageFlowManager.getInstance();
-        MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
+        MedicalForm form = createForm(Service.NOTIFY, Language.ENGLISH);
 
-        assertNotNull(form);
+        DataTransformPipeline pipeline = DataTransformPipeline.create();
+        assertNotNull(pipeline);
 
-        form.getMessageHeader().setLanguage(Language.ENGLISH.getName());
-
-        assertEquals(Service.NOTIFY.getName(), form.getMessageHeader().getService());
-        assertEquals(Language.ENGLISH.getName(), form.getMessageHeader().getLanguage());
-
-        form.getMessageHeader().getBreadcrumb().add(DIABETES_STEP);
-        form.getMessageHeader().getBreadcrumb().add(EYESIGHT_STEP);
-        assertEquals(form.getMessageHeader().getBreadcrumb().size(), 2);
-
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
-
-        MedicalCondition condition = conditions.get(DIABETES_CONDITION);
-        assertNotNull(condition);
-
-        form.setMedicalCondition(condition);
-
-        MedicalQuestion diabetes = form.getMedicalCondition().getQuestions().get(DIABETES_QUESTION);
-        diabetes.setAnswers(Arrays.asList(new String[]{YES}));
-
-        MedicalQuestion eyesight = form.getMedicalCondition().getQuestions().get(EYESIGHT_QUESTION);
-        eyesight.setAnswers(Arrays.asList(new String[]{NO}));
-
-        SummaryTransformManager transform = new SummaryTransformManager();
-        assertNotNull(transform);
-
-        List<Line> response = transform.transform(form);
+        List<SummaryLine> response = pipeline.transform(form);
         assertFalse(response.isEmpty());
         assertEquals(response.size(), 2);
 

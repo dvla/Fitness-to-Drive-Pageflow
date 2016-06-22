@@ -1,4 +1,4 @@
-package uk.gov.dvla.f2d.web.pageflow.processor.impl;
+package uk.gov.dvla.f2d.web.pageflow.processor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +11,9 @@ public final class DataProcessorFactory
 {
     private static final Logger logger = LoggerFactory.getLogger(DataProcessorFactory.class);
 
-    private static final String IMPL_PREFIX = "DataProcessor";
-    private static final String IMPL_SUFFIX = "Impl";
+    private static final String IMPL_PACKAGE        = "uk.gov.dvla.f2d.web.pageflow.processor.implementation.";
+    private static final String IMPL_PREFIX         = "DataProcessor";
+    private static final String IMPL_SUFFIX         = "Impl";
 
     public DataProcessorFactory() {
         super();
@@ -22,10 +23,7 @@ public final class DataProcessorFactory
         logger.debug("Attempting to instantiate the required data processor: "+question.getType());
 
         try {
-            String definition = this.getClass().getCanonicalName();
-            String packageName = definition.substring(0, definition.indexOf(getClass().getSimpleName()));
-
-            Class<?> temp = Class.forName(packageName + IMPL_PREFIX + question.getType() + IMPL_SUFFIX);
+            Class<?> temp = Class.forName(IMPL_PACKAGE + IMPL_PREFIX + question.getType() + IMPL_SUFFIX);
             Constructor<?> con = temp.getDeclaredConstructor(MedicalQuestion.class);
 
             return (IDataQuestionProcessor)con.newInstance(question);

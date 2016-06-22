@@ -7,7 +7,8 @@ import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
+import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.domain.PageFlowManager;
 
 import java.util.Map;
 
@@ -35,11 +36,11 @@ public class FormHelperTest extends TestCase
      * This test check the "capitalise" method of the FormHelper class.
      */
     public void testCapitalise() {
-        PageFlowManager cache = PageFlowManager.getInstance();
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
         MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
         assertNotNull(form);
 
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
         assertNotNull(condition);
 

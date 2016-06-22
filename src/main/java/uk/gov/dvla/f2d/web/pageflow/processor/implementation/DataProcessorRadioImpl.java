@@ -1,17 +1,17 @@
-package uk.gov.dvla.f2d.web.pageflow.processor.impl;
+package uk.gov.dvla.f2d.web.pageflow.processor.implementation;
 
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
+import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.ANSWER_FIELD;
 import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.*;
-
-import static uk.gov.dvla.f2d.web.pageflow.utils.ValidationUtils.*;
+import static uk.gov.dvla.f2d.model.utils.StringUtils.*;
 
 public class DataProcessorRadioImpl implements IDataQuestionProcessor
 {

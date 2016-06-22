@@ -1,4 +1,4 @@
-package uk.gov.dvla.f2d.web.pageflow.config;
+package uk.gov.dvla.f2d.web.pageflow.cache;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -16,36 +16,34 @@ import java.util.Map;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
 
-/**
- * Unit test for simple App.
- */
-public class PageFlowManagerTest extends TestCase
+public class PageFlowCacheManagerTest extends TestCase
 {
     private static final String DIABETES_CONDITION = Condition.DIABETES.getName();
 
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public PageFlowManagerTest(String testName ) {
+    private PageFlowCacheManager cache;
+
+    public PageFlowCacheManagerTest(String testName ) {
         super( testName );
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
     public static Test suite() {
-        return new TestSuite( PageFlowManagerTest.class );
+        return new TestSuite( PageFlowCacheManagerTest.class );
+    }
+
+
+    public void setUp() throws Exception {
+        cache = PageFlowCacheManager.getInstance();
+    }
+
+    public void tearDown() throws Exception {
+        cache.destroy();
     }
 
     /**
      * Test to see if all medical conditions have been loaded
      */
     public void testAllMedicalConditionsLoaded() {
-        PageFlowManager manager = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = manager.getSupportedConditions(Service.NOTIFY);
-
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
         assertEquals(conditions.size(), 5);
     }
 
@@ -57,9 +55,7 @@ public class PageFlowManagerTest extends TestCase
                 "Diabetes", "Glaucoma", "Epilepsy", "Alcohol problems", "Drug misuse"
         };
 
-        PageFlowManager manager = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = manager.getSupportedConditions(Service.NOTIFY);
-
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
         assertEquals(conditions.size(), supportedConditions.length);
 
         for(MedicalCondition condition : conditions.values()) {
@@ -72,8 +68,7 @@ public class PageFlowManagerTest extends TestCase
      * Test to ascertain if we can find a medical condition by it's identifier.
      */
     public void testFindConditionByIdentifier() {
-        PageFlowManager manager = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = manager.getSupportedConditions(Service.NOTIFY);
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
         assertNotNull(condition);
@@ -85,8 +80,7 @@ public class PageFlowManagerTest extends TestCase
      * Test to determine that all parameters are properly populated.
      */
     public void testAllMedicalConditionParametersPopulated() {
-        PageFlowManager manager = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = manager.getSupportedConditions(Service.NOTIFY);
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
         assertNotNull(condition);
@@ -116,8 +110,7 @@ public class PageFlowManagerTest extends TestCase
     public void testAllMedicalQuestionParametersPopulated() {
         final String QUESTION_ID = "hypoglycaemia-blood-sugar";
 
-        PageFlowManager cache = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
         assertNotNull(condition);
@@ -149,8 +142,7 @@ public class PageFlowManagerTest extends TestCase
     public void testMedicalQuestionDefaultAnswersSupplied() {
         final String QUESTION_ID = "insulin-declaration";
 
-        PageFlowManager cache = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
         MedicalCondition condition = conditions.get(DIABETES_CONDITION);
 
         assertNotNull(condition);

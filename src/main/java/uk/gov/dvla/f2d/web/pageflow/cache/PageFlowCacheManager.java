@@ -1,4 +1,4 @@
-package uk.gov.dvla.f2d.web.pageflow.config;
+package uk.gov.dvla.f2d.web.pageflow.cache;
 
 import uk.gov.dvla.f2d.model.enums.Language;
 import uk.gov.dvla.f2d.model.enums.Service;
@@ -11,13 +11,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class PageFlowManager
+public final class PageFlowCacheManager
 {
-    private static PageFlowManager instance;
+    private static PageFlowCacheManager instance;
 
     private PageFlowDataCache cache;
 
-    private PageFlowManager() {
+    private PageFlowCacheManager() {
         try {
             cache = new PageFlowDataCache();
             cache.initialise();
@@ -27,9 +27,9 @@ public class PageFlowManager
         }
     }
 
-    public static synchronized PageFlowManager getInstance() {
+    public static synchronized PageFlowCacheManager getInstance() {
         if(instance == null) {
-            instance = new PageFlowManager();
+            instance = new PageFlowCacheManager();
         }
         return instance;
     }
@@ -55,7 +55,11 @@ public class PageFlowManager
         return form;
     }
 
-    public Map<String, MedicalCondition> getSupportedConditions(Service service) {
+    public Map<String, MedicalCondition> getConditions(Service service) {
         return cache.getSupportedConditions(service);
+    }
+
+    public void destroy() {
+        instance = null;
     }
 }

@@ -1,0 +1,50 @@
+ERROR 2016-06-21 09:31:22,200 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,248 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,284 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,317 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,346 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,380 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,405 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,444 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:31:22,474 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,000 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,025 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,058 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,092 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,129 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,162 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,179 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,209 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+ERROR 2016-06-21 09:34:33,240 [main] uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory - Package: uk.gov.dvla.f2d.web.pageflow.processor.impl.DataProcessorFactory F2D-portal 
+INFO  2016-06-21 14:07:35,854 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:07:35,866 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:07:35,932 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:07:35,934 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal
+INFO  2016-06-21 14:07:35,993 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:07:35,995 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:07:36,012 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:07:36,015 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal
+INFO  2016-06-21 14:23:53,827 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:23:53,835 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:23:53,859 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:23:53,873 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal
+INFO  2016-06-21 14:23:53,921 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:23:53,927 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:23:53,951 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:23:53,952 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal
+INFO  2016-06-21 14:25:08,758 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:25:08,766 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:25:08,792 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:25:08,810 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal
+INFO  2016-06-21 14:25:08,861 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:25:08,866 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:25:08,880 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:25:08,884 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal
+INFO  2016-06-21 14:46:14,858 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:46:14,867 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:46:14,905 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:46:14,910 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal
+INFO  2016-06-21 14:46:14,969 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Starting to transform summary information... F2D-portal
+INFO  2016-06-21 14:46:14,974 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Loading summary data into internal cache... F2D-portal
+INFO  2016-06-21 14:46:14,988 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Summary data was loaded successfully... F2D-portal
+INFO  2016-06-21 14:46:14,989 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline - Finishing processing summary information... F2D-portal

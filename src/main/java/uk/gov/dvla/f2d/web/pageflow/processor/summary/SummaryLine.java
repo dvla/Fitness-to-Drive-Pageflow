@@ -1,16 +1,16 @@
-package uk.gov.dvla.f2d.web.pageflow.summary;
+package uk.gov.dvla.f2d.web.pageflow.processor.summary;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Line
+public class SummaryLine
 {
     private String type;
     private String subHeading;
     private List<String> lines;
     private String link;
 
-    Line() {
+    SummaryLine() {
         lines = new ArrayList<>();
     }
 

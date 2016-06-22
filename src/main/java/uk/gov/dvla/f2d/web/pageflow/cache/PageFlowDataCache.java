@@ -1,4 +1,4 @@
-package uk.gov.dvla.f2d.web.pageflow.config;
+package uk.gov.dvla.f2d.web.pageflow.cache;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -12,14 +12,11 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.TreeMap;
 
-import static uk.gov.dvla.f2d.model.constants.StringConstants.FORWARD_SLASH;
-import static uk.gov.dvla.f2d.model.constants.StringConstants.HYPHEN;
-import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.JSON_SUFFIX;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
+import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.*;
 
 final class PageFlowDataCache
 {
-    private static final String SUPPORTED_PREFIX        = "supported";
-
     private Map<Service, String> services;
 
     PageFlowDataCache() {
