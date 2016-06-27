@@ -1,12 +1,15 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.implementation;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
 import static uk.gov.dvla.f2d.web.pageflow.constants.Constants.ANSWER_FIELD;
@@ -15,16 +18,40 @@ import static uk.gov.dvla.f2d.model.utils.StringUtils.*;
 
 public class DataProcessorRadioImpl implements IDataQuestionProcessor
 {
-    //private static final Logger logger = LoggerFactory.getLogger(DataProcessorRadioImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(DataProcessorRadioImpl.class);
 
     private MedicalQuestion question;
 
     public DataProcessorRadioImpl(MedicalQuestion question) {
+        logger.debug("Constructor entered.");
         this.question = question;
+        loadConfiguration();
+    }
+
+    private void loadConfiguration() {
+        logger.debug("begin: loadConfiguration() method");
+        try {
+            String config = question.getConfiguration();
+
+            TypeReference<Map<String, String>> type = new TypeReference<Map<String, String>>() {};
+            Map<String, String> values = new ObjectMapper().readValue(config, type);
+
+            logger.debug("Map: "+values.toString());
+
+            for(String key : values.keySet()) {
+                String value = values.get(key);
+                logger.debug("Key: %s, Value: %s", key, value);
+            }
+
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     @Override
     public List<Notification> validate() {
+        logger.debug("begin: validate() method");
+
         final String[] options = question.getOptions().trim().split(COMMA);
 
         String answer = EMPTY;
@@ -66,6 +93,8 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
             notification.setDescription(INVALID_OPTION_DESC);
             notifications.add(notification);
         }
+
+        logger.debug("finish: validate() method");
 
         return notifications;
     }
