@@ -1,6 +1,5 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.implementation;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +7,9 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
+import uk.gov.dvla.f2d.web.pageflow.processor.components.RadioComponent;
 
+import java.io.IOException;
 import java.util.*;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
@@ -23,74 +24,60 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
     private MedicalQuestion question;
 
     public DataProcessorRadioImpl(MedicalQuestion question) {
-        logger.debug("Constructor entered.");
         this.question = question;
-        loadConfiguration();
     }
 
-    private void loadConfiguration() {
-        logger.debug("begin: loadConfiguration() method");
-        try {
-            String config = question.getConfiguration();
-
-            TypeReference<Map<String, String>> type = new TypeReference<Map<String, String>>() {};
-            Map<String, String> values = new ObjectMapper().readValue(config, type);
-
-            logger.debug("Map: "+values.toString());
-
-            for(String key : values.keySet()) {
-                String value = values.get(key);
-                logger.debug("Key: %s, Value: %s", key, value);
-            }
-
-        } catch(Exception ex) {
-            ex.printStackTrace();
-        }
+    private RadioComponent getComponent() throws IOException {
+        return new ObjectMapper().readValue(question.getConfiguration(), RadioComponent.class);
     }
 
     @Override
     public List<Notification> validate() {
         logger.debug("begin: validate() method");
 
-        final String[] options = question.getOptions().trim().split(COMMA);
-
-        String answer = EMPTY;
-        if(!(question.getAnswers().isEmpty())) {
-            answer = question.getAnswers().get(0).trim();
-        }
-
-        List<String> keys = new ArrayList<>();
-
-        for(String option : options) {
-            String key = option.split(EQUALS)[0].trim();
-            String value = option.split(EQUALS)[1].trim();
-
-            if(key.equalsIgnoreCase(answer)) {
-                question.setDecision(value);
+        List<Notification> notifications = new ArrayList<>();
+        try {
+            // Find the user the user provided.
+            String answer = EMPTY;
+            if(!(question.getAnswers().isEmpty())) {
+                answer = question.getAnswers().get(0).trim();
             }
 
-            keys.add(key);
-        }
+            // Check that an answer was supplied for this question.
+            if (isNullOrEmpty(answer)) {
+                Notification notification = new Notification();
+                notification.setPage(FormHelper.capitalise(question));
+                notification.setField(ANSWER_FIELD);
+                notification.setCode(NULL_OR_EMPTY_CODE);
+                notification.setDescription(NULL_OR_EMPTY_DESC);
+                notifications.add(notification);
+            }
 
-        List<Notification> notifications = new ArrayList<>();
+            RadioComponent component = getComponent();
 
-        // Check that an answer was supplied for this question.
-        if(isNullOrEmpty(answer)) {
+            Set<String> keys = component.getOptions().keySet();
+            for(String key : keys) {
+                if(key.equals(answer)) {
+                    question.setDecision(component.getOptions().get(key));
+                }
+            }
+
+            // Check that the answer supplied was a valid response.
+            if (!isNullOrEmpty(answer) && !keys.contains(answer)) {
+                Notification notification = new Notification();
+                notification.setPage(FormHelper.capitalise(question));
+                notification.setField(ANSWER_FIELD);
+                notification.setCode(INVALID_OPTION_CODE);
+                notification.setDescription(INVALID_OPTION_DESC);
+                notifications.add(notification);
+            }
+
+        } catch(IOException ex) {
             Notification notification = new Notification();
             notification.setPage(FormHelper.capitalise(question));
             notification.setField(ANSWER_FIELD);
-            notification.setCode(NULL_OR_EMPTY_CODE);
-            notification.setDescription(NULL_OR_EMPTY_DESC);
-            notifications.add(notification);
-        }
-
-        // Check that the answer supplied was a valid response.
-        if(!isNullOrEmpty(answer) && !keys.contains(answer)) {
-            Notification notification = new Notification();
-            notification.setPage(FormHelper.capitalise(question));
-            notification.setField(ANSWER_FIELD);
-            notification.setCode(INVALID_OPTION_CODE);
-            notification.setDescription(INVALID_OPTION_DESC);
+            notification.setCode(GENERAL_ERROR_CODE);
+            notification.setDescription(GENERAL_ERROR_DESC);
             notifications.add(notification);
         }
 
