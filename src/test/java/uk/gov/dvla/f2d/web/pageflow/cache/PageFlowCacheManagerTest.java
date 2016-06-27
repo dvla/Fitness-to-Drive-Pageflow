@@ -153,7 +153,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals(QUESTION_ID, question.getID());
         assertEquals("9", question.getStep());
         assertEquals(Page.VERIFIED.getName(), question.getPage());
-        assertEquals(12, question.getOrder().intValue());
+        assertEquals(13, question.getOrder().intValue());
         assertEquals(Format.RADIO.getName(), question.getType());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());

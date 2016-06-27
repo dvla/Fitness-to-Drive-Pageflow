@@ -33,7 +33,7 @@ public class PageFlowManagerTest extends TestCase
         Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         form = cache.createMedicalForm(Service.NOTIFY);
-        form.setMedicalCondition(conditions.get("diabetes"));
+        form.setMedicalCondition(conditions.get(Condition.DIABETES.getName()));
     }
 
     public void tearDown() throws Exception {
