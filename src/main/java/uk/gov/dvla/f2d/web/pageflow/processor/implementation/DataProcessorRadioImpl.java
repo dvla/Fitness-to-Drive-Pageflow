@@ -5,9 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
-import uk.gov.dvla.f2d.web.pageflow.helpers.FormHelper;
+import uk.gov.dvla.f2d.model.utils.StringUtils;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
-import uk.gov.dvla.f2d.web.pageflow.processor.components.RadioComponent;
+import uk.gov.dvla.f2d.web.pageflow.processor.components.config.RadioComponentConfiguration;
 
 import java.io.IOException;
 import java.util.*;
@@ -27,8 +27,8 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
         this.question = question;
     }
 
-    private RadioComponent getComponent() throws IOException {
-        return new ObjectMapper().readValue(question.getConfiguration(), RadioComponent.class);
+    private RadioComponentConfiguration getComponent() throws IOException {
+        return new ObjectMapper().readValue(question.getConfiguration(), RadioComponentConfiguration.class);
     }
 
     @Override
@@ -46,14 +46,14 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
             // Check that an answer was supplied for this question.
             if (isNullOrEmpty(answer)) {
                 Notification notification = new Notification();
-                notification.setPage(FormHelper.capitalise(question));
+                notification.setPage(StringUtils.splitAndCapitalise(question.getID(), HYPHEN));
                 notification.setField(ANSWER_FIELD);
                 notification.setCode(NULL_OR_EMPTY_CODE);
                 notification.setDescription(NULL_OR_EMPTY_DESC);
                 notifications.add(notification);
             }
 
-            RadioComponent component = getComponent();
+            RadioComponentConfiguration component = getComponent();
 
             Set<String> keys = component.getOptions().keySet();
             for(String key : keys) {
@@ -65,7 +65,7 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
             // Check that the answer supplied was a valid response.
             if (!isNullOrEmpty(answer) && !keys.contains(answer)) {
                 Notification notification = new Notification();
-                notification.setPage(FormHelper.capitalise(question));
+                notification.setPage(StringUtils.splitAndCapitalise(question.getID(), HYPHEN));
                 notification.setField(ANSWER_FIELD);
                 notification.setCode(INVALID_OPTION_CODE);
                 notification.setDescription(INVALID_OPTION_DESC);
@@ -74,7 +74,7 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
 
         } catch(IOException ex) {
             Notification notification = new Notification();
-            notification.setPage(FormHelper.capitalise(question));
+            notification.setPage(StringUtils.splitAndCapitalise(question.getID(), HYPHEN));
             notification.setField(ANSWER_FIELD);
             notification.setCode(GENERAL_ERROR_CODE);
             notification.setDescription(GENERAL_ERROR_DESC);

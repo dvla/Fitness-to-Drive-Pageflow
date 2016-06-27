@@ -1,16 +1,16 @@
-package uk.gov.dvla.f2d.web.pageflow.processor.components;
+package uk.gov.dvla.f2d.web.pageflow.processor.components.config;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import uk.gov.dvla.f2d.web.pageflow.processor.mappers.RadioComponentDataMapper;
+import uk.gov.dvla.f2d.web.pageflow.processor.mappers.config.RadioComponentConfigurationMapper;
 
 import java.util.Map;
 
-@JsonDeserialize(using = RadioComponentDataMapper.class)
-public final class RadioComponent
+@JsonDeserialize(using = RadioComponentConfigurationMapper.class)
+public final class RadioComponentConfiguration
 {
     private Map<String, String> options;
 
-    public RadioComponent() {
+    public RadioComponentConfiguration() {
         super();
     }
 

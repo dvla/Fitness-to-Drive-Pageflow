@@ -6,7 +6,7 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 
 import java.io.IOException;
 
-public final class MapUtils
+public final class PageFlowUtils
 {
     public static MedicalForm mapStringToModel(final String jsonModel) throws IOException {
         return new ObjectMapper().readValue(jsonModel, MedicalForm.class);
