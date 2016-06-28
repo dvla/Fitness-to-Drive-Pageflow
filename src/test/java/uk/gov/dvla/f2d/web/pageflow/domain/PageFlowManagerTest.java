@@ -7,21 +7,19 @@ import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
+import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
 
 import java.util.List;
 import java.util.Map;
 
-/**
- * Unit test for simple App.
- */
 public class PageFlowManagerTest extends TestCase
 {
     private MedicalForm form;
 
     public PageFlowManagerTest(String testName ) {
-        super( testName );
+        super(testName);
     }
 
     public static Test suite() {
@@ -38,6 +36,20 @@ public class PageFlowManagerTest extends TestCase
 
     public void tearDown() throws Exception {
         form = null;
+    }
+
+    public void testSupportedConditions() throws Exception {
+        PageFlowManager manager = new PageFlowManager(form);
+        Map<String, MedicalCondition> supported = manager.getConditions();
+
+        assertTrue("No conditions found.", supported.size() > 0);
+    }
+
+    public void testFindQuestion() throws Exception {
+        PageFlowManager manager = new PageFlowManager(form);
+        MedicalQuestion question = manager.getQuestion("5");
+
+        assertEquals("confirm-address", question.getID());
     }
 
     public void testSummaryTransformation() throws Exception {
