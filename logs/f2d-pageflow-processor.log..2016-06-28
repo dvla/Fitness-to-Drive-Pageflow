@@ -1,0 +1,12 @@
+INFO  2016-06-28 08:42:10,937 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Starting to transform summary information... F2D-portal 
+INFO  2016-06-28 08:42:10,948 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Loading summary data into internal cache... F2D-portal 
+INFO  2016-06-28 08:42:10,986 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - SummaryAggregate data was loaded successfully... F2D-portal 
+INFO  2016-06-28 08:42:10,988 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Finishing processing summary information... F2D-portal 
+INFO  2016-06-28 08:42:11,029 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Starting to transform summary information... F2D-portal 
+INFO  2016-06-28 08:42:11,041 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Loading summary data into internal cache... F2D-portal 
+INFO  2016-06-28 08:42:11,069 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - SummaryAggregate data was loaded successfully... F2D-portal 
+INFO  2016-06-28 08:42:11,070 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Finishing processing summary information... F2D-portal 
+INFO  2016-06-28 08:42:11,597 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Starting to transform summary information... F2D-portal 
+INFO  2016-06-28 08:42:11,598 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Loading summary data into internal cache... F2D-portal 
+INFO  2016-06-28 08:42:11,635 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - SummaryAggregate data was loaded successfully... F2D-portal 
+INFO  2016-06-28 08:42:11,638 [main] uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformDelegate - Finishing processing summary information... F2D-portal 

@@ -40,28 +40,11 @@ public class PageFlowCacheManagerTest extends TestCase
     }
 
     /**
-     * Test to see if all medical conditions have been loaded
-     */
-    public void testAllMedicalConditionsLoaded() {
-        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
-        assertEquals(conditions.size(), 5);
-    }
-
-    /**
      * Test to see if all supported conditions are present
      */
-    public void testAllSupportedMedicalConditions() {
-        String[] supportedConditions = {
-                "Diabetes", "Glaucoma", "Epilepsy", "Alcohol problems", "Drug misuse"
-        };
-
+    public void testAllSupportedMedicalConditionsForNotify() {
         Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
-        assertEquals(conditions.size(), supportedConditions.length);
-
-        for(MedicalCondition condition : conditions.values()) {
-            String message = condition.getTitle() + " does not exist in the page flow.";
-            assertTrue(message,  Arrays.asList(supportedConditions).contains(condition.getTitle()));
-        }
+        assertEquals(53, conditions.size());
     }
 
     /**
@@ -90,9 +73,9 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals("diabetes", condition.getName());
         assertEquals(EMPTY, condition.getType());
         assertEquals("DIAB1", condition.getForm());
-        assertEquals(DIABETES_CONDITION, condition.getSlug());
+        assertEquals(DIABETES_CONDITION, condition.getDomain());
         assertEquals("diabetes-with-insulin", condition.getStart());
-        assertEquals("diabetes", condition.getSlug());
+        assertEquals("diabetes", condition.getDomain());
         assertEquals("diabetes-driving", condition.getInformation());
         assertTrue(condition.getSynonyms().isEmpty());
         assertEquals(1, condition.getCasp().size());
