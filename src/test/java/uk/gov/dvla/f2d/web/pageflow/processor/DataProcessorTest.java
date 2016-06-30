@@ -8,8 +8,9 @@ import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
-import uk.gov.dvla.f2d.web.pageflow.processor.impl.*;
+import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.domain.PageFlowManager;
+import uk.gov.dvla.f2d.web.pageflow.processor.implementation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,8 +45,8 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getRadioGroupQuestion() {
         final String TARGET_QUESTION        = "hypoglycaemia-blood-sugar";
 
-        PageFlowManager cache = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
         assertFalse(conditions.isEmpty());
@@ -63,8 +64,8 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getCheckboxGroupQuestion() {
         final String TARGET_QUESTION        = "car-bike-moped";
 
-        PageFlowManager cache = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
         assertFalse(conditions.isEmpty());
@@ -78,8 +79,8 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getContinuePageQuestion() {
         final String TARGET_QUESTION        = "hypoglycaemia-symptoms-info";
 
-        PageFlowManager cache = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
         assertFalse(conditions.isEmpty());
@@ -93,8 +94,8 @@ public class DataProcessorTest extends TestCase
     private MedicalQuestion getFormPageQuestion() {
         final String TARGET_QUESTION        = "change-address";
 
-        PageFlowManager cache = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         assertNotNull(conditions);
         assertFalse(conditions.isEmpty());
@@ -116,7 +117,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorRadioGroupImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorRadioImpl));
     }
 
     /**
@@ -130,7 +131,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckBoxGroupImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorCheckBoxImpl));
     }
 
     /**
@@ -144,7 +145,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorContinuePageImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorContinueImpl));
     }
 
     /**
@@ -158,7 +159,7 @@ public class DataProcessorTest extends TestCase
         IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
 
         assertNotNull(processor);
-        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorFormPageImpl));
+        assertTrue("Processor is not the correct type.", (processor instanceof DataProcessorFormImpl));
     }
 
     public void testRadioGroupDataProcessorDecisionSuccess() {

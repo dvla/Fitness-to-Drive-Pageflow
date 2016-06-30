@@ -8,7 +8,8 @@ import uk.gov.dvla.f2d.model.enums.Language;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
-import uk.gov.dvla.f2d.web.pageflow.config.PageFlowManager;
+import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.helpers.ResourceHelper;
 
 import java.io.IOException;
 import java.util.Map;
@@ -34,8 +35,8 @@ public class MapUtilsTest extends TestCase
      * Test to see if a medical questionnaire has been loaded from resources
      */
     public void testRetrieveSupportedMedicalConditionsForNotifyService() {
-        PageFlowManager cache = PageFlowManager.getInstance();
-        Map<String, MedicalCondition> conditions = cache.getSupportedConditions(Service.NOTIFY);
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         assertTrue("No conditions were found in data structure", conditions.size() > 0);
         assertTrue("No questions were found in data structure", conditions.size() > 0);
@@ -46,10 +47,10 @@ public class MapUtilsTest extends TestCase
      */
     public void testMapMedicalFormToDataString() {
         try {
-            PageFlowManager cache = PageFlowManager.getInstance();
+            PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
             MedicalForm form = cache.createMedicalForm(Service.NOTIFY);
 
-            String data = MapUtils.mapModelToString(form);
+            String data = PageFlowUtils.mapModelToString(form);
 
             assertNotNull(data);
             assertTrue(data.trim().length() > 0);
@@ -64,10 +65,10 @@ public class MapUtilsTest extends TestCase
      */
     public void testMapDataStringToMedicalForm() {
         try {
-            final String data = "{\"messageHeader\":{\"service\":\"notify\",\"language\":\"en\",\"notifications\":[],\"breadcrumb\":[],\"authentication\":{\"verified\":false}},\"personalDetails\":null,\"medicalCondition\":null}\n";
+            String data = ResourceHelper.load("notify/config/", "medical-form.json");
             assertNotNull(data);
 
-            MedicalForm form = MapUtils.mapStringToModel(data);
+            MedicalForm form = PageFlowUtils.mapStringToModel(data);
             assertNotNull(form);
 
             assertEquals(form.getMessageHeader().getService(), Service.NOTIFY.getName());
