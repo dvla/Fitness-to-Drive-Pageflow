@@ -43,6 +43,8 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
                 answer = question.getAnswers().get(0).trim();
             }
 
+            logger.debug("Resolved answer: ["+answer+"]");
+
             // Check that an answer was supplied for this question.
             if (isNullOrEmpty(answer)) {
                 Notification notification = new Notification();
@@ -55,6 +57,8 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
 
             RadioComponentConfiguration component = getComponent();
 
+            logger.debug("Allowed responses: ["+component.getOptions().keySet()+"]");
+
             Set<String> keys = component.getOptions().keySet();
             for(String key : keys) {
                 if(key.equals(answer)) {
@@ -63,7 +67,7 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
             }
 
             // Check that the answer supplied was a valid response.
-            if (!isNullOrEmpty(answer) && !keys.contains(answer)) {
+            if (!keys.contains(answer)) {
                 Notification notification = new Notification();
                 notification.setPage(StringUtils.splitAndCapitalise(question.getID(), HYPHEN));
                 notification.setField(ANSWER_FIELD);
@@ -73,6 +77,7 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
             }
 
         } catch(IOException ex) {
+            logger.error(ex.toString());
             Notification notification = new Notification();
             notification.setPage(StringUtils.splitAndCapitalise(question.getID(), HYPHEN));
             notification.setField(ANSWER_FIELD);
