@@ -22,7 +22,7 @@
     "type": "",
     "form": "",
     "domain": "asteroid-hyalosis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["calcium deposited in jelly within the eye"],
     "casp": [],
@@ -31,10 +31,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -44,7 +44,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -55,7 +55,7 @@
     "type": "",
     "form": "",
     "domain": "astigmatism",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["abnormal curvature of the cornea"],
     "casp": [],
@@ -64,10 +64,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -77,7 +77,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -88,7 +88,7 @@
     "type": "",
     "form": "",
     "domain": "blepharitis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["inflammation of the eyelid margin"],
     "casp": [],
@@ -97,10 +97,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -110,7 +110,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -121,7 +121,7 @@
     "type": "",
     "form": "",
     "domain": "chalazion",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["cyst in the eye lid"],
     "casp": [],
@@ -130,10 +130,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -143,7 +143,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -154,7 +154,7 @@
     "type": "",
     "form": "",
     "domain": "colour-blindness",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -163,10 +163,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -176,7 +176,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -187,7 +187,7 @@
     "type": "",
     "form": "",
     "domain": "computer-vision-syndrome",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["computer vision"],
     "casp": [],
@@ -196,10 +196,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -209,7 +209,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -220,7 +220,7 @@
     "type": "",
     "form": "",
     "domain": "conjunctivitis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -229,10 +229,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -242,7 +242,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -253,7 +253,7 @@
     "type": "",
     "form": "",
     "domain": "corneal-abrasion",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["graze of corneal"],
     "casp": [],
@@ -262,10 +262,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -275,7 +275,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -286,7 +286,7 @@
     "type": "",
     "form": "",
     "domain": "corneal-transplant",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -295,10 +295,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -308,7 +308,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -319,7 +319,7 @@
     "type": "",
     "form": "",
     "domain": "corneal-ulcer",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -328,10 +328,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -341,7 +341,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -352,7 +352,7 @@
     "type": "",
     "form": "",
     "domain": "corrective-laser-treatment",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["correct longsightedness or shortsightedness"],
     "casp": [],
@@ -361,10 +361,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -374,7 +374,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -385,7 +385,7 @@
     "type": "",
     "form": "",
     "domain": "cosmetic-eye-surgery",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["surgery to remove excess skin from upper or lower eyelid"],
     "casp": [],
@@ -394,10 +394,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -407,7 +407,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -418,7 +418,7 @@
     "type": "",
     "form": "",
     "domain": "dacryocystitis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["blocked tear duct with inflammation"],
     "casp": [],
@@ -427,10 +427,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -440,7 +440,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -451,7 +451,7 @@
     "type": "",
     "form": "",
     "domain": "dendrictic-ulcer",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -460,10 +460,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -473,7 +473,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -500,7 +500,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=18, N=18",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -545,7 +545,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=GEN1, N=A6.1",
+        "options": "",
         "summary": false,
         "answers": [],
         "decision": "",
@@ -590,7 +590,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=EXP1, N=A4.1",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -620,7 +620,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "1=11a, 2=11b",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -650,7 +650,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=13, N=13",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -665,7 +665,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=17, N=13",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -680,7 +680,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=7, N=9",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -695,7 +695,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=8, N=8",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -710,7 +710,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "0=9, 1=9, 2=8a",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -725,7 +725,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "N=9, YO=9, YB=9",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -755,7 +755,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=10, N=10",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -770,7 +770,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=12, N=A7.1",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -785,7 +785,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=12, N=A7.1",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -800,7 +800,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=11, YG=11, N=11",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -815,7 +815,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=15, N=14",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -830,7 +830,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=15, N=15",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -845,7 +845,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "G=16, GN=16, C=16a, NS=16a",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -860,7 +860,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=19, N=*",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -892,7 +892,7 @@
     "type": "",
     "form": "",
     "domain": "diabetic-retinopathy",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["diabetic retinopathy"],
     "casp": [],
@@ -901,10 +901,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -914,7 +914,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -942,7 +942,7 @@
     "type": "",
     "form": "",
     "domain": "dry-eye",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -951,10 +951,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -964,7 +964,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -975,7 +975,7 @@
     "type": "",
     "form": "",
     "domain": "ectropion",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -984,10 +984,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -997,7 +997,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1008,7 +1008,7 @@
     "type": "",
     "form": "",
     "domain": "entropion",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1017,10 +1017,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1030,7 +1030,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1058,7 +1058,7 @@
     "type": "",
     "form": "",
     "domain": "episclertis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["inflammation of the sclera or white of the eye"],
     "casp": [],
@@ -1067,10 +1067,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1080,7 +1080,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1091,7 +1091,7 @@
     "type": "",
     "form": "",
     "domain": "exophoria",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1100,10 +1100,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1113,7 +1113,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1124,7 +1124,7 @@
     "type": "",
     "form": "",
     "domain": "exotropia",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1133,10 +1133,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1146,7 +1146,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1157,7 +1157,7 @@
     "type": "",
     "form": "",
     "domain": "farsightedness",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["farsighted"],
     "casp": [],
@@ -1166,10 +1166,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1179,7 +1179,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1190,7 +1190,7 @@
     "type": "",
     "form": "",
     "domain": "flashers-floaters",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["flashers", "floaters"],
     "casp": [],
@@ -1199,10 +1199,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1212,7 +1212,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1223,7 +1223,7 @@
     "type": "",
     "form": "",
     "domain": "foreign-body",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1232,10 +1232,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1245,7 +1245,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1287,7 +1287,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=GEN1, N=A6.1",
+        "options": "",
         "summary": false,
         "answers": [],
         "decision": "",
@@ -1332,7 +1332,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "1=EXP1, 2=A1.2",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -1347,7 +1347,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=EXP1, N=A1.3",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -1362,7 +1362,7 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=*, YG=*, N=*",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
@@ -1394,7 +1394,7 @@
     "type": "",
     "form": "",
     "domain": "herpes-simplex-keratitis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["herpes infection of cornea"],
     "casp": [],
@@ -1403,10 +1403,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1416,7 +1416,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1458,12 +1458,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=GEN1, N=A6.1",
+        "options": "",
         "summary": false,
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
         "id": "confirm-address"
       },
       "contact-details": {
@@ -1503,12 +1503,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=VIS5, N=*",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS5\",\"N\": \"*\"}}",
         "id": "eye-specialist"
       },
       "eye-specialist-interval": {
@@ -1518,12 +1518,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=VIS13, N=VIS13a",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS13\",\"N\": \"VIS13a\"}}",
         "id": "eye-specialist-interval"
       },
       "eye-specialist-one": {
@@ -1563,12 +1563,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=VIS4, YG=VIS4, N=*",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS4\",\"YG\": \"VIS4\",\"N\": \"*\"}}",
         "id": "legal-eyesight-standard"
       },
       "medical-consent-one": {
@@ -1578,12 +1578,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=*, N=14",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"14\"}}",
         "id": "medical-consent-one"
       },
       "medical-consent-two": {
@@ -1593,12 +1593,12 @@
         "type": "Radio",
         "validate": true,
         "logout": false,
-        "options": "Y=*, N=*",
+        "options": "",
         "summary": true,
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"*\"}}",
         "id": "medical-consent-two"
       }
     },
@@ -1610,7 +1610,7 @@
     "type": "",
     "form": "",
     "domain": "iris-neovascular",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1619,10 +1619,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1632,7 +1632,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1643,7 +1643,7 @@
     "type": "",
     "form": "",
     "domain": "iritis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["inflammation of the iris"],
     "casp": [],
@@ -1652,10 +1652,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1665,7 +1665,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1676,7 +1676,7 @@
     "type": "",
     "form": "",
     "domain": "lazy-eye-no-double-vision",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1685,10 +1685,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1698,7 +1698,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1709,7 +1709,7 @@
     "type": "",
     "form": "",
     "domain": "longsightedness",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["longsighted", "long sighted", "hyperopia", "hypermetropia"],
     "casp": [],
@@ -1718,10 +1718,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1731,7 +1731,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1742,7 +1742,7 @@
     "type": "",
     "form": "",
     "domain": "loss-of-an-eye",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1751,10 +1751,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1764,7 +1764,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1775,7 +1775,7 @@
     "type": "",
     "form": "",
     "domain": "monocularity",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["monocular vision", "sight in one eye only"],
     "casp": [],
@@ -1784,10 +1784,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1797,7 +1797,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1808,7 +1808,7 @@
     "type": "",
     "form": "",
     "domain": "myopia",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1817,10 +1817,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1830,7 +1830,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1841,7 +1841,7 @@
     "type": "",
     "form": "",
     "domain": "neovascularisation-of-cornea",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["clouding of the cornea due to new blood vessels"],
     "casp": [],
@@ -1850,10 +1850,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1863,7 +1863,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1874,7 +1874,7 @@
     "type": "",
     "form": "",
     "domain": "ocular-rosacea",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": [],
     "casp": [],
@@ -1883,10 +1883,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1896,7 +1896,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1907,7 +1907,7 @@
     "type": "",
     "form": "",
     "domain": "pinguecula",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["degeneration of the conjunctiva"],
     "casp": [],
@@ -1916,10 +1916,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1929,7 +1929,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1940,7 +1940,7 @@
     "type": "",
     "form": "",
     "domain": "pink-eye",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["blood shot eye or redness of the white of the eye"],
     "casp": [],
@@ -1949,10 +1949,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1962,7 +1962,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -1973,7 +1973,7 @@
     "type": "",
     "form": "",
     "domain": "posterior-vitreous-detachment",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["floaters"],
     "casp": [],
@@ -1982,10 +1982,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -1995,7 +1995,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2006,7 +2006,7 @@
     "type": "",
     "form": "",
     "domain": "presbyopia",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["longsightedness"],
     "casp": [],
@@ -2015,10 +2015,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2028,7 +2028,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2039,7 +2039,7 @@
     "type": "",
     "form": "",
     "domain": "pterygium",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["thickened degeneration of the conjunctiva"],
     "casp": [],
@@ -2048,10 +2048,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2061,7 +2061,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2072,7 +2072,7 @@
     "type": "",
     "form": "",
     "domain": "recurrent-corneal-erosion",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["recurrent corneal ulcer"],
     "casp": [],
@@ -2081,10 +2081,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2094,7 +2094,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2105,7 +2105,7 @@
     "type": "",
     "form": "",
     "domain": "red-eyes",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["blood shot eye or redness of the white of the eye"],
     "casp": [],
@@ -2114,10 +2114,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2127,7 +2127,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2138,7 +2138,7 @@
     "type": "",
     "form": "",
     "domain": "rubeosis",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["iris neovascular", "new blood vessels developing in the iris"],
     "casp": [],
@@ -2147,10 +2147,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2160,7 +2160,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2171,7 +2171,7 @@
     "type": "",
     "form": "",
     "domain": "shortsightedness",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["shortsighted", "short sighted"],
     "casp": [],
@@ -2180,10 +2180,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2193,7 +2193,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2204,7 +2204,7 @@
     "type": "",
     "form": "",
     "domain": "sjogrens-lupus-syndrome",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["with dry eyes"],
     "casp": [],
@@ -2213,10 +2213,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2226,7 +2226,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2237,7 +2237,7 @@
     "type": "",
     "form": "",
     "domain": "squint-no-double-vision",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["lazy eye without double vision"],
     "casp": [],
@@ -2246,10 +2246,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2259,7 +2259,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2270,7 +2270,7 @@
     "type": "",
     "form": "",
     "domain": "stye",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["infection of the eye"],
     "casp": [],
@@ -2279,10 +2279,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2292,7 +2292,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2303,7 +2303,7 @@
     "type": "",
     "form": "",
     "domain": "subconjunctival-haemorrhage",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["blood shot eyes"],
     "casp": [],
@@ -2312,10 +2312,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2325,7 +2325,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
@@ -2336,7 +2336,7 @@
     "type": "",
     "form": "",
     "domain": "vitreous-detachment",
-    "start": "non-notifiable-change",
+    "start": "non-notifiable-vision",
     "information": "",
     "synonyms": ["with floaters"],
     "casp": [],
@@ -2345,10 +2345,10 @@
     "display": true,
     "global": "vision-p6",
     "questions": {
-      "non-notifiable-change": {
-        "step": "A1.3",
+      "non-notifiable-vision": {
+        "step": "VIS3",
         "page": "Unverified",
-        "order": 3,
+        "order": 1,
         "type": "Continue",
         "validate": false,
         "logout": true,
@@ -2358,7 +2358,7 @@
         "decision": "",
         "text": "",
         "configuration": "",
-        "id": "non-notifiable-change"
+        "id": "non-notifiable-vision"
       }
     },
     "id": ""
