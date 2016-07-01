@@ -30,10 +30,10 @@ public class DataProcessorCheckBoxImpl implements IDataQuestionProcessor
 
         List<Notification> notifications = new ArrayList<>();
 
-        logger.debug("Answers: "+question.getAnswers());
-        logger.debug("Size: "+question.getAnswers().size());
-        logger.debug("Empty?: "+question.getAnswers().isEmpty());
-        logger.debug("Options: ["+question.getOptions()+"]");
+        logger.debug("> Answers: "+question.getAnswers());
+        logger.debug("> Size: "+question.getAnswers().size());
+        logger.debug("> Empty?: "+question.getAnswers().isEmpty());
+        logger.debug("> Options: ["+question.getOptions()+"]");
 
         question.setDecision(question.getOptions().trim());
 

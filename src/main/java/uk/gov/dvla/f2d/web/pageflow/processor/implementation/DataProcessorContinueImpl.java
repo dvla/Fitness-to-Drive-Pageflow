@@ -21,9 +21,13 @@ public class DataProcessorContinueImpl implements IDataQuestionProcessor
 
     @Override
     public List<Notification> validate() {
+        logger.debug("begin: validate() method");
         question.setDecision(question.getOptions().trim());
 
         List<Notification> notifications = new ArrayList<>();
+
+        logger.debug("finish: validate() method");
+
         return notifications;
     }
 }

@@ -730,7 +730,7 @@
         "answers": [],
         "decision": "",
         "text": "",
-        "configuration": "{\"options\": {\"0\": \"9\",\"1\": \"9\",\"2\": \"9\"}}",
+        "configuration": "{\"options\": {\"N\": \"9\",\"YO\": \"9\",\"YB\": \"9\"}}",
         "id": "hypoglycaemia-severe-episodes-help"
       },
       "hypoglycaemia-symptoms-info": {
@@ -1433,7 +1433,7 @@
     "casp": ["V09"],
     "ceg": "V00",
     "severity": "NOTIFIABLE",
-    "display": true,
+    "display": false,
     "global": "vision-p5",
     "questions": {
       "change-address": {

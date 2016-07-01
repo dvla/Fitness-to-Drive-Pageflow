@@ -108,7 +108,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals(Format.RADIO.getName(), question.getType());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
-        assertEquals("Y=7, N=9", question.getOptions());
+        assertEquals(EMPTY, question.getOptions());
 
         assertNotNull(question.getAnswers());
         assertEquals(question.getAnswers().size(), 0);
@@ -140,7 +140,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertEquals(Format.RADIO.getName(), question.getType());
         assertEquals(Boolean.TRUE, question.getValidate());
         assertEquals(Boolean.FALSE, question.getLogout());
-        assertEquals("Y=10, N=10", question.getOptions());
+        assertEquals(EMPTY, question.getOptions());
 
         assertNotNull(question.getAnswers());
         assertEquals(question.getAnswers().size(), 0);
