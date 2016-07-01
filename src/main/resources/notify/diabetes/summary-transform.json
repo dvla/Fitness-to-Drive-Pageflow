@@ -284,18 +284,46 @@
         }
       }
     },
-    "hypoglycaemia-multiple-episodes": {
+    "hypoglycaemia-severe-episodes": {
+      "options": {
+        "0": {
+          "answers": {
+            "cy": "you have had {b}no{/b} episodes of low blood sugar (hypoglycaemia) within the last 12 months (Welsh)",
+            "en": "you have had {b}no{/b} episodes of low blood sugar (hypoglycaemia) within the last 12 months"
+          }
+        },
+        "1": {
+          "answers": {
+            "cy": "you have had {b}one{/b} episodes of low blood sugar (hypoglycaemia) within the last 12 months (Welsh)",
+            "en": "you have had {b}one{/b} episodes of low blood sugar (hypoglycaemia) within the last 12 months"
+          }
+        },
+        "2": {
+          "answers": {
+            "cy": "you have had {b}two (or more){/b} episodes of low blood sugar (hypoglycaemia) within the last 12 months (Welsh)",
+            "en": "you have had {b}two (or more){/b} episodes of low blood sugar (hypoglycaemia) within the last 12 months"
+          }
+        }
+      }
+    },
+    "hypoglycaemia-severe-episodes-help": {
       "options": {
         "N": {
           "answers": {
-            "cy": "you have had {b}less than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months (Welsh)",
-            "en": "you have had {b}less than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months"
+            "cy": "you {b}did not{/b} need assistance from another person during these episodes of low blood sugar (hypoglycaemia) (Welsh)",
+            "en": "you {b}did not{/b} need assistance from another person during these episodes of low blood sugar (hypoglycaemia)"
           }
         },
-        "Y": {
+        "YO": {
           "answers": {
-            "cy": "you have had {b}more than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months (Welsh)",
-            "en": "you have had {b}more than two{/b} episodes of low blood sugar (hypoglycaemia), requiring assistance from another person, within the last 12 months"
+            "cy": "you only needed assistance {b}once{/b} from another person during these episodes of low blood sugar (hypoglycaemia) (Welsh)",
+            "en": "you only needed assistance {b}once{/b} from another person during these episodes of low blood sugar (hypoglycaemia)"
+          }
+        },
+        "YB": {
+          "answers": {
+            "cy": "you needed assistance from another person {b}both times (or more){/b} during these episodes of low blood sugar (hypoglycaemia) (Welsh)",
+            "en": "you needed assistance from another person {b}both times (or more){/b} during these episodes of low blood sugar (hypoglycaemia)"
           }
         }
       }
