@@ -1433,7 +1433,7 @@
     "casp": ["V09"],
     "ceg": "V00",
     "severity": "NOTIFIABLE",
-    "display": false,
+    "display": true,
     "global": "vision-p5",
     "questions": {
       "change-address": {
