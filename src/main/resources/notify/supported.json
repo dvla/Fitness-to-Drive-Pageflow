@@ -1508,6 +1508,21 @@
         "configuration": "",
         "id": "change-address"
       },
+      "condition-both-eyes": {
+        "step": "A1.2",
+        "page": "Unverified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"EXP1\",\"N\": \"A1.3\"}}",
+        "id": "condition-both-eyes"
+      },
       "confirm-address": {
         "step": "5",
         "page": "Verified",
@@ -1567,21 +1582,6 @@
         "text": "",
         "configuration": "{\"options\": {\"1\": \"EXP1\",\"2\": \"A1.2\"}}",
         "id": "functioning-eyes"
-      },
-      "glaucoma-eyes": {
-        "step": "A1.2",
-        "page": "Unverified",
-        "order": 2,
-        "type": "Radio",
-        "validate": true,
-        "logout": false,
-        "options": "",
-        "summary": true,
-        "answers": [],
-        "decision": "",
-        "text": "",
-        "configuration": "{\"options\": {\"Y\": \"EXP1\",\"N\": \"A1.3\"}}",
-        "id": "glaucoma-eyes"
       },
       "legal-eyesight-standard": {
         "step": "10",

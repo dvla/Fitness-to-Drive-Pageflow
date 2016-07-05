@@ -16,7 +16,7 @@
         }
       }
     },
-    "glaucoma-eyes": {
+    "condition-both-eyes": {
       "options": {
         "Y": {
           "answers": {
