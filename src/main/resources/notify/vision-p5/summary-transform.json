@@ -1,0 +1,58 @@
+{
+  "questions": {
+    "legal-eyesight-standard": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "you {b}do not meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}do not meet{/b} the legal eyesight standard for driving"
+          }
+        },
+        "YG": {
+          "answers": {
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b} (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b}"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving"
+          }
+        }
+      }
+    },
+    "eyesight-specialist": {
+      "options": {
+        "Y": {
+          "answers": {
+            "cy": "that you {b}have{/b} seen an eye specialist about your condition (Welsh)",
+            "en": "that you {b}have{/b} seen an eye specialist about your condition"
+          }
+        },
+        "N": {
+          "answers": {
+            "cy": "that you {b}have not{/b} seen an eye specialist about your condition (Welsh)",
+            "en": "that you {b}have not{/b} seen an eye specialist about your condition"
+          }
+        }
+      }
+    },
+    "eyesight-specialist-interval": {
+      "options": {
+        "Y": {
+          "answers": {
+            "cy": "that you {b}have{/b} seen an eye specialist about your condition in the last 12 months (Welsh)",
+            "en": "that you {b}have{/b} seen an eye specialist about your condition in the last 12 months"
+          }
+        },
+        "N": {
+          "answers": {
+            "cy": "that you {b}have not{/b} seen an eye specialist about your condition in the last 12 months (Welsh)",
+            "en": "that you {b}have not{/b} seen an eye specialist about your condition in the last 12 months"
+          }
+        }
+      }
+    }
+  }
+}
