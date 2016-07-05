@@ -68,7 +68,7 @@ public class DataTransformDelegate
         logger.info("Loading summary data into internal cache...");
         try {
             final String service = form.getMessageHeader().getService();
-            final String condition = form.getMedicalCondition().getDomain();
+            final String condition = form.getMedicalCondition().getGlobal();
 
             final String resourceToLoad = (
                     service + FORWARD_SLASH + condition + FORWARD_SLASH + SUMMARY_TRANSFORM + JSON_SUFFIX
