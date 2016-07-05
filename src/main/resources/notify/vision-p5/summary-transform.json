@@ -22,7 +22,7 @@
         }
       }
     },
-    "eyesight-specialist": {
+    "eye-specialist": {
       "options": {
         "Y": {
           "answers": {
@@ -38,7 +38,7 @@
         }
       }
     },
-    "eyesight-specialist-interval": {
+    "eye-specialist-interval": {
       "options": {
         "Y": {
           "answers": {
