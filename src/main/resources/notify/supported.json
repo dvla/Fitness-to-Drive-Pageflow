@@ -11,10 +11,148 @@
     "casp": [],
     "ceg": "",
     "severity": "NOTIFIABLE",
-    "display": false,
+    "enabled": false,
     "global": "alcohol",
     "questions": {},
     "id": "A"
+  },
+  "artery-occlusion": {
+    "title": "Artery Occlusion",
+    "name": "artery occlusion",
+    "type": "1",
+    "form": "V1",
+    "domain": "artery-occlusion",
+    "start": "functioning-eyes",
+    "information": "",
+    "synonyms": ["blocked artery in retina"],
+    "casp": ["V05"],
+    "ceg": "V00",
+    "severity": "NOTIFIABLE",
+    "enabled": false,
+    "global": "vision-p1",
+    "questions": {
+      "change-address": {
+        "step": "A6.1",
+        "page": "Verified",
+        "order": 6,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "GEN1",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "change-address"
+      },
+      "condition-both-eyes": {
+        "step": "A1.2",
+        "page": "Unverified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"N\": \"VIS3\",\"Y\": \"EXP1\"}}",
+        "id": "condition-both-eyes"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 7,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 4,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "functioning-eyes": {
+        "step": "A1.1",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"1\": \"EXP1\",\"2\": \"A1.2\"}}",
+        "id": "functioning-eyes"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 8,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"YG\": \"*\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      },
+      "non-notifiable-vision": {
+        "step": "VIS3",
+        "page": "Unverified",
+        "order": 3,
+        "type": "Continue",
+        "validate": false,
+        "logout": true,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "non-notifiable-vision"
+      }
+    },
+    "id": "V"
   },
   "asteroid-hyalosis": {
     "title": "Asteroid hyalosis",
@@ -28,7 +166,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -61,7 +199,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -94,7 +232,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -127,7 +265,7 @@
     "casp": ["V17"],
     "ceg": "V00",
     "severity": "NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p3",
     "questions": {
       "change-address": {
@@ -355,7 +493,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -388,7 +526,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -421,7 +559,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -454,7 +592,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -487,7 +625,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -520,7 +658,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -553,7 +691,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -586,7 +724,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -619,7 +757,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -652,7 +790,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -685,7 +823,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -718,7 +856,7 @@
     "casp": ["D01"],
     "ceg": "101",
     "severity": "NOTIFIABLE",
-    "display": true,
+    "enabled": true,
     "global": "diabetes",
     "questions": {
       "automatic-gears": {
@@ -1126,7 +1264,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1159,7 +1297,7 @@
     "casp": [],
     "ceg": "",
     "severity": "NOTIFIABLE",
-    "display": false,
+    "enabled": false,
     "global": "drugs",
     "questions": {},
     "id": "D"
@@ -1176,7 +1314,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1209,7 +1347,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1242,7 +1380,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1275,7 +1413,7 @@
     "casp": [],
     "ceg": "",
     "severity": "NOTIFIABLE",
-    "display": false,
+    "enabled": false,
     "global": "epilepsy",
     "questions": {},
     "id": "FEP"
@@ -1292,7 +1430,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1325,7 +1463,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1358,7 +1496,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1391,7 +1529,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1424,7 +1562,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1457,7 +1595,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1490,7 +1628,7 @@
     "casp": ["V08"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "display": true,
+    "enabled": true,
     "global": "glaucoma",
     "questions": {
       "change-address": {
@@ -1628,7 +1766,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1661,7 +1799,7 @@
     "casp": ["V09"],
     "ceg": "V00",
     "severity": "NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p5",
     "questions": {
       "change-address": {
@@ -1844,7 +1982,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1877,7 +2015,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1910,7 +2048,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1943,7 +2081,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -1976,7 +2114,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2009,7 +2147,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2042,7 +2180,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2075,7 +2213,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2108,7 +2246,7 @@
     "casp": ["V09"],
     "ceg": "V00",
     "severity": "NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p3",
     "questions": {
       "change-address": {
@@ -2336,7 +2474,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2369,7 +2507,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2402,7 +2540,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2435,7 +2573,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2468,7 +2606,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2501,7 +2639,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2534,7 +2672,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2567,7 +2705,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2600,7 +2738,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2633,7 +2771,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2666,7 +2804,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2699,7 +2837,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2732,7 +2870,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2765,7 +2903,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2798,7 +2936,7 @@
     "casp": [],
     "ceg": "V00",
     "severity": "NON_NOTIFIABLE",
-    "display": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {

@@ -44,7 +44,7 @@ public class PageFlowCacheManagerTest extends TestCase
      */
     public void testAllSupportedMedicalConditionsForNotify() {
         Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
-        assertEquals(56, conditions.size());
+        assertEquals(57, conditions.size());
     }
 
     /**
@@ -82,7 +82,7 @@ public class PageFlowCacheManagerTest extends TestCase
         assertTrue(condition.getCasp().contains("D01"));
         assertEquals(condition.getCeg(), "101");
         assertEquals(Severity.NOTIFIABLE, condition.getSeverity());
-        assertEquals(Boolean.TRUE, condition.getDisplay());
+        assertEquals(Boolean.TRUE, condition.getEnabled());
 
         assertNotNull(condition.toString());
     }
