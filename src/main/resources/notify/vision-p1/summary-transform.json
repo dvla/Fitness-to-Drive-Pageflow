@@ -1,0 +1,58 @@
+{
+  "questions": {
+    "functioning-eyes": {
+      "options": {
+        "1": {
+          "answers": {
+            "cy": "you have {b}one{/b} functioning eye (Welsh)",
+            "en": "you have {b}one{/b} functioning eye"
+          }
+        },
+        "2": {
+          "answers": {
+            "cy": "you have {b}two{/b} functioning eyes (Welsh)",
+            "en": "you have {b}two{/b} functioning eyes"
+          }
+        }
+      }
+    },
+    "condition-both-eyes": {
+      "options": {
+        "Y": {
+          "answers": {
+            "cy": "you have this condition in {b}both{/b} eyes (Welsh)",
+            "en": "you have this condition in {b}both{/b} eyes"
+          }
+        },
+        "N": {
+          "answers": {
+            "cy": "you have this condition in {b}one{/b} eye (Welsh)",
+            "en": "you have this condition in {b}one{/b} eye"
+          }
+        }
+      }
+    },
+    "legal-eyesight-standard": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "you {b}do not meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}do not meet{/b} the legal eyesight standard for driving"
+          }
+        },
+        "YG": {
+          "answers": {
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b} (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b}"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving"
+          }
+        }
+      }
+    }
+  }
+}
