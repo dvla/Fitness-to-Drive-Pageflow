@@ -28,7 +28,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -166,7 +166,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -199,7 +199,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -232,7 +232,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -370,7 +370,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -506,9 +506,9 @@
     "information": "",
     "synonyms": ["macular dystrophy", "macular degeneration"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -661,7 +661,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -799,7 +799,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -832,7 +832,7 @@
     "casp": ["V17"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p3",
     "questions": {
       "change-address": {
@@ -1048,19 +1048,19 @@
     },
     "id": "V"
   },
-  "blurred vision": {
+  "blurred-vision": {
     "title": "Blurred Vision",
     "name": "blurred vision",
     "type": "4",
     "form": "V1",
-    "domain": "blurred vision",
+    "domain": "blurred-vision",
     "start": "expectations",
     "information": "",
     "synonyms": ["blurry vision", "cloudy vision", "foggy vision", "hazy vision"],
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -1153,7 +1153,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1289,9 +1289,9 @@
     "information": "",
     "synonyms": ["clouding of lens"],
     "casp": ["V01"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -1444,7 +1444,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1582,7 +1582,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1720,7 +1720,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1856,9 +1856,9 @@
     "information": "",
     "synonyms": ["blocked vein in retina"],
     "casp": ["V05"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -2011,7 +2011,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2042,9 +2042,9 @@
     "information": "",
     "synonyms": ["corneal damage"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -2197,7 +2197,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2335,7 +2335,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2473,7 +2473,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2611,7 +2611,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2749,7 +2749,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2887,7 +2887,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -3023,9 +3023,9 @@
     "information": "",
     "synonyms": ["corneal dystrophy or damage"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -3178,7 +3178,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -3316,7 +3316,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3349,7 +3349,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3382,7 +3382,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3415,7 +3415,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3446,9 +3446,9 @@
     "information": "",
     "synonyms": ["corneal dystrophy or damage"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -3599,9 +3599,9 @@
     "information": "",
     "synonyms": ["keratoplasty", "keratoconus treatment", "corneal transplant"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -3754,7 +3754,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3787,7 +3787,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3820,7 +3820,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3853,7 +3853,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3886,7 +3886,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -4024,7 +4024,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -4162,7 +4162,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -4255,7 +4255,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -4393,7 +4393,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -4426,7 +4426,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -4447,19 +4447,19 @@
     },
     "id": ""
   },
-  "detached retina": {
+  "detached-retina": {
     "title": "Detached Retina",
     "name": "detached retina",
     "type": "1",
     "form": "V1",
-    "domain": "detached retina",
+    "domain": "detached-retina",
     "start": "functioning-eyes",
     "information": "",
     "synonyms": ["retinal detachment"],
     "casp": ["V02"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -5005,7 +5005,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5038,7 +5038,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -5268,7 +5268,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -5361,7 +5361,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5394,7 +5394,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -5607,7 +5607,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -5745,7 +5745,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5778,7 +5778,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -5916,7 +5916,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5966,7 +5966,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -6104,7 +6104,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6137,7 +6137,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6170,7 +6170,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6203,7 +6203,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -6341,7 +6341,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6374,7 +6374,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6407,7 +6407,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6438,9 +6438,9 @@
     "information": "",
     "synonyms": ["corneal damage or degeneration"],
     "casp": ["V01"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -6593,7 +6593,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -6731,7 +6731,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7007,7 +7007,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -7100,7 +7100,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -7131,9 +7131,9 @@
     "information": "",
     "synonyms": ["shingles within the eye"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -7286,7 +7286,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7424,7 +7424,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7562,7 +7562,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p5",
     "questions": {
       "change-address": {
@@ -7745,7 +7745,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -7778,7 +7778,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7916,7 +7916,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -7947,9 +7947,9 @@
     "information": "",
     "synonyms": ["corneal ulcer", "degeneration or dystrophy of cornea"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8100,9 +8100,9 @@
     "information": "",
     "synonyms": ["degeneration or dystrophy of cornea"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8255,7 +8255,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -8288,7 +8288,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -8381,7 +8381,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -8414,7 +8414,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -8447,7 +8447,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -8538,9 +8538,9 @@
     "information": "",
     "synonyms": ["damage to the macular or central retina"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8691,9 +8691,9 @@
     "information": "",
     "synonyms": ["bests disease", "damage to the macular or central retina"],
     "casp": ["V14"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8846,7 +8846,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -8982,9 +8982,9 @@
     "information": "",
     "synonyms": ["swelling or fluid accumulating in the macula or central retina"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -9137,7 +9137,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -9273,9 +9273,9 @@
     "information": "",
     "synonyms": ["degeneration of the central retina"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -9428,7 +9428,7 @@
     "casp": ["C05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -9566,7 +9566,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -9587,6 +9587,144 @@
     },
     "id": ""
   },
+  "my-new-address": {
+    "title": "--> ADDRESS LOOKUP",
+    "name": "my new address",
+    "type": "",
+    "form": "ALU",
+    "domain": "my-new-address",
+    "start": "functioning-eyes",
+    "information": "",
+    "synonyms": [],
+    "casp": ["CASP"],
+    "ceg": "XXX",
+    "severity": "NOTIFIABLE",
+    "enabled": true,
+    "global": "address",
+    "questions": {
+      "address-lookup": {
+        "step": "ADD1",
+        "page": "Verified",
+        "order": 6,
+        "type": "Controller",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"start\": \"/address/postcode-search\",\"finish\": \"GEN1\"}}",
+        "id": "address-lookup"
+      },
+      "condition-both-eyes": {
+        "step": "A1.2",
+        "page": "Unverified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"EXP1\",\"N\": \"A1.3\"}}",
+        "id": "condition-both-eyes"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"ADD1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 7,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 4,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "functioning-eyes": {
+        "step": "11",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"1\": \"EXP1\",\"2\": \"A1.2\"}}",
+        "id": "functioning-eyes"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 8,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"YG\": \"*\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      },
+      "non-notifiable-change": {
+        "step": "A1.3",
+        "page": "Unverified",
+        "order": 3,
+        "type": "Continue",
+        "validate": false,
+        "logout": true,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "non-notifiable-change"
+      }
+    },
+    "id": "ADD"
+  },
   "myopia": {
     "title": "Myopia (Shortsightedness)",
     "name": "myopia (shortsightedness)",
@@ -9599,7 +9737,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -9632,7 +9770,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -9665,7 +9803,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -9803,7 +9941,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -9941,7 +10079,7 @@
     "casp": ["V19"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -10032,9 +10170,9 @@
     "information": "",
     "synonyms": ["cataracts nuclear sclerosis"],
     "casp": ["V01"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -10187,7 +10325,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p3",
     "questions": {
       "change-address": {
@@ -10415,7 +10553,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -10553,7 +10691,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -10689,9 +10827,9 @@
     "information": "",
     "synonyms": ["elevated pressure within the eye"],
     "casp": ["V13"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -10844,7 +10982,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -11057,7 +11195,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -11090,7 +11228,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -11303,7 +11441,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -11396,7 +11534,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -11534,7 +11672,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -11672,7 +11810,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -11810,7 +11948,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -11843,7 +11981,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -11876,7 +12014,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -11969,7 +12107,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -12105,9 +12243,9 @@
     "information": "",
     "synonyms": ["posterior capsule opacity", "posterior lens capsule opacity", "clouding of lens"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -12260,7 +12398,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12293,7 +12431,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12324,9 +12462,9 @@
     "information": "",
     "synonyms": ["intraocular lens", "artificial lens put in at time of cataracts surgery"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -12479,7 +12617,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12512,7 +12650,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -12605,7 +12743,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -12698,7 +12836,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12731,7 +12869,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12762,9 +12900,9 @@
     "information": "",
     "synonyms": ["corneal dystrophy degeneration or clouding of the cornea"],
     "casp": ["V09"],
-    "ceg": "101",
+    "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -12917,7 +13055,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13055,7 +13193,7 @@
     "casp": ["V07"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -13148,7 +13286,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13286,7 +13424,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13424,7 +13562,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13562,7 +13700,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13700,7 +13838,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13838,7 +13976,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13976,7 +14114,7 @@
     "casp": ["V07"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -14069,7 +14207,7 @@
     "casp": ["V02"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14207,7 +14345,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14345,7 +14483,7 @@
     "casp": ["V07"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -14438,7 +14576,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14576,7 +14714,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14714,7 +14852,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14852,7 +14990,7 @@
     "casp": ["V03"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14990,7 +15128,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -15128,7 +15266,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -15266,7 +15404,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15299,7 +15437,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -15392,7 +15530,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15425,7 +15563,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15458,7 +15596,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15491,7 +15629,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -15704,7 +15842,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -15797,7 +15935,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -16010,7 +16148,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -16043,7 +16181,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -16076,7 +16214,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -16214,7 +16352,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -16427,7 +16565,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -16565,7 +16703,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -16658,7 +16796,7 @@
     "casp": ["C02"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -16796,7 +16934,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -16889,7 +17027,7 @@
     "casp": ["V15"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -16982,7 +17120,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -17120,7 +17258,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -17258,7 +17396,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -17396,7 +17534,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -17429,7 +17567,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
