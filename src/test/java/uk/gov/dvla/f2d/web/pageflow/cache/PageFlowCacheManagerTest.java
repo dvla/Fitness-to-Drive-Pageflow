@@ -44,7 +44,7 @@ public class PageFlowCacheManagerTest extends TestCase
      */
     public void testAllSupportedMedicalConditionsForNotify() {
         Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
-        assertEquals(164, conditions.size());
+        assertEquals(171, conditions.size());
     }
 
     /**
