@@ -28,7 +28,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -166,7 +166,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -199,7 +199,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -232,7 +232,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -370,7 +370,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -508,7 +508,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -661,7 +661,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -799,7 +799,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -832,7 +832,7 @@
     "casp": ["V17"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p3",
     "questions": {
       "change-address": {
@@ -1060,7 +1060,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -1153,7 +1153,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1291,7 +1291,7 @@
     "casp": ["V01"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -1444,7 +1444,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1582,7 +1582,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1720,7 +1720,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -1858,7 +1858,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -2011,7 +2011,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -2044,7 +2044,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -2197,7 +2197,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2335,7 +2335,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2473,7 +2473,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2611,7 +2611,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2749,7 +2749,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -2887,7 +2887,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -3025,7 +3025,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -3178,7 +3178,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -3316,7 +3316,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3349,7 +3349,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3382,7 +3382,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3415,7 +3415,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3448,7 +3448,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -3601,7 +3601,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -3754,7 +3754,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3787,7 +3787,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3820,7 +3820,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3853,7 +3853,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -3886,7 +3886,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -4024,7 +4024,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -4162,7 +4162,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -4255,7 +4255,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -4393,7 +4393,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -4426,7 +4426,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -4459,7 +4459,7 @@
     "casp": ["V02"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -5005,7 +5005,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5038,7 +5038,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -5268,7 +5268,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -5361,7 +5361,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5394,7 +5394,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -5607,7 +5607,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -5745,7 +5745,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5778,7 +5778,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -5916,7 +5916,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -5966,7 +5966,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -6104,7 +6104,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6137,7 +6137,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6170,7 +6170,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6203,7 +6203,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -6341,7 +6341,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6374,7 +6374,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6407,7 +6407,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -6440,7 +6440,7 @@
     "casp": ["V01"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -6593,7 +6593,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -6731,7 +6731,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7007,7 +7007,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -7100,7 +7100,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -7133,7 +7133,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -7286,7 +7286,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7424,7 +7424,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7562,7 +7562,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p5",
     "questions": {
       "change-address": {
@@ -7745,7 +7745,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -7778,7 +7778,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -7916,7 +7916,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -7949,7 +7949,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8102,7 +8102,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8255,7 +8255,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -8288,7 +8288,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -8381,7 +8381,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -8414,7 +8414,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -8447,7 +8447,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -8540,7 +8540,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8693,7 +8693,7 @@
     "casp": ["V14"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -8846,7 +8846,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -8984,7 +8984,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -9137,7 +9137,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -9275,7 +9275,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -9428,7 +9428,7 @@
     "casp": ["C05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -9566,7 +9566,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -9588,9 +9588,9 @@
     "id": ""
   },
   "my-new-address": {
-    "title": "--> ADDRESS LOOKUP",
+    "title": "---> ADDRESS LOOKUP",
     "name": "my new address",
-    "type": "",
+    "type": "A1",
     "form": "ALU",
     "domain": "my-new-address",
     "start": "functioning-eyes",
@@ -9737,7 +9737,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -9770,7 +9770,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -9803,7 +9803,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -9941,7 +9941,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -10079,7 +10079,7 @@
     "casp": ["V19"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -10172,7 +10172,7 @@
     "casp": ["V01"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -10325,7 +10325,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p3",
     "questions": {
       "change-address": {
@@ -10553,7 +10553,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -10691,7 +10691,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -10829,7 +10829,7 @@
     "casp": ["V13"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -10982,7 +10982,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -11195,7 +11195,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -11228,7 +11228,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -11441,7 +11441,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -11534,7 +11534,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -11672,7 +11672,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -11810,7 +11810,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -11948,7 +11948,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -11981,7 +11981,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12014,7 +12014,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -12107,7 +12107,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -12245,7 +12245,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -12398,7 +12398,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12431,7 +12431,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12464,7 +12464,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -12617,7 +12617,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12650,7 +12650,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -12743,7 +12743,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -12836,7 +12836,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12869,7 +12869,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -12902,7 +12902,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -13055,7 +13055,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13193,7 +13193,7 @@
     "casp": ["V07"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -13286,7 +13286,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13424,7 +13424,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13562,7 +13562,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13700,7 +13700,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13838,7 +13838,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -13976,7 +13976,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14114,7 +14114,7 @@
     "casp": ["V07"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -14207,7 +14207,7 @@
     "casp": ["V02"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14345,7 +14345,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14483,7 +14483,7 @@
     "casp": ["V07"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -14576,7 +14576,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14714,7 +14714,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14852,7 +14852,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -14990,7 +14990,7 @@
     "casp": ["V03"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -15128,7 +15128,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -15266,7 +15266,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -15404,7 +15404,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15437,7 +15437,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -15530,7 +15530,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15563,7 +15563,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15596,7 +15596,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -15629,7 +15629,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -15842,7 +15842,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -15935,7 +15935,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -16148,7 +16148,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -16181,7 +16181,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -16214,7 +16214,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -16352,7 +16352,7 @@
     "casp": ["V04"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p7",
     "questions": {
       "change-address": {
@@ -16565,7 +16565,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -16703,7 +16703,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -16796,7 +16796,7 @@
     "casp": ["C02"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -16934,7 +16934,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -17027,7 +17027,7 @@
     "casp": ["V15"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -17120,7 +17120,7 @@
     "casp": ["V09"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -17258,7 +17258,7 @@
     "casp": ["V05"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -17384,6 +17384,1047 @@
     },
     "id": "V"
   },
+  "vision-pattern-1": {
+    "title": "---> Vision (Pattern 1)",
+    "name": "vision pattern 1",
+    "type": "P1",
+    "form": "PAT1",
+    "domain": "vision-pattern-1",
+    "start": "functioning-eyes",
+    "information": "",
+    "synonyms": [],
+    "casp": ["VP1"],
+    "ceg": "102",
+    "severity": "NOTIFIABLE",
+    "enabled": true,
+    "global": "vision-p1",
+    "questions": {
+      "change-address": {
+        "step": "A6.1",
+        "page": "Verified",
+        "order": 6,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "GEN1",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "change-address"
+      },
+      "condition-both-eyes": {
+        "step": "A1.2",
+        "page": "Unverified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"N\": \"VIS3\",\"Y\": \"EXP1\"}}",
+        "id": "condition-both-eyes"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 7,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 4,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "functioning-eyes": {
+        "step": "A1.1",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"1\": \"EXP1\",\"2\": \"A1.2\"}}",
+        "id": "functioning-eyes"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 8,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"YG\": \"*\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      },
+      "non-notifiable-vision": {
+        "step": "VIS3",
+        "page": "Unverified",
+        "order": 3,
+        "type": "Continue",
+        "validate": false,
+        "logout": true,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "non-notifiable-vision"
+      }
+    },
+    "id": "PAT"
+  },
+  "vision-pattern-2": {
+    "title": "---> Vision (Pattern 2)",
+    "name": "vision pattern 2",
+    "type": "P2",
+    "form": "PAT2",
+    "domain": "vision-pattern-2",
+    "start": "functioning-eyes",
+    "information": "",
+    "synonyms": [],
+    "casp": ["VP2"],
+    "ceg": "102",
+    "severity": "NOTIFIABLE",
+    "enabled": true,
+    "global": "vision-p2",
+    "questions": {
+      "change-address": {
+        "step": "A6.1",
+        "page": "Verified",
+        "order": 6,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "GEN1",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "change-address"
+      },
+      "condition-both-eyes": {
+        "step": "A1.2",
+        "page": "Unverified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"N\": \"VIS3\",\"Y\": \"EXP1\"}}",
+        "id": "condition-both-eyes"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 7,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 4,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "functioning-eyes": {
+        "step": "A1.1",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"1\": \"EXP1\",\"2\": \"A1.2\"}}",
+        "id": "functioning-eyes"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 8,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS2\",\"YG\": \"VIS2\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      },
+      "non-notifiable-vision": {
+        "step": "VIS3",
+        "page": "Unverified",
+        "order": 3,
+        "type": "Continue",
+        "validate": false,
+        "logout": true,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "non-notifiable-vision"
+      },
+      "visual-field-defect": {
+        "step": "VIS2",
+        "page": "Verified",
+        "order": 9,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"*\"}}",
+        "id": "visual-field-defect"
+      }
+    },
+    "id": "PAT"
+  },
+  "vision-pattern-3": {
+    "title": "---> Vision (Pattern 3)",
+    "name": "vision pattern 3",
+    "type": "P3",
+    "form": "PAT3",
+    "domain": "vision-pattern-3",
+    "start": "functioning-eyes",
+    "information": "",
+    "synonyms": [],
+    "casp": ["VP3"],
+    "ceg": "102",
+    "severity": "NOTIFIABLE",
+    "enabled": true,
+    "global": "vision-p3",
+    "questions": {
+      "change-address": {
+        "step": "A6.1",
+        "page": "Verified",
+        "order": 6,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "GEN1",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "change-address"
+      },
+      "condition-both-eyes": {
+        "step": "A1.2",
+        "page": "Unverified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"N\": \"VIS3\",\"Y\": \"EXP1\"}}",
+        "id": "condition-both-eyes"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 7,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 4,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "eye-specialist": {
+        "step": "VIS4",
+        "page": "Verified",
+        "order": 9,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS5\",\"N\": \"*\"}}",
+        "id": "eye-specialist"
+      },
+      "eye-specialist-interval": {
+        "step": "VIS5",
+        "page": "Verified",
+        "order": 10,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS13\",\"N\": \"VIS13a\"}}",
+        "id": "eye-specialist-interval"
+      },
+      "eye-specialist-one": {
+        "step": "VIS13",
+        "page": "Verified",
+        "order": 11,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "13",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "eye-specialist-one"
+      },
+      "eye-specialist-two": {
+        "step": "VIS13a",
+        "page": "Verified",
+        "order": 12,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "*",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "eye-specialist-two"
+      },
+      "functioning-eyes": {
+        "step": "A1.1",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"1\": \"EXP1\",\"2\": \"A1.2\"}}",
+        "id": "functioning-eyes"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 8,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS4\",\"YG\": \"VIS4\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      },
+      "medical-consent-one": {
+        "step": "13",
+        "page": "Verified",
+        "order": 13,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"14\"}}",
+        "id": "medical-consent-one"
+      },
+      "medical-consent-two": {
+        "step": "14",
+        "page": "Verified",
+        "order": 14,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"*\"}}",
+        "id": "medical-consent-two"
+      },
+      "non-notifiable-vision": {
+        "step": "VIS3",
+        "page": "Unverified",
+        "order": 3,
+        "type": "Continue",
+        "validate": false,
+        "logout": true,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "non-notifiable-vision"
+      }
+    },
+    "id": "PAT"
+  },
+  "vision-pattern-4": {
+    "title": "---> Vision (Pattern 4)",
+    "name": "vision pattern 4",
+    "type": "P4",
+    "form": "PAT4",
+    "domain": "vision-pattern-4",
+    "start": "expectations",
+    "information": "",
+    "synonyms": [],
+    "casp": ["VP4"],
+    "ceg": "102",
+    "severity": "NOTIFIABLE",
+    "enabled": true,
+    "global": "vision-p4",
+    "questions": {
+      "change-address": {
+        "step": "A6.1",
+        "page": "Verified",
+        "order": 3,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "GEN1",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "change-address"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 4,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"YG\": \"*\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      }
+    },
+    "id": "PAT"
+  },
+  "vision-pattern-5": {
+    "title": "---> Vision (Pattern 5)",
+    "name": "vision pattern 5",
+    "type": "P5",
+    "form": "PAT5",
+    "domain": "vision-pattern-5",
+    "start": "expectations",
+    "information": "",
+    "synonyms": [],
+    "casp": ["VP5"],
+    "ceg": "102",
+    "severity": "NOTIFIABLE",
+    "enabled": true,
+    "global": "vision-p5",
+    "questions": {
+      "change-address": {
+        "step": "A6.1",
+        "page": "Verified",
+        "order": 3,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "GEN1",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "change-address"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 4,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "eye-specialist": {
+        "step": "VIS4",
+        "page": "Verified",
+        "order": 6,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS5\",\"N\": \"*\"}}",
+        "id": "eye-specialist"
+      },
+      "eye-specialist-interval": {
+        "step": "VIS5",
+        "page": "Verified",
+        "order": 7,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS13\",\"N\": \"VIS13a\"}}",
+        "id": "eye-specialist-interval"
+      },
+      "eye-specialist-one": {
+        "step": "VIS13",
+        "page": "Verified",
+        "order": 8,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "13",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "eye-specialist-one"
+      },
+      "eye-specialist-two": {
+        "step": "VIS13a",
+        "page": "Verified",
+        "order": 9,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "*",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "eye-specialist-two"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS4\",\"YG\": \"VIS4\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      },
+      "medical-consent-one": {
+        "step": "13",
+        "page": "Verified",
+        "order": 10,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"14\"}}",
+        "id": "medical-consent-one"
+      },
+      "medical-consent-two": {
+        "step": "14",
+        "page": "Verified",
+        "order": 11,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"*\"}}",
+        "id": "medical-consent-two"
+      }
+    },
+    "id": "PAT"
+  },
+  "vision-pattern-6": {
+    "title": "---> Vision (Pattern 6)",
+    "name": "vision pattern 6",
+    "type": "P6",
+    "form": "PAT6",
+    "domain": "vision-pattern-6",
+    "start": "non-notifiable-vision",
+    "information": "",
+    "synonyms": [],
+    "casp": ["VP6"],
+    "ceg": "102",
+    "severity": "NON_NOTIFIABLE",
+    "enabled": true,
+    "global": "vision-p6",
+    "questions": {
+      "non-notifiable-vision": {
+        "step": "VIS3",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Continue",
+        "validate": false,
+        "logout": true,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "non-notifiable-vision"
+      }
+    },
+    "id": "PAT"
+  },
+  "vision-pattern-7": {
+    "title": "---> Vision (Pattern 7)",
+    "name": "vision pattern 7",
+    "type": "P7",
+    "form": "PAT7",
+    "domain": "vision-pattern-7",
+    "start": "expectations",
+    "information": "",
+    "synonyms": [],
+    "casp": ["VP7"],
+    "ceg": "102",
+    "severity": "NOTIFIABLE",
+    "enabled": true,
+    "global": "vision-p7",
+    "questions": {
+      "change-address": {
+        "step": "A6.1",
+        "page": "Verified",
+        "order": 3,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "GEN1",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "change-address"
+      },
+      "confirm-address": {
+        "step": "5",
+        "page": "Verified",
+        "order": 2,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"GEN1\",\"N\": \"A6.1\"}}",
+        "id": "confirm-address"
+      },
+      "contact-details": {
+        "step": "GEN1",
+        "page": "Verified",
+        "order": 4,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "10",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "contact-details"
+      },
+      "diplopia-information": {
+        "step": "VIS12",
+        "page": "Verified",
+        "order": 7,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "*",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "diplopia-information"
+      },
+      "expectations": {
+        "step": "EXP1",
+        "page": "Unverified",
+        "order": 1,
+        "type": "Continue",
+        "validate": true,
+        "logout": false,
+        "options": "5",
+        "summary": false,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "expectations"
+      },
+      "eye-specialist": {
+        "step": "VIS4",
+        "page": "Verified",
+        "order": 7,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS5\",\"N\": \"*\"}}",
+        "id": "eye-specialist"
+      },
+      "eye-specialist-interval": {
+        "step": "VIS5",
+        "page": "Verified",
+        "order": 8,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS13\",\"N\": \"VIS13a\"}}",
+        "id": "eye-specialist-interval"
+      },
+      "eye-specialist-one": {
+        "step": "VIS13",
+        "page": "Verified",
+        "order": 9,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "13",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "eye-specialist-one"
+      },
+      "eye-specialist-two": {
+        "step": "VIS13a",
+        "page": "Verified",
+        "order": 10,
+        "type": "Form",
+        "validate": true,
+        "logout": false,
+        "options": "*",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "",
+        "id": "eye-specialist-two"
+      },
+      "legal-eyesight-standard": {
+        "step": "10",
+        "page": "Verified",
+        "order": 5,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"VIS11\",\"YG\": \"VIS11\",\"N\": \"*\"}}",
+        "id": "legal-eyesight-standard"
+      },
+      "medical-consent-one": {
+        "step": "13",
+        "page": "Verified",
+        "order": 11,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"14\"}}",
+        "id": "medical-consent-one"
+      },
+      "medical-consent-two": {
+        "step": "14",
+        "page": "Verified",
+        "order": 12,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"Y\": \"*\",\"N\": \"*\"}}",
+        "id": "medical-consent-two"
+      },
+      "vision-condition-controlled": {
+        "step": "VIS11",
+        "page": "Verified",
+        "order": 6,
+        "type": "Radio",
+        "validate": true,
+        "logout": false,
+        "options": "",
+        "summary": true,
+        "answers": [],
+        "decision": "",
+        "text": "",
+        "configuration": "{\"options\": {\"PSM\": \"VIS12\",\"LEN\": \"VIS12\",\"FGS\": \"VIS12\",\"PTH\": \"VIS12\",\"OTH\": \"VIS4\"}}",
+        "id": "vision-condition-controlled"
+      }
+    },
+    "id": "PAT"
+  },
   "visual-field-defect": {
     "title": "Visual Field Defect",
     "name": "visual field defect",
@@ -17396,7 +18437,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -17534,7 +18575,7 @@
     "casp": [],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -17567,7 +18608,7 @@
     "casp": ["V06"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": true,
+    "enabled": false,
     "global": "vision-p1",
     "questions": {
       "change-address": {
