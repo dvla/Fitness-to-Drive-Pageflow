@@ -63,7 +63,7 @@ public final class PageFlowManager
         return DataTransformPipeline.create().transform(medicalForm);
     }
 
-    class PageResult
+    public class PageResult
     {
         private Boolean flowFinished;
         private Boolean errorsFound;
