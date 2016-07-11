@@ -4,7 +4,6 @@ import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
-import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
 import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline;
@@ -17,14 +16,14 @@ import static uk.gov.dvla.f2d.model.constants.StringConstants.ASTERISC;
 
 public final class PageFlowManager
 {
-    private MedicalForm medicalForm;
+    private MedicalForm form;
 
     public PageFlowManager(MedicalForm form) {
-        this.medicalForm = form;
+        this.form = form;
     }
 
     public Map<String, MedicalCondition> getConditions() {
-        Service service = Service.lookup(medicalForm.getMessageHeader().getService());
+        Service service = Service.lookup(form.getMessageHeader().getService());
         return PageFlowCacheManager.getInstance().getConditions(service);
     }
 
@@ -34,24 +33,24 @@ public final class PageFlowManager
 
         PageResult result = new PageResult();
         result.setFlowFinished(medicalQuestion.getDecision().equals(ASTERISC));
-        result.setErrorsFound(!(medicalForm.getMessageHeader().getNotifications().isEmpty()));
+        result.setErrorsFound(!(form.getMessageHeader().getNotifications().isEmpty()));
         result.setNextPage(null);
         return result;
     }
 
     private void performIntegrityCheck() {
-        if(medicalForm.getMedicalCondition() == null) {
+        if(form.getMedicalCondition() == null) {
             throw new IllegalArgumentException("Medical condition has not been defined.");
         }
     }
 
     private void performFormValidation(PageForm pageForm, MedicalQuestion medicalQuestion) {
-        new FormValidator(pageForm).validate(medicalForm, medicalQuestion);
+        new FormValidator(pageForm).validate(form, medicalQuestion);
     }
 
     public MedicalQuestion getQuestion(final String step) {
         performIntegrityCheck();
-        for (MedicalQuestion question : medicalForm.getMedicalCondition().getQuestions().values()) {
+        for (MedicalQuestion question : form.getMedicalCondition().getQuestions().values()) {
             if (question.getStep().equals(step)) {
                 return question;
             }
@@ -60,7 +59,7 @@ public final class PageFlowManager
     }
 
     public List<SummaryLine> transform() {
-        return DataTransformPipeline.create().transform(medicalForm);
+        return DataTransformPipeline.create().transform(form);
     }
 
     public class PageResult
@@ -88,7 +87,6 @@ public final class PageFlowManager
         public void setErrorsFound(Boolean errorsFound) {
             this.errorsFound = errorsFound;
         }
-
 
         public String getNextPage() {
             return nextPage;
