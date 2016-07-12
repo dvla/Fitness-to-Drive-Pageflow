@@ -97,6 +97,11 @@ public final class PageFlowManager
         }
     }
 
+    public String findPreviousQuestion() {
+        performIntegrityCheck();
+
+    }
+
     private void checkVerificationRequired(MedicalQuestion question) throws VerificationRequiredException {
         if(question.getPage().equals(Page.VERIFIED.getName())) {
             if(!(form.getMessageHeader().getAuthentication().isVerified())) {
