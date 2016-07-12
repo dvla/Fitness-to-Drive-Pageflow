@@ -5,7 +5,8 @@ public enum Format
     RADIO("Radio"),
     CHECKBOX("CheckBox"),
     FORM("Form"),
-    CONTINUE("Continue");
+    CONTINUE("Continue"),
+    CONTROLLER("Controller");
 
     private String name;
 

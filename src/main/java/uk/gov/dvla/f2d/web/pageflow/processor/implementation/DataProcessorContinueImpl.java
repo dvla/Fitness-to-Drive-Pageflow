@@ -1,13 +1,19 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.implementation;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import uk.gov.dvla.f2d.model.exceptions.SystemException;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
+import uk.gov.dvla.f2d.web.pageflow.processor.components.config.ContinueComponentConfiguration;
+import uk.gov.dvla.f2d.web.pageflow.processor.components.config.ControllerComponentConfiguration;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class DataProcessorContinueImpl implements IDataQuestionProcessor
 {
@@ -17,6 +23,20 @@ public class DataProcessorContinueImpl implements IDataQuestionProcessor
 
     public DataProcessorContinueImpl(MedicalQuestion question) {
         this.question = question;
+    }
+
+    @Override
+    public Map<String, String> getConfiguration() {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            ContinueComponentConfiguration configuration = mapper.readValue(
+                    question.getConfiguration(), ContinueComponentConfiguration.class
+            );
+            return configuration.getOptions();
+
+        } catch(IOException ex) {
+            throw new SystemException(ex);
+        }
     }
 
     @Override

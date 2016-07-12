@@ -4,20 +4,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
-import uk.gov.dvla.f2d.web.pageflow.processor.components.config.ControllerComponentConfiguration;
+import uk.gov.dvla.f2d.web.pageflow.processor.components.config.CheckBoxComponentConfiguration;
 
 import java.io.IOException;
 import java.util.Map;
 
-public class ControllerComponentConfigurationMapper extends JsonDeserializer<ControllerComponentConfiguration>
+public class CheckBoxComponentMapper extends JsonDeserializer<CheckBoxComponentConfiguration>
 {
     @Override
-    public ControllerComponentConfiguration deserialize(JsonParser p, DeserializationContext ctxt)
+    public CheckBoxComponentConfiguration deserialize(JsonParser p, DeserializationContext ctxt)
         throws IOException {
 
         Root root = p.readValueAs(Root.class);
 
-        ControllerComponentConfiguration component = new ControllerComponentConfiguration();
+        CheckBoxComponentConfiguration component = new CheckBoxComponentConfiguration();
         component.setOptions(root.options);
 
         return component;

@@ -9,7 +9,6 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
-import uk.gov.dvla.f2d.web.pageflow.domain.PageFlowManager;
 import uk.gov.dvla.f2d.web.pageflow.processor.implementation.*;
 
 import java.util.ArrayList;
