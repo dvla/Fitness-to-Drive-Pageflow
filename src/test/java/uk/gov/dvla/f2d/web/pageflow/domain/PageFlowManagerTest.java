@@ -40,7 +40,7 @@ public class PageFlowManagerTest extends TestCase
 
     public void testSupportedConditions() throws Exception {
         PageFlowManager manager = new PageFlowManager(form);
-        Map<String, MedicalCondition> supported = manager.getConditions();
+        Map<String, MedicalCondition> supported = manager.getSupportedConditions();
 
         assertTrue("No conditions found.", supported.size() > 0);
     }
