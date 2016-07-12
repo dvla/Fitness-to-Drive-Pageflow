@@ -27,6 +27,8 @@ public final class PageFlowManager
 {
     private static final Logger logger = LoggerFactory.getLogger(PageFlowManager.class);
 
+    private static final String FINISH_ATTRIBUTE        = "finish";
+
     private MedicalForm form;
 
     public PageFlowManager(MedicalForm form) {
@@ -54,10 +56,7 @@ public final class PageFlowManager
         Format format = Format.lookup(question.getType());
 
         if(format.equals(Format.CONTROLLER)) {
-            DataProcessorFactory factory = new DataProcessorFactory();
-            IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
-
-            throw new FlowStateModifiedException(processor.getConfiguration());
+            prepareCustomController(question);
         }
 
         return form.getMedicalCondition().getQuestions().get(page);
@@ -114,6 +113,16 @@ public final class PageFlowManager
 
     private void performFormValidation(PageForm pageForm, MedicalQuestion medicalQuestion) {
         new FormValidator(pageForm).validate(form, medicalQuestion);
+    }
+
+    private void prepareCustomController(MedicalQuestion question) throws FlowStateModifiedException {
+        DataProcessorFactory factory = new DataProcessorFactory();
+        IDataQuestionProcessor processor = factory.getQuestionProcessor(question);
+
+        Map<String, String> configuration = processor.getConfiguration();
+        question.setDecision(configuration.get(FINISH_ATTRIBUTE));
+
+        throw new FlowStateModifiedException(configuration);
     }
 
     public MedicalQuestion getQuestion(final String step) {
