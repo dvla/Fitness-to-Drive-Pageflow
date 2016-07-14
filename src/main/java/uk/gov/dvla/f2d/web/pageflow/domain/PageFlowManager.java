@@ -10,6 +10,7 @@ import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
 import uk.gov.dvla.f2d.web.pageflow.enums.Page;
 import uk.gov.dvla.f2d.web.pageflow.exceptions.FlowStateModifiedException;
+import uk.gov.dvla.f2d.web.pageflow.exceptions.PageNotFoundException;
 import uk.gov.dvla.f2d.web.pageflow.exceptions.VerificationRequiredException;
 import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 import uk.gov.dvla.f2d.web.pageflow.processor.DataProcessorFactory;
@@ -97,9 +98,23 @@ public final class PageFlowManager
         }
     }
 
-    public String findPreviousQuestion() {
-        performIntegrityCheck();
+    private MedicalQuestion findQuestionInBreadcrumb(final int depth) throws PageNotFoundException {
+        List<String> path = form.getMessageHeader().getBreadcrumb();
+        if(path.isEmpty()) {
+            throw new PageNotFoundException("Breadcrumb is empty");
+        }
+        if(depth > path.size()) {
+            throw new PageNotFoundException("Breadcrumb is "+path.size()+", depth is "+depth);
+        }
+        return getQuestion(path.get(path.size() - depth));
+    }
 
+    public MedicalQuestion findPreviousQuestion() throws PageNotFoundException {
+        return findQuestionInBreadcrumb(-1);
+    }
+
+    public MedicalQuestion findCurrentQuestion() throws PageNotFoundException {
+        return findQuestionInBreadcrumb(0);
     }
 
     private void checkVerificationRequired(MedicalQuestion question) throws VerificationRequiredException {

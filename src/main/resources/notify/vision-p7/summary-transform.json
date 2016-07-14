@@ -1,0 +1,102 @@
+{
+  "questions": {
+    "legal-eyesight-standard": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "you {b}do not meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}do not meet{/b} the legal eyesight standard for driving"
+          }
+        },
+        "YG": {
+          "answers": {
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b} (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving {b}with glasses or corrective lenses{/b}"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "you {b}meet{/b} the legal eyesight standard for driving (Welsh)",
+            "en": "you {b}meet{/b} the legal eyesight standard for driving"
+          }
+        }
+      }
+    },
+    "vision-condition-controlled": {
+      "options": {
+        "PSM": {
+          "answers": {
+            "cy": "your vision condition is controlled by {b}prism{/b} (Welsh)",
+            "en": "your vision condition is controlled by {b}prism{/b}"
+          }
+        },
+        "LEN": {
+          "answers": {
+            "cy": "your vision condition is controlled by {b}lens{/b} (Welsh)",
+            "en": "your vision condition is controlled by {b}lens{/b}"
+          }
+        },
+        "FGS": {
+          "answers": {
+            "cy": "your vision condition is controlled by {b}frosted glass{/b} (Welsh)",
+            "en": "your vision condition is controlled by {b}frosted glass{/b}"
+          }
+        },
+        "PTH": {
+          "answers": {
+            "cy": "your vision condition is controlled by {b}patch{/b} (Welsh)",
+            "en": "your vision condition is controlled by {b}patch{/b}"
+          }
+        },
+        "OTH": {
+          "answers": {
+            "cy": "your vision condition is controlled by {b}other{/b} (Welsh)",
+            "en": "your vision condition is controlled by {b}other{/b}"
+          }
+        }
+      }
+    },
+    "eye-specialist-interval": {
+      "options": {
+        "Y": {
+          "answers": {
+            "cy": "that you {b}have{/b} seen an eye specialist about your condition in the last 12 months (Welsh)",
+            "en": "that you {b}have{/b} seen an eye specialist about your condition in the last 12 months"
+          }
+        },
+        "N": {
+          "answers": {
+            "cy": "that you {b}have not{/b} seen an eye specialist about your condition in the last 12 months (Welsh)",
+            "en": "that you {b}have not{/b} seen an eye specialist about your condition in the last 12 months"
+          }
+        }
+      }
+    },
+    "medical-consent-one": {
+      "options": {
+        "Y": {
+          "answers": {
+            "cy": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s)"
+          }
+        }
+      }
+    },
+    "medical-consent-two": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}do not provide consent{/b} for medical reports relevant to your fitness to drive to be disclosed to DVLA by your doctor(s)"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s) (Welsh)",
+            "en": "you {b}have agreed{/b} that medical reports relevant to your fitness to drive can be disclosed to DVLA by your doctor(s)"
+          }
+        }
+      }
+    }
+  }
+}
