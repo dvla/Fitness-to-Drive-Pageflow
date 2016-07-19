@@ -1,9 +1,12 @@
 package uk.gov.dvla.f2d.web.pageflow.responses;
 
+import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
+
 public class PageResponse
 {
     private Boolean flowFinished;
     private Boolean errorsFound;
+    private MedicalQuestion nextQuestion;
 
     public PageResponse() {
         super();
@@ -23,5 +26,13 @@ public class PageResponse
 
     public void setErrorsFound(Boolean errorsFound) {
         this.errorsFound = errorsFound;
+    }
+
+    public MedicalQuestion getNextQuestion() {
+        return nextQuestion;
+    }
+
+    public void setNextQuestion(MedicalQuestion nextQuestion) {
+        this.nextQuestion = nextQuestion;
     }
 }
