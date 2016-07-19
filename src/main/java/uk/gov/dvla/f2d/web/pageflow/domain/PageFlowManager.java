@@ -25,6 +25,7 @@ import java.util.Map;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.ASTERISC;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.FORWARD_SLASH;
 
 public final class PageFlowManager
 {
@@ -70,14 +71,30 @@ public final class PageFlowManager
     public PageResponse processQuestion(PageForm pageForm) {
         performIntegrityCheck();
 
-        Map<String, MedicalQuestion> questions = form.getMedicalCondition().getQuestions();
-        MedicalQuestion question = questions.get(pageForm.getQuestion());
+        MedicalCondition condition = form.getMedicalCondition();
 
-        performFormValidation(pageForm, question);
+        Map<String, MedicalQuestion> questions = condition.getQuestions();
+        MedicalQuestion current = questions.get(pageForm.getQuestion());
+
+        performFormValidation(pageForm, current);
 
         PageResponse response = new PageResponse();
-        response.setFlowFinished(question.getDecision().equals(ASTERISC));
+        response.setFlowFinished(current.getDecision().equals(ASTERISC));
         response.setErrorsFound(!(form.getMessageHeader().getNotifications().isEmpty()));
+
+        if(!response.isErrorsFound()) {
+            response.setNextQuestion(current);
+        } else {
+            if(!response.isFlowFinished()) {
+                for(MedicalQuestion next : condition.getQuestions().values()) {
+                    if(next.getStep().equalsIgnoreCase(current.getDecision())) {
+                        response.setNextQuestion(next);
+                    }
+                }
+            } else {
+                response.setNextQuestion(null);
+            }
+        }
 
         return response;
     }
