@@ -8,5 +8,6 @@ import java.util.Map;
 public interface IDataQuestionProcessor
 {
     Map<String, String> getConfiguration();
+
     List<Notification> validate();
 }

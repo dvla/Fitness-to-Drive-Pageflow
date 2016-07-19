@@ -17,12 +17,13 @@ import uk.gov.dvla.f2d.web.pageflow.processor.DataProcessorFactory;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
-import uk.gov.dvla.f2d.web.pageflow.validation.FormValidator;
+import uk.gov.dvla.f2d.web.pageflow.processor.validation.FormValidator;
 
 import java.util.List;
 import java.util.Map;
 
-import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.ASTERISC;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
 
 public final class PageFlowManager
 {
@@ -60,7 +61,9 @@ public final class PageFlowManager
             prepareCustomController(question);
         }
 
-        return form.getMedicalCondition().getQuestions().get(page);
+        updateBreadcrumb(question);
+
+        return question;
     }
 
     public PageResult process(PageForm pageForm, MedicalQuestion medicalQuestion) {
@@ -132,7 +135,7 @@ public final class PageFlowManager
     }
 
     private void performFormValidation(PageForm pageForm, MedicalQuestion medicalQuestion) {
-        new FormValidator(pageForm).validate(form, medicalQuestion);
+        new FormValidator(form, medicalQuestion).validate(pageForm);
     }
 
     private void prepareCustomController(MedicalQuestion question) throws FlowStateModifiedException {
