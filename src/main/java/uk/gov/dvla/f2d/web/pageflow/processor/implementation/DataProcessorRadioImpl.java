@@ -78,7 +78,7 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
         }
 
         // Check that the answer supplied was a valid response.
-        if(!keys.contains(answer)) {
+        if((!isNullOrEmpty(answer)) && (!keys.contains(answer))) {
             Notification notification = new Notification();
             notification.setPage(StringUtils.splitAndCapitalise(question.getID(), HYPHEN));
             notification.setField(ANSWER_FIELD);

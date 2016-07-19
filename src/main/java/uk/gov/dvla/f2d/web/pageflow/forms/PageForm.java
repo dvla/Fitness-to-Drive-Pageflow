@@ -5,6 +5,7 @@ import java.util.TreeMap;
 
 public class PageForm
 {
+    private String question;
     private Map<String, String[]> entities;
 
     public PageForm() {
@@ -13,6 +14,14 @@ public class PageForm
 
     public PageForm(Map<String, String[]> entities) {
         setEntities(entities);
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public Map<String, String[]> getEntities() {

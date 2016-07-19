@@ -18,6 +18,7 @@ import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
 import uk.gov.dvla.f2d.web.pageflow.processor.validation.FormValidator;
+import uk.gov.dvla.f2d.web.pageflow.responses.PageResponse;
 
 import java.util.List;
 import java.util.Map;
@@ -66,15 +67,19 @@ public final class PageFlowManager
         return question;
     }
 
-    public PageResult process(PageForm pageForm, MedicalQuestion medicalQuestion) {
+    public PageResponse processQuestion(PageForm pageForm) {
         performIntegrityCheck();
-        performFormValidation(pageForm, medicalQuestion);
 
-        PageResult result = new PageResult();
-        result.setFlowFinished(medicalQuestion.getDecision().equals(ASTERISC));
-        result.setErrorsFound(!(form.getMessageHeader().getNotifications().isEmpty()));
-        result.setNextPage(null);
-        return result;
+        Map<String, MedicalQuestion> questions = form.getMedicalCondition().getQuestions();
+        MedicalQuestion question = questions.get(pageForm.getQuestion());
+
+        performFormValidation(pageForm, question);
+
+        PageResponse response = new PageResponse();
+        response.setFlowFinished(question.getDecision().equals(ASTERISC));
+        response.setErrorsFound(!(form.getMessageHeader().getNotifications().isEmpty()));
+
+        return response;
     }
 
     public void updateBreadcrumb(MedicalQuestion question) {
@@ -160,40 +165,5 @@ public final class PageFlowManager
 
     public List<SummaryLine> transform() {
         return DataTransformPipeline.create().transform(form);
-    }
-
-    public class PageResult
-    {
-        private Boolean flowFinished;
-        private Boolean errorsFound;
-        private String nextPage;
-
-        PageResult() {
-            super();
-        }
-
-        public Boolean isFlowFinished() {
-            return flowFinished;
-        }
-
-        public void setFlowFinished(Boolean flowFinished) {
-            this.flowFinished = flowFinished;
-        }
-
-        public Boolean isErrorsFound() {
-            return errorsFound;
-        }
-
-        public void setErrorsFound(Boolean errorsFound) {
-            this.errorsFound = errorsFound;
-        }
-
-        public String getNextPage() {
-            return nextPage;
-        }
-
-        public void setNextPage(String nextPage) {
-            this.nextPage = nextPage;
-        }
     }
 }
