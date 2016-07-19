@@ -9,7 +9,7 @@ import uk.gov.dvla.f2d.web.pageflow.processor.components.config.RadioComponentCo
 import java.io.IOException;
 import java.util.Map;
 
-public class RadioComponentConfigurationMapper extends JsonDeserializer<RadioComponentConfiguration>
+public class RadioComponentMapper extends JsonDeserializer<RadioComponentConfiguration>
 {
     @Override
     public RadioComponentConfiguration deserialize(JsonParser p, DeserializationContext ctxt)

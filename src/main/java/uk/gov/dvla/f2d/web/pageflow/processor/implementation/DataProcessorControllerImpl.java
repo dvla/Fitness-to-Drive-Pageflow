@@ -7,7 +7,7 @@ import uk.gov.dvla.f2d.model.exceptions.SystemException;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
-import uk.gov.dvla.f2d.web.pageflow.processor.components.config.FormComponentConfiguration;
+import uk.gov.dvla.f2d.web.pageflow.processor.components.config.ControllerComponentConfiguration;
 import uk.gov.dvla.f2d.web.pageflow.processor.components.config.RadioComponentConfiguration;
 
 import java.io.IOException;
@@ -15,13 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class DataProcessorFormImpl implements IDataQuestionProcessor
+public class DataProcessorControllerImpl implements IDataQuestionProcessor
 {
-    private static final Logger logger = LoggerFactory.getLogger(DataProcessorFormImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(DataProcessorRadioImpl.class);
 
     private MedicalQuestion question;
 
-    public DataProcessorFormImpl(MedicalQuestion question) {
+    public DataProcessorControllerImpl(MedicalQuestion question) {
         this.question = question;
     }
 
@@ -29,8 +29,8 @@ public class DataProcessorFormImpl implements IDataQuestionProcessor
     public Map<String, String> getConfiguration() {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            FormComponentConfiguration configuration = mapper.readValue(
-                    question.getConfiguration(), FormComponentConfiguration.class
+            ControllerComponentConfiguration configuration = mapper.readValue(
+                    question.getConfiguration(), ControllerComponentConfiguration.class
             );
             return configuration.getOptions();
 
@@ -42,7 +42,6 @@ public class DataProcessorFormImpl implements IDataQuestionProcessor
     @Override
     public List<Notification> validate() {
         logger.debug("begin: validate() method");
-        question.setDecision(question.getOptions().trim());
 
         List<Notification> notifications = new ArrayList<>();
 

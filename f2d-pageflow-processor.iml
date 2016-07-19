@@ -12,7 +12,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: uk.gov.dvla.f2d:f2d-business-model:1.6" level="project" />
+    <orderEntry type="library" name="Maven: uk.gov.dvla.f2d:f2d-business-model:1.7-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: uk.gov.dvla.f2d:f2d-business-model:1.7-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.3" level="project" />
