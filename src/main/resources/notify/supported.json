@@ -12107,7 +12107,7 @@
     "casp": ["CASP"],
     "ceg": "XXX",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "address",
     "questions": {
       "address-lookup": {
@@ -17396,7 +17396,7 @@
     "casp": ["VP1"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p1",
     "questions": {
       "change-address": {
@@ -17534,7 +17534,7 @@
     "casp": ["VP2"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p2",
     "questions": {
       "change-address": {
@@ -17687,7 +17687,7 @@
     "casp": ["VP3"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p3",
     "questions": {
       "change-address": {
@@ -17915,7 +17915,7 @@
     "casp": ["VP4"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p4",
     "questions": {
       "change-address": {
@@ -18008,7 +18008,7 @@
     "casp": ["VP5"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p5",
     "questions": {
       "change-address": {
@@ -18191,7 +18191,7 @@
     "casp": ["VP6"],
     "ceg": "102",
     "severity": "NON_NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p6",
     "questions": {
       "non-notifiable-vision": {
@@ -18224,7 +18224,7 @@
     "casp": ["VP7"],
     "ceg": "102",
     "severity": "NOTIFIABLE",
-    "enabled": false,
+    "enabled": true,
     "global": "vision-p7",
     "questions": {
       "change-address": {
