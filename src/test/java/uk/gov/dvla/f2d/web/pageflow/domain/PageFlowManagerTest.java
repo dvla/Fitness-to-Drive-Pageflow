@@ -9,8 +9,11 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
+import uk.gov.dvla.f2d.web.pageflow.responses.PageResponse;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -58,5 +61,80 @@ public class PageFlowManagerTest extends TestCase
 
         assertNotNull(summary);
         assertEquals(0, summary.size());
+    }
+
+    public void testPrepareQuestion() throws Exception {
+        PageFlowManager manager = new PageFlowManager(form);
+        MedicalQuestion question = manager.prepareQuestion("diabetes-with-insulin");
+
+        assertNotNull(question.getDecision());
+        assertEquals(0, question.getAnswers().size());
+        assertEquals(Boolean.TRUE, question.getValidate());
+    }
+
+    public void testRadioProcessQuestionSuccess() throws Exception {
+        Map<String, String[]> entities = new HashMap<>();
+        entities.put("answer", new String[] {"Y"});
+
+        PageForm pageForm = new PageForm(entities);
+        pageForm.setQuestion("diabetes-with-insulin");
+
+        assertTrue(form.getMessageHeader().getNotifications().isEmpty());
+
+        PageFlowManager manager = new PageFlowManager(form);
+        PageResponse response = manager.processQuestion(pageForm);
+
+        assertNotNull(response);
+        assertEquals(0, form.getMessageHeader().getNotifications().size());
+
+        assertFalse(response.isErrorsFound());
+        assertFalse(response.isFlowFinished());
+
+        assertEquals("expectations", response.getNextQuestion().getID());
+
+        MedicalQuestion question = form.getMedicalCondition().getQuestions().get("diabetes-with-insulin");
+        assertEquals("EXP1", question.getDecision());
+    }
+
+    public void testRadioProcessQuestionWithNoAnswer() throws Exception {
+        Map<String, String[]> entities = new HashMap<>();
+        entities.put("answer", new String[] {""});
+
+        PageForm pageForm = new PageForm(entities);
+        pageForm.setQuestion("diabetes-with-insulin");
+
+        assertTrue(form.getMessageHeader().getNotifications().isEmpty());
+
+        PageFlowManager manager = new PageFlowManager(form);
+        PageResponse response = manager.processQuestion(pageForm);
+
+        assertNotNull(response);
+        assertEquals(1, form.getMessageHeader().getNotifications().size());
+
+        assertTrue(response.isErrorsFound());
+        assertFalse(response.isFlowFinished());
+
+        assertEquals("diabetes-with-insulin", response.getNextQuestion().getID());
+    }
+
+    public void testRadioProcessQuestionWithInvalidAnswer() throws Exception {
+        Map<String, String[]> entities = new HashMap<>();
+        entities.put("answer", new String[] {"X"});
+
+        PageForm pageForm = new PageForm(entities);
+        pageForm.setQuestion("diabetes-with-insulin");
+
+        assertTrue(form.getMessageHeader().getNotifications().isEmpty());
+
+        PageFlowManager manager = new PageFlowManager(form);
+        PageResponse response = manager.processQuestion(pageForm);
+
+        assertNotNull(response);
+        assertEquals(1, form.getMessageHeader().getNotifications().size());
+
+        assertTrue(response.isErrorsFound());
+        assertFalse(response.isFlowFinished());
+
+        assertEquals("diabetes-with-insulin", response.getNextQuestion().getID());
     }
 }

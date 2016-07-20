@@ -73,6 +73,7 @@ public class DataProcessorRadioImpl implements IDataQuestionProcessor
         Set<String> keys = configuration.keySet();
         for(String key : keys) {
             if(key.equals(answer)) {
+                logger.debug("Make Decision: ["+configuration.get(key)+"]");
                 question.setDecision(configuration.get(key));
             }
         }
