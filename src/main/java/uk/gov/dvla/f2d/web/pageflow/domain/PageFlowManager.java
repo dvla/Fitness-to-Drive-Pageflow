@@ -25,7 +25,6 @@ import java.util.Map;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.ASTERISC;
 import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
-import static uk.gov.dvla.f2d.model.constants.StringConstants.FORWARD_SLASH;
 
 public final class PageFlowManager
 {
@@ -69,20 +68,32 @@ public final class PageFlowManager
     }
 
     public PageResponse processQuestion(PageForm pageForm) {
+        logger.info("prepareQuestion("+pageForm.getQuestion()+")...");
+
         performIntegrityCheck();
 
         MedicalCondition condition = form.getMedicalCondition();
 
+        logger.info("  > Condition: "+condition.getTitle()+", ["+condition.getDomain()+"]");
+
         Map<String, MedicalQuestion> questions = condition.getQuestions();
         MedicalQuestion current = questions.get(pageForm.getQuestion());
 
+        logger.info("  > Question: "+current.getID()+", ["+current.getPage()+"]");
+
         performFormValidation(pageForm, current);
+
+        logger.info("  > Validation: "+form.getMessageHeader().getNotifications());
 
         PageResponse response = new PageResponse();
         response.setFlowFinished(current.getDecision().equals(ASTERISC));
         response.setErrorsFound(!(form.getMessageHeader().getNotifications().isEmpty()));
 
-        if(!response.isErrorsFound()) {
+        logger.info("  > Response (Breakdown) ...");
+        logger.info("    - Errors["+response.isErrorsFound()+"]");
+        logger.info("    - Finished: ["+response.isFlowFinished()+"]");
+
+        if(response.isErrorsFound()) {
             response.setNextQuestion(current);
         } else {
             if(!response.isFlowFinished()) {
@@ -92,6 +103,7 @@ public final class PageFlowManager
                     }
                 }
             } else {
+                // Flow finished, with no errors.
                 response.setNextQuestion(null);
             }
         }
