@@ -3,7 +3,6 @@ package uk.gov.dvla.f2d.web.pageflow.domain;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
@@ -19,6 +18,8 @@ import java.util.Map;
 
 public class PageFlowManagerTest extends TestCase
 {
+    private static final String DIABETES_CONDITION      = "diabetes";
+
     private MedicalForm form;
 
     public PageFlowManagerTest(String testName ) {
@@ -34,7 +35,7 @@ public class PageFlowManagerTest extends TestCase
         Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
         form = cache.createMedicalForm(Service.NOTIFY);
-        form.setMedicalCondition(conditions.get(Condition.DIABETES.getName()));
+        form.setMedicalCondition(conditions.get(DIABETES_CONDITION));
     }
 
     public void tearDown() throws Exception {

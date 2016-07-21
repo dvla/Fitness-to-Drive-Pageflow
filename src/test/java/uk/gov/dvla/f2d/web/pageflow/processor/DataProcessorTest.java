@@ -3,24 +3,27 @@ package uk.gov.dvla.f2d.web.pageflow.processor;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
-import uk.gov.dvla.f2d.web.pageflow.processor.implementation.*;
+import uk.gov.dvla.f2d.web.pageflow.processor.implementation.DataProcessorCheckBoxImpl;
+import uk.gov.dvla.f2d.web.pageflow.processor.implementation.DataProcessorContinueImpl;
+import uk.gov.dvla.f2d.web.pageflow.processor.implementation.DataProcessorFormImpl;
+import uk.gov.dvla.f2d.web.pageflow.processor.implementation.DataProcessorRadioImpl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
 
 public class DataProcessorTest extends TestCase
 {
-    private static final String DIABETES_CONDITION      = Condition.DIABETES.getName();
+    private static final String DIABETES_CONDITION      = "diabetes";
+
     /**
      * Create the test case
      *
