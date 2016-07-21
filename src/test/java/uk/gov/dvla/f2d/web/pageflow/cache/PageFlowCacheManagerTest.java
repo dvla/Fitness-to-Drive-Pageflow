@@ -3,7 +3,6 @@ package uk.gov.dvla.f2d.web.pageflow.cache;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.enums.Severity;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
@@ -11,14 +10,13 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
 import uk.gov.dvla.f2d.web.pageflow.enums.Page;
 
-import java.util.Arrays;
 import java.util.Map;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
 
 public class PageFlowCacheManagerTest extends TestCase
 {
-    private static final String DIABETES_CONDITION = Condition.DIABETES.getName();
+    private static final String DIABETES_CONDITION = "diabetes";
 
     private PageFlowCacheManager cache;
 

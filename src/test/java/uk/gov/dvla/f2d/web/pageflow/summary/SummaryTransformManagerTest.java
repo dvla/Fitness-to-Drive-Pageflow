@@ -3,14 +3,12 @@ package uk.gov.dvla.f2d.web.pageflow.summary;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import uk.gov.dvla.f2d.model.enums.Condition;
 import uk.gov.dvla.f2d.model.enums.Language;
 import uk.gov.dvla.f2d.model.enums.Service;
 import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
-import uk.gov.dvla.f2d.web.pageflow.domain.PageFlowManager;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.DataTransformPipeline;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
 
@@ -18,11 +16,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static uk.gov.dvla.f2d.model.constants.StringConstants.*;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.NO;
+import static uk.gov.dvla.f2d.model.constants.StringConstants.YES;
 
 public class SummaryTransformManagerTest extends TestCase
 {
-    private static final String DIABETES_CONDITION  = Condition.DIABETES.getName();
+    private static final String DIABETES_CONDITION  = "diabetes";
 
     private static final String DIABETES_QUESTION   = "diabetes-with-insulin";
     private static final String DIABETES_STEP       = "3";
@@ -44,6 +43,10 @@ public class SummaryTransformManagerTest extends TestCase
 
     public void tearDown() throws Exception {
 
+    }
+
+    private MedicalForm createDefaultForm(Service service) {
+        return createForm(service, Language.ENGLISH);
     }
 
     private MedicalForm createForm(Service service, Language language) {
@@ -77,7 +80,7 @@ public class SummaryTransformManagerTest extends TestCase
      * Test the summary for (Notify -> Diabetes -> Default).
      */
     public void testNotifyForDiabetesInDefaultLanguage() {
-        MedicalForm form = createForm(Service.NOTIFY, Language.ENGLISH);
+        MedicalForm form = createDefaultForm(Service.NOTIFY);
 
         DataTransformPipeline pipeline = DataTransformPipeline.create();
         assertNotNull(pipeline);
