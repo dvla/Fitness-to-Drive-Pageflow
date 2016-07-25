@@ -72,7 +72,7 @@ public abstract class AbstractFormValidator implements IFormValidator {
      * @param value field value
      * @return List<Notification> - error notifications.
      */
-    protected  List<Notification> validate(String fieldName, String value) {
+    private List<Notification> validate(String fieldName, String value) {
         List<Notification> notifications = new ArrayList<>();
 
         try {
