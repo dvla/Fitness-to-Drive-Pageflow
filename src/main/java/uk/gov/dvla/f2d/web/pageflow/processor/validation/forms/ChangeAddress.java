@@ -21,8 +21,4 @@ public final class ChangeAddress extends AbstractFormValidator {
     String[] getPersistentFields() {
         return new String[] { ADDRESS_LINE_1, ADDRESS_LINE_2, ADDRESS_LINE_3, POST_TOWN, POST_CODE};
     }
-
-    String[] getMandatoryFields() {
-        return new String[] { ADDRESS_LINE_1, POST_TOWN, POST_CODE};
-    }
 }

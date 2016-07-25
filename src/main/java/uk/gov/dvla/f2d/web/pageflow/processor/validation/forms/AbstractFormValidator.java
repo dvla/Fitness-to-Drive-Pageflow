@@ -55,23 +55,6 @@ public abstract class AbstractFormValidator implements IFormValidator {
         getQuestion().setAnswers(answers);
     }
 
-/*
-    List<Notification> checkMandatoryFieldsSupplied(PageForm pageForm) {
-        List<Notification> codes = new ArrayList<>();
-        for (String field : getMandatoryFields()) {
-            if (isNullOrEmpty(getFormField(pageForm, field))) {
-                Notification notification = new Notification();
-                notification.setPage(splitAndCapitalise(getQuestion().getID(), HYPHEN));
-                notification.setField(field);
-                notification.setCode(NULL_OR_EMPTY_CODE);
-                notification.setDescription(NULL_OR_EMPTY_DESC);
-                codes.add(notification);
-            }
-        }
-        return codes;
-    }
-*/
-
     public List<Notification> validate(PageForm pageForm) {
         List<Notification> codes = new ArrayList<>();
         persistAnswersToMedicalForm(pageForm);
@@ -96,7 +79,7 @@ public abstract class AbstractFormValidator implements IFormValidator {
             for (Field field : this.getClass().getDeclaredFields()) {
                 if (field.getType() == String.class) {
                     field.setAccessible(true);
-                    String fieldValue = (String) field.get(new String());
+                    String fieldValue = (String) field.get("");
                     if (fieldValue != null && fieldValue.equals(fieldName)) {
                         if (field.isAnnotationPresent(DataValidation.class)) {
                             DataValidation dataValidation = field.getAnnotation(DataValidation.class);
@@ -224,5 +207,4 @@ public abstract class AbstractFormValidator implements IFormValidator {
     }
 
     abstract String[] getPersistentFields();
-    abstract String[] getMandatoryFields();
 }

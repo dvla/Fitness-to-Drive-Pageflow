@@ -16,8 +16,4 @@ public final class ContactDetails extends AbstractFormValidator {
     String[] getPersistentFields() {
         return new String[] { PHONE_NUMBER, EMAIL_ADDRESS };
     }
-
-    String[] getMandatoryFields() {
-        return new String[] { };
-    }
 }

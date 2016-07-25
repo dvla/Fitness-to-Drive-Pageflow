@@ -21,8 +21,4 @@ public class ConsultantDetails extends AbstractFormValidator {
     String[] getPersistentFields() {
         return new String[] { CONSULTANT_NAME, HOSPITAL_NAME, POST_TOWN, POST_CODE, PHONE_NUMBER};
     }
-
-    String[] getMandatoryFields() {
-        return new String[] { CONSULTANT_NAME, HOSPITAL_NAME, POST_TOWN};
-    }
 }
