@@ -1,7 +1,9 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.validation.forms;
 
+import uk.gov.dvla.f2d.model.addressLookup.ChangeAddressDTO;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
+import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 
 public final class ChangeAddress extends AbstractFormValidator
 {
@@ -21,5 +23,15 @@ public final class ChangeAddress extends AbstractFormValidator
 
     String[] getMandatoryFields() {
         return new String[] { ADDRESS_LINE_1, POST_TOWN, POST_CODE};
+    }
+
+    public ChangeAddressDTO mapToDto(PageForm pageForm){
+        return new ChangeAddressDTO(
+            getFormField(pageForm, ADDRESS_LINE_1),
+            getFormField(pageForm, ADDRESS_LINE_2),
+            getFormField(pageForm, ADDRESS_LINE_3),
+            getFormField(pageForm, POST_TOWN),
+            getFormField(pageForm, POST_CODE)
+        );
     }
 }
