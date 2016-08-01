@@ -111,7 +111,7 @@ public final class PageFlowManager
         return response;
     }
 
-    public void updateBreadcrumb(MedicalQuestion question) {
+    private void updateBreadcrumb(MedicalQuestion question) {
         logger.debug("Update Breadcrumb: [" + question.getStep() + "]");
 
         List<String> breadcrumb = form.getMessageHeader().getBreadcrumb();
@@ -143,11 +143,11 @@ public final class PageFlowManager
         if(depth > path.size()) {
             throw new PageNotFoundException("Breadcrumb is "+path.size()+", depth is "+depth);
         }
-        return getQuestion(path.get(path.size() - depth));
+        return getQuestion(path.get((path.size() - 1) - depth));
     }
 
     public MedicalQuestion findPreviousQuestion() throws PageNotFoundException {
-        return findQuestionInBreadcrumb(-1);
+        return findQuestionInBreadcrumb(1);
     }
 
     public MedicalQuestion findCurrentQuestion() throws PageNotFoundException {
