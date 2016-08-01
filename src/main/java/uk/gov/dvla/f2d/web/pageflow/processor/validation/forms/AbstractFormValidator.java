@@ -1,5 +1,6 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.validation.forms;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
@@ -112,7 +113,7 @@ public abstract class AbstractFormValidator implements IFormValidator {
             }
 
         } catch (Exception e){
-            logger.error("Data validation exception : " + e.getStackTrace());
+            logger.error("Data validation exception : " + ExceptionUtils.getStackTrace(e));
         }
         return notifications;
     }
