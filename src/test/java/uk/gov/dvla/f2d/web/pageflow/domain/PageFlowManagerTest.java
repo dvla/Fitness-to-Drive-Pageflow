@@ -12,6 +12,7 @@ import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
 import uk.gov.dvla.f2d.web.pageflow.responses.PageResponse;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -137,5 +138,29 @@ public class PageFlowManagerTest extends TestCase
         assertFalse(response.isFlowFinished());
 
         assertEquals("diabetes-with-insulin", response.getNextQuestion().getID());
+    }
+
+    public void testFindPreviousQuestion() throws Exception {
+        String[] breadcrumbs = {"3", "EXP1", "5", "GEN1", "6a"};
+
+        form.getMessageHeader().setBreadcrumb(Arrays.asList(breadcrumbs));
+
+        PageFlowManager manager = new PageFlowManager(form);
+        MedicalQuestion previous = manager.findPreviousQuestion();
+
+        assertNotNull(previous);
+        assertEquals("GEN1", previous.getStep());
+    }
+
+    public void testFindCurrentQuestion() throws Exception {
+        String[] breadcrumbs = {"3", "EXP1", "5", "GEN1", "6a", "22", "7", "8", "8a", "9", "10"};
+
+        form.getMessageHeader().setBreadcrumb(Arrays.asList(breadcrumbs));
+
+        PageFlowManager manager = new PageFlowManager(form);
+        MedicalQuestion current = manager.findCurrentQuestion();
+
+        assertNotNull(current);
+        assertEquals("10", current.getStep());
     }
 }

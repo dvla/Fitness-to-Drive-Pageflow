@@ -111,7 +111,7 @@ public final class PageFlowManager
         return response;
     }
 
-    public void updateBreadcrumb(MedicalQuestion question) {
+    private void updateBreadcrumb(MedicalQuestion question) {
         logger.debug("Update Breadcrumb: [" + question.getStep() + "]");
 
         List<String> breadcrumb = form.getMessageHeader().getBreadcrumb();
