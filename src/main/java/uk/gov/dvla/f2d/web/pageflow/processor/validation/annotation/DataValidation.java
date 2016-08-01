@@ -23,7 +23,7 @@ public @interface DataValidation {
     int min() default 0;
 
     /**
-     * minimum length of field, defaults to 0.
+     * maximum length of field, mandatory field, no defaults.
      * @return int
      */
     int max();

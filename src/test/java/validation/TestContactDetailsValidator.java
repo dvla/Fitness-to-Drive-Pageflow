@@ -3,16 +3,20 @@ package validation;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 import uk.gov.dvla.f2d.model.enums.Service;
-import uk.gov.dvla.f2d.model.pageflow.*;
+import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
+import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
+import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
+import uk.gov.dvla.f2d.model.pageflow.Notification;
+import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
 import uk.gov.dvla.f2d.web.pageflow.enums.Format;
 import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 import uk.gov.dvla.f2d.web.pageflow.processor.validation.FormValidator;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.*;
+import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.MAX_LENGTH;
+import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.INVALID_CHARACTERS;
 
 /**
  * Tests validation rules on Contact Details.
@@ -29,35 +33,33 @@ public class TestContactDetailsValidator extends TestCase{
     private final String[] VALID_PHONE_NUMBER = {"1234567890"};
     private final String[] VALID_EMAIL_ADDRESS = {"test@example.com"};
 
+    private static final String DIABETES_CONDITION      = "diabetes";
+    private static final String CONTACT_DETAILS      = "contact-details";
+
     PageForm pageForm = new PageForm();
 
     public void setUp(){
-        medicalForm = new MedicalForm();
+        PageFlowCacheManager cache = PageFlowCacheManager.getInstance();
+        Map<String, MedicalCondition> conditions = cache.getConditions(Service.NOTIFY);
 
-
-        medicalForm.setMessageHeader(new MessageHeader());
-        medicalForm.getMessageHeader().setNotifications(new ArrayList<>());
-        medicalForm.getMessageHeader().setService(Service.NOTIFY.getName());
-
-        MedicalCondition condition = new MedicalCondition();
-        condition.setID("diabetes");
-        medicalForm.setMedicalCondition(condition);
+        medicalForm = cache.createMedicalForm(Service.NOTIFY);
+        medicalForm.setMedicalCondition(conditions.get(DIABETES_CONDITION));
 
         medicalQuestion = new MedicalQuestion();
-        medicalQuestion.setID("contact-details");
+        medicalQuestion.setID(CONTACT_DETAILS);
         medicalQuestion.setValidate(true);
         medicalQuestion.setType(Format.FORM.getName());
 
         Map<String, MedicalQuestion> medicalQuestions = new HashMap<>();
         medicalQuestions.put(medicalQuestion.getID(), medicalQuestion);
-        condition.setQuestions(medicalQuestions);
+        medicalForm.getMedicalCondition().setQuestions(medicalQuestions);
 
         entities = new HashMap<>();
         entities.put(PHONE_NUMBER, VALID_PHONE_NUMBER);
         entities.put(EMAIL_ADDRESS, VALID_EMAIL_ADDRESS);
 
         pageForm = new PageForm();
-        pageForm.setQuestion("contact-details");
+        pageForm.setQuestion(CONTACT_DETAILS);
     }
 
     public void testValidPhoneNumber() {
@@ -126,7 +128,7 @@ public class TestContactDetailsValidator extends TestCase{
         Assert.assertNotNull(medicalForm.getMessageHeader().getNotifications());
         Assert.assertEquals(1, medicalForm.getMessageHeader().getNotifications().size());
         Notification notification = medicalForm.getMessageHeader().getNotifications().get(0);
-        Assert.assertEquals(EXCEEDS_MAX_LENGTH, notification.getCode());
+        Assert.assertEquals(MAX_LENGTH, notification.getCode());
     }
 
 
@@ -143,7 +145,7 @@ public class TestContactDetailsValidator extends TestCase{
         Assert.assertNotNull(medicalForm.getMessageHeader().getNotifications());
         Assert.assertEquals(2, medicalForm.getMessageHeader().getNotifications().size());
         Notification notification = medicalForm.getMessageHeader().getNotifications().get(0);
-        Assert.assertEquals(EXCEEDS_MAX_LENGTH, notification.getCode());
+        Assert.assertEquals(MAX_LENGTH, notification.getCode());
         notification = medicalForm.getMessageHeader().getNotifications().get(1);
         Assert.assertEquals(INVALID_CHARACTERS, notification.getCode());
     }

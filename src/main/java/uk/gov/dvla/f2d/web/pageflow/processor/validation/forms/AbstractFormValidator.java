@@ -13,14 +13,9 @@ import uk.gov.dvla.f2d.web.pageflow.processor.validation.annotation.DataValidati
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
-import static uk.gov.dvla.f2d.model.constants.StringConstants.HYPHEN;
-import static uk.gov.dvla.f2d.model.utils.StringUtils.isNullOrEmpty;
-import static uk.gov.dvla.f2d.model.utils.StringUtils.splitAndCapitalise;
-import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.*;
+import static uk.gov.dvla.f2d.web.pageflow.utils.DataValidationUtils.validateData;
 
 public abstract class AbstractFormValidator implements IFormValidator {
     private MedicalForm form;
@@ -49,7 +44,7 @@ public abstract class AbstractFormValidator implements IFormValidator {
     }
 
     void persistAnswersToMedicalForm(PageForm pageForm) {
-        List<String> answers = new ArrayList<String>();
+        List<String> answers = new ArrayList<>();
         for (String field : getPersistentFields()) {
             answers.add(getFormField(pageForm, field));
         }
@@ -61,7 +56,7 @@ public abstract class AbstractFormValidator implements IFormValidator {
         persistAnswersToMedicalForm(pageForm);
 
         for (String field : getPersistentFields()) {
-            codes.addAll(validate(field, getFormField(pageForm, field)));
+            codes.addAll(buildNotifications(field, getFormField(pageForm, field)));
         }
 
         return codes;
@@ -73,45 +68,14 @@ public abstract class AbstractFormValidator implements IFormValidator {
      * @param value field value
      * @return List<Notification> - error notifications.
      */
-    private List<Notification> validate(String fieldName, String value) {
+    private List<Notification> buildNotifications(String fieldName, String value) {
         List<Notification> notifications = new ArrayList<>();
 
         try {
-            for (Field field : this.getClass().getDeclaredFields()) {
-                if (field.getType() == String.class) {
-                    field.setAccessible(true);
-                    String fieldValue = (String) field.get("");
-                    if (fieldValue != null && fieldValue.equals(fieldName)) {
-                        if (field.isAnnotationPresent(DataValidation.class)) {
-                            DataValidation dataValidation = field.getAnnotation(DataValidation.class);
-
-                            //check null or empty
-                            if (dataValidation.notNullOrEmpty()) {
-                                addNotification(notifications, checkNullOrEmpty(fieldName, value));
-                            }
-
-                            //check minimum length
-                            int min = dataValidation.min();
-                            if (min > 0) {
-                                addNotification(notifications, checkMin(fieldName, value, min));
-                            }
-
-                            //check maximum length
-                            int max = field.getAnnotation(DataValidation.class).max();
-                            if (max > 0) {
-                                addNotification(notifications, checkMax(fieldName, value, max));
-                            }
-
-                            //check regex
-                            String regex = field.getAnnotation(DataValidation.class).regex();
-                            if (!isNullOrEmpty(regex) && !isNullOrEmpty(value)) {
-                                addNotification(notifications, checkRegex(fieldName, value, regex));
-                            }
-                        }
-                    }
-                }
+            DataValidation dataValidation = getDataValidation(fieldName, value);
+            if (dataValidation != null) {
+                notifications = validateData(dataValidation, getQuestion(), fieldName, value);
             }
-
         } catch (Exception e){
             logger.error("Data validation exception : " + ExceptionUtils.getStackTrace(e));
         }
@@ -119,92 +83,29 @@ public abstract class AbstractFormValidator implements IFormValidator {
     }
 
     /**
-     * Check if a field is null or empty.
-     * @param field name of the field being checked
-     * @param value field value
-     * @return notification (error notification if field is null or empty, null otherwise)
+     * Get DataValidation annotaition for a persisted field.
+     * @param fieldName persisted field name
+     * @param value value e.g. phoneNumber.
+     * @return DataValidation annotation, if exists.
+     * @throws IllegalAccessException
      */
-    private Notification checkNullOrEmpty(String field, String value) {
-        Notification notification = null;
-        if (isNullOrEmpty(value)) {
-            notification = new Notification();
-            notification.setPage(splitAndCapitalise(getQuestion().getID(), HYPHEN));
-            notification.setField(field);
-            notification.setCode(NULL_OR_EMPTY_CODE);
-            notification.setDescription(NULL_OR_EMPTY_DESC);
+    private DataValidation getDataValidation(String fieldName, String value) throws IllegalAccessException{
+        DataValidation dataValidation = null;
+
+        for (Field field : this.getClass().getDeclaredFields()) {
+            if (field.getType() == String.class) {
+                field.setAccessible(true);
+                String fieldValue = (String) field.get(EMPTY);
+                if (fieldValue != null && fieldValue.equals(fieldName)) {
+                    if (field.isAnnotationPresent(DataValidation.class)) {
+                        dataValidation = field.getAnnotation(DataValidation.class);
+                    }
+                break;
+                }
+            }
         }
 
-        return notification;
-    }
-
-    /**
-     * Check maximum length for a field.
-     * @param field name of the field being checked
-     * @param value field value
-     * @param max allowed max characters
-     * @return notification (null if <= max length, error notification if > max length)
-     */
-    private Notification checkMax(String field, String value, int max) {
-        Notification notification = null;
-        if (value != null && value.length() > max) {
-            notification = new Notification();
-            notification.setPage(splitAndCapitalise(getQuestion().getID(), HYPHEN));
-            notification.setField(field);
-            notification.setCode(EXCEEDS_MAX_LENGTH);
-            notification.setDescription(EXCEEDS_MAX_LENGTH_DESC);
-        }
-
-        return notification;
-    }
-
-    /**
-     * Check minimum length for a field.
-     * @param field name of the field being checked
-     * @param value field value
-     * @param min allowed min characters
-     * @return notification (null if >= min length, error notification if < min length)
-     **/
-    private Notification checkMin(String field, String value, int min) {
-        Notification notification = null;
-        if (value != null && value.length() < min) {
-            notification = new Notification();
-            notification.setPage(splitAndCapitalise(getQuestion().getID(), HYPHEN));
-            notification.setField(field);
-            notification.setCode(LESS_THAN_MIN_LENGTH);
-            notification.setDescription(LESS_THAN_MIN_LENGTH_DESC);
-        }
-
-        return notification;
-    }
-
-    /**
-     * Chck regular expression for valid data.
-     * @param field name of the field being checked
-     * @param value field value
-     * @param regex regular expression for data allowed for the field being passed
-     * @return notification (null if regular expression matches else error notification)
-     */
-    private Notification checkRegex(String field, String value, String regex) {
-        Notification notification = null;
-
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(value);
-
-        if (!matcher.matches()) {
-            notification = new Notification();
-            notification.setPage(splitAndCapitalise(getQuestion().getID(), HYPHEN));
-            notification.setField(field);
-            notification.setCode(INVALID_CHARACTERS);
-            notification.setDescription(INVALID_CHARACTERS_DESC);
-        }
-
-        return notification;
-    }
-
-    private void addNotification(List<Notification> notifications, Notification notification) {
-        if (notification != null) {
-            notifications.add(notification);
-        }
+        return dataValidation;
     }
 
     abstract String[] getPersistentFields();
