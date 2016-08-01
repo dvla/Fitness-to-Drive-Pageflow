@@ -143,11 +143,11 @@ public final class PageFlowManager
         if(depth > path.size()) {
             throw new PageNotFoundException("Breadcrumb is "+path.size()+", depth is "+depth);
         }
-        return getQuestion(path.get(path.size() - depth));
+        return getQuestion(path.get((path.size() - 1) - depth));
     }
 
     public MedicalQuestion findPreviousQuestion() throws PageNotFoundException {
-        return findQuestionInBreadcrumb(-1);
+        return findQuestionInBreadcrumb(1);
     }
 
     public MedicalQuestion findCurrentQuestion() throws PageNotFoundException {
