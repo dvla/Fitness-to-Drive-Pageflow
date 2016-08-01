@@ -1,6 +1,7 @@
 package uk.gov.dvla.f2d.web.pageflow.processor.validation.forms;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.mockito.internal.util.collections.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
@@ -12,7 +13,9 @@ import uk.gov.dvla.f2d.web.pageflow.processor.validation.annotation.DataValidati
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static uk.gov.dvla.f2d.model.constants.StringConstants.EMPTY;
 import static uk.gov.dvla.f2d.web.pageflow.utils.DataValidationUtils.validateData;
@@ -83,16 +86,19 @@ public abstract class AbstractFormValidator implements IFormValidator {
     }
 
     /**
-     * Get DataValidation annotaition for a persisted field.
+     * Get DataValidation annotation for a persisted field.
      * @param fieldName persisted field name
      * @param value value e.g. phoneNumber.
      * @return DataValidation annotation, if exists.
      * @throws IllegalAccessException
      */
     private DataValidation getDataValidation(String fieldName, String value) throws IllegalAccessException{
-        DataValidation dataValidation = null;
+        Set<Field> allFields = new HashSet<>(); // no matter the order, the closest child fields will always override
+        allFields.addAll(Sets.newSet(this.getClass().getDeclaredFields()));
+        allFields.addAll(Sets.newSet(this.getClass().getFields()));
 
-        for (Field field : this.getClass().getDeclaredFields()) {
+        DataValidation dataValidation = null;
+        for (Field field : allFields) {
             if (field.getType() == String.class) {
                 field.setAccessible(true);
                 String fieldValue = (String) field.get(EMPTY);
