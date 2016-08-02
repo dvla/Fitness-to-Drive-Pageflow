@@ -111,7 +111,7 @@ public class DataValidationUtils {
         return notification;
     }
 
-    private static Notification createNotification(MedicalQuestion question, String field, String code, String description) {
+    public static Notification createNotification(MedicalQuestion question, String field, String code, String description) {
         Notification notification = new Notification();
         notification.setPage(splitAndCapitalise(question.getID(), HYPHEN));
         notification.setField(field);
