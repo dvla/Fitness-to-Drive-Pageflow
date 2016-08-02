@@ -1,4 +1,4 @@
-package validation;
+package uk.gov.dvla.f2d.web.pageflow.processor.validation.forms;
 
 import junit.framework.Assert;
 import junit.framework.TestCase;
@@ -21,7 +21,7 @@ import static uk.gov.dvla.f2d.web.pageflow.constants.ErrorCodes.INVALID_CHARACTE
 /**
  * Tests validation rules on Contact Details.
  */
-public class TestContactDetailsValidator extends TestCase{
+public class ContactDetailsValidatorTest extends TestCase{
     private MedicalForm medicalForm;
     private MedicalQuestion medicalQuestion;
 
