@@ -31,7 +31,7 @@ public class ConsultantDetailsTest extends TestCase{
         pageForm.getEntities().put(ConsultantDetails.CLINIC_NAME, new String[]{VALUE_CLINIC});
         pageForm.getEntities().put(ConsultantDetails.HOSPITAL_NAME, new String[]{VALUE_HOSPITAL});
         pageForm.getEntities().put(ConsultantDetails.POST_TOWN, new String[]{VALUE_POST_TOWN});
-        final List<Notification> notifications = validator.execute(pageForm);
+        final List<Notification> notifications = validator.validate(pageForm);
 
         assertEquals(notifications.size(), 0);
     }
@@ -40,7 +40,7 @@ public class ConsultantDetailsTest extends TestCase{
         PageForm pageForm = new PageForm();
         pageForm.getEntities().put(ConsultantDetails.CONSULTANT_NAME, new String[]{VALUE_CONSULTANT});
         pageForm.getEntities().put(ConsultantDetails.POST_TOWN, new String[]{VALUE_POST_TOWN});
-        final List<Notification> notifications = validator.execute(pageForm);
+        final List<Notification> notifications = validator.validate(pageForm);
 
         assertEquals(notifications.size(), 2);
         Notification wrongNotificationClinic = notifications.get(0);
@@ -55,7 +55,7 @@ public class ConsultantDetailsTest extends TestCase{
         pageForm.getEntities().put(ConsultantDetails.CLINIC_NAME, new String[]{VALUE_CLINIC});
 
         pageForm.getEntities().put(ConsultantDetails.POST_TOWN, new String[]{VALUE_POST_TOWN});
-        final List<Notification> notifications = validator.execute(pageForm);
+        final List<Notification> notifications = validator.validate(pageForm);
 
         assertEquals(notifications.size(), 0);
 
@@ -67,7 +67,7 @@ public class ConsultantDetailsTest extends TestCase{
 
         pageForm.getEntities().put(ConsultantDetails.HOSPITAL_NAME, new String[]{VALUE_HOSPITAL});
         pageForm.getEntities().put(ConsultantDetails.POST_TOWN, new String[]{VALUE_POST_TOWN});
-        final List<Notification> notifications = validator.execute(pageForm);
+        final List<Notification> notifications = validator.validate(pageForm);
 
         assertEquals(notifications.size(), 0);
 
@@ -76,7 +76,7 @@ public class ConsultantDetailsTest extends TestCase{
     public void testExecuteWithoutMandatoryData() {
         PageForm pageForm = new PageForm();
         pageForm.getEntities().put(ConsultantDetails.POST_CODE, new String[]{VALUE_POSTCODE});
-        final List<Notification> notifications = validator.execute(pageForm);
+        final List<Notification> notifications = validator.validate(pageForm);
 
         assertEquals(notifications.size(), 4);
     }
