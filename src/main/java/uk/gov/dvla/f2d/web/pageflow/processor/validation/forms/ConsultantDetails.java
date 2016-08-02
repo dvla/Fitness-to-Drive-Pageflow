@@ -26,7 +26,8 @@ public class ConsultantDetails extends AbstractFormValidator implements IFormVal
     static final String PHONE_NUMBER        = "phoneNumber";
 
     private static final String[] PERSISTED_FIELDS = {
-            CONSULTANT_NAME, CLINIC_NAME, HOSPITAL_NAME, POST_TOWN, POST_CODE, PHONE_NUMBER
+            //order is important because of mapping answers to a comma separated string
+            CONSULTANT_NAME, HOSPITAL_NAME, CLINIC_NAME, POST_TOWN, POST_CODE, PHONE_NUMBER
     };
 
 
