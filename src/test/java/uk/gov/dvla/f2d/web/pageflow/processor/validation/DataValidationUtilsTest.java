@@ -1,4 +1,4 @@
-package validation;
+package uk.gov.dvla.f2d.web.pageflow.processor.validation;
 
 
 import junit.framework.TestCase;
@@ -11,7 +11,7 @@ import uk.gov.dvla.f2d.web.pageflow.utils.DataValidationUtils;
 import java.lang.reflect.Field;
 import java.util.List;
 
-public class TestDataValidationUtils extends TestCase {
+public class DataValidationUtilsTest extends TestCase {
     MedicalQuestion medicalQuestion;
 
     String field = "field";
