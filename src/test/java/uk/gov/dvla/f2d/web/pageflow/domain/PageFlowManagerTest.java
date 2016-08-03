@@ -8,6 +8,7 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
 import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
 import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.web.pageflow.cache.PageFlowCacheManager;
+import uk.gov.dvla.f2d.web.pageflow.exceptions.PageNotFoundException;
 import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 import uk.gov.dvla.f2d.web.pageflow.processor.summary.SummaryLine;
 import uk.gov.dvla.f2d.web.pageflow.responses.PageResponse;
@@ -140,6 +141,46 @@ public class PageFlowManagerTest extends TestCase
         assertEquals("diabetes-with-insulin", response.getNextQuestion().getID());
     }
 
+    public void testFindCurrentQuestion() throws Exception {
+        String[] breadcrumbs = {"3", "EXP1", "5", "GEN1", "6a", "22", "7", "8", "8a", "9", "10"};
+
+        form.getMessageHeader().setBreadcrumb(Arrays.asList(breadcrumbs));
+
+        PageFlowManager manager = new PageFlowManager(form);
+        MedicalQuestion current = manager.findCurrentQuestion();
+
+        assertNotNull(current);
+        assertEquals("10", current.getStep());
+    }
+
+    public void testFindCurrentQuestionWithSingleQuestion() throws Exception {
+        String[] breadcrumbs = {"3"};
+
+        form.getMessageHeader().setBreadcrumb(Arrays.asList(breadcrumbs));
+
+        PageFlowManager manager = new PageFlowManager(form);
+        MedicalQuestion current = manager.findCurrentQuestion();
+
+        assertNotNull(current);
+        assertEquals("3", current.getStep());
+    }
+
+    public void testFindCurrentQuestionWithEmptyBreadcrumb() throws Exception {
+        String[] breadcrumbs = {};
+
+        try {
+            form.getMessageHeader().setBreadcrumb(Arrays.asList(breadcrumbs));
+
+            PageFlowManager manager = new PageFlowManager(form);
+            MedicalQuestion current = manager.findCurrentQuestion();
+
+            fail("A PageNotFoundException should have been raised!");
+
+        } catch(PageNotFoundException ex) {
+            // Success
+        }
+    }
+
     public void testFindPreviousQuestion() throws Exception {
         String[] breadcrumbs = {"3", "EXP1", "5", "GEN1", "6a"};
 
@@ -152,15 +193,31 @@ public class PageFlowManagerTest extends TestCase
         assertEquals("GEN1", previous.getStep());
     }
 
-    public void testFindCurrentQuestion() throws Exception {
-        String[] breadcrumbs = {"3", "EXP1", "5", "GEN1", "6a", "22", "7", "8", "8a", "9", "10"};
+    public void testFindPreviousQuestionWithSingleQuestion() throws Exception {
+        String[] breadcrumbs = {"3"};
+
+        try {
+            form.getMessageHeader().setBreadcrumb(Arrays.asList(breadcrumbs));
+
+            PageFlowManager manager = new PageFlowManager(form);
+            MedicalQuestion previous = manager.findPreviousQuestion();
+
+            fail("A PageNotFoundException should have been raised!");
+
+        } catch(PageNotFoundException ex) {
+            // Success
+        }
+    }
+
+    public void testFindPreviousQuestionWithTwoQuestions() throws Exception {
+        String[] breadcrumbs = {"3", "EXP1"};
 
         form.getMessageHeader().setBreadcrumb(Arrays.asList(breadcrumbs));
 
         PageFlowManager manager = new PageFlowManager(form);
-        MedicalQuestion current = manager.findCurrentQuestion();
+        MedicalQuestion previous = manager.findPreviousQuestion();
 
-        assertNotNull(current);
-        assertEquals("10", current.getStep());
+        assertNotNull(previous);
+        assertEquals("3", previous.getStep());
     }
 }

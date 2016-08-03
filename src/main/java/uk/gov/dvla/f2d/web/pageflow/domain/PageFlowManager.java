@@ -102,9 +102,6 @@ public final class PageFlowManager
                         response.setNextQuestion(next);
                     }
                 }
-            } else {
-                // Flow finished, with no errors.
-                response.setNextQuestion(null);
             }
         }
 
@@ -140,7 +137,7 @@ public final class PageFlowManager
         if(path.isEmpty()) {
             throw new PageNotFoundException("Breadcrumb is empty");
         }
-        if(depth > path.size()) {
+        if((depth + 1) > path.size()) {
             throw new PageNotFoundException("Breadcrumb is "+path.size()+", depth is "+depth);
         }
         return getQuestion(path.get((path.size() - 1) - depth));
