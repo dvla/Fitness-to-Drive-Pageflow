@@ -75,6 +75,19 @@ public class ContactDetailsValidatorTest extends TestCase{
         Assert.assertEquals(0, medicalForm.getMessageHeader().getNotifications().size());
     }
 
+    public void testValidPhoneNumberWithSpacesAtEnd() {
+        //valid - 0-9 and spaces, spaces at end needs to be trimmed out
+        String answers[] = {"12345 67890                 "};
+
+        entities.put(PHONE_NUMBER, answers);
+        pageForm.setEntities(entities);
+        FormValidator validator = new FormValidator(medicalForm, medicalQuestion);
+        validator.validate(pageForm);
+
+        Assert.assertNotNull(medicalForm.getMessageHeader().getNotifications());
+        Assert.assertEquals(0, medicalForm.getMessageHeader().getNotifications().size());
+    }
+
     public void testBlankPhoneNumber() {
         //valid - blank
         String answers[] = {""};

@@ -102,6 +102,21 @@ public class DataValidationUtilsTest extends TestCase {
     }
 
     /**
+     * value - "x    " less than minimum length  - 2 after trimming end spaces, a MIN_LENGTH notification needs to be raised.
+     */
+    public void testCheckMin5() {
+        String value = "x    ";
+        int minimumLength = 2;
+        Notification notification = DataValidationUtils.checkMin(medicalQuestion, field , value, minimumLength);
+        assertNotNull(notification);
+        assertEquals(ErrorCodes.MIN_LENGTH, notification.getCode());
+        assertEquals(ErrorCodes.MIN_LENGTH_DESC, notification.getDescription());
+        assertEquals("TestPage", notification.getPage());
+        assertEquals(field, notification.getField());
+    }
+
+
+    /**
      * value - xyz greater than maximum length  - 2, a MAX_LENGTH notification needs to be raised.
      */
     public void testCheckMax() {
@@ -147,6 +162,17 @@ public class DataValidationUtilsTest extends TestCase {
         assertEquals(ErrorCodes.MAX_LENGTH_DESC, notification.getDescription());
         assertEquals("TestPage", notification.getPage());
         assertEquals(field, notification.getField());
+    }
+
+    /**
+     * value - "x      " after trimming the subsequent scpaces, equals maximum length 1,
+     * a MAX_LENGTH notification should not be raised.
+     */
+    public void testCheckMax5() {
+        String value = "x      ";
+        int maximumLength = 1;
+        Notification notification = DataValidationUtils.checkMax(medicalQuestion, field , value, maximumLength);
+        assertNull(notification);
     }
 
     /**

@@ -17,10 +17,10 @@ public final class ErrorCodes
     public static final String GENERAL_ERROR_CODE           = "GeneralError";
     public static final String GENERAL_ERROR_DESC           = "General error occurred in processing.";
 
-    public static final String MAX_LENGTH = "ExceedsMaxLength";
+    public static final String MAX_LENGTH = "MaxLength";
     public static final String MAX_LENGTH_DESC = "Field was greater than the allowed maximum length.";
 
-    public static final String MIN_LENGTH = "LessThanMinLength";
+    public static final String MIN_LENGTH = "MinLength";
     public static final String MIN_LENGTH_DESC = "Field is less than the allowed minimum length.";
 
     public static final String INVALID_CHARACTERS = "InvalidChars";

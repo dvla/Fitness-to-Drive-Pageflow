@@ -68,7 +68,7 @@ public class DataValidationUtils {
      */
     public static Notification checkMax(MedicalQuestion question, String field, String value, int max) {
         Notification notification = null;
-        if (value != null && value.length() > max) {
+        if (value != null && value.trim().length() > max) {
             notification = createNotification(question, field, MAX_LENGTH, MAX_LENGTH_DESC);
         }
 
@@ -84,7 +84,7 @@ public class DataValidationUtils {
      **/
     public static Notification checkMin(MedicalQuestion question, String field, String value, int min) {
         Notification notification = null;
-        if (value != null && value.length() < min) {
+        if (value != null && value.trim().length() < min) {
             notification = createNotification(question, field, MIN_LENGTH, MIN_LENGTH_DESC);
         }
 
