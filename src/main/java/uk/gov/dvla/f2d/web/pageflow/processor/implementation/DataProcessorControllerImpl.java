@@ -8,7 +8,6 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
 import uk.gov.dvla.f2d.web.pageflow.processor.components.config.ControllerComponentConfiguration;
-import uk.gov.dvla.f2d.web.pageflow.processor.components.config.RadioComponentConfiguration;
 
 import java.io.IOException;
 import java.util.ArrayList;
