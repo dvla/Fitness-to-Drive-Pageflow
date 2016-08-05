@@ -56,6 +56,22 @@
         }
       }
     },
+    "eye-specialist": {
+      "options": {
+        "Y": {
+          "answers": {
+            "cy": "that you {b}have{/b} seen an eye specialist about your condition (Welsh)",
+            "en": "that you {b}have{/b} seen an eye specialist about your condition"
+          }
+        },
+        "N": {
+          "answers": {
+            "cy": "that you {b}have not{/b} seen an eye specialist about your condition (Welsh)",
+            "en": "that you {b}have not{/b} seen an eye specialist about your condition"
+          }
+        }
+      }
+    },
     "eye-specialist-interval": {
       "options": {
         "Y": {
