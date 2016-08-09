@@ -49,8 +49,6 @@ public class DataProcessorContinueImpl implements IDataQuestionProcessor
         Map<String, String> configuration = getConfiguration();
         question.setDecision(configuration.get(HASH));
 
-        logger.warn("detail: "+configuration);
-
         logger.debug("finish: validate() method");
 
         return notifications;
