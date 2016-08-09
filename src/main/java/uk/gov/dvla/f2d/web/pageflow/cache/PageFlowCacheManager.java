@@ -2,10 +2,7 @@ package uk.gov.dvla.f2d.web.pageflow.cache;
 
 import uk.gov.dvla.f2d.model.enums.Language;
 import uk.gov.dvla.f2d.model.enums.Service;
-import uk.gov.dvla.f2d.model.pageflow.Authentication;
-import uk.gov.dvla.f2d.model.pageflow.MedicalCondition;
-import uk.gov.dvla.f2d.model.pageflow.MedicalForm;
-import uk.gov.dvla.f2d.model.pageflow.MessageHeader;
+import uk.gov.dvla.f2d.model.pageflow.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,7 +47,11 @@ public final class PageFlowCacheManager
         form.setMessageHeader(header);
         form.setPersonalDetails(null);
         form.setMedicalCondition(null);
+        form.setMedicalOutcome(null);
         form.setAdditionalConditions(new ArrayList<>());
+
+        ApplicationState state = new ApplicationState();
+        state.setSubmitted(false);
 
         return form;
     }
