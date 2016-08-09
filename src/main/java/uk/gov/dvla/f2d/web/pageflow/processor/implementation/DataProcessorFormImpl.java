@@ -8,12 +8,13 @@ import uk.gov.dvla.f2d.model.pageflow.MedicalQuestion;
 import uk.gov.dvla.f2d.model.pageflow.Notification;
 import uk.gov.dvla.f2d.web.pageflow.processor.IDataQuestionProcessor;
 import uk.gov.dvla.f2d.web.pageflow.processor.components.config.FormComponentConfiguration;
-import uk.gov.dvla.f2d.web.pageflow.processor.components.config.RadioComponentConfiguration;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import static uk.gov.dvla.f2d.model.constants.StringConstants.HASH;
 
 public class DataProcessorFormImpl implements IDataQuestionProcessor
 {
@@ -42,9 +43,11 @@ public class DataProcessorFormImpl implements IDataQuestionProcessor
     @Override
     public List<Notification> validate() {
         logger.debug("begin: validate() method");
-        question.setDecision(question.getOptions().trim());
 
         List<Notification> notifications = new ArrayList<>();
+
+        Map<String, String> configuration = getConfiguration();
+        question.setDecision(configuration.get(HASH));
 
         logger.debug("finish: validate() method");
 
