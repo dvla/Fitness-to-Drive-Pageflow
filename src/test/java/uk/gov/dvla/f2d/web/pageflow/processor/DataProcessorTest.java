@@ -220,7 +220,7 @@ public class DataProcessorTest extends TestCase
 
     public void testCheckboxGroupDataProcessorDecision() {
         final String[] ANSWERS_FOR_QUESTIONS  = {"1","4","16"};
-        final String DECISION_FOR_QUESTION  = "*";
+        final String DECISION_FOR_QUESTION  = "SPL1";
 
         MedicalQuestion question = getCheckboxGroupQuestion();
         assertNotNull(question);
