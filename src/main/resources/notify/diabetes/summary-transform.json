@@ -477,6 +477,22 @@
           }
         }
       }
+    },
+    "accept-short-period": {
+      "options": {
+        "N": {
+          "answers": {
+            "cy": "you {b}do not accept{/b} a short period medical driving licence (Welsh)",
+            "en": "you {b}do not accept{/b} a short period medical driving licence"
+          }
+        },
+        "Y": {
+          "answers": {
+            "cy": "you {b}accept{/b} a short period medical driving licence (Welsh)",
+            "en": "you {b}accept{/b} a short period medical driving licence"
+          }
+        }
+      }
     }
   }
 }
