@@ -11,6 +11,7 @@ import uk.gov.dvla.f2d.web.pageflow.enums.Format;
 import uk.gov.dvla.f2d.web.pageflow.enums.Page;
 import uk.gov.dvla.f2d.web.pageflow.exceptions.FlowStateModifiedException;
 import uk.gov.dvla.f2d.web.pageflow.exceptions.PageNotFoundException;
+import uk.gov.dvla.f2d.web.pageflow.exceptions.QuestionNotFoundException;
 import uk.gov.dvla.f2d.web.pageflow.exceptions.VerificationRequiredException;
 import uk.gov.dvla.f2d.web.pageflow.forms.PageForm;
 import uk.gov.dvla.f2d.web.pageflow.processor.DataProcessorFactory;
@@ -45,7 +46,7 @@ public final class PageFlowManager
     }
 
     public MedicalQuestion prepareQuestion(final String page)
-        throws VerificationRequiredException, FlowStateModifiedException {
+        throws VerificationRequiredException, FlowStateModifiedException, QuestionNotFoundException {
 
         logger.info("prepareQuestion("+page+")...");
 
@@ -108,7 +109,7 @@ public final class PageFlowManager
         return response;
     }
 
-    private void updateBreadcrumb(MedicalQuestion question) {
+    private void updateBreadcrumb(MedicalQuestion question) throws QuestionNotFoundException {
         logger.debug("Update Breadcrumb: [" + question.getStep() + "]");
 
         List<String> breadcrumb = form.getMessageHeader().getBreadcrumb();
@@ -132,7 +133,9 @@ public final class PageFlowManager
         }
     }
 
-    private MedicalQuestion findQuestionInBreadcrumb(final int depth) throws PageNotFoundException {
+    private MedicalQuestion findQuestionInBreadcrumb(final int depth)
+        throws PageNotFoundException, QuestionNotFoundException {
+
         List<String> path = form.getMessageHeader().getBreadcrumb();
         if(path.isEmpty()) {
             throw new PageNotFoundException("Breadcrumb is empty");
@@ -143,11 +146,15 @@ public final class PageFlowManager
         return getQuestion(path.get((path.size() - 1) - depth));
     }
 
-    public MedicalQuestion findPreviousQuestion() throws PageNotFoundException {
+    public MedicalQuestion findPreviousQuestion()
+        throws PageNotFoundException, QuestionNotFoundException {
+
         return findQuestionInBreadcrumb(1);
     }
 
-    public MedicalQuestion findCurrentQuestion() throws PageNotFoundException {
+    public MedicalQuestion findCurrentQuestion()
+        throws PageNotFoundException, QuestionNotFoundException {
+
         return findQuestionInBreadcrumb(0);
     }
 
@@ -179,14 +186,14 @@ public final class PageFlowManager
         throw new FlowStateModifiedException(configuration);
     }
 
-    public MedicalQuestion getQuestion(final String step) {
+    public MedicalQuestion getQuestion(final String step) throws QuestionNotFoundException {
         performIntegrityCheck();
         for (MedicalQuestion question : form.getMedicalCondition().getQuestions().values()) {
             if (question.getStep().equals(step)) {
                 return question;
             }
         }
-        throw new IllegalArgumentException("No question has been configured for this scenario!");
+        throw new QuestionNotFoundException("No question has been configured for: ["+step+"]");
     }
 
     public List<SummaryLine> transform() {
